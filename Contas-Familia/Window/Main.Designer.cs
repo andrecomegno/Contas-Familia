@@ -96,6 +96,7 @@ namespace Contas_Familia.Window
             this.bt_minimize.TabIndex = 71;
             this.bt_minimize.Text = "🗕";
             this.bt_minimize.UseVisualStyleBackColor = false;
+            this.bt_minimize.Click += new System.EventHandler(this.bt_minimize_Click);
             // 
             // bt_maximize
             // 
@@ -114,6 +115,7 @@ namespace Contas_Familia.Window
             this.bt_maximize.TabIndex = 72;
             this.bt_maximize.Text = "❐";
             this.bt_maximize.UseVisualStyleBackColor = false;
+            this.bt_maximize.Click += new System.EventHandler(this.bt_maximize_Click);
             // 
             // pl_left
             // 
@@ -126,7 +128,7 @@ namespace Contas_Familia.Window
             this.pl_left.Dock = System.Windows.Forms.DockStyle.Left;
             this.pl_left.Location = new System.Drawing.Point(0, 33);
             this.pl_left.Name = "pl_left";
-            this.pl_left.Size = new System.Drawing.Size(210, 968);
+            this.pl_left.Size = new System.Drawing.Size(210, 974);
             this.pl_left.TabIndex = 1;
             // 
             // bt_menu_back
@@ -146,13 +148,14 @@ namespace Contas_Familia.Window
             this.bt_menu_back.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_menu_back.IconSize = 35;
             this.bt_menu_back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_menu_back.Location = new System.Drawing.Point(7, 928);
+            this.bt_menu_back.Location = new System.Drawing.Point(7, 934);
             this.bt_menu_back.Name = "bt_menu_back";
             this.bt_menu_back.Size = new System.Drawing.Size(40, 36);
             this.bt_menu_back.TabIndex = 61;
             this.bt_menu_back.Tag = "";
             this.bt_menu_back.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_menu_back.UseVisualStyleBackColor = false;
+            this.bt_menu_back.Click += new System.EventHandler(this.bt_menu_back_Click);
             // 
             // bt_settings_2
             // 
@@ -171,13 +174,14 @@ namespace Contas_Familia.Window
             this.bt_settings_2.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_settings_2.IconSize = 35;
             this.bt_settings_2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_settings_2.Location = new System.Drawing.Point(167, 929);
+            this.bt_settings_2.Location = new System.Drawing.Point(167, 935);
             this.bt_settings_2.Name = "bt_settings_2";
             this.bt_settings_2.Size = new System.Drawing.Size(40, 36);
             this.bt_settings_2.TabIndex = 58;
             this.bt_settings_2.Tag = "";
             this.bt_settings_2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_settings_2.UseVisualStyleBackColor = false;
+            this.bt_settings_2.Click += new System.EventHandler(this.bt_settings_2_Click);
             // 
             // bt_dashboard
             // 
@@ -201,6 +205,7 @@ namespace Contas_Familia.Window
             this.bt_dashboard.Text = "Dashboard";
             this.bt_dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_dashboard.UseVisualStyleBackColor = false;
+            this.bt_dashboard.Click += new System.EventHandler(this.bt_dashboard_Click);
             // 
             // bt_settings
             // 
@@ -224,6 +229,7 @@ namespace Contas_Familia.Window
             this.bt_settings.Text = "Settings";
             this.bt_settings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_settings.UseVisualStyleBackColor = false;
+            this.bt_settings.Click += new System.EventHandler(this.bt_settings_Click);
             // 
             // bt_home
             // 
@@ -247,6 +253,7 @@ namespace Contas_Familia.Window
             this.bt_home.Text = "Home";
             this.bt_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_home.UseVisualStyleBackColor = false;
+            this.bt_home.Click += new System.EventHandler(this.bt_home_Click);
             // 
             // pl_mid
             // 
@@ -262,16 +269,16 @@ namespace Contas_Familia.Window
             this.panel2.Controls.Add(this.build);
             this.panel2.Controls.Add(this.txt_creator);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 1001);
+            this.panel2.Location = new System.Drawing.Point(0, 1007);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1222, 30);
+            this.panel2.Size = new System.Drawing.Size(1222, 24);
             this.panel2.TabIndex = 69;
             // 
             // build
             // 
             this.build.AutoSize = true;
             this.build.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.build.Location = new System.Drawing.Point(12, 8);
+            this.build.Location = new System.Drawing.Point(12, 6);
             this.build.Name = "build";
             this.build.Size = new System.Drawing.Size(31, 13);
             this.build.TabIndex = 1;
@@ -282,7 +289,7 @@ namespace Contas_Familia.Window
             this.txt_creator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_creator.AutoSize = true;
             this.txt_creator.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txt_creator.Location = new System.Drawing.Point(1060, 10);
+            this.txt_creator.Location = new System.Drawing.Point(1060, 7);
             this.txt_creator.Name = "txt_creator";
             this.txt_creator.Size = new System.Drawing.Size(155, 13);
             this.txt_creator.TabIndex = 0;

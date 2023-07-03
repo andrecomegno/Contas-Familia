@@ -98,6 +98,12 @@
     <Compile Include="PanelControll\Register\register_name.Designer.cs">
       <DependentUpon>register_name.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelControll\Settings\setting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelControll\Settings\setting.Designer.cs">
+      <DependentUpon>setting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Script\configdb.cs" />
     <Compile Include="Script\RJTextBox.cs">
       <SubType>UserControl</SubType>
@@ -134,6 +140,9 @@
     <EmbeddedResource Include="PanelControll\Register\register_name.resx">
       <DependentUpon>register_name.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PanelControll\Settings\setting.resx">
+      <DependentUpon>setting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -166,9 +175,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PanelControll\Settings\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>

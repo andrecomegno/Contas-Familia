@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Contas_Familia.PanelControll.Dashboard;
 using Contas_Familia.Window;
 
-namespace Contas_Familia.PanelControll
+namespace Contas_Familia.PanelControll.Bills
 {
     public partial class bills_to_pay : UserControl
     {
@@ -26,7 +27,7 @@ namespace Contas_Familia.PanelControll
             {
                 // PROXIMA TELA
                 family uc = new family();
-                Main.Instance.addControl(uc);
+                Main.Instance.addControll(uc);
             }
         }
 

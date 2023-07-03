@@ -1,5 +1,5 @@
 ﻿
-namespace Contas_Familia.PanelControll
+namespace Contas_Familia.PanelControll.Bills
 {
     partial class bills_to_pay
     {

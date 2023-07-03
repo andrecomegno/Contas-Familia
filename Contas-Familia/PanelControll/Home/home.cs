@@ -1,7 +1,8 @@
-﻿using Contas_Familia.Window;
+﻿using Contas_Familia.PanelControll.Register;
+using Contas_Familia.Window;
 using System.Windows.Forms;
 
-namespace Contas_Familia.PanelControll
+namespace Contas_Familia.PanelControll.Home
 {
     public partial class home : UserControl
     {
@@ -28,7 +29,7 @@ namespace Contas_Familia.PanelControll
         private void bt_new_family_Click(object sender, System.EventArgs e)
         {
             register_name uc = new register_name();
-            Main.Instance.addControl(uc);
+            Main.Instance.addControll(uc);
         }
     }
 }

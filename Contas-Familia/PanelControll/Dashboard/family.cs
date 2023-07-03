@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Contas_Familia.PanelControll
+namespace Contas_Familia.PanelControll.Dashboard
 {
     public partial class family : UserControl
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace Contas_Familia.PanelControll
+namespace Contas_Familia.PanelControll.Dashboard
 {
     partial class family
     {

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Contas_Familia.PanelControll
+namespace Contas_Familia.PanelControll.Home
 {
     public partial class list_family : UserControl
     {
