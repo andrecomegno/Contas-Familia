@@ -2,7 +2,7 @@
 using Contas_Familia.Window;
 using System.Windows.Forms;
 
-namespace Contas_Familia.Painel
+namespace Contas_Familia.PanelControll
 {
     public partial class register_name : UserControl
     {
@@ -15,7 +15,7 @@ namespace Contas_Familia.Painel
         private void bt_save_Click(object sender, EventArgs e)
         {
             bills_to_pay uc = new bills_to_pay();
-            Dashboard.Instance.addControl(uc);
+            Main.Instance.addControl(uc);
         }
     }
 }

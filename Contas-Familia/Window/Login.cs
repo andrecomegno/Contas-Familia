@@ -9,13 +9,30 @@ namespace Contas_Familia
         public Login()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void bt_enter_Click(object sender, EventArgs e)
         {
             // ESCONDER O LOGIN 
             this.Hide();
-            new Dashboard().Show();
+            new Main().Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Are you sure you want to exit?", "EXIT", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            switch (dr)
+            {
+                case DialogResult.Yes:
+                    Application.Exit();
+                    break;
+                case DialogResult.No:
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

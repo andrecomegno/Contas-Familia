@@ -1,21 +1,23 @@
-﻿using Contas_Familia.Painel;
-using System;
-using System.Drawing;
+﻿using System;
+using Contas_Familia.PanelControll;
 using System.Windows.Forms;
 
 namespace Contas_Familia.Window
 {
-    public partial class Dashboard : Form
+    public partial class Main : Form
     {
-        public static Dashboard Instance;
+        public static Main Instance;
 
-        public Dashboard()
+        public Main()
         {
             InitializeComponent();
 
             this.FormBorderStyle = FormBorderStyle.None;
 
             Instance = this;
+
+            home uc = new home();
+            addControl(uc);
         }
 
         public void addControl(UserControl userControl)
@@ -28,7 +30,7 @@ namespace Contas_Familia.Window
 
         private void bt_fechar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Are you sure you want to exit?", "CANCEL", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult dr = MessageBox.Show("Are you sure you want to exit?", "EXIT", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             switch (dr)
             {
@@ -40,12 +42,6 @@ namespace Contas_Familia.Window
                 default:
                     break;
             }
-        }
-
-        private void bt_test_Click(object sender, EventArgs e)
-        {
-            register_name uc = new register_name();
-            addControl(uc);
         }
     }
 }
