@@ -34,7 +34,8 @@ namespace Contas_Familia.Window
             this.bt_minimize = new System.Windows.Forms.Button();
             this.bt_maximize = new System.Windows.Forms.Button();
             this.pl_left = new System.Windows.Forms.Panel();
-            this.bt_menu_back = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bt_menu_collapse = new FontAwesome.Sharp.IconButton();
             this.bt_settings_2 = new FontAwesome.Sharp.IconButton();
             this.bt_dashboard = new FontAwesome.Sharp.IconButton();
             this.bt_settings = new FontAwesome.Sharp.IconButton();
@@ -45,6 +46,7 @@ namespace Contas_Familia.Window
             this.txt_creator = new System.Windows.Forms.Label();
             this.pl_top.SuspendLayout();
             this.pl_left.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +61,7 @@ namespace Contas_Familia.Window
             this.pl_top.Name = "pl_top";
             this.pl_top.Size = new System.Drawing.Size(1222, 33);
             this.pl_top.TabIndex = 0;
+            this.pl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pl_top_MouseDown);
             // 
             // bt_exit
             // 
@@ -120,8 +123,7 @@ namespace Contas_Familia.Window
             // pl_left
             // 
             this.pl_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(60)))));
-            this.pl_left.Controls.Add(this.bt_menu_back);
-            this.pl_left.Controls.Add(this.bt_settings_2);
+            this.pl_left.Controls.Add(this.panel1);
             this.pl_left.Controls.Add(this.bt_dashboard);
             this.pl_left.Controls.Add(this.bt_settings);
             this.pl_left.Controls.Add(this.bt_home);
@@ -131,36 +133,46 @@ namespace Contas_Familia.Window
             this.pl_left.Size = new System.Drawing.Size(210, 974);
             this.pl_left.TabIndex = 1;
             // 
-            // bt_menu_back
+            // panel1
             // 
-            this.bt_menu_back.AccessibleName = "";
-            this.bt_menu_back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bt_menu_back.BackColor = System.Drawing.Color.Transparent;
-            this.bt_menu_back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_menu_back.FlatAppearance.BorderSize = 0;
-            this.bt_menu_back.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.bt_menu_back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.bt_menu_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_menu_back.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_menu_back.ForeColor = System.Drawing.Color.White;
-            this.bt_menu_back.IconChar = FontAwesome.Sharp.IconChar.AngleLeft;
-            this.bt_menu_back.IconColor = System.Drawing.Color.White;
-            this.bt_menu_back.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.bt_menu_back.IconSize = 35;
-            this.bt_menu_back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_menu_back.Location = new System.Drawing.Point(7, 934);
-            this.bt_menu_back.Name = "bt_menu_back";
-            this.bt_menu_back.Size = new System.Drawing.Size(40, 36);
-            this.bt_menu_back.TabIndex = 61;
-            this.bt_menu_back.Tag = "";
-            this.bt_menu_back.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bt_menu_back.UseVisualStyleBackColor = false;
-            this.bt_menu_back.Click += new System.EventHandler(this.bt_menu_back_Click);
+            this.panel1.Controls.Add(this.bt_menu_collapse);
+            this.panel1.Controls.Add(this.bt_settings_2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 928);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(210, 46);
+            this.panel1.TabIndex = 0;
+            // 
+            // bt_menu_collapse
+            // 
+            this.bt_menu_collapse.AccessibleName = "";
+            this.bt_menu_collapse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bt_menu_collapse.BackColor = System.Drawing.Color.Transparent;
+            this.bt_menu_collapse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_menu_collapse.FlatAppearance.BorderSize = 0;
+            this.bt_menu_collapse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bt_menu_collapse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.bt_menu_collapse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_menu_collapse.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_menu_collapse.ForeColor = System.Drawing.Color.White;
+            this.bt_menu_collapse.IconChar = FontAwesome.Sharp.IconChar.AngleLeft;
+            this.bt_menu_collapse.IconColor = System.Drawing.Color.White;
+            this.bt_menu_collapse.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.bt_menu_collapse.IconSize = 35;
+            this.bt_menu_collapse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_menu_collapse.Location = new System.Drawing.Point(7, 5);
+            this.bt_menu_collapse.Name = "bt_menu_collapse";
+            this.bt_menu_collapse.Size = new System.Drawing.Size(40, 36);
+            this.bt_menu_collapse.TabIndex = 61;
+            this.bt_menu_collapse.Tag = "";
+            this.bt_menu_collapse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bt_menu_collapse.UseVisualStyleBackColor = false;
+            this.bt_menu_collapse.Click += new System.EventHandler(this.bt_menu_collapse_Click);
             // 
             // bt_settings_2
             // 
             this.bt_settings_2.AccessibleName = "";
-            this.bt_settings_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bt_settings_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_settings_2.BackColor = System.Drawing.Color.Transparent;
             this.bt_settings_2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_settings_2.FlatAppearance.BorderSize = 0;
@@ -174,7 +186,7 @@ namespace Contas_Familia.Window
             this.bt_settings_2.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_settings_2.IconSize = 35;
             this.bt_settings_2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_settings_2.Location = new System.Drawing.Point(167, 935);
+            this.bt_settings_2.Location = new System.Drawing.Point(161, 6);
             this.bt_settings_2.Name = "bt_settings_2";
             this.bt_settings_2.Size = new System.Drawing.Size(40, 36);
             this.bt_settings_2.TabIndex = 58;
@@ -196,7 +208,7 @@ namespace Contas_Familia.Window
             this.bt_dashboard.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_dashboard.IconSize = 35;
             this.bt_dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_dashboard.Location = new System.Drawing.Point(0, 75);
+            this.bt_dashboard.Location = new System.Drawing.Point(0, 188);
             this.bt_dashboard.Name = "bt_dashboard";
             this.bt_dashboard.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.bt_dashboard.Size = new System.Drawing.Size(210, 46);
@@ -220,7 +232,7 @@ namespace Contas_Familia.Window
             this.bt_settings.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_settings.IconSize = 35;
             this.bt_settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_settings.Location = new System.Drawing.Point(0, 127);
+            this.bt_settings.Location = new System.Drawing.Point(0, 240);
             this.bt_settings.Name = "bt_settings";
             this.bt_settings.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.bt_settings.Size = new System.Drawing.Size(210, 46);
@@ -244,7 +256,7 @@ namespace Contas_Familia.Window
             this.bt_home.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_home.IconSize = 35;
             this.bt_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_home.Location = new System.Drawing.Point(0, 23);
+            this.bt_home.Location = new System.Drawing.Point(0, 136);
             this.bt_home.Name = "bt_home";
             this.bt_home.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.bt_home.Size = new System.Drawing.Size(210, 46);
@@ -258,9 +270,9 @@ namespace Contas_Familia.Window
             // pl_mid
             // 
             this.pl_mid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pl_mid.Location = new System.Drawing.Point(0, 33);
+            this.pl_mid.Location = new System.Drawing.Point(210, 33);
             this.pl_mid.Name = "pl_mid";
-            this.pl_mid.Size = new System.Drawing.Size(1222, 998);
+            this.pl_mid.Size = new System.Drawing.Size(1012, 974);
             this.pl_mid.TabIndex = 3;
             // 
             // panel2
@@ -301,16 +313,18 @@ namespace Contas_Familia.Window
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(1222, 1031);
+            this.Controls.Add(this.pl_mid);
             this.Controls.Add(this.pl_left);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pl_mid);
             this.Controls.Add(this.pl_top);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pl_top.ResumeLayout(false);
             this.pl_left.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -332,6 +346,7 @@ namespace Contas_Familia.Window
         private FontAwesome.Sharp.IconButton bt_settings_2;
         private FontAwesome.Sharp.IconButton bt_dashboard;
         private FontAwesome.Sharp.IconButton bt_settings;
-        private FontAwesome.Sharp.IconButton bt_menu_back;
+        private FontAwesome.Sharp.IconButton bt_menu_collapse;
+        private System.Windows.Forms.Panel panel1;
     }
 }

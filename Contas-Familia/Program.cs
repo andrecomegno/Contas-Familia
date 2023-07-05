@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Contas_Familia.Window;
 using System.Windows.Forms;
 
 namespace Contas_Familia
@@ -16,7 +14,7 @@ namespace Contas_Familia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Main());
         }
     }
 }

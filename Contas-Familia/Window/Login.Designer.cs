@@ -33,9 +33,8 @@ namespace Contas_Familia
             this.txt_name = new Contas_Familia.Script.RJTextBox();
             this.txt_password = new Contas_Familia.Script.RJTextBox();
             this.pl_menu = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bt_exit = new System.Windows.Forms.Button();
+            this.bt_minimize = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.build = new System.Windows.Forms.Label();
             this.txt_creator = new System.Windows.Forms.Label();
@@ -96,7 +95,7 @@ namespace Contas_Familia
             this.txt_password.Multiline = false;
             this.txt_password.Name = "txt_password";
             this.txt_password.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_password.PasswordChar = false;
+            this.txt_password.PasswordChar = true;
             this.txt_password.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txt_password.PlaceholderText = "Password";
             this.txt_password.Size = new System.Drawing.Size(250, 31);
@@ -107,69 +106,52 @@ namespace Contas_Familia
             // pl_menu
             // 
             this.pl_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
-            this.pl_menu.Controls.Add(this.button1);
-            this.pl_menu.Controls.Add(this.button2);
-            this.pl_menu.Controls.Add(this.button3);
+            this.pl_menu.Controls.Add(this.bt_exit);
+            this.pl_menu.Controls.Add(this.bt_minimize);
             this.pl_menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pl_menu.Location = new System.Drawing.Point(0, 0);
             this.pl_menu.Name = "pl_menu";
             this.pl_menu.Size = new System.Drawing.Size(300, 38);
             this.pl_menu.TabIndex = 76;
+            this.pl_menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pl_top_MouseDown);
             // 
-            // button1
+            // bt_exit
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(266, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 26);
-            this.button1.TabIndex = 70;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bt_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_exit.BackColor = System.Drawing.Color.Gray;
+            this.bt_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_exit.FlatAppearance.BorderSize = 0;
+            this.bt_exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato;
+            this.bt_exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
+            this.bt_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_exit.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_exit.ForeColor = System.Drawing.Color.White;
+            this.bt_exit.Location = new System.Drawing.Point(266, 5);
+            this.bt_exit.Name = "bt_exit";
+            this.bt_exit.Size = new System.Drawing.Size(27, 26);
+            this.bt_exit.TabIndex = 70;
+            this.bt_exit.Text = "X";
+            this.bt_exit.UseVisualStyleBackColor = false;
+            this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
             // 
-            // button2
+            // bt_minimize
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(200, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(27, 26);
-            this.button2.TabIndex = 71;
-            this.button2.Text = "🗕";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(233, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(27, 26);
-            this.button3.TabIndex = 72;
-            this.button3.Text = "❐";
-            this.button3.UseVisualStyleBackColor = false;
+            this.bt_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_minimize.BackColor = System.Drawing.Color.Gray;
+            this.bt_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_minimize.FlatAppearance.BorderSize = 0;
+            this.bt_minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.bt_minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.bt_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_minimize.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_minimize.ForeColor = System.Drawing.Color.White;
+            this.bt_minimize.Location = new System.Drawing.Point(233, 5);
+            this.bt_minimize.Name = "bt_minimize";
+            this.bt_minimize.Size = new System.Drawing.Size(27, 26);
+            this.bt_minimize.TabIndex = 71;
+            this.bt_minimize.Text = "🗕";
+            this.bt_minimize.UseVisualStyleBackColor = false;
+            this.bt_minimize.Click += new System.EventHandler(this.bt_minimize_Click);
             // 
             // panel2
             // 
@@ -244,9 +226,8 @@ namespace Contas_Familia
         private Script.RJTextBox txt_name;
         private Script.RJTextBox txt_password;
         private System.Windows.Forms.Panel pl_menu;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bt_exit;
+        private System.Windows.Forms.Button bt_minimize;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label build;
         private System.Windows.Forms.Label txt_creator;

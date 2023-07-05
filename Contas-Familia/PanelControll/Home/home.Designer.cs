@@ -31,10 +31,14 @@ namespace Contas_Familia.PanelControll.Home
         {
             this.pl_top = new System.Windows.Forms.Panel();
             this.lb_home = new System.Windows.Forms.Label();
-            this.pl_mid = new System.Windows.Forms.Panel();
-            this.pl_family = new System.Windows.Forms.Panel();
+            this.pl_content = new System.Windows.Forms.Panel();
             this.bt_new_family = new FontAwesome.Sharp.IconButton();
+            this.pl_family = new System.Windows.Forms.Panel();
+            this.pl_right = new System.Windows.Forms.Panel();
+            this.pl_left = new System.Windows.Forms.Panel();
+            this.pl_mid = new System.Windows.Forms.Panel();
             this.pl_top.SuspendLayout();
+            this.pl_content.SuspendLayout();
             this.pl_mid.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +54,7 @@ namespace Contas_Familia.PanelControll.Home
             // 
             // lb_home
             // 
-            this.lb_home.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.lb_home.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_home.ForeColor = System.Drawing.Color.White;
@@ -61,25 +65,17 @@ namespace Contas_Familia.PanelControll.Home
             this.lb_home.Text = "HOME";
             this.lb_home.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pl_mid
+            // pl_content
             // 
-            this.pl_mid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
-            this.pl_mid.Controls.Add(this.pl_family);
-            this.pl_mid.Controls.Add(this.bt_new_family);
-            this.pl_mid.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_mid.Location = new System.Drawing.Point(0, 51);
-            this.pl_mid.Name = "pl_mid";
-            this.pl_mid.Size = new System.Drawing.Size(1078, 457);
-            this.pl_mid.TabIndex = 143;
-            // 
-            // pl_family
-            // 
-            this.pl_family.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pl_family.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.pl_family.Location = new System.Drawing.Point(366, 51);
-            this.pl_family.Name = "pl_family";
-            this.pl_family.Size = new System.Drawing.Size(560, 300);
-            this.pl_family.TabIndex = 99;
+            this.pl_content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.pl_content.Controls.Add(this.pl_mid);
+            this.pl_content.Controls.Add(this.pl_right);
+            this.pl_content.Controls.Add(this.pl_left);
+            this.pl_content.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_content.Location = new System.Drawing.Point(0, 51);
+            this.pl_content.Name = "pl_content";
+            this.pl_content.Size = new System.Drawing.Size(1078, 390);
+            this.pl_content.TabIndex = 143;
             // 
             // bt_new_family
             // 
@@ -95,7 +91,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_new_family.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_new_family.IconSize = 35;
             this.bt_new_family.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_new_family.Location = new System.Drawing.Point(131, 51);
+            this.bt_new_family.Location = new System.Drawing.Point(65, 16);
             this.bt_new_family.Name = "bt_new_family";
             this.bt_new_family.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.bt_new_family.Size = new System.Drawing.Size(210, 46);
@@ -106,16 +102,52 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_new_family.UseVisualStyleBackColor = false;
             this.bt_new_family.Click += new System.EventHandler(this.bt_new_family_Click);
             // 
+            // pl_family
+            // 
+            this.pl_family.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pl_family.BackColor = System.Drawing.Color.White;
+            this.pl_family.Location = new System.Drawing.Point(286, 16);
+            this.pl_family.Name = "pl_family";
+            this.pl_family.Size = new System.Drawing.Size(560, 300);
+            this.pl_family.TabIndex = 99;
+            // 
+            // pl_right
+            // 
+            this.pl_right.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pl_right.Location = new System.Drawing.Point(991, 0);
+            this.pl_right.Name = "pl_right";
+            this.pl_right.Size = new System.Drawing.Size(87, 390);
+            this.pl_right.TabIndex = 2;
+            // 
+            // pl_left
+            // 
+            this.pl_left.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pl_left.Location = new System.Drawing.Point(0, 0);
+            this.pl_left.Name = "pl_left";
+            this.pl_left.Size = new System.Drawing.Size(92, 390);
+            this.pl_left.TabIndex = 0;
+            // 
+            // pl_mid
+            // 
+            this.pl_mid.Controls.Add(this.bt_new_family);
+            this.pl_mid.Controls.Add(this.pl_family);
+            this.pl_mid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pl_mid.Location = new System.Drawing.Point(92, 0);
+            this.pl_mid.Name = "pl_mid";
+            this.pl_mid.Size = new System.Drawing.Size(899, 390);
+            this.pl_mid.TabIndex = 3;
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.Controls.Add(this.pl_mid);
+            this.Controls.Add(this.pl_content);
             this.Controls.Add(this.pl_top);
             this.Name = "home";
             this.Size = new System.Drawing.Size(1078, 965);
             this.pl_top.ResumeLayout(false);
+            this.pl_content.ResumeLayout(false);
             this.pl_mid.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -125,8 +157,11 @@ namespace Contas_Familia.PanelControll.Home
 
         private System.Windows.Forms.Panel pl_top;
         private System.Windows.Forms.Label lb_home;
-        private System.Windows.Forms.Panel pl_mid;
+        private System.Windows.Forms.Panel pl_content;
         private System.Windows.Forms.Panel pl_family;
         private FontAwesome.Sharp.IconButton bt_new_family;
+        private System.Windows.Forms.Panel pl_right;
+        private System.Windows.Forms.Panel pl_left;
+        private System.Windows.Forms.Panel pl_mid;
     }
 }

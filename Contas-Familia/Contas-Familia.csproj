@@ -51,6 +51,8 @@
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -74,11 +76,11 @@
     <Compile Include="PanelControll\Bills\bills_to_pay.Designer.cs">
       <DependentUpon>bills_to_pay.cs</DependentUpon>
     </Compile>
-    <Compile Include="PanelControll\Dashboard\family.cs">
+    <Compile Include="PanelControll\Dashboard\dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PanelControll\Dashboard\family.Designer.cs">
-      <DependentUpon>family.cs</DependentUpon>
+    <Compile Include="PanelControll\Dashboard\dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="PanelControll\Home\home.cs">
       <SubType>UserControl</SubType>
@@ -128,8 +130,8 @@
     <EmbeddedResource Include="PanelControll\Bills\bills_to_pay.resx">
       <DependentUpon>bills_to_pay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PanelControll\Dashboard\family.resx">
-      <DependentUpon>family.cs</DependentUpon>
+    <EmbeddedResource Include="PanelControll\Dashboard\dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelControll\Home\home.resx">
       <DependentUpon>home.cs</DependentUpon>
