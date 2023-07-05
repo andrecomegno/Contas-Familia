@@ -1,7 +1,7 @@
 ﻿
 namespace Contas_Familia.PanelControll.Register
 {
-    partial class register_name
+    partial class register_family
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -52,7 +52,7 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_name_04 = new Contas_Familia.Script.RJTextBox();
             this.txt_name_05 = new Contas_Familia.Script.RJTextBox();
             this.txt_name_06 = new Contas_Familia.Script.RJTextBox();
-            this.txt_name = new Contas_Familia.Script.RJTextBox();
+            this.txt_family_name = new Contas_Familia.Script.RJTextBox();
             this.txt_name_09 = new Contas_Familia.Script.RJTextBox();
             this.txt_name_03 = new Contas_Familia.Script.RJTextBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
@@ -94,7 +94,7 @@ namespace Contas_Familia.PanelControll.Register
             this.pl_reg.Controls.Add(this.txt_name_04);
             this.pl_reg.Controls.Add(this.txt_name_05);
             this.pl_reg.Controls.Add(this.txt_name_06);
-            this.pl_reg.Controls.Add(this.txt_name);
+            this.pl_reg.Controls.Add(this.txt_family_name);
             this.pl_reg.Controls.Add(this.txt_name_09);
             this.pl_reg.Controls.Add(this.txt_name_03);
             this.pl_reg.Controls.Add(this.shapeContainer1);
@@ -307,6 +307,7 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_name_07.TabIndex = 110;
             this.txt_name_07.Texts = "";
             this.txt_name_07.UnderlinedStyle = false;
+            this.txt_name_07.Leave += new System.EventHandler(this.txt_name_07_Leave);
             // 
             // txt_name_08
             // 
@@ -329,6 +330,7 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_name_08.TabIndex = 112;
             this.txt_name_08.Texts = "";
             this.txt_name_08.UnderlinedStyle = false;
+            this.txt_name_08.Leave += new System.EventHandler(this.txt_name_08_Leave);
             // 
             // txt_name_10
             // 
@@ -351,6 +353,7 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_name_10.TabIndex = 116;
             this.txt_name_10.Texts = "";
             this.txt_name_10.UnderlinedStyle = false;
+            this.txt_name_10.Leave += new System.EventHandler(this.txt_name_10_Leave);
             // 
             // txt_name_01
             // 
@@ -373,6 +376,7 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_name_01.TabIndex = 68;
             this.txt_name_01.Texts = "";
             this.txt_name_01.UnderlinedStyle = false;
+            this.txt_name_01.Leave += new System.EventHandler(this.txt_name_01_Leave);
             // 
             // txt_name_02
             // 
@@ -395,6 +399,7 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_name_02.TabIndex = 100;
             this.txt_name_02.Texts = "";
             this.txt_name_02.UnderlinedStyle = false;
+            this.txt_name_02.Leave += new System.EventHandler(this.txt_name_02_Leave);
             // 
             // txt_name_04
             // 
@@ -417,6 +422,7 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_name_04.TabIndex = 104;
             this.txt_name_04.Texts = "";
             this.txt_name_04.UnderlinedStyle = false;
+            this.txt_name_04.Leave += new System.EventHandler(this.txt_name_04_Leave);
             // 
             // txt_name_05
             // 
@@ -439,6 +445,7 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_name_05.TabIndex = 106;
             this.txt_name_05.Texts = "";
             this.txt_name_05.UnderlinedStyle = false;
+            this.txt_name_05.Leave += new System.EventHandler(this.txt_name_05_Leave);
             // 
             // txt_name_06
             // 
@@ -461,28 +468,30 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_name_06.TabIndex = 108;
             this.txt_name_06.Texts = "";
             this.txt_name_06.UnderlinedStyle = false;
+            this.txt_name_06.Leave += new System.EventHandler(this.txt_name_06_Leave);
             // 
-            // txt_name
+            // txt_family_name
             // 
-            this.txt_name.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_name.BorderColor = System.Drawing.Color.White;
-            this.txt_name.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name.BorderRadius = 0;
-            this.txt_name.BorderSize = 2;
-            this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_name.Location = new System.Drawing.Point(16, 12);
-            this.txt_name.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name.Multiline = false;
-            this.txt_name.Name = "txt_name";
-            this.txt_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name.PasswordChar = false;
-            this.txt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name.PlaceholderText = "Family Name ";
-            this.txt_name.Size = new System.Drawing.Size(250, 31);
-            this.txt_name.TabIndex = 7;
-            this.txt_name.Texts = "";
-            this.txt_name.UnderlinedStyle = false;
+            this.txt_family_name.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_family_name.BorderColor = System.Drawing.Color.White;
+            this.txt_family_name.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_family_name.BorderRadius = 0;
+            this.txt_family_name.BorderSize = 2;
+            this.txt_family_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_family_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_family_name.Location = new System.Drawing.Point(16, 12);
+            this.txt_family_name.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_family_name.Multiline = false;
+            this.txt_family_name.Name = "txt_family_name";
+            this.txt_family_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_family_name.PasswordChar = false;
+            this.txt_family_name.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_family_name.PlaceholderText = "Family Name ";
+            this.txt_family_name.Size = new System.Drawing.Size(250, 31);
+            this.txt_family_name.TabIndex = 7;
+            this.txt_family_name.Texts = "";
+            this.txt_family_name.UnderlinedStyle = false;
+            this.txt_family_name.Leave += new System.EventHandler(this.txt_family_name_Leave);
             // 
             // txt_name_09
             // 
@@ -505,6 +514,7 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_name_09.TabIndex = 114;
             this.txt_name_09.Texts = "";
             this.txt_name_09.UnderlinedStyle = false;
+            this.txt_name_09.Leave += new System.EventHandler(this.txt_name_09_Leave);
             // 
             // txt_name_03
             // 
@@ -527,6 +537,7 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_name_03.TabIndex = 102;
             this.txt_name_03.Texts = "";
             this.txt_name_03.UnderlinedStyle = false;
+            this.txt_name_03.Leave += new System.EventHandler(this.txt_name_03_Leave);
             // 
             // shapeContainer1
             // 
@@ -632,7 +643,7 @@ namespace Contas_Familia.PanelControll.Register
 
         private System.Windows.Forms.Panel pl_reg;
         private System.Windows.Forms.Button bt_next;
-        private Script.RJTextBox txt_name;
+        private Script.RJTextBox txt_family_name;
         private System.Windows.Forms.Panel pl_top;
         private System.Windows.Forms.Label lb_register_family;
         private System.Windows.Forms.Panel pl_null_00;

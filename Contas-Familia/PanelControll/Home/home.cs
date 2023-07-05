@@ -28,7 +28,7 @@ namespace Contas_Familia.PanelControll.Home
 
         private void bt_new_family_Click(object sender, System.EventArgs e)
         {
-            register_name uc = new register_name();
+            register_family uc = new register_family();
             Main.Instance.addControll(uc);
         }
     }
