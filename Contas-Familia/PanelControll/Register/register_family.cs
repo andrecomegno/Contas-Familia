@@ -10,8 +10,9 @@ namespace Contas_Familia.PanelControll.Register
 {
     public partial class register_family : UserControl
     {
-
+        public static register_family Instance;
         private bool _next;
+        public long id_register_family;
         private string id_login = Login.Instance.id_login;
 
         public register_family()
@@ -19,6 +20,7 @@ namespace Contas_Familia.PanelControll.Register
             InitializeComponent();
 
             PanelContent(_next, pl_content);
+            Instance = this;
         }
 
         // BOTÕES
@@ -76,7 +78,8 @@ namespace Contas_Familia.PanelControll.Register
             CmdRegisterFamily.Parameters.Add("@id_login", MySqlDbType.Int32).Value = id_login;
 
             CmdRegisterFamily.ExecuteNonQuery();
-            long id_RegisterFamily = CmdRegisterFamily.LastInsertedId;
+            // LONG ID
+            id_register_family = CmdRegisterFamily.LastInsertedId;
 
             // TODOS OS TEXTO BOX 
             string[] textBoxValues = { txt_name_01.Texts, txt_name_02.Texts, txt_name_03.Texts, txt_name_04.Texts, txt_name_05.Texts, txt_name_06.Texts, txt_name_07.Texts, txt_name_08.Texts, txt_name_09.Texts, txt_name_10.Texts };
@@ -94,7 +97,7 @@ namespace Contas_Familia.PanelControll.Register
 
                     cmdFamilyMember.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = textBoxValues[i];
                     cmdFamilyMember.Parameters.Add("@family_amount", MySqlDbType.Int32).Value = familyMemberCount;
-                    cmdFamilyMember.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_RegisterFamily;
+                    cmdFamilyMember.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
 
                     cmdFamilyMember.ExecuteNonQuery();
 
