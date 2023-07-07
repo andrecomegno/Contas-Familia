@@ -12,7 +12,6 @@ namespace Contas_Familia.PanelControll.Register
     {
 
         private bool _next;
-
         private string id_login = Login.Instance.id_login;
 
         public register_family()
@@ -48,6 +47,8 @@ namespace Contas_Familia.PanelControll.Register
                 try
                 {
                     Family();
+
+                    MessageBox.Show("Family Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 finally
                 {
@@ -69,7 +70,7 @@ namespace Contas_Familia.PanelControll.Register
             database.openConnection();
 
             // INSERT TABELA CADASTRO FAMILIA
-            MySqlCommand CmdRegisterFamily = new MySqlCommand("insert into familypayday.register_family (id_register_family, family_name, id_login) values (null, ?, ?)", database.getConnection());
+            MySqlCommand CmdRegisterFamily = new MySqlCommand("INSERT INTO familypayday.register_family (id_register_family, family_name, id_login) values (null, @family_name, @id_login)", database.getConnection());
 
             CmdRegisterFamily.Parameters.Add("@family_name", MySqlDbType.VarChar, 45).Value = txt_family_name.Texts;
             CmdRegisterFamily.Parameters.Add("@id_login", MySqlDbType.Int32).Value = id_login;
@@ -77,38 +78,31 @@ namespace Contas_Familia.PanelControll.Register
             CmdRegisterFamily.ExecuteNonQuery();
             long id_RegisterFamily = CmdRegisterFamily.LastInsertedId;
 
-            // INSERT TABELA CADASTRO MEMBRO DA FAMILIA
-            MySqlCommand CmdFamilyMember_01 = new MySqlCommand("insert into familypayday.family_member (id_family_member, family_member, family_amount, id_register_family) values (null, ?, ?, ?)", database.getConnection());
+            // TODOS OS TEXTO BOX 
+            string[] textBoxValues = { txt_name_01.Texts, txt_name_02.Texts, txt_name_03.Texts, txt_name_04.Texts, txt_name_05.Texts, txt_name_06.Texts, txt_name_07.Texts, txt_name_08.Texts, txt_name_09.Texts, txt_name_10.Texts };
+            // CONTADOR DE MEMBROS DA FAMILIA
+            int familyMemberCount = 1; 
 
-            CmdFamilyMember_01.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = txt_name_01.Texts;
-            CmdFamilyMember_01.Parameters.Add("@family_amount", MySqlDbType.Int32).Value = 1;
-            CmdFamilyMember_01.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_RegisterFamily;
-
-            CmdFamilyMember_01.ExecuteNonQuery();
-
-            if (txt_name_02.Texts != null)
+            // CRIADO UM LOOP
+            for (int i = 0; i < textBoxValues.Length; i++)
             {
-                // INSERT TABELA CADASTRO MEMBRO DA FAMILIA
-                MySqlCommand CmdFamilyMember_02 = new MySqlCommand("insert into familypayday.family_member (id_family_member, family_member, family_amount, id_register_family) values (null, ?, ?, ?)", database.getConnection());
+                // VERIFICA SE O TEXTBOX ESTÁ PREENCHIDO, SE ESTIVER, VAI SALVAR OS DADOS
+                if (!string.IsNullOrEmpty(textBoxValues[i]))
+                {
+                    // INSERT TABELA CADASTRO MEMBRO DA FAMILIA
+                    MySqlCommand cmdFamilyMember = new MySqlCommand("INSERT INTO familypayday.family_member (id_family_member, family_member, family_amount, id_register_family) VALUES (null, @family_member, @family_amount, @id_register_family)", database.getConnection());
 
-                CmdFamilyMember_02.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = txt_name_02.Texts;
-                CmdFamilyMember_02.Parameters.Add("@family_amount", MySqlDbType.Int32).Value = 2;
-                CmdFamilyMember_02.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_RegisterFamily;
+                    cmdFamilyMember.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = textBoxValues[i];
+                    cmdFamilyMember.Parameters.Add("@family_amount", MySqlDbType.Int32).Value = familyMemberCount;
+                    cmdFamilyMember.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_RegisterFamily;
 
-                CmdFamilyMember_02.ExecuteNonQuery();
+                    cmdFamilyMember.ExecuteNonQuery();
+
+                    // CONTAGEM
+                    familyMemberCount++;
+                }
             }
-            else if (txt_name_03.Texts != null)
-            {
-                // INSERT TABELA CADASTRO MEMBRO DA FAMILIA
-                MySqlCommand CmdFamilyMember_03 = new MySqlCommand("insert into familypayday.family_member (id_family_member, family_member, family_amount, id_register_family) values (null, ?, ?, ?)", database.getConnection());
 
-                CmdFamilyMember_03.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = txt_name_02.Texts;
-                CmdFamilyMember_03.Parameters.Add("@family_amount", MySqlDbType.Int32).Value = 3;
-                CmdFamilyMember_03.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_RegisterFamily;
-
-                CmdFamilyMember_03.ExecuteNonQuery();
-            }
-            
             database.closeConnection();
         }
 
@@ -140,7 +134,7 @@ namespace Contas_Familia.PanelControll.Register
             }
         }
 
-        // NOTIFICAÇÃO DO TEXTOBOX
+        #region CLEAN NOTIFICATION TEXTOBOX
         private void txt_family_name_Leave(object sender, EventArgs e)
         {
             txt_family_name.BorderColor = Color.Transparent;
@@ -206,5 +200,6 @@ namespace Contas_Familia.PanelControll.Register
             txt_name_10.BorderColor = Color.Transparent;
             txt_name_10.BorderSize = 0;
         }
+        #endregion
     }
 }
