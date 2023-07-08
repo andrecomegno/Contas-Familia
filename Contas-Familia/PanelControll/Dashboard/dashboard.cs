@@ -30,14 +30,13 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_family_Click(object sender, EventArgs e) => Family();
 
-
         public void Home()
         {
             dashboard uc = new dashboard();
             Main.Instance.addControll(uc);
 
-            bt_home.BackColor = Color.CornflowerBlue;
-            bt_family.BackColor = Color.LightSlateGray;
+            bt_home.BackColor = Color.FromArgb(48, 134, 200);
+            bt_family.BackColor = Color.FromArgb(27, 74, 111);
         }
 
         public void Family()
@@ -45,11 +44,9 @@ namespace Contas_Familia.PanelControll.Dashboard
             bills_to_pay uc = new bills_to_pay();
             addControll(uc);
 
-            bt_family.BackColor = Color.CornflowerBlue;
-            bt_home.BackColor = Color.LightSlateGray;
+            bt_family.BackColor = Color.FromArgb(48, 134, 200);
+            bt_home.BackColor = Color.FromArgb(27, 74, 111);
         }
-
-
     }
 
 }

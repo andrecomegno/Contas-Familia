@@ -22,13 +22,19 @@ namespace Contas_Familia.Window
             InitializeComponent();
 
             this.FormBorderStyle = FormBorderStyle.None;
-
             Instance = this;
 
-            new Login().ShowDialog();
+            try
+            {
+                new Login().ShowDialog();
+            }
+            finally
+            {
+                home uc = new home();
+                addControll(uc);
 
-            home uc = new home();
-            addControll(uc);
+                ButtonMenuDisabled(false);
+            } 
         }
 
         public void addControll(UserControl userControl)
@@ -119,10 +125,8 @@ namespace Contas_Familia.Window
 
         public void home()
         {
-            bt_home.BackColor = Color.CornflowerBlue;
-
-            bt_dashboard.BackColor = Color.LightSlateGray;
-            bt_settings.BackColor = Color.LightSlateGray;
+            bt_home.BackColor = Color.FromArgb(48, 134, 200);
+            bt_settings.BackColor = Color.FromArgb(27, 74, 111);
 
             home uc = new home();
             addControll(uc);
@@ -130,10 +134,8 @@ namespace Contas_Familia.Window
 
         public void Dashboard()
         {
-            bt_dashboard.BackColor = Color.CornflowerBlue;
-
-            bt_home.BackColor = Color.LightSlateGray;
-            bt_settings.BackColor = Color.LightSlateGray;
+            bt_dashboard.BackColor = Color.FromArgb(48, 134, 200);
+            bt_settings.BackColor = Color.FromArgb(27, 74, 111);
 
             dashboard uc = new dashboard();
             addControll(uc);
@@ -141,10 +143,10 @@ namespace Contas_Familia.Window
 
         public void Setting()
         {
-            bt_settings.BackColor = Color.CornflowerBlue;
+            bt_settings.BackColor = Color.FromArgb(48, 134, 200);
 
-            bt_home.BackColor = Color.LightSlateGray;
-            bt_dashboard.BackColor = Color.LightSlateGray;
+            bt_home.BackColor = Color.FromArgb(27, 74, 111);
+            bt_dashboard.BackColor = Color.FromArgb(27, 74, 111);
 
             setting uc = new setting();
             addControll(uc);
@@ -162,6 +164,20 @@ namespace Contas_Familia.Window
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-
+        // DESATIVA O MENU HOME QUANDO EFETURAR UM CADASTRO OU SELECIONAR UMA NOVA FAMILIA
+        public void ButtonMenuDisabled(bool menu)
+        {
+            if (!menu)
+            {
+                bt_dashboard.Visible = false;
+                bt_home.Location = new Point(0, 100);
+                bt_home.Visible = true;
+            }
+            else
+            {
+                bt_home.Visible = false;
+                bt_dashboard.Visible = true;
+            }
+        }
     }
 }

@@ -32,11 +32,11 @@ namespace Contas_Familia.PanelControll.Home
             this.pl_top = new System.Windows.Forms.Panel();
             this.lb_home = new System.Windows.Forms.Label();
             this.pl_content = new System.Windows.Forms.Panel();
+            this.pl_mid = new System.Windows.Forms.Panel();
             this.bt_new_family = new FontAwesome.Sharp.IconButton();
             this.pl_family = new System.Windows.Forms.Panel();
             this.pl_right = new System.Windows.Forms.Panel();
             this.pl_left = new System.Windows.Forms.Panel();
-            this.pl_mid = new System.Windows.Forms.Panel();
             this.pl_top.SuspendLayout();
             this.pl_content.SuspendLayout();
             this.pl_mid.SuspendLayout();
@@ -76,6 +76,16 @@ namespace Contas_Familia.PanelControll.Home
             this.pl_content.Name = "pl_content";
             this.pl_content.Size = new System.Drawing.Size(1078, 390);
             this.pl_content.TabIndex = 143;
+            // 
+            // pl_mid
+            // 
+            this.pl_mid.Controls.Add(this.bt_new_family);
+            this.pl_mid.Controls.Add(this.pl_family);
+            this.pl_mid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pl_mid.Location = new System.Drawing.Point(92, 0);
+            this.pl_mid.Name = "pl_mid";
+            this.pl_mid.Size = new System.Drawing.Size(899, 390);
+            this.pl_mid.TabIndex = 3;
             // 
             // bt_new_family
             // 
@@ -126,16 +136,6 @@ namespace Contas_Familia.PanelControll.Home
             this.pl_left.Name = "pl_left";
             this.pl_left.Size = new System.Drawing.Size(92, 390);
             this.pl_left.TabIndex = 0;
-            // 
-            // pl_mid
-            // 
-            this.pl_mid.Controls.Add(this.bt_new_family);
-            this.pl_mid.Controls.Add(this.pl_family);
-            this.pl_mid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pl_mid.Location = new System.Drawing.Point(92, 0);
-            this.pl_mid.Name = "pl_mid";
-            this.pl_mid.Size = new System.Drawing.Size(899, 390);
-            this.pl_mid.TabIndex = 3;
             // 
             // home
             // 

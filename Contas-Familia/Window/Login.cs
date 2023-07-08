@@ -1,6 +1,7 @@
 ﻿using Contas_Familia.Script;
 using MySql.Data.MySqlClient;
 using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -9,7 +10,7 @@ namespace Contas_Familia
     public partial class Login : Form
     {
         public static Login Instance;
-        public string id_login;
+        public int id_login;
         public string name;
 
         public Login()
@@ -40,21 +41,34 @@ namespace Contas_Familia
 
                 var login = objCmdLogin.ExecuteScalar();
 
-                if (login != null)
+                if (String.IsNullOrEmpty(txt_name.Texts))
                 {
-                    // COLETA O ID LOGADO
-                    MySqlDataReader dr = objCmdLogin.ExecuteReader();
-                    while (dr.Read())
-                    {
-                        id_login = dr["id_login"].ToString();
-                        name = dr["name"].ToString();
-                    }
-
-                    this.Close();
+                    txt_name.BorderColor = Color.Red;
+                    txt_name.BorderSize = 3;
+                }
+                else if (String.IsNullOrEmpty(txt_password.Texts))
+                {
+                    txt_password.BorderColor = Color.Red;
+                    txt_password.BorderSize = 3;
                 }
                 else
                 {
-                    MessageBox.Show("User or Password not found !", "Failed !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (login != null)
+                    {
+                        // COLETA O ID LOGADO
+                        MySqlDataReader dr = objCmdLogin.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            id_login = dr.GetInt32("id_login");
+                            name = dr.GetString("name");
+                        }
+
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("User or Password not found !", "Failed !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
 
                 database.closeConnection();
@@ -65,7 +79,8 @@ namespace Contas_Familia
             }
             finally
             {
-               // limpar
+                txt_name.Texts = string.Empty;
+                txt_password.Texts = string.Empty;
             }
         }
 
@@ -91,6 +106,20 @@ namespace Contas_Familia
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        #region CLEAN NOTIFICATION TEXTOBOX
+        private void txt_name_Leave(object sender, EventArgs e)
+        {
+            txt_name.BorderColor = Color.Transparent;
+            txt_name.BorderSize = 0;
+        }
+
+        private void txt_password_Leave(object sender, EventArgs e)
+        {
+            txt_password.BorderColor = Color.Transparent;
+            txt_password.BorderSize = 0;
+        }
+        #endregion
 
         //DROG FORM
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

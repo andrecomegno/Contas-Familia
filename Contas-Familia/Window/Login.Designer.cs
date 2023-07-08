@@ -30,8 +30,6 @@ namespace Contas_Familia
         private void InitializeComponent()
         {
             this.bt_enter = new System.Windows.Forms.Button();
-            this.txt_name = new Contas_Familia.Script.RJTextBox();
-            this.txt_password = new Contas_Familia.Script.RJTextBox();
             this.pl_menu = new System.Windows.Forms.Panel();
             this.bt_exit = new System.Windows.Forms.Button();
             this.bt_minimize = new System.Windows.Forms.Button();
@@ -39,13 +37,15 @@ namespace Contas_Familia
             this.build = new System.Windows.Forms.Label();
             this.txt_creator = new System.Windows.Forms.Label();
             this.lb_login = new System.Windows.Forms.Label();
+            this.txt_password = new Contas_Familia.Script.RJTextBox();
+            this.txt_name = new Contas_Familia.Script.RJTextBox();
             this.pl_menu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bt_enter
             // 
-            this.bt_enter.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.bt_enter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(74)))), ((int)(((byte)(111)))));
             this.bt_enter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_enter.FlatAppearance.BorderSize = 0;
             this.bt_enter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -59,53 +59,9 @@ namespace Contas_Familia
             this.bt_enter.UseVisualStyleBackColor = false;
             this.bt_enter.Click += new System.EventHandler(this.bt_enter_Click);
             // 
-            // txt_name
-            // 
-            this.txt_name.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_name.BorderColor = System.Drawing.Color.White;
-            this.txt_name.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name.BorderRadius = 0;
-            this.txt_name.BorderSize = 2;
-            this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_name.Location = new System.Drawing.Point(25, 126);
-            this.txt_name.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name.Multiline = false;
-            this.txt_name.Name = "txt_name";
-            this.txt_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name.PasswordChar = false;
-            this.txt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name.PlaceholderText = "Name";
-            this.txt_name.Size = new System.Drawing.Size(250, 31);
-            this.txt_name.TabIndex = 6;
-            this.txt_name.Texts = "";
-            this.txt_name.UnderlinedStyle = false;
-            // 
-            // txt_password
-            // 
-            this.txt_password.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_password.BorderColor = System.Drawing.Color.White;
-            this.txt_password.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_password.BorderRadius = 0;
-            this.txt_password.BorderSize = 2;
-            this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_password.Location = new System.Drawing.Point(25, 165);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_password.Multiline = false;
-            this.txt_password.Name = "txt_password";
-            this.txt_password.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_password.PasswordChar = true;
-            this.txt_password.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_password.PlaceholderText = "Password";
-            this.txt_password.Size = new System.Drawing.Size(250, 31);
-            this.txt_password.TabIndex = 7;
-            this.txt_password.Texts = "";
-            this.txt_password.UnderlinedStyle = false;
-            // 
             // pl_menu
             // 
-            this.pl_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_menu.BackColor = System.Drawing.Color.Black;
             this.pl_menu.Controls.Add(this.bt_exit);
             this.pl_menu.Controls.Add(this.bt_minimize);
             this.pl_menu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -195,6 +151,52 @@ namespace Contas_Familia
             this.lb_login.TabIndex = 78;
             this.lb_login.Text = "LOGIN";
             this.lb_login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_password
+            // 
+            this.txt_password.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_password.BorderColor = System.Drawing.Color.White;
+            this.txt_password.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_password.BorderRadius = 0;
+            this.txt_password.BorderSize = 2;
+            this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_password.Location = new System.Drawing.Point(25, 165);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_password.Multiline = false;
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_password.PasswordChar = true;
+            this.txt_password.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_password.PlaceholderText = "Password";
+            this.txt_password.Size = new System.Drawing.Size(250, 31);
+            this.txt_password.TabIndex = 7;
+            this.txt_password.Texts = "";
+            this.txt_password.UnderlinedStyle = false;
+            this.txt_password.Leave += new System.EventHandler(this.txt_password_Leave);
+            // 
+            // txt_name
+            // 
+            this.txt_name.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_name.BorderColor = System.Drawing.Color.White;
+            this.txt_name.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name.BorderRadius = 0;
+            this.txt_name.BorderSize = 2;
+            this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_name.Location = new System.Drawing.Point(25, 126);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name.Multiline = false;
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name.PasswordChar = false;
+            this.txt_name.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name.PlaceholderText = "Name";
+            this.txt_name.Size = new System.Drawing.Size(250, 31);
+            this.txt_name.TabIndex = 6;
+            this.txt_name.Texts = "";
+            this.txt_name.UnderlinedStyle = false;
+            this.txt_name.Leave += new System.EventHandler(this.txt_name_Leave);
             // 
             // Login
             // 

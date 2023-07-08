@@ -30,12 +30,12 @@ namespace Contas_Familia.PanelControll.Dashboard
         private void InitializeComponent()
         {
             this.pl_top = new System.Windows.Forms.Panel();
+            this.bt_family = new System.Windows.Forms.Button();
+            this.bt_home = new System.Windows.Forms.Button();
             this.lb_dashboard = new System.Windows.Forms.Label();
             this.pl_left = new System.Windows.Forms.Panel();
             this.pl_right = new System.Windows.Forms.Panel();
             this.pl_mid = new System.Windows.Forms.Panel();
-            this.bt_home = new System.Windows.Forms.Button();
-            this.bt_family = new System.Windows.Forms.Button();
             this.pl_top.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,38 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_top.Name = "pl_top";
             this.pl_top.Size = new System.Drawing.Size(1222, 67);
             this.pl_top.TabIndex = 146;
+            // 
+            // bt_family
+            // 
+            this.bt_family.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(74)))), ((int)(((byte)(111)))));
+            this.bt_family.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_family.FlatAppearance.BorderSize = 0;
+            this.bt_family.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_family.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_family.ForeColor = System.Drawing.Color.White;
+            this.bt_family.Location = new System.Drawing.Point(175, 39);
+            this.bt_family.Name = "bt_family";
+            this.bt_family.Size = new System.Drawing.Size(77, 25);
+            this.bt_family.TabIndex = 120;
+            this.bt_family.Text = "Family";
+            this.bt_family.UseVisualStyleBackColor = false;
+            this.bt_family.Click += new System.EventHandler(this.bt_family_Click);
+            // 
+            // bt_home
+            // 
+            this.bt_home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(134)))), ((int)(((byte)(200)))));
+            this.bt_home.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_home.FlatAppearance.BorderSize = 0;
+            this.bt_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_home.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_home.ForeColor = System.Drawing.Color.White;
+            this.bt_home.Location = new System.Drawing.Point(92, 39);
+            this.bt_home.Name = "bt_home";
+            this.bt_home.Size = new System.Drawing.Size(77, 25);
+            this.bt_home.TabIndex = 119;
+            this.bt_home.Text = "Home";
+            this.bt_home.UseVisualStyleBackColor = false;
+            this.bt_home.Click += new System.EventHandler(this.bt_home_Click);
             // 
             // lb_dashboard
             // 
@@ -82,43 +114,10 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             // pl_mid
             // 
-            this.pl_mid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pl_mid.Location = new System.Drawing.Point(40, 67);
             this.pl_mid.Name = "pl_mid";
             this.pl_mid.Size = new System.Drawing.Size(1142, 931);
             this.pl_mid.TabIndex = 150;
-            // 
-            // bt_home
-            // 
-            this.bt_home.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.bt_home.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_home.FlatAppearance.BorderSize = 0;
-            this.bt_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_home.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_home.ForeColor = System.Drawing.Color.White;
-            this.bt_home.Location = new System.Drawing.Point(92, 39);
-            this.bt_home.Name = "bt_home";
-            this.bt_home.Size = new System.Drawing.Size(77, 25);
-            this.bt_home.TabIndex = 119;
-            this.bt_home.Text = "Home";
-            this.bt_home.UseVisualStyleBackColor = false;
-            this.bt_home.Click += new System.EventHandler(this.bt_home_Click);
-            // 
-            // bt_family
-            // 
-            this.bt_family.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_family.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_family.FlatAppearance.BorderSize = 0;
-            this.bt_family.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_family.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_family.ForeColor = System.Drawing.Color.White;
-            this.bt_family.Location = new System.Drawing.Point(175, 39);
-            this.bt_family.Name = "bt_family";
-            this.bt_family.Size = new System.Drawing.Size(77, 25);
-            this.bt_family.TabIndex = 120;
-            this.bt_family.Text = "Family";
-            this.bt_family.UseVisualStyleBackColor = false;
-            this.bt_family.Click += new System.EventHandler(this.bt_family_Click);
             // 
             // dashboard
             // 

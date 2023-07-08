@@ -52,7 +52,7 @@ namespace Contas_Familia.Window
             // 
             // pl_top
             // 
-            this.pl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_top.BackColor = System.Drawing.Color.Black;
             this.pl_top.Controls.Add(this.bt_exit);
             this.pl_top.Controls.Add(this.bt_minimize);
             this.pl_top.Controls.Add(this.bt_maximize);
@@ -197,7 +197,7 @@ namespace Contas_Familia.Window
             // 
             // bt_dashboard
             // 
-            this.bt_dashboard.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(134)))), ((int)(((byte)(200)))));
             this.bt_dashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_dashboard.FlatAppearance.BorderSize = 0;
             this.bt_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -208,7 +208,7 @@ namespace Contas_Familia.Window
             this.bt_dashboard.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_dashboard.IconSize = 35;
             this.bt_dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_dashboard.Location = new System.Drawing.Point(0, 188);
+            this.bt_dashboard.Location = new System.Drawing.Point(0, 100);
             this.bt_dashboard.Name = "bt_dashboard";
             this.bt_dashboard.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.bt_dashboard.Size = new System.Drawing.Size(210, 46);
@@ -221,7 +221,7 @@ namespace Contas_Familia.Window
             // 
             // bt_settings
             // 
-            this.bt_settings.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(74)))), ((int)(((byte)(111)))));
             this.bt_settings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_settings.FlatAppearance.BorderSize = 0;
             this.bt_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -232,7 +232,7 @@ namespace Contas_Familia.Window
             this.bt_settings.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_settings.IconSize = 35;
             this.bt_settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_settings.Location = new System.Drawing.Point(0, 240);
+            this.bt_settings.Location = new System.Drawing.Point(0, 152);
             this.bt_settings.Name = "bt_settings";
             this.bt_settings.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.bt_settings.Size = new System.Drawing.Size(210, 46);
@@ -245,7 +245,7 @@ namespace Contas_Familia.Window
             // 
             // bt_home
             // 
-            this.bt_home.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.bt_home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(134)))), ((int)(((byte)(200)))));
             this.bt_home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_home.FlatAppearance.BorderSize = 0;
             this.bt_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -256,7 +256,7 @@ namespace Contas_Familia.Window
             this.bt_home.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_home.IconSize = 35;
             this.bt_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_home.Location = new System.Drawing.Point(0, 136);
+            this.bt_home.Location = new System.Drawing.Point(0, 204);
             this.bt_home.Name = "bt_home";
             this.bt_home.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.bt_home.Size = new System.Drawing.Size(210, 46);
@@ -269,6 +269,7 @@ namespace Contas_Familia.Window
             // 
             // pl_mid
             // 
+            this.pl_mid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.pl_mid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pl_mid.Location = new System.Drawing.Point(210, 33);
             this.pl_mid.Name = "pl_mid";

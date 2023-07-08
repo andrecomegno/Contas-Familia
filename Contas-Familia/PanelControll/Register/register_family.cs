@@ -12,8 +12,9 @@ namespace Contas_Familia.PanelControll.Register
     {
         public static register_family Instance;
         private bool _next;
+        private int id_login = Login.Instance.id_login;
+
         public long id_register_family;
-        private string id_login = Login.Instance.id_login;
 
         public register_family()
         {

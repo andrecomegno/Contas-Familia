@@ -59,7 +59,7 @@ namespace Contas_Familia.PanelControll.Home
             this.pl_list_family.Dock = System.Windows.Forms.DockStyle.Top;
             this.pl_list_family.Location = new System.Drawing.Point(0, 0);
             this.pl_list_family.Name = "pl_list_family";
-            this.pl_list_family.Size = new System.Drawing.Size(560, 297);
+            this.pl_list_family.Size = new System.Drawing.Size(560, 300);
             this.pl_list_family.TabIndex = 142;
             // 
             // bt_family_10
@@ -76,13 +76,14 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_10.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_family_10.IconSize = 35;
             this.bt_family_10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_family_10.Location = new System.Drawing.Point(279, 225);
+            this.bt_family_10.Location = new System.Drawing.Point(279, 227);
             this.bt_family_10.Name = "bt_family_10";
             this.bt_family_10.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bt_family_10.Size = new System.Drawing.Size(210, 46);
+            this.bt_family_10.Size = new System.Drawing.Size(247, 46);
             this.bt_family_10.TabIndex = 129;
             this.bt_family_10.Tag = "";
             this.bt_family_10.UseVisualStyleBackColor = false;
+            this.bt_family_10.Click += new System.EventHandler(this.bt_family_10_Click);
             // 
             // bt_family_06
             // 
@@ -98,13 +99,14 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_06.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_family_06.IconSize = 35;
             this.bt_family_06.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_family_06.Location = new System.Drawing.Point(279, 121);
+            this.bt_family_06.Location = new System.Drawing.Point(279, 123);
             this.bt_family_06.Name = "bt_family_06";
             this.bt_family_06.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bt_family_06.Size = new System.Drawing.Size(210, 46);
+            this.bt_family_06.Size = new System.Drawing.Size(247, 46);
             this.bt_family_06.TabIndex = 125;
             this.bt_family_06.Tag = "";
             this.bt_family_06.UseVisualStyleBackColor = false;
+            this.bt_family_06.Click += new System.EventHandler(this.bt_family_06_Click);
             // 
             // bt_family_09
             // 
@@ -120,13 +122,14 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_09.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_family_09.IconSize = 35;
             this.bt_family_09.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_family_09.Location = new System.Drawing.Point(63, 225);
+            this.bt_family_09.Location = new System.Drawing.Point(26, 227);
             this.bt_family_09.Name = "bt_family_09";
             this.bt_family_09.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bt_family_09.Size = new System.Drawing.Size(210, 46);
+            this.bt_family_09.Size = new System.Drawing.Size(247, 46);
             this.bt_family_09.TabIndex = 128;
             this.bt_family_09.Tag = "";
             this.bt_family_09.UseVisualStyleBackColor = false;
+            this.bt_family_09.Click += new System.EventHandler(this.bt_family_09_Click);
             // 
             // bt_family_05
             // 
@@ -142,13 +145,14 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_05.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_family_05.IconSize = 35;
             this.bt_family_05.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_family_05.Location = new System.Drawing.Point(63, 121);
+            this.bt_family_05.Location = new System.Drawing.Point(26, 123);
             this.bt_family_05.Name = "bt_family_05";
             this.bt_family_05.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bt_family_05.Size = new System.Drawing.Size(210, 46);
+            this.bt_family_05.Size = new System.Drawing.Size(247, 46);
             this.bt_family_05.TabIndex = 124;
             this.bt_family_05.Tag = "";
             this.bt_family_05.UseVisualStyleBackColor = false;
+            this.bt_family_05.Click += new System.EventHandler(this.bt_family_05_Click);
             // 
             // bt_family_07
             // 
@@ -164,13 +168,14 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_07.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_family_07.IconSize = 35;
             this.bt_family_07.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_family_07.Location = new System.Drawing.Point(63, 173);
+            this.bt_family_07.Location = new System.Drawing.Point(26, 175);
             this.bt_family_07.Name = "bt_family_07";
             this.bt_family_07.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bt_family_07.Size = new System.Drawing.Size(210, 46);
+            this.bt_family_07.Size = new System.Drawing.Size(247, 46);
             this.bt_family_07.TabIndex = 126;
             this.bt_family_07.Tag = "";
             this.bt_family_07.UseVisualStyleBackColor = false;
+            this.bt_family_07.Click += new System.EventHandler(this.bt_family_07_Click);
             // 
             // bt_family_08
             // 
@@ -186,13 +191,14 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_08.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_family_08.IconSize = 35;
             this.bt_family_08.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_family_08.Location = new System.Drawing.Point(279, 173);
+            this.bt_family_08.Location = new System.Drawing.Point(279, 175);
             this.bt_family_08.Name = "bt_family_08";
             this.bt_family_08.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bt_family_08.Size = new System.Drawing.Size(210, 46);
+            this.bt_family_08.Size = new System.Drawing.Size(247, 46);
             this.bt_family_08.TabIndex = 123;
             this.bt_family_08.Tag = "";
             this.bt_family_08.UseVisualStyleBackColor = false;
+            this.bt_family_08.Click += new System.EventHandler(this.bt_family_08_Click);
             // 
             // bt_family_03
             // 
@@ -208,13 +214,14 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_03.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_family_03.IconSize = 35;
             this.bt_family_03.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_family_03.Location = new System.Drawing.Point(63, 69);
+            this.bt_family_03.Location = new System.Drawing.Point(26, 71);
             this.bt_family_03.Name = "bt_family_03";
             this.bt_family_03.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bt_family_03.Size = new System.Drawing.Size(210, 46);
+            this.bt_family_03.Size = new System.Drawing.Size(247, 46);
             this.bt_family_03.TabIndex = 122;
             this.bt_family_03.Tag = "";
             this.bt_family_03.UseVisualStyleBackColor = false;
+            this.bt_family_03.Click += new System.EventHandler(this.bt_family_03_Click);
             // 
             // bt_family_02
             // 
@@ -230,13 +237,14 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_02.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_family_02.IconSize = 35;
             this.bt_family_02.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_family_02.Location = new System.Drawing.Point(279, 17);
+            this.bt_family_02.Location = new System.Drawing.Point(279, 19);
             this.bt_family_02.Name = "bt_family_02";
             this.bt_family_02.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bt_family_02.Size = new System.Drawing.Size(210, 46);
+            this.bt_family_02.Size = new System.Drawing.Size(247, 46);
             this.bt_family_02.TabIndex = 121;
             this.bt_family_02.Tag = "";
             this.bt_family_02.UseVisualStyleBackColor = false;
+            this.bt_family_02.Click += new System.EventHandler(this.bt_family_02_Click);
             // 
             // bt_family_01
             // 
@@ -252,13 +260,14 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_01.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_family_01.IconSize = 35;
             this.bt_family_01.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_family_01.Location = new System.Drawing.Point(63, 17);
+            this.bt_family_01.Location = new System.Drawing.Point(26, 19);
             this.bt_family_01.Name = "bt_family_01";
             this.bt_family_01.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bt_family_01.Size = new System.Drawing.Size(210, 46);
+            this.bt_family_01.Size = new System.Drawing.Size(247, 46);
             this.bt_family_01.TabIndex = 120;
             this.bt_family_01.Tag = "";
             this.bt_family_01.UseVisualStyleBackColor = false;
+            this.bt_family_01.Click += new System.EventHandler(this.bt_family_01_Click);
             // 
             // bt_family_04
             // 
@@ -274,13 +283,14 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_04.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.bt_family_04.IconSize = 35;
             this.bt_family_04.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_family_04.Location = new System.Drawing.Point(279, 69);
+            this.bt_family_04.Location = new System.Drawing.Point(279, 71);
             this.bt_family_04.Name = "bt_family_04";
             this.bt_family_04.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bt_family_04.Size = new System.Drawing.Size(210, 46);
+            this.bt_family_04.Size = new System.Drawing.Size(247, 46);
             this.bt_family_04.TabIndex = 119;
             this.bt_family_04.Tag = "";
             this.bt_family_04.UseVisualStyleBackColor = false;
+            this.bt_family_04.Click += new System.EventHandler(this.bt_family_04_Click);
             // 
             // list_family
             // 
@@ -290,6 +300,7 @@ namespace Contas_Familia.PanelControll.Home
             this.Controls.Add(this.pl_list_family);
             this.Name = "list_family";
             this.Size = new System.Drawing.Size(560, 300);
+            this.Load += new System.EventHandler(this.list_family_Load);
             this.pl_list_family.ResumeLayout(false);
             this.ResumeLayout(false);
 
