@@ -41,13 +41,13 @@ namespace Contas_Familia.Window
             this.bt_settings = new FontAwesome.Sharp.IconButton();
             this.bt_home = new FontAwesome.Sharp.IconButton();
             this.pl_mid = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pl_footer = new System.Windows.Forms.Panel();
             this.build = new System.Windows.Forms.Label();
             this.txt_creator = new System.Windows.Forms.Label();
             this.pl_top.SuspendLayout();
             this.pl_left.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pl_footer.SuspendLayout();
             this.SuspendLayout();
             // 
             // pl_top
@@ -276,16 +276,16 @@ namespace Contas_Familia.Window
             this.pl_mid.Size = new System.Drawing.Size(1012, 974);
             this.pl_mid.TabIndex = 3;
             // 
-            // panel2
+            // pl_footer
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
-            this.panel2.Controls.Add(this.build);
-            this.panel2.Controls.Add(this.txt_creator);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 1007);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1222, 24);
-            this.panel2.TabIndex = 69;
+            this.pl_footer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_footer.Controls.Add(this.build);
+            this.pl_footer.Controls.Add(this.txt_creator);
+            this.pl_footer.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pl_footer.Location = new System.Drawing.Point(0, 1007);
+            this.pl_footer.Name = "pl_footer";
+            this.pl_footer.Size = new System.Drawing.Size(1222, 24);
+            this.pl_footer.TabIndex = 69;
             // 
             // build
             // 
@@ -316,7 +316,7 @@ namespace Contas_Familia.Window
             this.ClientSize = new System.Drawing.Size(1222, 1031);
             this.Controls.Add(this.pl_mid);
             this.Controls.Add(this.pl_left);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pl_footer);
             this.Controls.Add(this.pl_top);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Main";
@@ -326,8 +326,8 @@ namespace Contas_Familia.Window
             this.pl_top.ResumeLayout(false);
             this.pl_left.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pl_footer.ResumeLayout(false);
+            this.pl_footer.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -340,7 +340,7 @@ namespace Contas_Familia.Window
         private System.Windows.Forms.Button bt_minimize;
         private System.Windows.Forms.Button bt_exit;
         private System.Windows.Forms.Button bt_maximize;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pl_footer;
         private System.Windows.Forms.Label txt_creator;
         private System.Windows.Forms.Label build;
         private FontAwesome.Sharp.IconButton bt_home;

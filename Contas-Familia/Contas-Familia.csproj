@@ -110,11 +110,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PanelControll\Bills\bills_to_pay.cs">
+    <Compile Include="PanelControll\Dashboard\family.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PanelControll\Bills\bills_to_pay.Designer.cs">
-      <DependentUpon>bills_to_pay.cs</DependentUpon>
+    <Compile Include="PanelControll\Dashboard\family.Designer.cs">
+      <DependentUpon>family.cs</DependentUpon>
     </Compile>
     <Compile Include="PanelControll\Dashboard\dashboard.cs">
       <SubType>UserControl</SubType>
@@ -167,8 +167,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PanelControll\Bills\bills_to_pay.resx">
-      <DependentUpon>bills_to_pay.cs</DependentUpon>
+    <EmbeddedResource Include="PanelControll\Dashboard\family.resx">
+      <DependentUpon>family.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelControll\Dashboard\dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using Contas_Familia.PanelControll.Home;
@@ -7,9 +8,9 @@ using Contas_Familia.Window;
 using FontAwesome.Sharp;
 using MySql.Data.MySqlClient;
 
-namespace Contas_Familia.PanelControll.Bills
+namespace Contas_Familia.PanelControll.Dashboard
 {
-    public partial class bills_to_pay : UserControl
+    public partial class family : UserControl
     {
         private int id_register_family = list_family.Instance.select_id_register_family;
 
@@ -20,13 +21,49 @@ namespace Contas_Familia.PanelControll.Bills
         // BOTÃO EDITAR
         private bool[] _edit = new bool[10];
 
-        public bills_to_pay()
+        public family()
         {
             InitializeComponent();
-            StartPanelFamily();           
+            StartPanelFamily();            
         }
 
-        void Table()
+        #region TABLES
+        private void TableAll()
+        {
+            configdb database = new configdb();
+            database.openConnection();
+
+            MySqlCommand cmd = new MySqlCommand("select fm.id_family_member, rf.id_register_family, cc.id_credit_card, pr.id_products, cc.credit_card_name, cc.credit_card_pay_day, pr.store_name, pr.product_name, cc.credit_card_installment, tcc.total_payble, tcc.total_payable_installment from familypayday.register_family rf left join familypayday.family_member fm on fm.id_register_family = rf.id_register_family left join familypayday.total_credit_card tcc on tcc.id_total_credit_card = tcc.id_total_credit_card left join familypayday.credit_card cc on cc.id_total_credit_card = tcc.id_total_credit_card left join familypayday.products pr on pr.id_credit_card = cc.id_credit_card where fm.family_member like 'Andre%'; ", database.getConnection());
+
+            using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+            {
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+            }
+
+            database.closeConnection();
+
+            Tabela();
+        }
+
+        private void Tabela()
+        {
+            dataGridView1.Columns[0].Visible = false; // id_family_member
+            dataGridView1.Columns[1].Visible = false; // id_register_family
+            dataGridView1.Columns[2].Visible = false; // id_credit_card
+            dataGridView1.Columns[3].Visible = false; // id_products
+            dataGridView1.Columns[4].HeaderText = "CARTÕES";
+            dataGridView1.Columns[5].HeaderText = "VENCIMENTO";
+            dataGridView1.Columns[6].HeaderText = "LOJAS";
+            dataGridView1.Columns[7].HeaderText = "PRODUTOS";
+            dataGridView1.Columns[8].HeaderText = "PARCELAMENTO";
+            dataGridView1.Columns[9].HeaderText = "VALOR TOTAL";
+            dataGridView1.Columns[10].HeaderText = "VALOR PARCELADO";
+        }
+
+        void Table_Family_Member()
         {
             configdb database = new configdb();
             database.openConnection();
@@ -49,6 +86,22 @@ namespace Contas_Familia.PanelControll.Bills
             database.closeConnection();
         }
 
+        // ATRIBIU OS NOMES DE CADA MEMBRO DA FAMILIA AO TEXTO BOX
+        void DataTextBox()
+        {
+            Label[] labels = { lb_name_01, lb_name_02, lb_name_03, lb_name_04, lb_name_05, lb_name_06, lb_name_07, lb_name_08, lb_name_09, lb_name_10 };
+            int numLabels = labels.Length;
+
+            for (int i = 0; i < numLabels; i++)
+            {
+                if (i < family_member.Length)
+                {
+                    labels[i].Text = family_member[i];
+                }
+            }
+        }
+        #endregion
+
         // PAINEL DE CADA MEMBRO DA FAMILIA DIMINIU/AUMENTA DE TAMANHO AO CLICAR NO BOTÃO EDITAR
         void PanelContent(bool reg, Panel pl_content, IconButton button)
         {
@@ -56,7 +109,6 @@ namespace Contas_Familia.PanelControll.Bills
             {
                 pl_content.Size = new Size(830, 500);
                 button.IconChar = IconChar.AngleUp;
-
             }
             else
             {
@@ -157,21 +209,6 @@ namespace Contas_Familia.PanelControll.Bills
         }
         #endregion
 
-        // ATRIBIU OS NOMES DE CADA MEMBRO DA FAMILIA AO TEXTO BOX
-        void DataTextBox()
-        {
-            txt_name_01.Texts = family_member[0];
-            txt_name_02.Texts = family_member[1];
-            txt_name_03.Texts = family_member[2];
-            txt_name_04.Texts = family_member[3];
-            txt_name_05.Texts = family_member[4];
-            txt_name_06.Texts = family_member[5];
-            txt_name_07.Texts = family_member[6];
-            txt_name_08.Texts = family_member[7];
-            txt_name_09.Texts = family_member[8];
-            txt_name_10.Texts = family_member[9];
-        }
-
         // PAINEL DOS MEMBROS DA FAMILIA
         void StartPanelFamily()
         {
@@ -191,7 +228,8 @@ namespace Contas_Familia.PanelControll.Bills
         {
             Main.Instance.ButtonMenuDisabled(true);
 
-            Table();            
+            TableAll();
+            Table_Family_Member();       
         }
     }
 }

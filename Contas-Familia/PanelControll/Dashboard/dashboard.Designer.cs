@@ -33,8 +33,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_family = new System.Windows.Forms.Button();
             this.bt_home = new System.Windows.Forms.Button();
             this.lb_dashboard = new System.Windows.Forms.Label();
-            this.pl_left = new System.Windows.Forms.Panel();
-            this.pl_right = new System.Windows.Forms.Panel();
             this.pl_mid = new System.Windows.Forms.Panel();
             this.pl_top.SuspendLayout();
             this.SuspendLayout();
@@ -96,27 +94,12 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_dashboard.Text = "DASHBOARD";
             this.lb_dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pl_left
-            // 
-            this.pl_left.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pl_left.Location = new System.Drawing.Point(0, 67);
-            this.pl_left.Name = "pl_left";
-            this.pl_left.Size = new System.Drawing.Size(40, 931);
-            this.pl_left.TabIndex = 147;
-            // 
-            // pl_right
-            // 
-            this.pl_right.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pl_right.Location = new System.Drawing.Point(1182, 67);
-            this.pl_right.Name = "pl_right";
-            this.pl_right.Size = new System.Drawing.Size(40, 931);
-            this.pl_right.TabIndex = 148;
-            // 
             // pl_mid
             // 
-            this.pl_mid.Location = new System.Drawing.Point(40, 67);
+            this.pl_mid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pl_mid.Location = new System.Drawing.Point(0, 67);
             this.pl_mid.Name = "pl_mid";
-            this.pl_mid.Size = new System.Drawing.Size(1142, 931);
+            this.pl_mid.Size = new System.Drawing.Size(1222, 931);
             this.pl_mid.TabIndex = 150;
             // 
             // dashboard
@@ -125,8 +108,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.Controls.Add(this.pl_mid);
-            this.Controls.Add(this.pl_right);
-            this.Controls.Add(this.pl_left);
             this.Controls.Add(this.pl_top);
             this.Name = "dashboard";
             this.Size = new System.Drawing.Size(1222, 998);
@@ -139,8 +120,6 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private System.Windows.Forms.Panel pl_top;
         private System.Windows.Forms.Label lb_dashboard;
-        private System.Windows.Forms.Panel pl_left;
-        private System.Windows.Forms.Panel pl_right;
         private System.Windows.Forms.Panel pl_mid;
         private System.Windows.Forms.Button bt_family;
         private System.Windows.Forms.Button bt_home;

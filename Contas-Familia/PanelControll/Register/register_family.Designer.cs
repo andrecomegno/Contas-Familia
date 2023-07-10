@@ -44,14 +44,6 @@ namespace Contas_Familia.PanelControll.Register
             this.lb_01 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bt_next = new System.Windows.Forms.Button();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.pl_top = new System.Windows.Forms.Panel();
-            this.lb_register_family = new System.Windows.Forms.Label();
-            this.pl_null_00 = new System.Windows.Forms.Panel();
-            this.pl_right = new System.Windows.Forms.Panel();
-            this.pl_left = new System.Windows.Forms.Panel();
-            this.pl_content = new System.Windows.Forms.Panel();
             this.txt_name_07 = new Contas_Familia.Script.RJTextBox();
             this.txt_name_08 = new Contas_Familia.Script.RJTextBox();
             this.txt_name_10 = new Contas_Familia.Script.RJTextBox();
@@ -63,6 +55,14 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_family_name = new Contas_Familia.Script.RJTextBox();
             this.txt_name_09 = new Contas_Familia.Script.RJTextBox();
             this.txt_name_03 = new Contas_Familia.Script.RJTextBox();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.pl_top = new System.Windows.Forms.Panel();
+            this.lb_register_family = new System.Windows.Forms.Label();
+            this.pl_null_00 = new System.Windows.Forms.Panel();
+            this.pl_right = new System.Windows.Forms.Panel();
+            this.pl_left = new System.Windows.Forms.Panel();
+            this.pl_content = new System.Windows.Forms.Panel();
             this.pl_reg.SuspendLayout();
             this.pl_top.SuspendLayout();
             this.pl_content.SuspendLayout();
@@ -86,17 +86,17 @@ namespace Contas_Familia.PanelControll.Register
             this.pl_reg.Controls.Add(this.lb_01);
             this.pl_reg.Controls.Add(this.label1);
             this.pl_reg.Controls.Add(this.bt_next);
-            this.pl_reg.Controls.Add(this.txt_name_07);
             this.pl_reg.Controls.Add(this.txt_name_08);
-            this.pl_reg.Controls.Add(this.txt_name_10);
-            this.pl_reg.Controls.Add(this.txt_name_01);
-            this.pl_reg.Controls.Add(this.txt_name_02);
-            this.pl_reg.Controls.Add(this.txt_name_04);
             this.pl_reg.Controls.Add(this.txt_name_05);
+            this.pl_reg.Controls.Add(this.txt_name_01);
             this.pl_reg.Controls.Add(this.txt_name_06);
+            this.pl_reg.Controls.Add(this.txt_name_07);
             this.pl_reg.Controls.Add(this.txt_family_name);
+            this.pl_reg.Controls.Add(this.txt_name_02);
             this.pl_reg.Controls.Add(this.txt_name_09);
+            this.pl_reg.Controls.Add(this.txt_name_10);
             this.pl_reg.Controls.Add(this.txt_name_03);
+            this.pl_reg.Controls.Add(this.txt_name_04);
             this.pl_reg.Controls.Add(this.shapeContainer1);
             this.pl_reg.Location = new System.Drawing.Point(4, 6);
             this.pl_reg.Name = "pl_reg";
@@ -112,7 +112,7 @@ namespace Contas_Familia.PanelControll.Register
             this.bt_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_cancel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cancel.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel.Location = new System.Drawing.Point(16, 364);
+            this.bt_cancel.Location = new System.Drawing.Point(566, 364);
             this.bt_cancel.Name = "bt_cancel";
             this.bt_cancel.Size = new System.Drawing.Size(122, 36);
             this.bt_cancel.TabIndex = 119;
@@ -122,6 +122,7 @@ namespace Contas_Familia.PanelControll.Register
             // 
             // bt_save
             // 
+            this.bt_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_save.BackColor = System.Drawing.Color.OliveDrab;
             this.bt_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save.FlatAppearance.BorderSize = 0;
@@ -285,86 +286,6 @@ namespace Contas_Familia.PanelControll.Register
             this.bt_next.Text = "Next";
             this.bt_next.UseVisualStyleBackColor = false;
             this.bt_next.Click += new System.EventHandler(this.bt_next_Click);
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(830, 419);
-            this.shapeContainer1.TabIndex = 69;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.lineShape1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lineShape1.BorderWidth = 5;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 25;
-            this.lineShape1.X2 = 802;
-            this.lineShape1.Y1 = 87;
-            this.lineShape1.Y2 = 87;
-            // 
-            // pl_top
-            // 
-            this.pl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(60)))));
-            this.pl_top.Controls.Add(this.lb_register_family);
-            this.pl_top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_top.Location = new System.Drawing.Point(0, 0);
-            this.pl_top.Name = "pl_top";
-            this.pl_top.Size = new System.Drawing.Size(1078, 51);
-            this.pl_top.TabIndex = 98;
-            // 
-            // lb_register_family
-            // 
-            this.lb_register_family.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_register_family.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_register_family.ForeColor = System.Drawing.Color.White;
-            this.lb_register_family.Location = new System.Drawing.Point(3, 12);
-            this.lb_register_family.Name = "lb_register_family";
-            this.lb_register_family.Size = new System.Drawing.Size(1072, 31);
-            this.lb_register_family.TabIndex = 97;
-            this.lb_register_family.Text = "REGISTER FAMILY";
-            this.lb_register_family.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pl_null_00
-            // 
-            this.pl_null_00.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_null_00.Location = new System.Drawing.Point(120, 51);
-            this.pl_null_00.Name = "pl_null_00";
-            this.pl_null_00.Size = new System.Drawing.Size(838, 38);
-            this.pl_null_00.TabIndex = 151;
-            // 
-            // pl_right
-            // 
-            this.pl_right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.pl_right.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pl_right.Location = new System.Drawing.Point(958, 51);
-            this.pl_right.Name = "pl_right";
-            this.pl_right.Size = new System.Drawing.Size(120, 914);
-            this.pl_right.TabIndex = 150;
-            // 
-            // pl_left
-            // 
-            this.pl_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.pl_left.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pl_left.Location = new System.Drawing.Point(0, 51);
-            this.pl_left.Name = "pl_left";
-            this.pl_left.Size = new System.Drawing.Size(120, 914);
-            this.pl_left.TabIndex = 149;
-            // 
-            // pl_content
-            // 
-            this.pl_content.Controls.Add(this.pl_reg);
-            this.pl_content.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content.Location = new System.Drawing.Point(120, 89);
-            this.pl_content.Name = "pl_content";
-            this.pl_content.Size = new System.Drawing.Size(838, 440);
-            this.pl_content.TabIndex = 152;
             // 
             // txt_name_07
             // 
@@ -618,6 +539,86 @@ namespace Contas_Familia.PanelControll.Register
             this.txt_name_03.Texts = "";
             this.txt_name_03.UnderlinedStyle = false;
             this.txt_name_03.Leave += new System.EventHandler(this.txt_name_03_Leave);
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(830, 419);
+            this.shapeContainer1.TabIndex = 69;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.lineShape1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.lineShape1.BorderWidth = 5;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 25;
+            this.lineShape1.X2 = 802;
+            this.lineShape1.Y1 = 87;
+            this.lineShape1.Y2 = 87;
+            // 
+            // pl_top
+            // 
+            this.pl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(60)))));
+            this.pl_top.Controls.Add(this.lb_register_family);
+            this.pl_top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_top.Location = new System.Drawing.Point(0, 0);
+            this.pl_top.Name = "pl_top";
+            this.pl_top.Size = new System.Drawing.Size(1078, 51);
+            this.pl_top.TabIndex = 98;
+            // 
+            // lb_register_family
+            // 
+            this.lb_register_family.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_register_family.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_register_family.ForeColor = System.Drawing.Color.White;
+            this.lb_register_family.Location = new System.Drawing.Point(3, 12);
+            this.lb_register_family.Name = "lb_register_family";
+            this.lb_register_family.Size = new System.Drawing.Size(1072, 31);
+            this.lb_register_family.TabIndex = 97;
+            this.lb_register_family.Text = "REGISTER FAMILY";
+            this.lb_register_family.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pl_null_00
+            // 
+            this.pl_null_00.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_null_00.Location = new System.Drawing.Point(120, 51);
+            this.pl_null_00.Name = "pl_null_00";
+            this.pl_null_00.Size = new System.Drawing.Size(838, 38);
+            this.pl_null_00.TabIndex = 151;
+            // 
+            // pl_right
+            // 
+            this.pl_right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.pl_right.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pl_right.Location = new System.Drawing.Point(958, 51);
+            this.pl_right.Name = "pl_right";
+            this.pl_right.Size = new System.Drawing.Size(120, 914);
+            this.pl_right.TabIndex = 150;
+            // 
+            // pl_left
+            // 
+            this.pl_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.pl_left.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pl_left.Location = new System.Drawing.Point(0, 51);
+            this.pl_left.Name = "pl_left";
+            this.pl_left.Size = new System.Drawing.Size(120, 914);
+            this.pl_left.TabIndex = 149;
+            // 
+            // pl_content
+            // 
+            this.pl_content.Controls.Add(this.pl_reg);
+            this.pl_content.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_content.Location = new System.Drawing.Point(120, 89);
+            this.pl_content.Name = "pl_content";
+            this.pl_content.Size = new System.Drawing.Size(838, 440);
+            this.pl_content.TabIndex = 152;
             // 
             // register_family
             // 

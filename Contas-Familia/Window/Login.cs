@@ -11,7 +11,7 @@ namespace Contas_Familia
     {
         public static Login Instance;
         public int id_login;
-        public string name;
+        public string username;
 
         public Login()
         {
@@ -35,8 +35,8 @@ namespace Contas_Familia
                 database.openConnection();
 
                 // SELECT TABELA LOGIN
-                MySqlCommand objCmdLogin = new MySqlCommand("select id_login, name, password from familypayday.login where name=@name and password=@password ", database.getConnection());
-                objCmdLogin.Parameters.AddWithValue("@name", txt_name.Texts);
+                MySqlCommand objCmdLogin = new MySqlCommand("select id_login, username, password from familypayday.login where username=@username and password=@password ", database.getConnection());
+                objCmdLogin.Parameters.AddWithValue("@username", txt_name.Texts);
                 objCmdLogin.Parameters.AddWithValue("@password", txt_password.Texts);
 
                 var login = objCmdLogin.ExecuteScalar();
@@ -60,7 +60,7 @@ namespace Contas_Familia
                         while (dr.Read())
                         {
                             id_login = dr.GetInt32("id_login");
-                            name = dr.GetString("name");
+                            username = dr.GetString("username");
                         }
 
                         this.Close();

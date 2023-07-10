@@ -1,7 +1,8 @@
 ﻿using System;
-using Contas_Familia.Window;
 using System.Windows.Forms;
 using System.Drawing;
+using Contas_Familia.Window;
+using Contas_Familia.PanelControll.Home;
 using Contas_Familia.PanelControll.Dashboard;
 using Contas_Familia.Script;
 using MySql.Data.MySqlClient;
@@ -84,8 +85,6 @@ namespace Contas_Familia.PanelControll.Register
 
             // TODOS OS TEXTO BOX 
             string[] textBoxValues = { txt_name_01.Texts, txt_name_02.Texts, txt_name_03.Texts, txt_name_04.Texts, txt_name_05.Texts, txt_name_06.Texts, txt_name_07.Texts, txt_name_08.Texts, txt_name_09.Texts, txt_name_10.Texts };
-            // CONTADOR DE MEMBROS DA FAMILIA
-            int familyMemberCount = 1; 
 
             // CRIADO UM LOOP
             for (int i = 0; i < textBoxValues.Length; i++)
@@ -94,16 +93,12 @@ namespace Contas_Familia.PanelControll.Register
                 if (!string.IsNullOrEmpty(textBoxValues[i]))
                 {
                     // INSERT TABELA CADASTRO MEMBRO DA FAMILIA
-                    MySqlCommand cmdFamilyMember = new MySqlCommand("INSERT INTO familypayday.family_member (id_family_member, family_member, family_amount, id_register_family) VALUES (null, @family_member, @family_amount, @id_register_family)", database.getConnection());
+                    MySqlCommand cmdFamilyMember = new MySqlCommand("INSERT INTO familypayday.family_member (id_family_member, family_member, id_register_family) VALUES (null, @family_member, @id_register_family)", database.getConnection());
 
                     cmdFamilyMember.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = textBoxValues[i];
-                    cmdFamilyMember.Parameters.Add("@family_amount", MySqlDbType.Int32).Value = familyMemberCount;
                     cmdFamilyMember.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
 
                     cmdFamilyMember.ExecuteNonQuery();
-
-                    // CONTAGEM
-                    familyMemberCount++;
                 }
             }
 
@@ -112,11 +107,11 @@ namespace Contas_Familia.PanelControll.Register
 
         void Cancel()
         {
-            dashboard uc = new dashboard();
+            home uc = new home();
             Main.Instance.addControll(uc);
 
-            // SELECIONAR BOTÃO DASHBOARD
-            Main.Instance.Dashboard();
+            // SELECIONAR BOTÃO HOME
+            Main.Instance.Home();
         }
         
         private void bt_next_Click(object sender, EventArgs e) => Next();

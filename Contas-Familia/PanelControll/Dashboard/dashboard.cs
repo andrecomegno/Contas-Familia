@@ -1,5 +1,4 @@
-﻿using Contas_Familia.PanelControll.Bills;
-using Contas_Familia.Window;
+﻿using Contas_Familia.Window;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -41,7 +40,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         public void Family()
         {
-            bills_to_pay uc = new bills_to_pay();
+            family uc = new family();
             addControll(uc);
 
             bt_family.BackColor = Color.FromArgb(48, 134, 200);

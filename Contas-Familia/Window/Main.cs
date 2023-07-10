@@ -111,7 +111,7 @@ namespace Contas_Familia.Window
         }
 
         // BOTÕES LATERAL
-        private void bt_home_Click(object sender, EventArgs e) => home();
+        private void bt_home_Click(object sender, EventArgs e) => Home();
 
         private void bt_dashboard_Click(object sender, EventArgs e) => Dashboard();
 
@@ -123,7 +123,7 @@ namespace Contas_Familia.Window
 
         private void Menu_Collapse() => MenuCollapse(_menuCollapse = !_menuCollapse);
 
-        public void home()
+        public void Home()
         {
             bt_home.BackColor = Color.FromArgb(48, 134, 200);
             bt_settings.BackColor = Color.FromArgb(27, 74, 111);
