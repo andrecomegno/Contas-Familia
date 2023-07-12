@@ -14,8 +14,9 @@ namespace Contas_Familia.PanelControll.Dashboard
     {
         private int id_register_family = list_family.Instance.select_id_register_family;
 
-        // NOME DOS MEMBROS DA FAMILIA, E OS ID`S
+        // ID`S
         private int[] id_family_member = new int[10];
+
         private string[] family_member = new string[10];        
 
         // BOTÃO EDITAR
@@ -155,7 +156,7 @@ namespace Contas_Familia.PanelControll.Dashboard
         }
 
         // TABELA DELETAR MEMBRO DA FAMILIA
-        void DeleteFamilyMembro(int id_member)
+        void DeleteFamilyMembro(int id_member, Panel pl)
         {
             configdb database = new configdb();
             database.openConnection();
@@ -165,7 +166,9 @@ namespace Contas_Familia.PanelControll.Dashboard
             cmd.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
 
             cmd.ExecuteNonQuery();
-            database.closeConnection();            
+            database.closeConnection();
+
+            pl.Visible = false;
         }
         #endregion
 
@@ -189,14 +192,23 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_cancel_01_Click(object sender, EventArgs e) => PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
 
-        private void bt_delet_01_Click(object sender, EventArgs e)
+        private void bt_delete_01_Click(object sender, EventArgs e)
         {
             try
             {
-                // MEMBRO FAMILIA DELETADO 
-                DeleteFamilyMembro(id_family_member[0]);
-                // DESATIVA O PAINEL
-                pl_content_01.Visible = false;
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        // MEMBRO FAMILIA DELETADO 
+                        DeleteFamilyMembro(id_family_member[0], pl_content_01);
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }
             }
             catch (Exception ex)
             {
@@ -216,8 +228,19 @@ namespace Contas_Familia.PanelControll.Dashboard
         {
             try
             {
-                DeleteFamilyMembro(id_family_member[1]);
-                pl_content_02.Visible = false;
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        // MEMBRO FAMILIA DELETADO 
+                        DeleteFamilyMembro(id_family_member[1], pl_content_02);
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }                
             }
             catch (Exception ex)
             {
@@ -237,8 +260,19 @@ namespace Contas_Familia.PanelControll.Dashboard
         {
             try
             {
-                DeleteFamilyMembro(id_family_member[2]);
-                pl_content_03.Visible = false;
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        // MEMBRO FAMILIA DELETADO 
+                        DeleteFamilyMembro(id_family_member[2], pl_content_03);
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }                
             }
             catch (Exception ex)
             {
@@ -256,7 +290,30 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_04_Click(object sender, EventArgs e)
         {
-            // DETELAR MEMBRO DA FAMILIA
+            try
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        // MEMBRO FAMILIA DELETADO 
+                        DeleteFamilyMembro(id_family_member[3], pl_content_04);
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                PanelContent(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
+            }
         }
 
         private void bt_edit_05_Click(object sender, EventArgs e) => PanelContent(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
@@ -265,7 +322,30 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_05_Click(object sender, EventArgs e)
         {
-            // DETELAR MEMBRO DA FAMILIA
+            try
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        // MEMBRO FAMILIA DELETADO 
+                        DeleteFamilyMembro(id_family_member[4], pl_content_05);
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                PanelContent(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
+            }
         }
 
         private void bt_edit_06_Click(object sender, EventArgs e) => PanelContent(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
@@ -274,7 +354,30 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_06_Click(object sender, EventArgs e)
         {
-            // DETELAR MEMBRO DA FAMILIA
+            try
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        // MEMBRO FAMILIA DELETADO 
+                        DeleteFamilyMembro(id_family_member[5], pl_content_06);
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                PanelContent(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
+            }
         }
 
         private void bt_edit_07_Click(object sender, EventArgs e) => PanelContent(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
@@ -283,7 +386,30 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_07_Click(object sender, EventArgs e)
         {
-            // DETELAR MEMBRO DA FAMILIA
+            try
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        // MEMBRO FAMILIA DELETADO 
+                        DeleteFamilyMembro(id_family_member[6], pl_content_07);
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                PanelContent(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
+            }
         }
 
         private void bt_edit_08_Click(object sender, EventArgs e) => PanelContent(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
@@ -292,7 +418,30 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_08_Click(object sender, EventArgs e)
         {
-            // DETELAR MEMBRO DA FAMILIA
+            try
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        // MEMBRO FAMILIA DELETADO 
+                        DeleteFamilyMembro(id_family_member[7], pl_content_08);
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                PanelContent(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
+            }
         }
 
         private void bt_edit_09_Click(object sender, EventArgs e) => PanelContent(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
@@ -301,7 +450,30 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_09_Click(object sender, EventArgs e)
         {
-            // DETELAR MEMBRO DA FAMILIA
+            try
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        // MEMBRO FAMILIA DELETADO 
+                        DeleteFamilyMembro(id_family_member[8], pl_content_09);
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                PanelContent(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
+            }
         }
 
         private void bt_edit_10_Click(object sender, EventArgs e) => PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
@@ -310,7 +482,30 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_10_Click(object sender, EventArgs e)
         {
-            // DETELAR MEMBRO DA FAMILIA
+            try
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        // MEMBRO FAMILIA DELETADO 
+                        DeleteFamilyMembro(id_family_member[9], pl_content_10);
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
+            }
         }
         #endregion
 
@@ -404,6 +599,65 @@ namespace Contas_Familia.PanelControll.Dashboard
 
             TableAll();
             TableFamilyMember();
+        }
+
+        private void bt_save_01_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.Rows.Count > 1)
+                {
+                    for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                    {
+                        id_family_member[0] = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
+
+                        string credit_card_name = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                        string store_name = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                        string product_name = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                        string card_credit_installment = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                        DateTime credit_card_payday = Convert.ToDateTime(dataGridView1.Rows[i].Cells[5].Value);
+                        decimal total_payble = Convert.ToDecimal(dataGridView1.Rows[i].Cells[6].Value);
+                        decimal total_payable_installment = Convert.ToDecimal(dataGridView1.Rows[i].Cells[7].Value);
+
+                        // BANCO DE DADOS
+                        configdb database = new configdb();
+                        database.openConnection();
+
+                        // TOTAL
+                        MySqlCommand cmdTotal = new MySqlCommand("INSERT INTO familypayday.total_credit_card (id_total_credit_card, total_payble, total_payable_installment) VALUES (null, @total_payble, @total_payable_installment )", database.getConnection());
+                        cmdTotal.Parameters.AddWithValue("@total_payble", total_payble);
+                        cmdTotal.Parameters.AddWithValue("@total_payable_installment", total_payable_installment);
+
+                        cmdTotal.ExecuteNonQuery();
+                        long id_total_credit_card = cmdTotal.LastInsertedId;
+
+                        // CARTÃO DE CREDITO
+                        MySqlCommand cmdCreditCard = new MySqlCommand("INSERT INTO familypayday.credit_card (id_credit_card, credit_card_name, credit_card_pay_day, credit_card_installment, id_total_credit_card) VALUES (null, @credit_card_name, @credit_card_pay_day, @credit_card_installment, @id_total_credit_card)", database.getConnection());
+                        cmdCreditCard.Parameters.AddWithValue("@credit_card_name", credit_card_name);
+                        cmdCreditCard.Parameters.AddWithValue("@credit_card_pay_day", credit_card_payday);
+                        cmdCreditCard.Parameters.AddWithValue("@credit_card_installment", card_credit_installment);
+                        cmdCreditCard.Parameters.AddWithValue("@id_total_credit_card", id_total_credit_card);
+
+                        cmdCreditCard.ExecuteNonQuery();
+                        long id_credit_card = cmdCreditCard.LastInsertedId;
+
+                        // PRODUTOS
+                        MySqlCommand cmdProducts = new MySqlCommand("INSERT INTO familypayday.products (id_products, store_name, product_name, id_family_member, id_credit_card) VALUES (null, @store_name, @product_name, @id_family_member, @id_credit_card)", database.getConnection());
+                        cmdProducts.Parameters.AddWithValue("@store_name", store_name);
+                        cmdProducts.Parameters.AddWithValue("@product_name", product_name);
+                        cmdProducts.Parameters.AddWithValue("@id_family_member", id_family_member);
+                        cmdProducts.Parameters.AddWithValue("@id_credit_card", id_credit_card);
+
+                        cmdProducts.ExecuteNonQuery();
+
+                        database.closeConnection();
+                    }
+                }
+            }
+            finally
+            {
+
+            }
         }
     }
 }

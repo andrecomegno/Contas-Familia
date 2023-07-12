@@ -60,8 +60,10 @@ namespace Contas_Familia.PanelControll.Dashboard
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pl_family_01 = new System.Windows.Forms.Panel();
+            this.bt_save_01 = new System.Windows.Forms.Button();
             this.lb_name_01 = new System.Windows.Forms.Label();
             this.lb_total_01 = new System.Windows.Forms.Label();
+            this.txt_total_01 = new Contas_Familia.Script.RJTextBox();
             this.bt_edit_01 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_01 = new System.Windows.Forms.Button();
             this.bt_delet_01 = new System.Windows.Forms.Button();
@@ -72,6 +74,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lb_name_02 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.rjTextBox1 = new Contas_Familia.Script.RJTextBox();
             this.bt_edit_02 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_02 = new System.Windows.Forms.Button();
             this.bt_delet_02 = new System.Windows.Forms.Button();
@@ -80,6 +83,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.lb_name_03 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.rjTextBox2 = new Contas_Familia.Script.RJTextBox();
             this.bt_edit_03 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_03 = new System.Windows.Forms.Button();
             this.bt_delet_03 = new System.Windows.Forms.Button();
@@ -88,6 +92,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.lb_name_04 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.rjTextBox3 = new Contas_Familia.Script.RJTextBox();
             this.bt_edit_04 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_04 = new System.Windows.Forms.Button();
             this.bt_delet_04 = new System.Windows.Forms.Button();
@@ -96,6 +101,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.lb_name_05 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.rjTextBox4 = new Contas_Familia.Script.RJTextBox();
             this.bt_edit_05 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_05 = new System.Windows.Forms.Button();
             this.bt_delet_05 = new System.Windows.Forms.Button();
@@ -104,6 +110,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.lb_name_06 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.rjTextBox5 = new Contas_Familia.Script.RJTextBox();
             this.bt_edit_06 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_06 = new System.Windows.Forms.Button();
             this.bt_delet_06 = new System.Windows.Forms.Button();
@@ -112,6 +119,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.lb_name_07 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.rjTextBox6 = new Contas_Familia.Script.RJTextBox();
             this.bt_edit_07 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_07 = new System.Windows.Forms.Button();
             this.bt_delet_07 = new System.Windows.Forms.Button();
@@ -120,6 +128,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.lb_name_08 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.rjTextBox7 = new Contas_Familia.Script.RJTextBox();
             this.bt_edit_08 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_08 = new System.Windows.Forms.Button();
             this.bt_delet_08 = new System.Windows.Forms.Button();
@@ -128,6 +137,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
             this.lb_name_09 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.rjTextBox8 = new Contas_Familia.Script.RJTextBox();
             this.bt_edit_09 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_09 = new System.Windows.Forms.Button();
             this.bt_delet_09 = new System.Windows.Forms.Button();
@@ -136,28 +146,16 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.lb_name_10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.rjTextBox9 = new Contas_Familia.Script.RJTextBox();
             this.bt_edit_10 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_10 = new System.Windows.Forms.Button();
             this.bt_delet_10 = new System.Windows.Forms.Button();
             this.pl_add = new System.Windows.Forms.Panel();
             this.pl_add_family_member = new System.Windows.Forms.Panel();
+            this.txt_add_family_name = new Contas_Familia.Script.RJTextBox();
             this.bt_cancel = new System.Windows.Forms.Button();
             this.bt_save = new System.Windows.Forms.Button();
             this.bt_add = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.rjTextBox9 = new Contas_Familia.Script.RJTextBox();
-            this.rjTextBox8 = new Contas_Familia.Script.RJTextBox();
-            this.rjTextBox7 = new Contas_Familia.Script.RJTextBox();
-            this.rjTextBox6 = new Contas_Familia.Script.RJTextBox();
-            this.rjTextBox5 = new Contas_Familia.Script.RJTextBox();
-            this.rjTextBox4 = new Contas_Familia.Script.RJTextBox();
-            this.rjTextBox3 = new Contas_Familia.Script.RJTextBox();
-            this.rjTextBox2 = new Contas_Familia.Script.RJTextBox();
-            this.rjTextBox1 = new Contas_Familia.Script.RJTextBox();
-            this.txt_total_01 = new Contas_Familia.Script.RJTextBox();
-            this.txt_add_family_name = new Contas_Familia.Script.RJTextBox();
             this.pl_family_01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pl_content_01.SuspendLayout();
@@ -197,7 +195,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_01.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
-            this.pl_family_01.Controls.Add(this.label10);
+            this.pl_family_01.Controls.Add(this.bt_save_01);
             this.pl_family_01.Controls.Add(this.lb_name_01);
             this.pl_family_01.Controls.Add(this.lb_total_01);
             this.pl_family_01.Controls.Add(this.txt_total_01);
@@ -209,6 +207,22 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_01.Name = "pl_family_01";
             this.pl_family_01.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_01.TabIndex = 10;
+            // 
+            // bt_save_01
+            // 
+            this.bt_save_01.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_save_01.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_save_01.FlatAppearance.BorderSize = 0;
+            this.bt_save_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_save_01.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save_01.ForeColor = System.Drawing.Color.White;
+            this.bt_save_01.Location = new System.Drawing.Point(355, 423);
+            this.bt_save_01.Name = "bt_save_01";
+            this.bt_save_01.Size = new System.Drawing.Size(122, 36);
+            this.bt_save_01.TabIndex = 80;
+            this.bt_save_01.Text = "Save";
+            this.bt_save_01.UseVisualStyleBackColor = false;
+            this.bt_save_01.Click += new System.EventHandler(this.bt_save_01_Click);
             // 
             // lb_name_01
             // 
@@ -232,6 +246,30 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_total_01.Size = new System.Drawing.Size(79, 25);
             this.lb_total_01.TabIndex = 73;
             this.lb_total_01.Text = "TOTAL";
+            // 
+            // txt_total_01
+            // 
+            this.txt_total_01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_total_01.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_total_01.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_total_01.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_total_01.BorderRadius = 0;
+            this.txt_total_01.BorderSize = 2;
+            this.txt_total_01.Enabled = false;
+            this.txt_total_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_01.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_total_01.Location = new System.Drawing.Point(1033, 421);
+            this.txt_total_01.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_total_01.Multiline = false;
+            this.txt_total_01.Name = "txt_total_01";
+            this.txt_total_01.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_total_01.PasswordChar = false;
+            this.txt_total_01.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_total_01.PlaceholderText = "";
+            this.txt_total_01.Size = new System.Drawing.Size(120, 31);
+            this.txt_total_01.TabIndex = 72;
+            this.txt_total_01.Texts = "";
+            this.txt_total_01.UnderlinedStyle = false;
             // 
             // bt_edit_01
             // 
@@ -288,7 +326,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_01.TabIndex = 68;
             this.bt_delet_01.Text = "Delet";
             this.bt_delet_01.UseVisualStyleBackColor = false;
-            this.bt_delet_01.Click += new System.EventHandler(this.bt_delet_01_Click);
+            this.bt_delet_01.Click += new System.EventHandler(this.bt_delete_01_Click);
             // 
             // dataGridView1
             // 
@@ -321,7 +359,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView1.Location = new System.Drawing.Point(16, 65);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
@@ -355,7 +392,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_02.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
-            this.pl_family_02.Controls.Add(this.label11);
             this.pl_family_02.Controls.Add(this.dataGridView2);
             this.pl_family_02.Controls.Add(this.lb_name_02);
             this.pl_family_02.Controls.Add(this.label1);
@@ -433,6 +469,30 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label1.TabIndex = 75;
             this.label1.Text = "TOTAL";
             // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjTextBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox1.BorderRadius = 0;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Enabled = false;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(1031, 422);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox1.PlaceholderText = "";
+            this.rjTextBox1.Size = new System.Drawing.Size(120, 31);
+            this.rjTextBox1.TabIndex = 74;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            // 
             // bt_edit_02
             // 
             this.bt_edit_02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -504,7 +564,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_03.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
-            this.pl_family_03.Controls.Add(this.label12);
             this.pl_family_03.Controls.Add(this.dataGridView3);
             this.pl_family_03.Controls.Add(this.lb_name_03);
             this.pl_family_03.Controls.Add(this.label2);
@@ -581,6 +640,30 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label2.Size = new System.Drawing.Size(79, 25);
             this.label2.TabIndex = 75;
             this.label2.Text = "TOTAL";
+            // 
+            // rjTextBox2
+            // 
+            this.rjTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjTextBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.rjTextBox2.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox2.BorderRadius = 0;
+            this.rjTextBox2.BorderSize = 2;
+            this.rjTextBox2.Enabled = false;
+            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rjTextBox2.Location = new System.Drawing.Point(1031, 426);
+            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox2.Multiline = false;
+            this.rjTextBox2.Name = "rjTextBox2";
+            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox2.PasswordChar = false;
+            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox2.PlaceholderText = "";
+            this.rjTextBox2.Size = new System.Drawing.Size(120, 31);
+            this.rjTextBox2.TabIndex = 74;
+            this.rjTextBox2.Texts = "";
+            this.rjTextBox2.UnderlinedStyle = false;
             // 
             // bt_edit_03
             // 
@@ -730,6 +813,30 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label3.TabIndex = 75;
             this.label3.Text = "TOTAL";
             // 
+            // rjTextBox3
+            // 
+            this.rjTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjTextBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.rjTextBox3.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox3.BorderRadius = 0;
+            this.rjTextBox3.BorderSize = 2;
+            this.rjTextBox3.Enabled = false;
+            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rjTextBox3.Location = new System.Drawing.Point(1031, 422);
+            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox3.Multiline = false;
+            this.rjTextBox3.Name = "rjTextBox3";
+            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox3.PasswordChar = false;
+            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox3.PlaceholderText = "";
+            this.rjTextBox3.Size = new System.Drawing.Size(120, 31);
+            this.rjTextBox3.TabIndex = 74;
+            this.rjTextBox3.Texts = "";
+            this.rjTextBox3.UnderlinedStyle = false;
+            // 
             // bt_edit_04
             // 
             this.bt_edit_04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -877,6 +984,30 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label4.Size = new System.Drawing.Size(79, 25);
             this.label4.TabIndex = 75;
             this.label4.Text = "TOTAL";
+            // 
+            // rjTextBox4
+            // 
+            this.rjTextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjTextBox4.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.rjTextBox4.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox4.BorderRadius = 0;
+            this.rjTextBox4.BorderSize = 2;
+            this.rjTextBox4.Enabled = false;
+            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rjTextBox4.Location = new System.Drawing.Point(1031, 421);
+            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox4.Multiline = false;
+            this.rjTextBox4.Name = "rjTextBox4";
+            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox4.PasswordChar = false;
+            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox4.PlaceholderText = "";
+            this.rjTextBox4.Size = new System.Drawing.Size(120, 31);
+            this.rjTextBox4.TabIndex = 74;
+            this.rjTextBox4.Texts = "";
+            this.rjTextBox4.UnderlinedStyle = false;
             // 
             // bt_edit_05
             // 
@@ -1026,6 +1157,30 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label5.TabIndex = 75;
             this.label5.Text = "TOTAL";
             // 
+            // rjTextBox5
+            // 
+            this.rjTextBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjTextBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.rjTextBox5.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox5.BorderRadius = 0;
+            this.rjTextBox5.BorderSize = 2;
+            this.rjTextBox5.Enabled = false;
+            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rjTextBox5.Location = new System.Drawing.Point(1031, 422);
+            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox5.Multiline = false;
+            this.rjTextBox5.Name = "rjTextBox5";
+            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox5.PasswordChar = false;
+            this.rjTextBox5.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox5.PlaceholderText = "";
+            this.rjTextBox5.Size = new System.Drawing.Size(120, 31);
+            this.rjTextBox5.TabIndex = 74;
+            this.rjTextBox5.Texts = "";
+            this.rjTextBox5.UnderlinedStyle = false;
+            // 
             // bt_edit_06
             // 
             this.bt_edit_06.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1173,6 +1328,30 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label6.Size = new System.Drawing.Size(79, 25);
             this.label6.TabIndex = 75;
             this.label6.Text = "TOTAL";
+            // 
+            // rjTextBox6
+            // 
+            this.rjTextBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjTextBox6.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.rjTextBox6.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox6.BorderRadius = 0;
+            this.rjTextBox6.BorderSize = 2;
+            this.rjTextBox6.Enabled = false;
+            this.rjTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rjTextBox6.Location = new System.Drawing.Point(1031, 422);
+            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox6.Multiline = false;
+            this.rjTextBox6.Name = "rjTextBox6";
+            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox6.PasswordChar = false;
+            this.rjTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox6.PlaceholderText = "";
+            this.rjTextBox6.Size = new System.Drawing.Size(120, 31);
+            this.rjTextBox6.TabIndex = 74;
+            this.rjTextBox6.Texts = "";
+            this.rjTextBox6.UnderlinedStyle = false;
             // 
             // bt_edit_07
             // 
@@ -1322,6 +1501,30 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label7.TabIndex = 75;
             this.label7.Text = "TOTAL";
             // 
+            // rjTextBox7
+            // 
+            this.rjTextBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjTextBox7.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.rjTextBox7.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox7.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox7.BorderRadius = 0;
+            this.rjTextBox7.BorderSize = 2;
+            this.rjTextBox7.Enabled = false;
+            this.rjTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rjTextBox7.Location = new System.Drawing.Point(1031, 422);
+            this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox7.Multiline = false;
+            this.rjTextBox7.Name = "rjTextBox7";
+            this.rjTextBox7.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox7.PasswordChar = false;
+            this.rjTextBox7.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox7.PlaceholderText = "";
+            this.rjTextBox7.Size = new System.Drawing.Size(120, 31);
+            this.rjTextBox7.TabIndex = 74;
+            this.rjTextBox7.Texts = "";
+            this.rjTextBox7.UnderlinedStyle = false;
+            // 
             // bt_edit_08
             // 
             this.bt_edit_08.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1469,6 +1672,30 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label8.Size = new System.Drawing.Size(79, 25);
             this.label8.TabIndex = 75;
             this.label8.Text = "TOTAL";
+            // 
+            // rjTextBox8
+            // 
+            this.rjTextBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjTextBox8.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.rjTextBox8.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox8.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox8.BorderRadius = 0;
+            this.rjTextBox8.BorderSize = 2;
+            this.rjTextBox8.Enabled = false;
+            this.rjTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rjTextBox8.Location = new System.Drawing.Point(1031, 421);
+            this.rjTextBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox8.Multiline = false;
+            this.rjTextBox8.Name = "rjTextBox8";
+            this.rjTextBox8.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox8.PasswordChar = false;
+            this.rjTextBox8.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox8.PlaceholderText = "";
+            this.rjTextBox8.Size = new System.Drawing.Size(120, 31);
+            this.rjTextBox8.TabIndex = 74;
+            this.rjTextBox8.Texts = "";
+            this.rjTextBox8.UnderlinedStyle = false;
             // 
             // bt_edit_09
             // 
@@ -1618,6 +1845,30 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label9.TabIndex = 75;
             this.label9.Text = "TOTAL";
             // 
+            // rjTextBox9
+            // 
+            this.rjTextBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjTextBox9.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.rjTextBox9.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox9.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox9.BorderRadius = 0;
+            this.rjTextBox9.BorderSize = 2;
+            this.rjTextBox9.Enabled = false;
+            this.rjTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rjTextBox9.Location = new System.Drawing.Point(1031, 422);
+            this.rjTextBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox9.Multiline = false;
+            this.rjTextBox9.Name = "rjTextBox9";
+            this.rjTextBox9.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox9.PasswordChar = false;
+            this.rjTextBox9.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox9.PlaceholderText = "";
+            this.rjTextBox9.Size = new System.Drawing.Size(120, 31);
+            this.rjTextBox9.TabIndex = 74;
+            this.rjTextBox9.Texts = "";
+            this.rjTextBox9.UnderlinedStyle = false;
+            // 
             // bt_edit_10
             // 
             this.bt_edit_10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1698,6 +1949,28 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_add_family_member.Size = new System.Drawing.Size(1171, 73);
             this.pl_add_family_member.TabIndex = 10;
             // 
+            // txt_add_family_name
+            // 
+            this.txt_add_family_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.txt_add_family_name.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_add_family_name.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_add_family_name.BorderRadius = 0;
+            this.txt_add_family_name.BorderSize = 2;
+            this.txt_add_family_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_add_family_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_add_family_name.Location = new System.Drawing.Point(16, 17);
+            this.txt_add_family_name.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_add_family_name.Multiline = false;
+            this.txt_add_family_name.Name = "txt_add_family_name";
+            this.txt_add_family_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_add_family_name.PasswordChar = false;
+            this.txt_add_family_name.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_add_family_name.PlaceholderText = "";
+            this.txt_add_family_name.Size = new System.Drawing.Size(250, 31);
+            this.txt_add_family_name.TabIndex = 81;
+            this.txt_add_family_name.Texts = "";
+            this.txt_add_family_name.UnderlinedStyle = false;
+            // 
             // bt_cancel
             // 
             this.bt_cancel.BackColor = System.Drawing.Color.LightSlateGray;
@@ -1748,304 +2021,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_add.Text = "Add";
             this.bt_add.UseVisualStyleBackColor = false;
             this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(415, 25);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 25);
-            this.label10.TabIndex = 75;
-            this.label10.Text = "1";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(415, 20);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(23, 25);
-            this.label11.TabIndex = 77;
-            this.label11.Text = "2";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(396, 25);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(23, 25);
-            this.label12.TabIndex = 79;
-            this.label12.Text = "3";
-            // 
-            // rjTextBox9
-            // 
-            this.rjTextBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox9.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.rjTextBox9.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox9.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox9.BorderRadius = 0;
-            this.rjTextBox9.BorderSize = 2;
-            this.rjTextBox9.Enabled = false;
-            this.rjTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rjTextBox9.Location = new System.Drawing.Point(1031, 422);
-            this.rjTextBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox9.Multiline = false;
-            this.rjTextBox9.Name = "rjTextBox9";
-            this.rjTextBox9.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox9.PasswordChar = false;
-            this.rjTextBox9.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox9.PlaceholderText = "";
-            this.rjTextBox9.Size = new System.Drawing.Size(120, 31);
-            this.rjTextBox9.TabIndex = 74;
-            this.rjTextBox9.Texts = "";
-            this.rjTextBox9.UnderlinedStyle = false;
-            // 
-            // rjTextBox8
-            // 
-            this.rjTextBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox8.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.rjTextBox8.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox8.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox8.BorderRadius = 0;
-            this.rjTextBox8.BorderSize = 2;
-            this.rjTextBox8.Enabled = false;
-            this.rjTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rjTextBox8.Location = new System.Drawing.Point(1031, 421);
-            this.rjTextBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox8.Multiline = false;
-            this.rjTextBox8.Name = "rjTextBox8";
-            this.rjTextBox8.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox8.PasswordChar = false;
-            this.rjTextBox8.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox8.PlaceholderText = "";
-            this.rjTextBox8.Size = new System.Drawing.Size(120, 31);
-            this.rjTextBox8.TabIndex = 74;
-            this.rjTextBox8.Texts = "";
-            this.rjTextBox8.UnderlinedStyle = false;
-            // 
-            // rjTextBox7
-            // 
-            this.rjTextBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox7.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.rjTextBox7.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox7.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox7.BorderRadius = 0;
-            this.rjTextBox7.BorderSize = 2;
-            this.rjTextBox7.Enabled = false;
-            this.rjTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rjTextBox7.Location = new System.Drawing.Point(1031, 422);
-            this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox7.Multiline = false;
-            this.rjTextBox7.Name = "rjTextBox7";
-            this.rjTextBox7.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox7.PasswordChar = false;
-            this.rjTextBox7.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox7.PlaceholderText = "";
-            this.rjTextBox7.Size = new System.Drawing.Size(120, 31);
-            this.rjTextBox7.TabIndex = 74;
-            this.rjTextBox7.Texts = "";
-            this.rjTextBox7.UnderlinedStyle = false;
-            // 
-            // rjTextBox6
-            // 
-            this.rjTextBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox6.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.rjTextBox6.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox6.BorderRadius = 0;
-            this.rjTextBox6.BorderSize = 2;
-            this.rjTextBox6.Enabled = false;
-            this.rjTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rjTextBox6.Location = new System.Drawing.Point(1031, 422);
-            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox6.Multiline = false;
-            this.rjTextBox6.Name = "rjTextBox6";
-            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox6.PasswordChar = false;
-            this.rjTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox6.PlaceholderText = "";
-            this.rjTextBox6.Size = new System.Drawing.Size(120, 31);
-            this.rjTextBox6.TabIndex = 74;
-            this.rjTextBox6.Texts = "";
-            this.rjTextBox6.UnderlinedStyle = false;
-            // 
-            // rjTextBox5
-            // 
-            this.rjTextBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.rjTextBox5.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox5.BorderRadius = 0;
-            this.rjTextBox5.BorderSize = 2;
-            this.rjTextBox5.Enabled = false;
-            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rjTextBox5.Location = new System.Drawing.Point(1031, 422);
-            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox5.Multiline = false;
-            this.rjTextBox5.Name = "rjTextBox5";
-            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox5.PlaceholderText = "";
-            this.rjTextBox5.Size = new System.Drawing.Size(120, 31);
-            this.rjTextBox5.TabIndex = 74;
-            this.rjTextBox5.Texts = "";
-            this.rjTextBox5.UnderlinedStyle = false;
-            // 
-            // rjTextBox4
-            // 
-            this.rjTextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox4.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox4.BorderRadius = 0;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Enabled = false;
-            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rjTextBox4.Location = new System.Drawing.Point(1031, 421);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox4.PlaceholderText = "";
-            this.rjTextBox4.Size = new System.Drawing.Size(120, 31);
-            this.rjTextBox4.TabIndex = 74;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = false;
-            // 
-            // rjTextBox3
-            // 
-            this.rjTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox3.BorderRadius = 0;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.Enabled = false;
-            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rjTextBox3.Location = new System.Drawing.Point(1031, 422);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox3.PlaceholderText = "";
-            this.rjTextBox3.Size = new System.Drawing.Size(120, 31);
-            this.rjTextBox3.TabIndex = 74;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = false;
-            // 
-            // rjTextBox2
-            // 
-            this.rjTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Enabled = false;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rjTextBox2.Location = new System.Drawing.Point(1031, 426);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(120, 31);
-            this.rjTextBox2.TabIndex = 74;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Enabled = false;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(1031, 422);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(120, 31);
-            this.rjTextBox1.TabIndex = 74;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            // 
-            // txt_total_01
-            // 
-            this.txt_total_01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total_01.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_total_01.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_total_01.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_total_01.BorderRadius = 0;
-            this.txt_total_01.BorderSize = 2;
-            this.txt_total_01.Enabled = false;
-            this.txt_total_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_01.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_total_01.Location = new System.Drawing.Point(1033, 421);
-            this.txt_total_01.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_total_01.Multiline = false;
-            this.txt_total_01.Name = "txt_total_01";
-            this.txt_total_01.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_total_01.PasswordChar = false;
-            this.txt_total_01.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_total_01.PlaceholderText = "";
-            this.txt_total_01.Size = new System.Drawing.Size(120, 31);
-            this.txt_total_01.TabIndex = 72;
-            this.txt_total_01.Texts = "";
-            this.txt_total_01.UnderlinedStyle = false;
-            // 
-            // txt_add_family_name
-            // 
-            this.txt_add_family_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.txt_add_family_name.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_add_family_name.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_add_family_name.BorderRadius = 0;
-            this.txt_add_family_name.BorderSize = 2;
-            this.txt_add_family_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_add_family_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_add_family_name.Location = new System.Drawing.Point(16, 17);
-            this.txt_add_family_name.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_add_family_name.Multiline = false;
-            this.txt_add_family_name.Name = "txt_add_family_name";
-            this.txt_add_family_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_add_family_name.PasswordChar = false;
-            this.txt_add_family_name.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_add_family_name.PlaceholderText = "";
-            this.txt_add_family_name.Size = new System.Drawing.Size(250, 31);
-            this.txt_add_family_name.TabIndex = 81;
-            this.txt_add_family_name.Texts = "";
-            this.txt_add_family_name.UnderlinedStyle = false;
             // 
             // family
             // 
@@ -2211,8 +2186,6 @@ namespace Contas_Familia.PanelControll.Dashboard
         private System.Windows.Forms.Button bt_save;
         private System.Windows.Forms.Button bt_add;
         private Script.RJTextBox txt_add_family_name;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button bt_save_01;
     }
 }
