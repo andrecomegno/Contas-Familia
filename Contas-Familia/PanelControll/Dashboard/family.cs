@@ -41,6 +41,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             for (int i = 0; i < dataGridViews.Length; i++)
             {
                 dataGridViews[i].DataSource = ExecuteQuery(lbNames[i]);
+
+                MessageBox.Show(dataGridViews[i].ToString());
             }
 
             // CONFIGURAÇÃO DO DATAGRIDVIEW
@@ -57,7 +59,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             using (MySqlConnection connection = database.getConnection())
             {
                 connection.Open();
-                string query = "select fm.id_family_member, rf.id_register_family, cc.id_credit_card, pr.id_products, cc.credit_card_name, cc.credit_card_pay_day, pr.store_name, pr.product_name, cc.credit_card_installment, tcc.total_payble, tcc.total_payable_installment from familypayday.register_family rf left join familypayday.family_member fm on fm.id_register_family = rf.id_register_family left join familypayday.total_credit_card tcc on tcc.id_total_credit_card = tcc.id_total_credit_card left join familypayday.credit_card cc on cc.id_total_credit_card = tcc.id_total_credit_card left join familypayday.products pr on pr.id_credit_card = cc.id_credit_card where fm.family_member like @family_member '%';";
+                string query = "select fm.id_family_member, rf.id_register_family, cc.id_credit_card, pr.id_products, cc.credit_card_name, cc.credit_card_payday, pr.store_name, pr.product_name, cc.credit_card_installment, tcc.total_payble, tcc.total_payable_installment from familypayday.register_family rf left join familypayday.family_member fm on fm.id_register_family = rf.id_register_family left join familypayday.total_credit_card tcc on tcc.id_total_credit_card = tcc.id_total_credit_card left join familypayday.credit_card cc on cc.id_total_credit_card = tcc.id_total_credit_card left join familypayday.products pr on pr.id_credit_card = cc.id_credit_card where fm.family_member like @family_member '%' ";
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@family_member", familyMemberName);
@@ -84,7 +86,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             dataGridView.Columns[7].HeaderText = "PRODUTOS";
             dataGridView.Columns[8].HeaderText = "PARCELAMENTO";
             dataGridView.Columns[9].HeaderText = "VALOR TOTAL";
-            dataGridView.Columns[10].HeaderText = "VALOR PARCELADO";
+            dataGridView.Columns[10].HeaderText = "VALOR PARCELADO";            
         }
 
         // TABELA DOS MEMBROS DA FAMILIA
@@ -218,6 +220,79 @@ namespace Contas_Familia.PanelControll.Dashboard
             {
                 PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
             }
+        }
+
+        private void bt_save_01_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (dataGridView1.Rows.Count > 1)
+                {
+                    for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                    {
+                        // ID
+                        id_family_member[0] = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
+                        // NOME DO CARTÃO DE CREDITO
+                        string credit_card_name = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                        // VENCIMENTO DO CARTÃO DE CREDITO
+                        DateTime credit_card_payday = Convert.ToDateTime(dataGridView1.Rows[i].Cells[5].Value);
+                        // NOME DA LOJA
+                        string store_name = dataGridView1.Rows[i].Cells[6].Value.ToString();
+                        // NOME DO PRODUTO
+                        string product_name = dataGridView1.Rows[i].Cells[7].Value.ToString();
+                        // PARCELAMENTO 
+                        string card_credit_installment = dataGridView1.Rows[i].Cells[8].Value.ToString();
+                        // VALOR TOTAL DA COMPRA
+                        decimal total_payble = Convert.ToDecimal(dataGridView1.Rows[i].Cells[9].Value);
+                        // VALOR A PAGAR PARCELADO
+                        decimal total_payable_installment = Convert.ToDecimal(dataGridView1.Rows[i].Cells[10].Value);
+
+                        // BANCO DE DADOS
+                        configdb database = new configdb();
+                        database.openConnection();
+
+                        // TOTAL
+                        MySqlCommand cmdTotal = new MySqlCommand("INSERT INTO familypayday.total_credit_card (id_total_credit_card, total_payble, total_payable_installment) VALUES (null, @total_payble, @total_payable_installment)", database.getConnection());
+                        cmdTotal.Parameters.Add("@total_payble", MySqlDbType.Decimal).Value = total_payble;
+                        cmdTotal.Parameters.Add("@total_payable_installment", MySqlDbType.Decimal).Value = total_payable_installment;
+
+                        cmdTotal.ExecuteNonQuery();
+                        long id_total_credit_card = cmdTotal.LastInsertedId;
+
+                        // CARTÃO DE CREDITO
+                        MySqlCommand cmdCreditCard = new MySqlCommand("INSERT INTO familypayday.credit_card (id_credit_card, credit_card_name, credit_card_payday, credit_card_installment, id_total_credit_card) VALUES (null, @credit_card_name, @credit_card_payday, @credit_card_installment, @id_total_credit_card)", database.getConnection());
+                        cmdCreditCard.Parameters.Add("@credit_card_name", MySqlDbType.VarChar, 45).Value = credit_card_name;
+                        cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.Date).Value = credit_card_payday;
+                        cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = card_credit_installment;
+                        cmdCreditCard.Parameters.Add("@id_total_credit_card", MySqlDbType.Int32).Value = id_total_credit_card;
+
+                        cmdCreditCard.ExecuteNonQuery();
+                        long id_credit_card = cmdCreditCard.LastInsertedId;
+
+                        // PRODUTOS
+                        MySqlCommand cmdProducts = new MySqlCommand("INSERT INTO familypayday.products (id_products, store_name, product_name, id_family_member, id_credit_card) VALUES (null, @store_name, @product_name, @id_family_member, @id_credit_card)", database.getConnection());
+                        cmdProducts.Parameters.Add("@store_name", MySqlDbType.VarChar, 50).Value = store_name;
+                        cmdProducts.Parameters.Add("@product_name", MySqlDbType.VarChar, 245).Value = product_name;
+                        cmdProducts.Parameters.Add("@id_family_member", MySqlDbType.Int32).Value = id_family_member[0];
+                        cmdProducts.Parameters.Add("@id_credit_card", MySqlDbType.Int32).Value = id_credit_card;
+
+                        cmdProducts.ExecuteNonQuery();
+
+                        database.closeConnection();
+
+                        MessageBox.Show(i.ToString());
+                    }
+                }
+            }
+            finally
+            {
+
+
+                //MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
         }
 
         private void bt_edit_02_Click(object sender, EventArgs e) => PanelContent(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
@@ -529,7 +604,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             }
             catch (Exception ex)
             {
-                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);                
+                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             finally
             {
@@ -599,65 +674,8 @@ namespace Contas_Familia.PanelControll.Dashboard
 
             TableAll();
             TableFamilyMember();
-        }
 
-        private void bt_save_01_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (dataGridView1.Rows.Count > 1)
-                {
-                    for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
-                    {
-                        id_family_member[0] = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
-
-                        string credit_card_name = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                        string store_name = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                        string product_name = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                        string card_credit_installment = dataGridView1.Rows[i].Cells[4].Value.ToString();
-                        DateTime credit_card_payday = Convert.ToDateTime(dataGridView1.Rows[i].Cells[5].Value);
-                        decimal total_payble = Convert.ToDecimal(dataGridView1.Rows[i].Cells[6].Value);
-                        decimal total_payable_installment = Convert.ToDecimal(dataGridView1.Rows[i].Cells[7].Value);
-
-                        // BANCO DE DADOS
-                        configdb database = new configdb();
-                        database.openConnection();
-
-                        // TOTAL
-                        MySqlCommand cmdTotal = new MySqlCommand("INSERT INTO familypayday.total_credit_card (id_total_credit_card, total_payble, total_payable_installment) VALUES (null, @total_payble, @total_payable_installment )", database.getConnection());
-                        cmdTotal.Parameters.AddWithValue("@total_payble", total_payble);
-                        cmdTotal.Parameters.AddWithValue("@total_payable_installment", total_payable_installment);
-
-                        cmdTotal.ExecuteNonQuery();
-                        long id_total_credit_card = cmdTotal.LastInsertedId;
-
-                        // CARTÃO DE CREDITO
-                        MySqlCommand cmdCreditCard = new MySqlCommand("INSERT INTO familypayday.credit_card (id_credit_card, credit_card_name, credit_card_pay_day, credit_card_installment, id_total_credit_card) VALUES (null, @credit_card_name, @credit_card_pay_day, @credit_card_installment, @id_total_credit_card)", database.getConnection());
-                        cmdCreditCard.Parameters.AddWithValue("@credit_card_name", credit_card_name);
-                        cmdCreditCard.Parameters.AddWithValue("@credit_card_pay_day", credit_card_payday);
-                        cmdCreditCard.Parameters.AddWithValue("@credit_card_installment", card_credit_installment);
-                        cmdCreditCard.Parameters.AddWithValue("@id_total_credit_card", id_total_credit_card);
-
-                        cmdCreditCard.ExecuteNonQuery();
-                        long id_credit_card = cmdCreditCard.LastInsertedId;
-
-                        // PRODUTOS
-                        MySqlCommand cmdProducts = new MySqlCommand("INSERT INTO familypayday.products (id_products, store_name, product_name, id_family_member, id_credit_card) VALUES (null, @store_name, @product_name, @id_family_member, @id_credit_card)", database.getConnection());
-                        cmdProducts.Parameters.AddWithValue("@store_name", store_name);
-                        cmdProducts.Parameters.AddWithValue("@product_name", product_name);
-                        cmdProducts.Parameters.AddWithValue("@id_family_member", id_family_member);
-                        cmdProducts.Parameters.AddWithValue("@id_credit_card", id_credit_card);
-
-                        cmdProducts.ExecuteNonQuery();
-
-                        database.closeConnection();
-                    }
-                }
-            }
-            finally
-            {
-
-            }
+           
         }
     }
 }

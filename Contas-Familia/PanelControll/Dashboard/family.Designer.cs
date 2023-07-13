@@ -435,7 +435,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView2.Location = new System.Drawing.Point(16, 65);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
@@ -607,7 +606,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView3.Location = new System.Drawing.Point(16, 65);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
@@ -779,7 +777,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView4.Location = new System.Drawing.Point(16, 65);
             this.dataGridView4.MultiSelect = false;
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.ReadOnly = true;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
@@ -951,7 +948,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView5.Location = new System.Drawing.Point(16, 65);
             this.dataGridView5.MultiSelect = false;
             this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.ReadOnly = true;
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
@@ -1123,7 +1119,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView6.Location = new System.Drawing.Point(16, 65);
             this.dataGridView6.MultiSelect = false;
             this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.ReadOnly = true;
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView6.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
@@ -1295,7 +1290,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView7.Location = new System.Drawing.Point(16, 65);
             this.dataGridView7.MultiSelect = false;
             this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.ReadOnly = true;
             dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView7.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
@@ -1467,7 +1461,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView8.Location = new System.Drawing.Point(16, 65);
             this.dataGridView8.MultiSelect = false;
             this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.ReadOnly = true;
             dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView8.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
@@ -1639,7 +1632,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView9.Location = new System.Drawing.Point(16, 65);
             this.dataGridView9.MultiSelect = false;
             this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.ReadOnly = true;
             dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView9.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
@@ -1811,7 +1803,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView10.Location = new System.Drawing.Point(16, 65);
             this.dataGridView10.MultiSelect = false;
             this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.ReadOnly = true;
             dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView10.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
