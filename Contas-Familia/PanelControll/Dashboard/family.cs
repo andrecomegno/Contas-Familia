@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -12,15 +13,22 @@ namespace Contas_Familia.PanelControll.Dashboard
 {
     public partial class family : UserControl
     {
-        private int id_register_family = list_family.Instance.select_id_register_family;
-
         // ID`S
-        private int[] id_family_member = new int[10];
+        private int id_register_family = list_family.Instance.select_id_register_family;        
+        private int[] id_register_family_member = new int[10];
 
-        private string[] family_member = new string[10];        
+        private string[] family_member = new string[10];
 
         // BOTÃO EDITAR
         private bool[] _edit = new bool[10];
+
+        string credit_card_name;
+        DateTime credit_card_payday;
+        string store_name;
+        string product_name;
+        string card_credit_installment;
+        decimal total_payble;
+        decimal total_payable_installment;
 
         public family()
         {
@@ -31,25 +39,67 @@ namespace Contas_Familia.PanelControll.Dashboard
         #region TABLES
         // TODAS AS TABELAS DOS MEMBROS, ATRIBUIDAS COM OS SEUS SEGUINTES NOMES REGISTRADOS
         private void TableAll()
-        { 
+        {
+            configdb database = new configdb();
+            database.openConnection();
+
+            Panel[] panels = { pl_content_01, pl_content_02, pl_content_03, pl_content_04, pl_content_05, pl_content_06, pl_content_07, pl_content_08, pl_content_09, pl_content_10 };
             // TABELAS
             DataGridView[] dataGridViews = { dataGridView1, dataGridView2, dataGridView3, dataGridView4, dataGridView5,  dataGridView6, dataGridView7, dataGridView8, dataGridView9, dataGridView10 };
             // NOMES DOS MEMBROS DA FAMILIA
-            string[] lbNames = { lb_name_01.Text, lb_name_02.Text, lb_name_03.Text, lb_name_04.Text, lb_name_05.Text, lb_name_06.Text, lb_name_07.Text, lb_name_08.Text, lb_name_09.Text, lb_name_10.Text };
+            Label[] lbNames = { lb_name_01, lb_name_02, lb_name_03, lb_name_04, lb_name_05, lb_name_06, lb_name_07, lb_name_08, lb_name_09, lb_name_10 };
+
+            MySqlCommand cmd = new MySqlCommand("select rfm.id_register_family_member, rfm.family_member, cc.credit_card_name, cc.credit_card_payday, pr.store_name, pr.product_name, cc.credit_card_installment, tcc.total_payble, tcc.total_payable_installment, rf.id_register_family, cc.id_credit_card, pr.id_products from familypayday.login lo left join familypayday.register_family rf on rf.id_login = lo.id_login left join familypayday.register_family_member rfm on rfm.id_register_family = rf.id_register_family left join familypayday.products pr on pr.id_register_family_member = rfm.id_register_family_member left join familypayday.credit_card cc on cc.id_products = pr.id_products left join familypayday.total_credit_card tcc on tcc.id_credit_card = cc.id_credit_card where rfm.family_member like @family_member '%' ", database.getConnection());
+            // UTILIZADO O lbNames[0].Text PADRÃO PARA INICIAR, A BUSCA PELO NOME DOS MEMBROS DA FAMILIA
+            cmd.Parameters.AddWithValue("@family_member", lbNames[0].Text);
+
+            using (MySqlDataReader dr = cmd.ExecuteReader())
+            {
+                int index = 0;
+                while (dr.Read() && index < 10)
+                {
+                    id_register_family_member[index] = dr.GetInt32("id_register_family_member");
+                    family_member[index] = dr.GetString("family_member");
+                    index++;
+                }
+            }
+
+            // LISTA PARA ARMANEZAR OS NOMES JA ATRIBUIDOS
+            List<string> SaveNameList = new List<string>();
 
             // DATAGRIDVIEW NOME DO MEMBRO DA FAMILIA
             for (int i = 0; i < dataGridViews.Length; i++)
             {
-                dataGridViews[i].DataSource = ExecuteQuery(lbNames[i]);
+                // VERIFICA SE O NOME JA FOI ATRIBUIDO
+                if (i < family_member.Length && !SaveNameList.Contains(family_member[i]))
+                {
+                    lbNames[i].Text = family_member[i];
 
-                MessageBox.Show(dataGridViews[i].ToString());
+                    // Adiciona o nome à lista de nomes atribuídos
+                    SaveNameList.Add(family_member[i]);
+                }
+
+                // DESATIVA E ATIVA OS PAINEIS 
+                if (String.IsNullOrEmpty(lbNames[i].Text))
+                {
+                    panels[i].Visible = false;
+                }
+                else
+                {
+                    panels[i].Visible = true;
+                }
+
+                dataGridViews[i].DataSource = ExecuteQuery(lbNames[i].Text);
             }
+
 
             // CONFIGURAÇÃO DO DATAGRIDVIEW
             foreach (DataGridView dataGridView in dataGridViews)
             {
                 ConfigureDataGridViewColumns(dataGridView);
             }
+
+            database.closeConnection();
         }
 
         // EXECUTAR A CONSULTA E RETORNAR O DATATABLE
@@ -59,7 +109,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             using (MySqlConnection connection = database.getConnection())
             {
                 connection.Open();
-                string query = "select fm.id_family_member, rf.id_register_family, cc.id_credit_card, pr.id_products, cc.credit_card_name, cc.credit_card_payday, pr.store_name, pr.product_name, cc.credit_card_installment, tcc.total_payble, tcc.total_payable_installment from familypayday.register_family rf left join familypayday.family_member fm on fm.id_register_family = rf.id_register_family left join familypayday.total_credit_card tcc on tcc.id_total_credit_card = tcc.id_total_credit_card left join familypayday.credit_card cc on cc.id_total_credit_card = tcc.id_total_credit_card left join familypayday.products pr on pr.id_credit_card = cc.id_credit_card where fm.family_member like @family_member '%' ";
+                string query = "select rfm.id_register_family_member, rfm.family_member, cc.credit_card_name, cc.credit_card_payday, pr.store_name, pr.product_name, cc.credit_card_installment, tcc.total_payble, tcc.total_payable_installment, rf.id_register_family, cc.id_credit_card, pr.id_products from familypayday.login lo left join familypayday.register_family rf on rf.id_login = lo.id_login left join familypayday.register_family_member rfm on rfm.id_register_family = rf.id_register_family left join familypayday.products pr on pr.id_register_family_member = rfm.id_register_family_member left join familypayday.credit_card cc on cc.id_products = pr.id_products left join familypayday.total_credit_card tcc on tcc.id_credit_card = cc.id_credit_card where rfm.family_member like @family_member '%' ";
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@family_member", familyMemberName);
@@ -76,70 +126,18 @@ namespace Contas_Familia.PanelControll.Dashboard
         // CONFIGURAR AS COLUNAS DO DATAGRIDVIEW
         private void ConfigureDataGridViewColumns(DataGridView dataGridView)
         {
-            dataGridView.Columns[0].Visible = false; // id_family_member
-            dataGridView.Columns[1].Visible = false; // id_register_family
-            dataGridView.Columns[2].Visible = false; // id_credit_card
-            dataGridView.Columns[3].Visible = false; // id_products
-            dataGridView.Columns[4].HeaderText = "CARTÕES";
-            dataGridView.Columns[5].HeaderText = "VENCIMENTO";
-            dataGridView.Columns[6].HeaderText = "LOJAS";
-            dataGridView.Columns[7].HeaderText = "PRODUTOS";
-            dataGridView.Columns[8].HeaderText = "PARCELAMENTO";
-            dataGridView.Columns[9].HeaderText = "VALOR TOTAL";
-            dataGridView.Columns[10].HeaderText = "VALOR PARCELADO";            
-        }
-
-        // TABELA DOS MEMBROS DA FAMILIA
-        void TableFamilyMember()
-        {
-            configdb database = new configdb();
-            database.openConnection();
-
-            MySqlCommand cmd = new MySqlCommand("select ID_FAMILY_MEMBER, FAMILY_MEMBER, ID_REGISTER_FAMILY from familypayday.family_member where id_register_family = @id_register_family ", database.getConnection());
-            cmd.Parameters.AddWithValue("@id_register_family", id_register_family);
-
-            using (MySqlDataReader dr = cmd.ExecuteReader())
-            {
-                int index = 0;
-                while (dr.Read() && index < 10)
-                {
-                    id_family_member[index] = dr.GetInt32("id_family_member");
-                    family_member[index] = dr.GetString("family_member");
-                    index++;
-                }               
-            }
-
-            DataTextBox();
-            database.closeConnection();            
-        }
-
-        // ATRIBUI OS NOMES DE CADA MEMBRO DA FAMILIA AO TEXTOBOX, E DESABILITA O PANEL DAQUELES QUE ESTAO SEM NOME
-        void DataTextBox()
-        {
-            Panel[] panels = { pl_content_01, pl_content_02, pl_content_03, pl_content_04, pl_content_05, pl_content_06, pl_content_07, pl_content_08, pl_content_09, pl_content_10 };
-            // NOME DOS MEMBROS DA FAMILIA
-            Label[] labels = { lb_name_01, lb_name_02, lb_name_03, lb_name_04, lb_name_05, lb_name_06, lb_name_07, lb_name_08, lb_name_09, lb_name_10 };
-            // CONTA OS MEMBROS DA FAMILIA
-            int numLabels = labels.Length;
-
-            for (int i = 0; i < numLabels; i++)
-            {
-                // ATRIBUI OS NOMES 
-                if (i < family_member.Length)
-                {
-                    labels[i].Text = family_member[i];
-                }
-
-                // DESATIVA E ATIVA OS PAINEIS 
-                if (String.IsNullOrEmpty(labels[i].Text))
-                {
-                    panels[i].Visible = false;
-                }
-                else
-                {
-                    panels[i].Visible = true;
-                }
-            }
+            dataGridView.Columns[0].HeaderText = "ID MEMBRO FAMILIA"; // id_register_family_member
+            dataGridView.Columns[1].HeaderText = "NOME";
+            dataGridView.Columns[2].HeaderText = "CARTÕES";
+            dataGridView.Columns[3].HeaderText = "VENCIMENTO";
+            dataGridView.Columns[4].HeaderText = "LOJAS";
+            dataGridView.Columns[5].HeaderText = "PRODUTOS";
+            dataGridView.Columns[6].HeaderText = "PARCELAMENTO";
+            dataGridView.Columns[7].HeaderText = "VALOR TOTAL";
+            dataGridView.Columns[8].HeaderText = "VALOR PARCELADO";
+            dataGridView.Columns[9].Visible = false; // id_register_family
+            dataGridView.Columns[10].Visible = false; // id_credit_card
+            dataGridView.Columns[11].Visible = false; // id_products
         }
 
         // TABELA NOVO MEMBRO DA FAMILIA
@@ -149,7 +147,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             database.openConnection();
 
             // ADD NOVO MEMBRO DA FAMILIA
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO familypayday.family_member (id_family_member, family_member, id_register_family) VALUES (null, @family_member, @id_register_family)", database.getConnection());
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO familypayday.register_family_member (id_register_family_member, family_member, id_register_family) VALUES (null, @family_member, @id_register_family)", database.getConnection());
             cmd.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = txt_add_family_name.Texts;
             cmd.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
 
@@ -163,8 +161,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             configdb database = new configdb();
             database.openConnection();
 
-            MySqlCommand cmd = new MySqlCommand("DELETE FROM familypayday.family_member WHERE id_family_member = @id_family_member and id_register_family = @id_register_family", database.getConnection());
-            cmd.Parameters.Add("@id_family_member", MySqlDbType.Int32).Value = id_member;
+            MySqlCommand cmd = new MySqlCommand("DELETE FROM familypayday.register_family_member WHERE id_register_family_member = @id_register_family_member and id_register_family = @id_register_family", database.getConnection());
+            cmd.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id_member;
             cmd.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
 
             cmd.ExecuteNonQuery();
@@ -173,21 +171,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             pl.Visible = false;
         }
         #endregion
-
-        // PAINEL DE CADA MEMBRO DA FAMILIA DIMINIU/AUMENTA DE TAMANHO AO CLICAR NO BOTÃO EDITAR
-        void PanelContent(bool reg, Panel pl_content, IconButton button)
-        {
-            if (reg)
-            {
-                pl_content.Size = new Size(830, 500);
-                button.IconChar = IconChar.AngleUp;
-            }
-            else
-            {
-                pl_content.Size = new Size(830, 70);
-                button.IconChar = IconChar.AngleDown;
-            }
-        }
 
         #region BUTTON TABELA MEMBER FAMILY
         private void bt_edit_01_Click(object sender, EventArgs e) => PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
@@ -204,7 +187,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     case DialogResult.Yes:
                         // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_family_member[0], pl_content_01);
+                        DeleteFamilyMembro(id_register_family_member[0], pl_content_01);
                         break;
                     case DialogResult.No:
                         break;
@@ -222,78 +205,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             }
         }
 
-        private void bt_save_01_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                if (dataGridView1.Rows.Count > 1)
-                {
-                    for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
-                    {
-                        // ID
-                        id_family_member[0] = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
-                        // NOME DO CARTÃO DE CREDITO
-                        string credit_card_name = dataGridView1.Rows[i].Cells[4].Value.ToString();
-                        // VENCIMENTO DO CARTÃO DE CREDITO
-                        DateTime credit_card_payday = Convert.ToDateTime(dataGridView1.Rows[i].Cells[5].Value);
-                        // NOME DA LOJA
-                        string store_name = dataGridView1.Rows[i].Cells[6].Value.ToString();
-                        // NOME DO PRODUTO
-                        string product_name = dataGridView1.Rows[i].Cells[7].Value.ToString();
-                        // PARCELAMENTO 
-                        string card_credit_installment = dataGridView1.Rows[i].Cells[8].Value.ToString();
-                        // VALOR TOTAL DA COMPRA
-                        decimal total_payble = Convert.ToDecimal(dataGridView1.Rows[i].Cells[9].Value);
-                        // VALOR A PAGAR PARCELADO
-                        decimal total_payable_installment = Convert.ToDecimal(dataGridView1.Rows[i].Cells[10].Value);
-
-                        // BANCO DE DADOS
-                        configdb database = new configdb();
-                        database.openConnection();
-
-                        // TOTAL
-                        MySqlCommand cmdTotal = new MySqlCommand("INSERT INTO familypayday.total_credit_card (id_total_credit_card, total_payble, total_payable_installment) VALUES (null, @total_payble, @total_payable_installment)", database.getConnection());
-                        cmdTotal.Parameters.Add("@total_payble", MySqlDbType.Decimal).Value = total_payble;
-                        cmdTotal.Parameters.Add("@total_payable_installment", MySqlDbType.Decimal).Value = total_payable_installment;
-
-                        cmdTotal.ExecuteNonQuery();
-                        long id_total_credit_card = cmdTotal.LastInsertedId;
-
-                        // CARTÃO DE CREDITO
-                        MySqlCommand cmdCreditCard = new MySqlCommand("INSERT INTO familypayday.credit_card (id_credit_card, credit_card_name, credit_card_payday, credit_card_installment, id_total_credit_card) VALUES (null, @credit_card_name, @credit_card_payday, @credit_card_installment, @id_total_credit_card)", database.getConnection());
-                        cmdCreditCard.Parameters.Add("@credit_card_name", MySqlDbType.VarChar, 45).Value = credit_card_name;
-                        cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.Date).Value = credit_card_payday;
-                        cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = card_credit_installment;
-                        cmdCreditCard.Parameters.Add("@id_total_credit_card", MySqlDbType.Int32).Value = id_total_credit_card;
-
-                        cmdCreditCard.ExecuteNonQuery();
-                        long id_credit_card = cmdCreditCard.LastInsertedId;
-
-                        // PRODUTOS
-                        MySqlCommand cmdProducts = new MySqlCommand("INSERT INTO familypayday.products (id_products, store_name, product_name, id_family_member, id_credit_card) VALUES (null, @store_name, @product_name, @id_family_member, @id_credit_card)", database.getConnection());
-                        cmdProducts.Parameters.Add("@store_name", MySqlDbType.VarChar, 50).Value = store_name;
-                        cmdProducts.Parameters.Add("@product_name", MySqlDbType.VarChar, 245).Value = product_name;
-                        cmdProducts.Parameters.Add("@id_family_member", MySqlDbType.Int32).Value = id_family_member[0];
-                        cmdProducts.Parameters.Add("@id_credit_card", MySqlDbType.Int32).Value = id_credit_card;
-
-                        cmdProducts.ExecuteNonQuery();
-
-                        database.closeConnection();
-
-                        MessageBox.Show(i.ToString());
-                    }
-                }
-            }
-            finally
-            {
-
-
-                //MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-
-        }
+        private void bt_save_01_Click(object sender, EventArgs e) => BT_Save(dataGridView1, id_register_family_member[0], lb_name_01.Text);
 
         private void bt_edit_02_Click(object sender, EventArgs e) => PanelContent(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
 
@@ -309,7 +221,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     case DialogResult.Yes:
                         // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_family_member[1], pl_content_02);
+                        DeleteFamilyMembro(id_register_family_member[1], pl_content_02);
                         break;
                     case DialogResult.No:
                         break;
@@ -327,6 +239,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             }
         }
 
+        private void bt_save_02_Click(object sender, EventArgs e) => BT_Save(dataGridView2, id_register_family_member[1], lb_name_02.Text);
+
         private void bt_edit_03_Click(object sender, EventArgs e) => PanelContent(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
 
         private void bt_cancel_03_Click(object sender, EventArgs e) => PanelContent(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
@@ -341,7 +255,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     case DialogResult.Yes:
                         // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_family_member[2], pl_content_03);
+                        DeleteFamilyMembro(id_register_family_member[2], pl_content_03);
                         break;
                     case DialogResult.No:
                         break;
@@ -373,7 +287,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     case DialogResult.Yes:
                         // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_family_member[3], pl_content_04);
+                        DeleteFamilyMembro(id_register_family_member[3], pl_content_04);
                         break;
                     case DialogResult.No:
                         break;
@@ -405,7 +319,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     case DialogResult.Yes:
                         // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_family_member[4], pl_content_05);
+                        DeleteFamilyMembro(id_register_family_member[4], pl_content_05);
                         break;
                     case DialogResult.No:
                         break;
@@ -437,7 +351,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     case DialogResult.Yes:
                         // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_family_member[5], pl_content_06);
+                        DeleteFamilyMembro(id_register_family_member[5], pl_content_06);
                         break;
                     case DialogResult.No:
                         break;
@@ -469,7 +383,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     case DialogResult.Yes:
                         // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_family_member[6], pl_content_07);
+                        DeleteFamilyMembro(id_register_family_member[6], pl_content_07);
                         break;
                     case DialogResult.No:
                         break;
@@ -501,7 +415,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     case DialogResult.Yes:
                         // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_family_member[7], pl_content_08);
+                        DeleteFamilyMembro(id_register_family_member[7], pl_content_08);
                         break;
                     case DialogResult.No:
                         break;
@@ -533,7 +447,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     case DialogResult.Yes:
                         // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_family_member[8], pl_content_09);
+                        DeleteFamilyMembro(id_register_family_member[8], pl_content_09);
                         break;
                     case DialogResult.No:
                         break;
@@ -565,7 +479,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     case DialogResult.Yes:
                         // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_family_member[9], pl_content_10);
+                        DeleteFamilyMembro(id_register_family_member[9], pl_content_10);
                         break;
                     case DialogResult.No:
                         break;
@@ -580,6 +494,74 @@ namespace Contas_Familia.PanelControll.Dashboard
             finally
             {
                 PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
+            }
+        }
+        
+        void BT_Save(DataGridView dataGridViews, int id, string member)
+        {
+            try
+            {
+                if (dataGridViews.Rows.Count > 1)
+                {
+                    for (int i = 0; i < dataGridViews.Rows.Count - 1; i++)
+                    {
+                        // ID - COLUNA 0
+                        dataGridViews.Rows[i].Cells[0].Value = id;
+                        // NOME DO MEMBRO DA FAMILIA - COLUNA - 1
+                        dataGridViews.Rows[i].Cells[1].Value = member;
+                        // NOME DO CARTÃO DE CREDITO - COLUNA - 2
+                        credit_card_name = dataGridViews.Rows[i].Cells[2].Value.ToString();
+                        // VENCIMENTO DO CARTÃO DE CREDITO - COLUNA - 3
+                        credit_card_payday = Convert.ToDateTime(dataGridViews.Rows[i].Cells[3].Value);
+                        // NOME DA LOJA - COLUNA - 4
+                        store_name = dataGridViews.Rows[i].Cells[4].Value.ToString();
+                        // NOME DO PRODUTO - COLUNA - 5
+                        product_name = dataGridViews.Rows[i].Cells[5].Value.ToString();
+                        // PARCELAMENTO  - COLUNA - 6
+                        card_credit_installment = dataGridViews.Rows[i].Cells[6].Value.ToString();
+                        // VALOR TOTAL DA COMPRA - COLUNA - 7
+                        total_payble = Convert.ToDecimal(dataGridViews.Rows[i].Cells[7].Value);
+                        // VALOR A PAGAR PARCELADO - COLUNA - 8
+                        total_payable_installment = Convert.ToDecimal(dataGridViews.Rows[i].Cells[8].Value);
+                    }
+
+                    // BANCO DE DADOS
+                    configdb database = new configdb();
+                    database.openConnection();
+
+                    // PRODUTOS
+                    MySqlCommand cmdProducts = new MySqlCommand("INSERT INTO familypayday.products (id_products, store_name, product_name, id_register_family_member) VALUES (null, @store_name, @product_name, @id_register_family_member)", database.getConnection());
+                    cmdProducts.Parameters.Add("@store_name", MySqlDbType.VarChar, 50).Value = store_name;
+                    cmdProducts.Parameters.Add("@product_name", MySqlDbType.VarChar, 245).Value = product_name;
+                    cmdProducts.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id;
+
+                    cmdProducts.ExecuteNonQuery();
+                    long id_products = cmdProducts.LastInsertedId;
+
+                    // CARTÃO DE CREDITO
+                    MySqlCommand cmdCreditCard = new MySqlCommand("INSERT INTO familypayday.credit_card (id_credit_card, credit_card_name, credit_card_payday, credit_card_installment, id_products) VALUES (null, @credit_card_name, @credit_card_payday, @credit_card_installment, @id_products)", database.getConnection());
+                    cmdCreditCard.Parameters.Add("@credit_card_name", MySqlDbType.VarChar, 45).Value = credit_card_name;
+                    cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.Date).Value = credit_card_payday;
+                    cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = card_credit_installment;
+                    cmdCreditCard.Parameters.Add("@id_products", MySqlDbType.Int32).Value = id_products;
+
+                    cmdCreditCard.ExecuteNonQuery();
+                    long id_credit_card = cmdCreditCard.LastInsertedId;
+
+                    // TOTAL
+                    MySqlCommand cmdTotal = new MySqlCommand("INSERT INTO familypayday.total_credit_card (id_total_credit_card, total_payble, total_payable_installment, id_credit_card) VALUES (null, @total_payble, @total_payable_installment, @id_credit_card)", database.getConnection());
+                    cmdTotal.Parameters.Add("@total_payble", MySqlDbType.Decimal).Value = total_payble;
+                    cmdTotal.Parameters.Add("@total_payable_installment", MySqlDbType.Decimal).Value = total_payable_installment;
+                    cmdTotal.Parameters.Add("@id_credit_card", MySqlDbType.Int32).Value = id_credit_card;
+
+                    cmdTotal.ExecuteNonQuery();
+
+                    database.closeConnection();
+                }
+            }
+            finally
+            {
+                MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);                
             }
         }
         #endregion
@@ -600,7 +582,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 // ATUALIZA OS PAINEL QUANDO CRIADO UM NOVO MEMBRO DA FAMILIA
-                TableFamilyMember();
+                TableAll();
             }
             catch (Exception ex)
             {
@@ -653,6 +635,21 @@ namespace Contas_Familia.PanelControll.Dashboard
         }
         #endregion
 
+        // PAINEL DE CADA MEMBRO DA FAMILIA DIMINIU/AUMENTA DE TAMANHO AO CLICAR NO BOTÃO EDITAR
+        void PanelContent(bool reg, Panel pl_content, IconButton button)
+        {
+            if (reg)
+            {
+                pl_content.Size = new Size(830, 500);
+                button.IconChar = IconChar.AngleUp;
+            }
+            else
+            {
+                pl_content.Size = new Size(830, 70);
+                button.IconChar = IconChar.AngleDown;
+            }
+        }
+
         // PAINEL DOS MEMBROS DA FAMILIA
         void StartPanelFamily()
         {
@@ -673,9 +670,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             Main.Instance.ButtonMenuDisabled(true);
 
             TableAll();
-            TableFamilyMember();
-
-           
         }
+
     }
 }

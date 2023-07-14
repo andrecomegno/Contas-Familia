@@ -93,7 +93,7 @@ namespace Contas_Familia.PanelControll.Register
                 if (!string.IsNullOrEmpty(textBoxValues[i]))
                 {
                     // INSERT TABELA CADASTRO MEMBRO DA FAMILIA
-                    MySqlCommand cmdFamilyMember = new MySqlCommand("INSERT INTO familypayday.family_member (id_family_member, family_member, id_register_family) VALUES (null, @family_member, @id_register_family)", database.getConnection());
+                    MySqlCommand cmdFamilyMember = new MySqlCommand("INSERT INTO familypayday.register_family_member (id_register_family_member, family_member, id_register_family) VALUES (null, @family_member, @id_register_family)", database.getConnection());
 
                     cmdFamilyMember.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = textBoxValues[i];
                     cmdFamilyMember.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
