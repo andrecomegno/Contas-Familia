@@ -33,7 +33,7 @@ namespace Contas_Familia.PanelControll.Dashboard
         public family()
         {
             InitializeComponent();
-            StartPanelFamily();            
+            StartPanelFamily();
         }
 
         #region TABLES
@@ -43,11 +43,14 @@ namespace Contas_Familia.PanelControll.Dashboard
             configdb database = new configdb();
             database.openConnection();
 
+            // PAINEIS
             Panel[] panels = { pl_content_01, pl_content_02, pl_content_03, pl_content_04, pl_content_05, pl_content_06, pl_content_07, pl_content_08, pl_content_09, pl_content_10 };
             // TABELAS
             DataGridView[] dataGridViews = { dataGridView1, dataGridView2, dataGridView3, dataGridView4, dataGridView5,  dataGridView6, dataGridView7, dataGridView8, dataGridView9, dataGridView10 };
             // NOMES DOS MEMBROS DA FAMILIA
             Label[] lbNames = { lb_name_01, lb_name_02, lb_name_03, lb_name_04, lb_name_05, lb_name_06, lb_name_07, lb_name_08, lb_name_09, lb_name_10 };
+            //
+            Label[] TxtTotal = { txt_total_01, txt_total_02, txt_total_03, txt_total_04, txt_total_05, txt_total_06, txt_total_07, txt_total_08, txt_total_09, txt_total_10 };
 
             MySqlCommand cmd = new MySqlCommand("select rfm.id_register_family_member, rfm.family_member, cc.credit_card_name, cc.credit_card_payday, pr.store_name, pr.product_name, cc.credit_card_installment, tcc.total_payble, tcc.total_payable_installment, rf.id_register_family, cc.id_credit_card, pr.id_products from familypayday.login lo left join familypayday.register_family rf on rf.id_login = lo.id_login left join familypayday.register_family_member rfm on rfm.id_register_family = rf.id_register_family left join familypayday.products pr on pr.id_register_family_member = rfm.id_register_family_member left join familypayday.credit_card cc on cc.id_products = pr.id_products left join familypayday.total_credit_card tcc on tcc.id_credit_card = cc.id_credit_card where rfm.family_member like @family_member '%' ", database.getConnection());
             // UTILIZADO O lbNames[0].Text PADRÃO PARA INICIAR, A BUSCA PELO NOME DOS MEMBROS DA FAMILIA
@@ -66,18 +69,20 @@ namespace Contas_Familia.PanelControll.Dashboard
 
             // LISTA PARA ARMANEZAR OS NOMES JA ATRIBUIDOS
             List<string> SaveNameList = new List<string>();
-
-            // DATAGRIDVIEW NOME DO MEMBRO DA FAMILIA
             for (int i = 0; i < dataGridViews.Length; i++)
             {
                 // VERIFICA SE O NOME JA FOI ATRIBUIDO
                 if (i < family_member.Length && !SaveNameList.Contains(family_member[i]))
                 {
+                    // DATAGRIDVIEW NOME DO MEMBRO DA FAMILIA  
                     lbNames[i].Text = family_member[i];
 
                     // Adiciona o nome à lista de nomes atribuídos
-                    SaveNameList.Add(family_member[i]);
+                    SaveNameList.Add(family_member[i]);                    
                 }
+
+                double valorTotal = CalcularValorTotal(dataGridViews[i]);
+                TxtTotal[i].Text = valorTotal.ToString("c")
 
                 // DESATIVA E ATIVA OS PAINEIS 
                 if (String.IsNullOrEmpty(lbNames[i].Text))
@@ -89,9 +94,8 @@ namespace Contas_Familia.PanelControll.Dashboard
                     panels[i].Visible = true;
                 }
 
-                dataGridViews[i].DataSource = ExecuteQuery(lbNames[i].Text);
+                dataGridViews[i].DataSource = ExecuteQuery(lbNames[i].Text);                
             }
-
 
             // CONFIGURAÇÃO DO DATAGRIDVIEW
             foreach (DataGridView dataGridView in dataGridViews)
@@ -100,6 +104,20 @@ namespace Contas_Familia.PanelControll.Dashboard
             }
 
             database.closeConnection();
+        }
+
+        private double CalcularValorTotal(DataGridView dataGridView)
+        {
+            double total = 0;
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (row.Cells["total_payable_installment"].Value != null &&
+                    double.TryParse(row.Cells["total_payable_installment"].Value.ToString(), out double freight))
+                {
+                    total += freight;
+                }
+            }
+            return total;
         }
 
         // EXECUTAR A CONSULTA E RETORNAR O DATATABLE
@@ -126,8 +144,8 @@ namespace Contas_Familia.PanelControll.Dashboard
         // CONFIGURAR AS COLUNAS DO DATAGRIDVIEW
         private void ConfigureDataGridViewColumns(DataGridView dataGridView)
         {
-            dataGridView.Columns[0].HeaderText = "ID MEMBRO FAMILIA"; // id_register_family_member
-            dataGridView.Columns[1].HeaderText = "NOME";
+            dataGridView.Columns[0].Visible = false; // id_register_family_member
+            dataGridView.Columns[1].Visible = false; // family_member
             dataGridView.Columns[2].HeaderText = "CARTÕES";
             dataGridView.Columns[3].HeaderText = "VENCIMENTO";
             dataGridView.Columns[4].HeaderText = "LOJAS";
@@ -155,348 +173,123 @@ namespace Contas_Familia.PanelControll.Dashboard
             database.closeConnection();
         }
 
-        // TABELA DELETAR MEMBRO DA FAMILIA
-        void DeleteFamilyMembro(int id_member, Panel pl)
-        {
-            configdb database = new configdb();
-            database.openConnection();
-
-            MySqlCommand cmd = new MySqlCommand("DELETE FROM familypayday.register_family_member WHERE id_register_family_member = @id_register_family_member and id_register_family = @id_register_family", database.getConnection());
-            cmd.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id_member;
-            cmd.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
-
-            cmd.ExecuteNonQuery();
-            database.closeConnection();
-
-            pl.Visible = false;
-        }
         #endregion
 
         #region BUTTON TABELA MEMBER FAMILY
+
+        // BOTÃO 1
         private void bt_edit_01_Click(object sender, EventArgs e) => PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
 
         private void bt_cancel_01_Click(object sender, EventArgs e) => PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
 
-        private void bt_delete_01_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-                switch (dr)
-                {
-                    case DialogResult.Yes:
-                        // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_register_family_member[0], pl_content_01);
-                        break;
-                    case DialogResult.No:
-                        break;
-                    default:
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            finally
-            {
-                PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
-            }
-        }
+        private void bt_delete_01_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[0], pl_content_01, _edit[0] = !_edit[0], pl_content_01, bt_edit_01);
 
         private void bt_save_01_Click(object sender, EventArgs e) => BT_Save(dataGridView1, id_register_family_member[0], lb_name_01.Text);
 
+        // BOTÃO 2
         private void bt_edit_02_Click(object sender, EventArgs e) => PanelContent(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
 
         private void bt_cancel_02_Click(object sender, EventArgs e) => PanelContent(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
 
-        private void bt_delet_02_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-                switch (dr)
-                {
-                    case DialogResult.Yes:
-                        // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_register_family_member[1], pl_content_02);
-                        break;
-                    case DialogResult.No:
-                        break;
-                    default:
-                        break;
-                }                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            finally
-            {
-                PanelContent(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
-            }
-        }
+        private void bt_delet_02_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[1], pl_content_02, _edit[1] = !_edit[1], pl_content_02, bt_edit_02);
 
         private void bt_save_02_Click(object sender, EventArgs e) => BT_Save(dataGridView2, id_register_family_member[1], lb_name_02.Text);
 
+        // BOTÃO 3
         private void bt_edit_03_Click(object sender, EventArgs e) => PanelContent(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
 
         private void bt_cancel_03_Click(object sender, EventArgs e) => PanelContent(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
 
-        private void bt_delet_03_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+        private void bt_delet_03_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[2], pl_content_03, _edit[2] = !_edit[2], pl_content_03, bt_edit_03);
 
-                switch (dr)
-                {
-                    case DialogResult.Yes:
-                        // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_register_family_member[2], pl_content_03);
-                        break;
-                    case DialogResult.No:
-                        break;
-                    default:
-                        break;
-                }                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            finally
-            {
-                PanelContent(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
-            }
-        }
+        private void bt_save_03_Click(object sender, EventArgs e) => BT_Save(dataGridView3, id_register_family_member[2], lb_name_03.Text);
 
+        // BOTÃO 4
         private void bt_edit_04_Click(object sender, EventArgs e) => PanelContent(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
 
         private void bt_cancel_04_Click(object sender, EventArgs e) => PanelContent(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
 
-        private void bt_delet_04_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+        private void bt_delet_04_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[3], pl_content_04, _edit[3] = !_edit[3], pl_content_04, bt_edit_04);
 
-                switch (dr)
-                {
-                    case DialogResult.Yes:
-                        // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_register_family_member[3], pl_content_04);
-                        break;
-                    case DialogResult.No:
-                        break;
-                    default:
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            finally
-            {
-                PanelContent(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
-            }
-        }
+        private void bt_save_04_Click(object sender, EventArgs e) => BT_Save(dataGridView4, id_register_family_member[3], lb_name_04.Text);
 
+        // BOTÃO 5
         private void bt_edit_05_Click(object sender, EventArgs e) => PanelContent(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
 
         private void bt_cancel_05_Click(object sender, EventArgs e) => PanelContent(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
 
-        private void bt_delet_05_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+        private void bt_delet_05_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[4], pl_content_05, _edit[4] = !_edit[4], pl_content_05, bt_edit_05);
 
-                switch (dr)
-                {
-                    case DialogResult.Yes:
-                        // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_register_family_member[4], pl_content_05);
-                        break;
-                    case DialogResult.No:
-                        break;
-                    default:
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            finally
-            {
-                PanelContent(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
-            }
-        }
+        private void bt_save_05_Click(object sender, EventArgs e) => BT_Save(dataGridView5, id_register_family_member[4], lb_name_05.Text);
 
+        // BOTÃO 6
         private void bt_edit_06_Click(object sender, EventArgs e) => PanelContent(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
 
         private void bt_cancel_06_Click(object sender, EventArgs e) => PanelContent(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
 
-        private void bt_delet_06_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+        private void bt_delet_06_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[5], pl_content_06, _edit[5] = !_edit[5], pl_content_06, bt_edit_06);
 
-                switch (dr)
-                {
-                    case DialogResult.Yes:
-                        // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_register_family_member[5], pl_content_06);
-                        break;
-                    case DialogResult.No:
-                        break;
-                    default:
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            finally
-            {
-                PanelContent(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
-            }
-        }
+        private void bt_save_06_Click(object sender, EventArgs e) => BT_Save(dataGridView6, id_register_family_member[5], lb_name_06.Text);
 
+        // BOTÃO 7
         private void bt_edit_07_Click(object sender, EventArgs e) => PanelContent(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
 
         private void bt_cancel_07_Click(object sender, EventArgs e) => PanelContent(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
 
-        private void bt_delet_07_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+        private void bt_delet_07_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[6], pl_content_07, _edit[6] = !_edit[6], pl_content_07, bt_edit_07);
 
-                switch (dr)
-                {
-                    case DialogResult.Yes:
-                        // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_register_family_member[6], pl_content_07);
-                        break;
-                    case DialogResult.No:
-                        break;
-                    default:
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            finally
-            {
-                PanelContent(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
-            }
-        }
+        private void bt_save_07_Click(object sender, EventArgs e) => BT_Save(dataGridView7, id_register_family_member[6], lb_name_07.Text);
 
+        // BOTÃO 8
         private void bt_edit_08_Click(object sender, EventArgs e) => PanelContent(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
 
         private void bt_cancel_08_Click(object sender, EventArgs e) => PanelContent(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
 
-        private void bt_delet_08_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+        private void bt_delet_08_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[7], pl_content_08, _edit[7] = !_edit[7], pl_content_08, bt_edit_08);
 
-                switch (dr)
-                {
-                    case DialogResult.Yes:
-                        // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_register_family_member[7], pl_content_08);
-                        break;
-                    case DialogResult.No:
-                        break;
-                    default:
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            finally
-            {
-                PanelContent(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
-            }
-        }
+        private void bt_save_08_Click(object sender, EventArgs e) => BT_Save(dataGridView8, id_register_family_member[7], lb_name_08.Text);
 
+        // BOTÃO 9
         private void bt_edit_09_Click(object sender, EventArgs e) => PanelContent(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
 
         private void bt_cancel_09_Click(object sender, EventArgs e) => PanelContent(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
 
-        private void bt_delet_09_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+        private void bt_delet_09_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[8], pl_content_09, _edit[8] = !_edit[8], pl_content_09, bt_edit_09);
 
-                switch (dr)
-                {
-                    case DialogResult.Yes:
-                        // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_register_family_member[8], pl_content_09);
-                        break;
-                    case DialogResult.No:
-                        break;
-                    default:
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            finally
-            {
-                PanelContent(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
-            }
-        }
+        private void bt_save_09_Click(object sender, EventArgs e) => BT_Save(dataGridView9, id_register_family_member[8], lb_name_09.Text);
 
+        // BOTÃO 10
         private void bt_edit_10_Click(object sender, EventArgs e) => PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
 
         private void bt_cancel_10_Click(object sender, EventArgs e) => PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
 
-        private void bt_delet_10_Click(object sender, EventArgs e)
+        private void bt_delet_10_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[9], pl_content_10, _edit[9] = !_edit[9], pl_content_10, bt_edit_10);
+
+        private void bt_save_10_Click(object sender, EventArgs e) => BT_Save(dataGridView10, id_register_family_member[9], lb_name_10.Text);
+
+        void BT_Cancel(DataGridView dataGridViews, bool reg, Panel pl_content, IconButton button)
         {
             try
             {
-                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                switch (dr)
-                {
-                    case DialogResult.Yes:
-                        // MEMBRO FAMILIA DELETADO 
-                        DeleteFamilyMembro(id_register_family_member[9], pl_content_10);
-                        break;
-                    case DialogResult.No:
-                        break;
-                    default:
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             finally
             {
-                PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
+                if (reg)
+                {
+                    pl_content.Size = new Size(830, 500);
+                    button.IconChar = IconChar.AngleUp;
+                }
+                else
+                {
+                    pl_content.Size = new Size(830, 70);
+                    button.IconChar = IconChar.AngleDown;
+                }
             }
+
+
         }
-        
+
         void BT_Save(DataGridView dataGridViews, int id, string member)
         {
             try
@@ -564,6 +357,53 @@ namespace Contas_Familia.PanelControll.Dashboard
                 MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);                
             }
         }
+
+        void BT_Delete(int id_member, Panel pl, bool reg, Panel pl_content, IconButton button)
+        {
+            try
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        configdb database = new configdb();
+                        database.openConnection();
+
+                        MySqlCommand cmd = new MySqlCommand("DELETE FROM familypayday.register_family_member WHERE id_register_family_member = @id_register_family_member and id_register_family = @id_register_family", database.getConnection());
+                        cmd.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id_member;
+                        cmd.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
+
+                        cmd.ExecuteNonQuery();
+                        database.closeConnection();
+
+                        pl.Visible = false;
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                if (reg)
+                {
+                    pl_content.Size = new Size(830, 500);
+                    button.IconChar = IconChar.AngleUp;
+                }
+                else
+                {
+                    pl_content.Size = new Size(830, 70);
+                    button.IconChar = IconChar.AngleDown;
+                }
+            }
+        }
+
         #endregion
 
         #region ADD NEW FAMILY MEMEBR
@@ -582,7 +422,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 // ATUALIZA OS PAINEL QUANDO CRIADO UM NOVO MEMBRO DA FAMILIA
-                TableAll();
+
             }
             catch (Exception ex)
             {
@@ -635,21 +475,6 @@ namespace Contas_Familia.PanelControll.Dashboard
         }
         #endregion
 
-        // PAINEL DE CADA MEMBRO DA FAMILIA DIMINIU/AUMENTA DE TAMANHO AO CLICAR NO BOTÃO EDITAR
-        void PanelContent(bool reg, Panel pl_content, IconButton button)
-        {
-            if (reg)
-            {
-                pl_content.Size = new Size(830, 500);
-                button.IconChar = IconChar.AngleUp;
-            }
-            else
-            {
-                pl_content.Size = new Size(830, 70);
-                button.IconChar = IconChar.AngleDown;
-            }
-        }
-
         // PAINEL DOS MEMBROS DA FAMILIA
         void StartPanelFamily()
         {
@@ -663,6 +488,21 @@ namespace Contas_Familia.PanelControll.Dashboard
             PanelContent(_edit[7], pl_content_08, bt_edit_08);
             PanelContent(_edit[8], pl_content_09, bt_edit_09);
             PanelContent(_edit[9], pl_content_10, bt_edit_10);
+        }
+
+        // PAINEL DE CADA MEMBRO DA FAMILIA DIMINIU/AUMENTA DE TAMANHO AO CLICAR NO BOTÃO EDITAR
+        void PanelContent(bool reg, Panel pl_content, IconButton button)
+        {
+            if (reg)
+            {
+                pl_content.Size = new Size(830, 500);
+                button.IconChar = IconChar.AngleUp;
+            }
+            else
+            {
+                pl_content.Size = new Size(830, 70);
+                button.IconChar = IconChar.AngleDown;
+            }
         }
 
         private void family_Load(object sender, EventArgs e)
