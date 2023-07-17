@@ -59,7 +59,11 @@ namespace Contas_Familia.PanelControll.Dashboard
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pl_family_01 = new System.Windows.Forms.Panel();
+            this.txt_total_01 = new System.Windows.Forms.Label();
             this.bt_save_01 = new System.Windows.Forms.Button();
             this.lb_name_01 = new System.Windows.Forms.Label();
             this.lb_total_01 = new System.Windows.Forms.Label();
@@ -70,6 +74,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_content_01 = new System.Windows.Forms.Panel();
             this.pl_content_02 = new System.Windows.Forms.Panel();
             this.pl_family_02 = new System.Windows.Forms.Panel();
+            this.txt_total_02 = new System.Windows.Forms.Label();
             this.bt_save_02 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lb_name_02 = new System.Windows.Forms.Label();
@@ -79,6 +84,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_02 = new System.Windows.Forms.Button();
             this.pl_content_03 = new System.Windows.Forms.Panel();
             this.pl_family_03 = new System.Windows.Forms.Panel();
+            this.txt_total_03 = new System.Windows.Forms.Label();
             this.bt_save_03 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.lb_name_03 = new System.Windows.Forms.Label();
@@ -88,6 +94,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_03 = new System.Windows.Forms.Button();
             this.pl_content_04 = new System.Windows.Forms.Panel();
             this.pl_family_04 = new System.Windows.Forms.Panel();
+            this.txt_total_04 = new System.Windows.Forms.Label();
             this.bt_save_04 = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.lb_name_04 = new System.Windows.Forms.Label();
@@ -97,6 +104,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_04 = new System.Windows.Forms.Button();
             this.pl_content_05 = new System.Windows.Forms.Panel();
             this.pl_family_05 = new System.Windows.Forms.Panel();
+            this.txt_total_05 = new System.Windows.Forms.Label();
             this.bt_save_05 = new System.Windows.Forms.Button();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.lb_name_05 = new System.Windows.Forms.Label();
@@ -106,6 +114,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_05 = new System.Windows.Forms.Button();
             this.pl_content_06 = new System.Windows.Forms.Panel();
             this.pl_family_06 = new System.Windows.Forms.Panel();
+            this.txt_total_06 = new System.Windows.Forms.Label();
             this.bt_save_06 = new System.Windows.Forms.Button();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.lb_name_06 = new System.Windows.Forms.Label();
@@ -115,6 +124,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_06 = new System.Windows.Forms.Button();
             this.pl_content_07 = new System.Windows.Forms.Panel();
             this.pl_family_07 = new System.Windows.Forms.Panel();
+            this.txt_total_07 = new System.Windows.Forms.Label();
             this.bt_save_07 = new System.Windows.Forms.Button();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.lb_name_07 = new System.Windows.Forms.Label();
@@ -124,6 +134,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_07 = new System.Windows.Forms.Button();
             this.pl_content_08 = new System.Windows.Forms.Panel();
             this.pl_family_08 = new System.Windows.Forms.Panel();
+            this.txt_total_08 = new System.Windows.Forms.Label();
             this.bt_save_08 = new System.Windows.Forms.Button();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.lb_name_08 = new System.Windows.Forms.Label();
@@ -133,6 +144,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_08 = new System.Windows.Forms.Button();
             this.pl_content_09 = new System.Windows.Forms.Panel();
             this.pl_family_09 = new System.Windows.Forms.Panel();
+            this.txt_total_09 = new System.Windows.Forms.Label();
             this.bt_save_09 = new System.Windows.Forms.Button();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
             this.lb_name_09 = new System.Windows.Forms.Label();
@@ -142,6 +154,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_09 = new System.Windows.Forms.Button();
             this.pl_content_10 = new System.Windows.Forms.Panel();
             this.pl_family_10 = new System.Windows.Forms.Panel();
+            this.txt_total_10 = new System.Windows.Forms.Label();
             this.bt_save_10 = new System.Windows.Forms.Button();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.lb_name_10 = new System.Windows.Forms.Label();
@@ -150,20 +163,15 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_cancel_10 = new System.Windows.Forms.Button();
             this.bt_delet_10 = new System.Windows.Forms.Button();
             this.pl_add = new System.Windows.Forms.Panel();
+            this.lb_alert_member = new System.Windows.Forms.Label();
             this.pl_add_family_member = new System.Windows.Forms.Panel();
             this.bt_cancel = new System.Windows.Forms.Button();
             this.bt_save = new System.Windows.Forms.Button();
             this.bt_add = new System.Windows.Forms.Button();
-            this.txt_total_01 = new System.Windows.Forms.Label();
-            this.txt_total_02 = new System.Windows.Forms.Label();
-            this.txt_total_03 = new System.Windows.Forms.Label();
-            this.txt_total_10 = new System.Windows.Forms.Label();
-            this.txt_total_09 = new System.Windows.Forms.Label();
-            this.txt_total_08 = new System.Windows.Forms.Label();
-            this.txt_total_07 = new System.Windows.Forms.Label();
-            this.txt_total_06 = new System.Windows.Forms.Label();
-            this.txt_total_05 = new System.Windows.Forms.Label();
-            this.txt_total_04 = new System.Windows.Forms.Label();
+            this.pl_null = new System.Windows.Forms.Panel();
+            this.lb_table_member_family = new System.Windows.Forms.Label();
+            this.dgv_family_member = new System.Windows.Forms.DataGridView();
+            this.pl_table_member_family = new System.Windows.Forms.Panel();
             this.txt_add_family_name = new Contas_Familia.Script.RJTextBox();
             this.pl_family_01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -197,6 +205,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             this.pl_add.SuspendLayout();
             this.pl_add_family_member.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_family_member)).BeginInit();
+            this.pl_table_member_family.SuspendLayout();
             this.SuspendLayout();
             // 
             // pl_family_01
@@ -217,16 +227,27 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_01.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_01.TabIndex = 10;
             // 
+            // txt_total_01
+            // 
+            this.txt_total_01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_total_01.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_total_01.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_01.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_total_01.Location = new System.Drawing.Point(971, 421);
+            this.txt_total_01.Name = "txt_total_01";
+            this.txt_total_01.Size = new System.Drawing.Size(182, 36);
+            this.txt_total_01.TabIndex = 81;
+            this.txt_total_01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // bt_save_01
             // 
-            this.bt_save_01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_save_01.BackColor = System.Drawing.Color.OliveDrab;
             this.bt_save_01.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save_01.FlatAppearance.BorderSize = 0;
             this.bt_save_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save_01.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_save_01.ForeColor = System.Drawing.Color.White;
-            this.bt_save_01.Location = new System.Drawing.Point(654, 423);
+            this.bt_save_01.Location = new System.Drawing.Point(16, 420);
             this.bt_save_01.Name = "bt_save_01";
             this.bt_save_01.Size = new System.Drawing.Size(122, 36);
             this.bt_save_01.TabIndex = 80;
@@ -251,7 +272,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_total_01.AutoSize = true;
             this.lb_total_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_total_01.ForeColor = System.Drawing.Color.White;
-            this.lb_total_01.Location = new System.Drawing.Point(947, 427);
+            this.lb_total_01.Location = new System.Drawing.Point(886, 428);
             this.lb_total_01.Name = "lb_total_01";
             this.lb_total_01.Size = new System.Drawing.Size(79, 25);
             this.lb_total_01.TabIndex = 73;
@@ -284,14 +305,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             // bt_cancel_01
             // 
-            this.bt_cancel_01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_cancel_01.BackColor = System.Drawing.Color.LightSlateGray;
             this.bt_cancel_01.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_cancel_01.FlatAppearance.BorderSize = 0;
             this.bt_cancel_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_cancel_01.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cancel_01.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_01.Location = new System.Drawing.Point(782, 423);
+            this.bt_cancel_01.Location = new System.Drawing.Point(144, 420);
             this.bt_cancel_01.Name = "bt_cancel_01";
             this.bt_cancel_01.Size = new System.Drawing.Size(122, 36);
             this.bt_cancel_01.TabIndex = 69;
@@ -307,7 +327,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_delet_01.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delet_01.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_01.Location = new System.Drawing.Point(19, 421);
+            this.bt_delet_01.Location = new System.Drawing.Point(277, 14);
             this.bt_delet_01.Name = "bt_delet_01";
             this.bt_delet_01.Size = new System.Drawing.Size(122, 36);
             this.bt_delet_01.TabIndex = 68;
@@ -334,7 +354,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 50;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -359,7 +379,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             this.pl_content_01.Controls.Add(this.pl_family_01);
             this.pl_content_01.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_01.Location = new System.Drawing.Point(0, 70);
+            this.pl_content_01.Location = new System.Drawing.Point(0, 458);
             this.pl_content_01.Name = "pl_content_01";
             this.pl_content_01.Size = new System.Drawing.Size(1222, 500);
             this.pl_content_01.TabIndex = 150;
@@ -368,7 +388,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             this.pl_content_02.Controls.Add(this.pl_family_02);
             this.pl_content_02.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_02.Location = new System.Drawing.Point(0, 570);
+            this.pl_content_02.Location = new System.Drawing.Point(0, 958);
             this.pl_content_02.Name = "pl_content_02";
             this.pl_content_02.Size = new System.Drawing.Size(1222, 500);
             this.pl_content_02.TabIndex = 154;
@@ -391,16 +411,27 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_02.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_02.TabIndex = 10;
             // 
+            // txt_total_02
+            // 
+            this.txt_total_02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_total_02.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_total_02.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_02.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_total_02.Location = new System.Drawing.Point(971, 421);
+            this.txt_total_02.Name = "txt_total_02";
+            this.txt_total_02.Size = new System.Drawing.Size(182, 36);
+            this.txt_total_02.TabIndex = 82;
+            this.txt_total_02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // bt_save_02
             // 
-            this.bt_save_02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_save_02.BackColor = System.Drawing.Color.OliveDrab;
             this.bt_save_02.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save_02.FlatAppearance.BorderSize = 0;
             this.bt_save_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save_02.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_save_02.ForeColor = System.Drawing.Color.White;
-            this.bt_save_02.Location = new System.Drawing.Point(654, 422);
+            this.bt_save_02.Location = new System.Drawing.Point(16, 420);
             this.bt_save_02.Name = "bt_save_02";
             this.bt_save_02.Size = new System.Drawing.Size(122, 36);
             this.bt_save_02.TabIndex = 81;
@@ -427,7 +458,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView2.ColumnHeadersHeight = 50;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -466,7 +497,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(947, 427);
+            this.label1.Location = new System.Drawing.Point(886, 428);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 25);
             this.label1.TabIndex = 75;
@@ -499,14 +530,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             // bt_cancel_02
             // 
-            this.bt_cancel_02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_cancel_02.BackColor = System.Drawing.Color.LightSlateGray;
             this.bt_cancel_02.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_cancel_02.FlatAppearance.BorderSize = 0;
             this.bt_cancel_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_cancel_02.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cancel_02.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_02.Location = new System.Drawing.Point(782, 422);
+            this.bt_cancel_02.Location = new System.Drawing.Point(144, 420);
             this.bt_cancel_02.Name = "bt_cancel_02";
             this.bt_cancel_02.Size = new System.Drawing.Size(122, 36);
             this.bt_cancel_02.TabIndex = 69;
@@ -522,7 +552,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_delet_02.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delet_02.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_02.Location = new System.Drawing.Point(16, 421);
+            this.bt_delet_02.Location = new System.Drawing.Point(277, 14);
             this.bt_delet_02.Name = "bt_delet_02";
             this.bt_delet_02.Size = new System.Drawing.Size(122, 36);
             this.bt_delet_02.TabIndex = 68;
@@ -534,7 +564,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             this.pl_content_03.Controls.Add(this.pl_family_03);
             this.pl_content_03.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_03.Location = new System.Drawing.Point(0, 1070);
+            this.pl_content_03.Location = new System.Drawing.Point(0, 1458);
             this.pl_content_03.Name = "pl_content_03";
             this.pl_content_03.Size = new System.Drawing.Size(1222, 500);
             this.pl_content_03.TabIndex = 156;
@@ -557,16 +587,27 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_03.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_03.TabIndex = 11;
             // 
+            // txt_total_03
+            // 
+            this.txt_total_03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_total_03.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_total_03.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_03.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_total_03.Location = new System.Drawing.Point(971, 421);
+            this.txt_total_03.Name = "txt_total_03";
+            this.txt_total_03.Size = new System.Drawing.Size(182, 36);
+            this.txt_total_03.TabIndex = 83;
+            this.txt_total_03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // bt_save_03
             // 
-            this.bt_save_03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_save_03.BackColor = System.Drawing.Color.OliveDrab;
             this.bt_save_03.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save_03.FlatAppearance.BorderSize = 0;
             this.bt_save_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save_03.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_save_03.ForeColor = System.Drawing.Color.White;
-            this.bt_save_03.Location = new System.Drawing.Point(654, 421);
+            this.bt_save_03.Location = new System.Drawing.Point(16, 420);
             this.bt_save_03.Name = "bt_save_03";
             this.bt_save_03.Size = new System.Drawing.Size(122, 36);
             this.bt_save_03.TabIndex = 82;
@@ -593,7 +634,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView3.ColumnHeadersHeight = 50;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -632,7 +673,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(947, 427);
+            this.label2.Location = new System.Drawing.Point(886, 428);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 25);
             this.label2.TabIndex = 75;
@@ -665,14 +706,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             // bt_cancel_03
             // 
-            this.bt_cancel_03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_cancel_03.BackColor = System.Drawing.Color.LightSlateGray;
             this.bt_cancel_03.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_cancel_03.FlatAppearance.BorderSize = 0;
             this.bt_cancel_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_cancel_03.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cancel_03.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_03.Location = new System.Drawing.Point(782, 421);
+            this.bt_cancel_03.Location = new System.Drawing.Point(144, 420);
             this.bt_cancel_03.Name = "bt_cancel_03";
             this.bt_cancel_03.Size = new System.Drawing.Size(122, 36);
             this.bt_cancel_03.TabIndex = 69;
@@ -688,7 +728,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_delet_03.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delet_03.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_03.Location = new System.Drawing.Point(16, 421);
+            this.bt_delet_03.Location = new System.Drawing.Point(277, 14);
             this.bt_delet_03.Name = "bt_delet_03";
             this.bt_delet_03.Size = new System.Drawing.Size(122, 36);
             this.bt_delet_03.TabIndex = 68;
@@ -700,7 +740,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             this.pl_content_04.Controls.Add(this.pl_family_04);
             this.pl_content_04.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_04.Location = new System.Drawing.Point(0, 1570);
+            this.pl_content_04.Location = new System.Drawing.Point(0, 1958);
             this.pl_content_04.Name = "pl_content_04";
             this.pl_content_04.Size = new System.Drawing.Size(1222, 500);
             this.pl_content_04.TabIndex = 157;
@@ -723,16 +763,27 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_04.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_04.TabIndex = 10;
             // 
+            // txt_total_04
+            // 
+            this.txt_total_04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_total_04.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_total_04.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_04.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_total_04.Location = new System.Drawing.Point(971, 421);
+            this.txt_total_04.Name = "txt_total_04";
+            this.txt_total_04.Size = new System.Drawing.Size(182, 36);
+            this.txt_total_04.TabIndex = 92;
+            this.txt_total_04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // bt_save_04
             // 
-            this.bt_save_04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_save_04.BackColor = System.Drawing.Color.OliveDrab;
             this.bt_save_04.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save_04.FlatAppearance.BorderSize = 0;
             this.bt_save_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save_04.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_save_04.ForeColor = System.Drawing.Color.White;
-            this.bt_save_04.Location = new System.Drawing.Point(654, 421);
+            this.bt_save_04.Location = new System.Drawing.Point(16, 420);
             this.bt_save_04.Name = "bt_save_04";
             this.bt_save_04.Size = new System.Drawing.Size(122, 36);
             this.bt_save_04.TabIndex = 82;
@@ -759,7 +810,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView4.ColumnHeadersHeight = 50;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -798,7 +849,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(947, 427);
+            this.label3.Location = new System.Drawing.Point(886, 428);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 25);
             this.label3.TabIndex = 75;
@@ -831,14 +882,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             // bt_cancel_04
             // 
-            this.bt_cancel_04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_cancel_04.BackColor = System.Drawing.Color.LightSlateGray;
             this.bt_cancel_04.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_cancel_04.FlatAppearance.BorderSize = 0;
             this.bt_cancel_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_cancel_04.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cancel_04.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_04.Location = new System.Drawing.Point(782, 421);
+            this.bt_cancel_04.Location = new System.Drawing.Point(144, 420);
             this.bt_cancel_04.Name = "bt_cancel_04";
             this.bt_cancel_04.Size = new System.Drawing.Size(122, 36);
             this.bt_cancel_04.TabIndex = 69;
@@ -854,7 +904,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_delet_04.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delet_04.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_04.Location = new System.Drawing.Point(16, 421);
+            this.bt_delet_04.Location = new System.Drawing.Point(277, 14);
             this.bt_delet_04.Name = "bt_delet_04";
             this.bt_delet_04.Size = new System.Drawing.Size(122, 36);
             this.bt_delet_04.TabIndex = 68;
@@ -866,7 +916,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             this.pl_content_05.Controls.Add(this.pl_family_05);
             this.pl_content_05.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_05.Location = new System.Drawing.Point(0, 2070);
+            this.pl_content_05.Location = new System.Drawing.Point(0, 2458);
             this.pl_content_05.Name = "pl_content_05";
             this.pl_content_05.Size = new System.Drawing.Size(1222, 500);
             this.pl_content_05.TabIndex = 158;
@@ -889,16 +939,27 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_05.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_05.TabIndex = 10;
             // 
+            // txt_total_05
+            // 
+            this.txt_total_05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_total_05.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_total_05.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_05.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_total_05.Location = new System.Drawing.Point(971, 421);
+            this.txt_total_05.Name = "txt_total_05";
+            this.txt_total_05.Size = new System.Drawing.Size(182, 36);
+            this.txt_total_05.TabIndex = 91;
+            this.txt_total_05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // bt_save_05
             // 
-            this.bt_save_05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_save_05.BackColor = System.Drawing.Color.OliveDrab;
             this.bt_save_05.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save_05.FlatAppearance.BorderSize = 0;
             this.bt_save_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save_05.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_save_05.ForeColor = System.Drawing.Color.White;
-            this.bt_save_05.Location = new System.Drawing.Point(654, 421);
+            this.bt_save_05.Location = new System.Drawing.Point(16, 420);
             this.bt_save_05.Name = "bt_save_05";
             this.bt_save_05.Size = new System.Drawing.Size(122, 36);
             this.bt_save_05.TabIndex = 82;
@@ -925,7 +986,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView5.ColumnHeadersHeight = 50;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -964,7 +1025,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(947, 427);
+            this.label4.Location = new System.Drawing.Point(886, 428);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 25);
             this.label4.TabIndex = 75;
@@ -997,14 +1058,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             // bt_cancel_05
             // 
-            this.bt_cancel_05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_cancel_05.BackColor = System.Drawing.Color.LightSlateGray;
             this.bt_cancel_05.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_cancel_05.FlatAppearance.BorderSize = 0;
             this.bt_cancel_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_cancel_05.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cancel_05.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_05.Location = new System.Drawing.Point(782, 421);
+            this.bt_cancel_05.Location = new System.Drawing.Point(144, 420);
             this.bt_cancel_05.Name = "bt_cancel_05";
             this.bt_cancel_05.Size = new System.Drawing.Size(122, 36);
             this.bt_cancel_05.TabIndex = 69;
@@ -1020,7 +1080,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_delet_05.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delet_05.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_05.Location = new System.Drawing.Point(16, 421);
+            this.bt_delet_05.Location = new System.Drawing.Point(277, 14);
             this.bt_delet_05.Name = "bt_delet_05";
             this.bt_delet_05.Size = new System.Drawing.Size(122, 36);
             this.bt_delet_05.TabIndex = 68;
@@ -1032,7 +1092,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             this.pl_content_06.Controls.Add(this.pl_family_06);
             this.pl_content_06.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_06.Location = new System.Drawing.Point(0, 2570);
+            this.pl_content_06.Location = new System.Drawing.Point(0, 2958);
             this.pl_content_06.Name = "pl_content_06";
             this.pl_content_06.Size = new System.Drawing.Size(1222, 500);
             this.pl_content_06.TabIndex = 159;
@@ -1055,16 +1115,27 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_06.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_06.TabIndex = 10;
             // 
+            // txt_total_06
+            // 
+            this.txt_total_06.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_total_06.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_total_06.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_06.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_total_06.Location = new System.Drawing.Point(971, 421);
+            this.txt_total_06.Name = "txt_total_06";
+            this.txt_total_06.Size = new System.Drawing.Size(182, 36);
+            this.txt_total_06.TabIndex = 90;
+            this.txt_total_06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // bt_save_06
             // 
-            this.bt_save_06.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_save_06.BackColor = System.Drawing.Color.OliveDrab;
             this.bt_save_06.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save_06.FlatAppearance.BorderSize = 0;
             this.bt_save_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save_06.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_save_06.ForeColor = System.Drawing.Color.White;
-            this.bt_save_06.Location = new System.Drawing.Point(654, 421);
+            this.bt_save_06.Location = new System.Drawing.Point(16, 420);
             this.bt_save_06.Name = "bt_save_06";
             this.bt_save_06.Size = new System.Drawing.Size(122, 36);
             this.bt_save_06.TabIndex = 82;
@@ -1091,7 +1162,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridView6.ColumnHeadersHeight = 50;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1130,7 +1201,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(947, 427);
+            this.label5.Location = new System.Drawing.Point(886, 428);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 25);
             this.label5.TabIndex = 75;
@@ -1163,14 +1234,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             // bt_cancel_06
             // 
-            this.bt_cancel_06.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_cancel_06.BackColor = System.Drawing.Color.LightSlateGray;
             this.bt_cancel_06.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_cancel_06.FlatAppearance.BorderSize = 0;
             this.bt_cancel_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_cancel_06.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cancel_06.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_06.Location = new System.Drawing.Point(782, 421);
+            this.bt_cancel_06.Location = new System.Drawing.Point(144, 420);
             this.bt_cancel_06.Name = "bt_cancel_06";
             this.bt_cancel_06.Size = new System.Drawing.Size(122, 36);
             this.bt_cancel_06.TabIndex = 69;
@@ -1186,7 +1256,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_delet_06.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delet_06.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_06.Location = new System.Drawing.Point(16, 421);
+            this.bt_delet_06.Location = new System.Drawing.Point(277, 14);
             this.bt_delet_06.Name = "bt_delet_06";
             this.bt_delet_06.Size = new System.Drawing.Size(122, 36);
             this.bt_delet_06.TabIndex = 68;
@@ -1198,7 +1268,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             this.pl_content_07.Controls.Add(this.pl_family_07);
             this.pl_content_07.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_07.Location = new System.Drawing.Point(0, 3070);
+            this.pl_content_07.Location = new System.Drawing.Point(0, 3458);
             this.pl_content_07.Name = "pl_content_07";
             this.pl_content_07.Size = new System.Drawing.Size(1222, 500);
             this.pl_content_07.TabIndex = 160;
@@ -1221,16 +1291,27 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_07.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_07.TabIndex = 10;
             // 
+            // txt_total_07
+            // 
+            this.txt_total_07.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_total_07.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_total_07.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_07.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_total_07.Location = new System.Drawing.Point(971, 421);
+            this.txt_total_07.Name = "txt_total_07";
+            this.txt_total_07.Size = new System.Drawing.Size(182, 36);
+            this.txt_total_07.TabIndex = 89;
+            this.txt_total_07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // bt_save_07
             // 
-            this.bt_save_07.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_save_07.BackColor = System.Drawing.Color.OliveDrab;
             this.bt_save_07.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save_07.FlatAppearance.BorderSize = 0;
             this.bt_save_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save_07.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_save_07.ForeColor = System.Drawing.Color.White;
-            this.bt_save_07.Location = new System.Drawing.Point(654, 421);
+            this.bt_save_07.Location = new System.Drawing.Point(16, 420);
             this.bt_save_07.Name = "bt_save_07";
             this.bt_save_07.Size = new System.Drawing.Size(122, 36);
             this.bt_save_07.TabIndex = 83;
@@ -1257,7 +1338,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView7.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridView7.ColumnHeadersHeight = 50;
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1296,7 +1377,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(947, 427);
+            this.label6.Location = new System.Drawing.Point(886, 428);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 25);
             this.label6.TabIndex = 75;
@@ -1329,14 +1410,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             // bt_cancel_07
             // 
-            this.bt_cancel_07.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_cancel_07.BackColor = System.Drawing.Color.LightSlateGray;
             this.bt_cancel_07.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_cancel_07.FlatAppearance.BorderSize = 0;
             this.bt_cancel_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_cancel_07.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cancel_07.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_07.Location = new System.Drawing.Point(782, 421);
+            this.bt_cancel_07.Location = new System.Drawing.Point(144, 420);
             this.bt_cancel_07.Name = "bt_cancel_07";
             this.bt_cancel_07.Size = new System.Drawing.Size(122, 36);
             this.bt_cancel_07.TabIndex = 69;
@@ -1352,7 +1432,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_delet_07.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delet_07.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_07.Location = new System.Drawing.Point(16, 421);
+            this.bt_delet_07.Location = new System.Drawing.Point(277, 14);
             this.bt_delet_07.Name = "bt_delet_07";
             this.bt_delet_07.Size = new System.Drawing.Size(122, 36);
             this.bt_delet_07.TabIndex = 68;
@@ -1364,7 +1444,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             this.pl_content_08.Controls.Add(this.pl_family_08);
             this.pl_content_08.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_08.Location = new System.Drawing.Point(0, 3570);
+            this.pl_content_08.Location = new System.Drawing.Point(0, 3958);
             this.pl_content_08.Name = "pl_content_08";
             this.pl_content_08.Size = new System.Drawing.Size(1222, 500);
             this.pl_content_08.TabIndex = 161;
@@ -1387,16 +1467,27 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_08.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_08.TabIndex = 10;
             // 
+            // txt_total_08
+            // 
+            this.txt_total_08.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_total_08.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_total_08.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_08.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_total_08.Location = new System.Drawing.Point(971, 421);
+            this.txt_total_08.Name = "txt_total_08";
+            this.txt_total_08.Size = new System.Drawing.Size(182, 36);
+            this.txt_total_08.TabIndex = 88;
+            this.txt_total_08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // bt_save_08
             // 
-            this.bt_save_08.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_save_08.BackColor = System.Drawing.Color.OliveDrab;
             this.bt_save_08.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save_08.FlatAppearance.BorderSize = 0;
             this.bt_save_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save_08.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_save_08.ForeColor = System.Drawing.Color.White;
-            this.bt_save_08.Location = new System.Drawing.Point(654, 421);
+            this.bt_save_08.Location = new System.Drawing.Point(16, 420);
             this.bt_save_08.Name = "bt_save_08";
             this.bt_save_08.Size = new System.Drawing.Size(122, 36);
             this.bt_save_08.TabIndex = 84;
@@ -1423,7 +1514,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView8.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridView8.ColumnHeadersHeight = 50;
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1462,7 +1553,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(947, 427);
+            this.label7.Location = new System.Drawing.Point(886, 428);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 25);
             this.label7.TabIndex = 75;
@@ -1495,14 +1586,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             // bt_cancel_08
             // 
-            this.bt_cancel_08.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_cancel_08.BackColor = System.Drawing.Color.LightSlateGray;
             this.bt_cancel_08.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_cancel_08.FlatAppearance.BorderSize = 0;
             this.bt_cancel_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_cancel_08.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cancel_08.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_08.Location = new System.Drawing.Point(782, 421);
+            this.bt_cancel_08.Location = new System.Drawing.Point(144, 420);
             this.bt_cancel_08.Name = "bt_cancel_08";
             this.bt_cancel_08.Size = new System.Drawing.Size(122, 36);
             this.bt_cancel_08.TabIndex = 69;
@@ -1518,7 +1608,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_delet_08.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delet_08.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_08.Location = new System.Drawing.Point(16, 421);
+            this.bt_delet_08.Location = new System.Drawing.Point(277, 14);
             this.bt_delet_08.Name = "bt_delet_08";
             this.bt_delet_08.Size = new System.Drawing.Size(122, 36);
             this.bt_delet_08.TabIndex = 68;
@@ -1530,7 +1620,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             this.pl_content_09.Controls.Add(this.pl_family_09);
             this.pl_content_09.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_09.Location = new System.Drawing.Point(0, 4070);
+            this.pl_content_09.Location = new System.Drawing.Point(0, 4458);
             this.pl_content_09.Name = "pl_content_09";
             this.pl_content_09.Size = new System.Drawing.Size(1222, 500);
             this.pl_content_09.TabIndex = 162;
@@ -1553,16 +1643,27 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_09.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_09.TabIndex = 10;
             // 
+            // txt_total_09
+            // 
+            this.txt_total_09.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_total_09.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_total_09.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_09.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_total_09.Location = new System.Drawing.Point(971, 421);
+            this.txt_total_09.Name = "txt_total_09";
+            this.txt_total_09.Size = new System.Drawing.Size(182, 36);
+            this.txt_total_09.TabIndex = 88;
+            this.txt_total_09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // bt_save_09
             // 
-            this.bt_save_09.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_save_09.BackColor = System.Drawing.Color.OliveDrab;
             this.bt_save_09.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save_09.FlatAppearance.BorderSize = 0;
             this.bt_save_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save_09.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_save_09.ForeColor = System.Drawing.Color.White;
-            this.bt_save_09.Location = new System.Drawing.Point(654, 421);
+            this.bt_save_09.Location = new System.Drawing.Point(16, 420);
             this.bt_save_09.Name = "bt_save_09";
             this.bt_save_09.Size = new System.Drawing.Size(122, 36);
             this.bt_save_09.TabIndex = 85;
@@ -1589,7 +1690,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView9.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridView9.ColumnHeadersHeight = 50;
             this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1628,7 +1729,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(947, 427);
+            this.label8.Location = new System.Drawing.Point(886, 428);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 25);
             this.label8.TabIndex = 75;
@@ -1661,14 +1762,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             // bt_cancel_09
             // 
-            this.bt_cancel_09.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_cancel_09.BackColor = System.Drawing.Color.LightSlateGray;
             this.bt_cancel_09.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_cancel_09.FlatAppearance.BorderSize = 0;
             this.bt_cancel_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_cancel_09.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cancel_09.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_09.Location = new System.Drawing.Point(782, 421);
+            this.bt_cancel_09.Location = new System.Drawing.Point(144, 420);
             this.bt_cancel_09.Name = "bt_cancel_09";
             this.bt_cancel_09.Size = new System.Drawing.Size(122, 36);
             this.bt_cancel_09.TabIndex = 69;
@@ -1684,7 +1784,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_delet_09.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delet_09.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_09.Location = new System.Drawing.Point(16, 421);
+            this.bt_delet_09.Location = new System.Drawing.Point(277, 14);
             this.bt_delet_09.Name = "bt_delet_09";
             this.bt_delet_09.Size = new System.Drawing.Size(122, 36);
             this.bt_delet_09.TabIndex = 68;
@@ -1696,7 +1796,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             this.pl_content_10.Controls.Add(this.pl_family_10);
             this.pl_content_10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_10.Location = new System.Drawing.Point(0, 4570);
+            this.pl_content_10.Location = new System.Drawing.Point(0, 4958);
             this.pl_content_10.Name = "pl_content_10";
             this.pl_content_10.Size = new System.Drawing.Size(1222, 500);
             this.pl_content_10.TabIndex = 163;
@@ -1719,16 +1819,27 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_10.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_10.TabIndex = 10;
             // 
+            // txt_total_10
+            // 
+            this.txt_total_10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_total_10.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_total_10.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_total_10.Location = new System.Drawing.Point(971, 421);
+            this.txt_total_10.Name = "txt_total_10";
+            this.txt_total_10.Size = new System.Drawing.Size(182, 36);
+            this.txt_total_10.TabIndex = 87;
+            this.txt_total_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // bt_save_10
             // 
-            this.bt_save_10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_save_10.BackColor = System.Drawing.Color.OliveDrab;
             this.bt_save_10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save_10.FlatAppearance.BorderSize = 0;
             this.bt_save_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save_10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_save_10.ForeColor = System.Drawing.Color.White;
-            this.bt_save_10.Location = new System.Drawing.Point(654, 421);
+            this.bt_save_10.Location = new System.Drawing.Point(16, 420);
             this.bt_save_10.Name = "bt_save_10";
             this.bt_save_10.Size = new System.Drawing.Size(122, 36);
             this.bt_save_10.TabIndex = 86;
@@ -1755,7 +1866,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView10.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridView10.ColumnHeadersHeight = 50;
             this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1794,7 +1905,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(947, 427);
+            this.label9.Location = new System.Drawing.Point(886, 428);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 25);
             this.label9.TabIndex = 75;
@@ -1827,14 +1938,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             // bt_cancel_10
             // 
-            this.bt_cancel_10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_cancel_10.BackColor = System.Drawing.Color.LightSlateGray;
             this.bt_cancel_10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_cancel_10.FlatAppearance.BorderSize = 0;
             this.bt_cancel_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_cancel_10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cancel_10.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_10.Location = new System.Drawing.Point(782, 421);
+            this.bt_cancel_10.Location = new System.Drawing.Point(144, 420);
             this.bt_cancel_10.Name = "bt_cancel_10";
             this.bt_cancel_10.Size = new System.Drawing.Size(122, 36);
             this.bt_cancel_10.TabIndex = 69;
@@ -1850,7 +1960,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_delet_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_delet_10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delet_10.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_10.Location = new System.Drawing.Point(16, 421);
+            this.bt_delet_10.Location = new System.Drawing.Point(277, 14);
             this.bt_delet_10.Name = "bt_delet_10";
             this.bt_delet_10.Size = new System.Drawing.Size(122, 36);
             this.bt_delet_10.TabIndex = 68;
@@ -1860,12 +1970,24 @@ namespace Contas_Familia.PanelControll.Dashboard
             // 
             // pl_add
             // 
+            this.pl_add.Controls.Add(this.lb_alert_member);
             this.pl_add.Controls.Add(this.pl_add_family_member);
             this.pl_add.Dock = System.Windows.Forms.DockStyle.Top;
             this.pl_add.Location = new System.Drawing.Point(0, 0);
             this.pl_add.Name = "pl_add";
-            this.pl_add.Size = new System.Drawing.Size(1222, 70);
+            this.pl_add.Size = new System.Drawing.Size(1222, 458);
             this.pl_add.TabIndex = 164;
+            // 
+            // lb_alert_member
+            // 
+            this.lb_alert_member.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_alert_member.ForeColor = System.Drawing.Color.White;
+            this.lb_alert_member.Location = new System.Drawing.Point(15, 215);
+            this.lb_alert_member.Name = "lb_alert_member";
+            this.lb_alert_member.Size = new System.Drawing.Size(1194, 35);
+            this.lb_alert_member.TabIndex = 74;
+            this.lb_alert_member.Text = "There is no family member, please add a new one";
+            this.lb_alert_member.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pl_add_family_member
             // 
@@ -1932,134 +2054,76 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_add.UseVisualStyleBackColor = false;
             this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
             // 
-            // txt_total_01
+            // pl_null
             // 
-            this.txt_total_01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total_01.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_total_01.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_01.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_total_01.Location = new System.Drawing.Point(1033, 421);
-            this.txt_total_01.Name = "txt_total_01";
-            this.txt_total_01.Size = new System.Drawing.Size(120, 31);
-            this.txt_total_01.TabIndex = 81;
-            this.txt_total_01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pl_null.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_null.Location = new System.Drawing.Point(0, 5458);
+            this.pl_null.Name = "pl_null";
+            this.pl_null.Size = new System.Drawing.Size(1222, 73);
+            this.pl_null.TabIndex = 165;
             // 
-            // txt_total_02
+            // lb_table_member_family
             // 
-            this.txt_total_02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total_02.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_total_02.Enabled = false;
-            this.txt_total_02.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_02.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_total_02.Location = new System.Drawing.Point(1033, 421);
-            this.txt_total_02.Name = "txt_total_02";
-            this.txt_total_02.Size = new System.Drawing.Size(120, 31);
-            this.txt_total_02.TabIndex = 82;
-            this.txt_total_02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lb_table_member_family.AutoSize = true;
+            this.lb_table_member_family.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_table_member_family.ForeColor = System.Drawing.Color.White;
+            this.lb_table_member_family.Location = new System.Drawing.Point(66, 100);
+            this.lb_table_member_family.Name = "lb_table_member_family";
+            this.lb_table_member_family.Size = new System.Drawing.Size(244, 25);
+            this.lb_table_member_family.TabIndex = 86;
+            this.lb_table_member_family.Text = "TABLE MEMBER FAMILY";
             // 
-            // txt_total_03
+            // dgv_family_member
             // 
-            this.txt_total_03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total_03.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_total_03.Enabled = false;
-            this.txt_total_03.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_03.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_total_03.Location = new System.Drawing.Point(1033, 421);
-            this.txt_total_03.Name = "txt_total_03";
-            this.txt_total_03.Size = new System.Drawing.Size(120, 31);
-            this.txt_total_03.TabIndex = 83;
-            this.txt_total_03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dgv_family_member.AllowUserToAddRows = false;
+            this.dgv_family_member.AllowUserToDeleteRows = false;
+            this.dgv_family_member.AllowUserToResizeColumns = false;
+            this.dgv_family_member.AllowUserToResizeRows = false;
+            this.dgv_family_member.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_family_member.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.dgv_family_member.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dgv_family_member.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_family_member.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            this.dgv_family_member.ColumnHeadersHeight = 50;
+            this.dgv_family_member.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_family_member.DefaultCellStyle = dataGridViewCellStyle32;
+            this.dgv_family_member.EnableHeadersVisualStyles = false;
+            this.dgv_family_member.Location = new System.Drawing.Point(25, 6);
+            this.dgv_family_member.MultiSelect = false;
+            this.dgv_family_member.Name = "dgv_family_member";
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_family_member.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            this.dgv_family_member.RowHeadersVisible = false;
+            this.dgv_family_member.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgv_family_member.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgv_family_member.ShowCellToolTips = false;
+            this.dgv_family_member.Size = new System.Drawing.Size(337, 230);
+            this.dgv_family_member.TabIndex = 85;
             // 
-            // txt_total_10
+            // pl_table_member_family
             // 
-            this.txt_total_10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total_10.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_total_10.Enabled = false;
-            this.txt_total_10.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_total_10.Location = new System.Drawing.Point(1033, 421);
-            this.txt_total_10.Name = "txt_total_10";
-            this.txt_total_10.Size = new System.Drawing.Size(120, 31);
-            this.txt_total_10.TabIndex = 87;
-            this.txt_total_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_total_09
-            // 
-            this.txt_total_09.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total_09.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_total_09.Enabled = false;
-            this.txt_total_09.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_09.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_total_09.Location = new System.Drawing.Point(1033, 421);
-            this.txt_total_09.Name = "txt_total_09";
-            this.txt_total_09.Size = new System.Drawing.Size(120, 31);
-            this.txt_total_09.TabIndex = 88;
-            this.txt_total_09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_total_08
-            // 
-            this.txt_total_08.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total_08.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_total_08.Enabled = false;
-            this.txt_total_08.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_08.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_total_08.Location = new System.Drawing.Point(1033, 421);
-            this.txt_total_08.Name = "txt_total_08";
-            this.txt_total_08.Size = new System.Drawing.Size(120, 31);
-            this.txt_total_08.TabIndex = 88;
-            this.txt_total_08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_total_07
-            // 
-            this.txt_total_07.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total_07.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_total_07.Enabled = false;
-            this.txt_total_07.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_07.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_total_07.Location = new System.Drawing.Point(1033, 421);
-            this.txt_total_07.Name = "txt_total_07";
-            this.txt_total_07.Size = new System.Drawing.Size(120, 31);
-            this.txt_total_07.TabIndex = 89;
-            this.txt_total_07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_total_06
-            // 
-            this.txt_total_06.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total_06.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_total_06.Enabled = false;
-            this.txt_total_06.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_06.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_total_06.Location = new System.Drawing.Point(1033, 421);
-            this.txt_total_06.Name = "txt_total_06";
-            this.txt_total_06.Size = new System.Drawing.Size(120, 31);
-            this.txt_total_06.TabIndex = 90;
-            this.txt_total_06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_total_05
-            // 
-            this.txt_total_05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total_05.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_total_05.Enabled = false;
-            this.txt_total_05.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_05.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_total_05.Location = new System.Drawing.Point(1033, 421);
-            this.txt_total_05.Name = "txt_total_05";
-            this.txt_total_05.Size = new System.Drawing.Size(120, 31);
-            this.txt_total_05.TabIndex = 91;
-            this.txt_total_05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_total_04
-            // 
-            this.txt_total_04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total_04.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_total_04.Enabled = false;
-            this.txt_total_04.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_04.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_total_04.Location = new System.Drawing.Point(1033, 421);
-            this.txt_total_04.Name = "txt_total_04";
-            this.txt_total_04.Size = new System.Drawing.Size(120, 31);
-            this.txt_total_04.TabIndex = 92;
-            this.txt_total_04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pl_table_member_family.Controls.Add(this.lb_table_member_family);
+            this.pl_table_member_family.Controls.Add(this.dgv_family_member);
+            this.pl_table_member_family.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_table_member_family.Location = new System.Drawing.Point(0, 5531);
+            this.pl_table_member_family.Name = "pl_table_member_family";
+            this.pl_table_member_family.Size = new System.Drawing.Size(1222, 258);
+            this.pl_table_member_family.TabIndex = 166;
             // 
             // txt_add_family_name
             // 
@@ -2083,6 +2147,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_add_family_name.TabIndex = 81;
             this.txt_add_family_name.Texts = "";
             this.txt_add_family_name.UnderlinedStyle = false;
+            this.txt_add_family_name.Leave += new System.EventHandler(this.txt_add_family_name_Leave);
             // 
             // family
             // 
@@ -2090,6 +2155,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.Controls.Add(this.pl_table_member_family);
+            this.Controls.Add(this.pl_null);
             this.Controls.Add(this.pl_content_10);
             this.Controls.Add(this.pl_content_09);
             this.Controls.Add(this.pl_content_08);
@@ -2146,6 +2213,9 @@ namespace Contas_Familia.PanelControll.Dashboard
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             this.pl_add.ResumeLayout(false);
             this.pl_add_family_member.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_family_member)).EndInit();
+            this.pl_table_member_family.ResumeLayout(false);
+            this.pl_table_member_family.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2258,5 +2328,10 @@ namespace Contas_Familia.PanelControll.Dashboard
         private System.Windows.Forms.Label txt_total_08;
         private System.Windows.Forms.Label txt_total_09;
         private System.Windows.Forms.Label txt_total_10;
+        private System.Windows.Forms.Panel pl_null;
+        private System.Windows.Forms.Label lb_table_member_family;
+        private System.Windows.Forms.DataGridView dgv_family_member;
+        private System.Windows.Forms.Panel pl_table_member_family;
+        private System.Windows.Forms.Label lb_alert_member;
     }
 }
