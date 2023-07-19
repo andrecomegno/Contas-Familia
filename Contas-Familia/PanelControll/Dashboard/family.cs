@@ -22,8 +22,8 @@ namespace Contas_Familia.PanelControll.Dashboard
         // BOTÃO EDITAR
         private bool[] _edit = new bool[10];
 
-        // BOTÃO DELETAR / SALVAR NOVO NOME
-        private bool _editNameMember;
+        // BOTÃO EDITAR NOME DO MEMBRO DA FAMILIA
+        private bool[] _nameEdit = new bool[10];
 
         // BOTÃO SALVAR - ATRIBUI NOVOS DADOS A TABELA
         string credit_card_name;
@@ -265,11 +265,11 @@ namespace Contas_Familia.PanelControll.Dashboard
         // BOTÃO 1
         private void bt_edit_01_Click(object sender, EventArgs e) => PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
 
-        private void bt_cancel_01_Click(object sender, EventArgs e) => BT_Cancel(dataGridView1, _edit[0] = !_edit[0], pl_content_01, bt_edit_01, txt_name_01, txt_name_edit_01);
+        private void bt_cancel_01_Click(object sender, EventArgs e) => BT_Cancel(dataGridView1, _nameEdit[0], txt_name_01, txt_name_edit_01, bt_delet_01, bt_delet_01, bt_cancel, _edit[0] = !_edit[0], pl_content_01, bt_edit_01);
 
         private void bt_delete_01_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[0], pl_content_01, txt_name_01);
 
-        private void bt_save_01_Click(object sender, EventArgs e) => BT_Save(dataGridView1, id_register_family_member[0], txt_name_01 ,txt_name_edit_01);
+        private void bt_save_01_Click(object sender, EventArgs e) => BT_Save(dataGridView1, id_register_family_member[0], txt_name_01 ,_nameEdit[0] = !_nameEdit[0], txt_name_edit_01, bt_delet_01, bt_save_01, bt_cancel_01);
 
         // BOTÃO 2
         private void bt_edit_02_Click(object sender, EventArgs e) => PanelContent(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
@@ -278,7 +278,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_02_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[1], pl_content_02, txt_name_02);
 
-        private void bt_save_02_Click(object sender, EventArgs e) => BT_Save(dataGridView2, id_register_family_member[1], txt_name_02, txt_name_edit_02);
+        private void bt_save_02_Click(object sender, EventArgs e) => BT_Save(dataGridView2, id_register_family_member[1], txt_name_02, _nameEdit[1], txt_name_edit_02, bt_delet_02, bt_save_02, bt_cancel_02);
 
         // BOTÃO 3
         private void bt_edit_03_Click(object sender, EventArgs e) => PanelContent(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
@@ -287,7 +287,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_03_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[2], pl_content_03, txt_name_03);
 
-        private void bt_save_03_Click(object sender, EventArgs e) => BT_Save(dataGridView3, id_register_family_member[2], txt_name_03, txt_name_edit_03);
+        private void bt_save_03_Click(object sender, EventArgs e) => BT_Save(dataGridView3, id_register_family_member[2], txt_name_03, _nameEdit[2], txt_name_edit_03, bt_delet_03, bt_save_03, bt_cancel_03);
 
         // BOTÃO 4
         private void bt_edit_04_Click(object sender, EventArgs e) => PanelContent(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
@@ -296,7 +296,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_04_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[3], pl_content_04, txt_name_04);
 
-        private void bt_save_04_Click(object sender, EventArgs e) => BT_Save(dataGridView4, id_register_family_member[3], txt_name_04, txt_name_edit_04);
+        private void bt_save_04_Click(object sender, EventArgs e) => BT_Save(dataGridView4, id_register_family_member[3], txt_name_04, _nameEdit[3], txt_name_edit_04, bt_delet_04, bt_save_04, bt_cancel_04);
 
         // BOTÃO 5
         private void bt_edit_05_Click(object sender, EventArgs e) => PanelContent(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
@@ -305,7 +305,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_05_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[4], pl_content_05, txt_name_05);
 
-        private void bt_save_05_Click(object sender, EventArgs e) => BT_Save(dataGridView5, id_register_family_member[4], txt_name_05, txt_name_edit_05);
+        private void bt_save_05_Click(object sender, EventArgs e) => BT_Save(dataGridView5, id_register_family_member[4], txt_name_05, _nameEdit[4], txt_name_edit_05, bt_delet_05, bt_save_05, bt_cancel_05);
 
         // BOTÃO 6
         private void bt_edit_06_Click(object sender, EventArgs e) => PanelContent(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
@@ -314,7 +314,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_06_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[5], pl_content_06, txt_name_06);
 
-        private void bt_save_06_Click(object sender, EventArgs e) => BT_Save(dataGridView6, id_register_family_member[5], txt_name_06, txt_name_edit_06);
+        private void bt_save_06_Click(object sender, EventArgs e) => BT_Save(dataGridView6, id_register_family_member[5], txt_name_06, _nameEdit[5], txt_name_edit_06, bt_delet_06, bt_save_06, bt_cancel_06);
 
         // BOTÃO 7
         private void bt_edit_07_Click(object sender, EventArgs e) => PanelContent(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
@@ -323,7 +323,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_07_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[6], pl_content_07, txt_name_07);
 
-        private void bt_save_07_Click(object sender, EventArgs e) => BT_Save(dataGridView7, id_register_family_member[6], txt_name_07, txt_name_edit_07);
+        private void bt_save_07_Click(object sender, EventArgs e) => BT_Save(dataGridView7, id_register_family_member[6], txt_name_07, _nameEdit[6], txt_name_edit_07, bt_delet_07, bt_save_07, bt_cancel_07);
 
         // BOTÃO 8
         private void bt_edit_08_Click(object sender, EventArgs e) => PanelContent(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
@@ -332,7 +332,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_08_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[7], pl_content_08, txt_name_08);
 
-        private void bt_save_08_Click(object sender, EventArgs e) => BT_Save(dataGridView8, id_register_family_member[7], txt_name_08, txt_name_edit_08);
+        private void bt_save_08_Click(object sender, EventArgs e) => BT_Save(dataGridView8, id_register_family_member[7], txt_name_08, _nameEdit[7], txt_name_edit_08, bt_delet_08, bt_save_09, bt_cancel_08);
 
         // BOTÃO 9
         private void bt_edit_09_Click(object sender, EventArgs e) => PanelContent(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
@@ -341,7 +341,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_09_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[8], pl_content_09, txt_name_09);
 
-        private void bt_save_09_Click(object sender, EventArgs e) => BT_Save(dataGridView9, id_register_family_member[8], txt_name_09, txt_name_edit_09);
+        private void bt_save_09_Click(object sender, EventArgs e) => BT_Save(dataGridView9, id_register_family_member[8], txt_name_09, _nameEdit[8], txt_name_edit_09, bt_delet_09, bt_save_09, bt_cancel_09);
 
         // BOTÃO 10
         private void bt_edit_10_Click(object sender, EventArgs e) => PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
@@ -350,75 +350,46 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_delet_10_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[9], pl_content_10, txt_name_10);
 
-        private void bt_save_10_Click(object sender, EventArgs e) => BT_Save(dataGridView10, id_register_family_member[9], txt_name_10, txt_name_edit_10);
+        private void bt_save_10_Click(object sender, EventArgs e) => BT_Save(dataGridView10, id_register_family_member[9], txt_name_10, _nameEdit[9], txt_name_edit_10, bt_delet_10, bt_save_10, bt_cancel_10);
 
         // BOTÃO CAMCELAR
-        void BT_Cancel(DataGridView dataGridViews, bool reg, Panel pl_content, IconButton button, Label member, RJTextBox Editname)
+        void BT_Cancel(DataGridView dataGridViews, bool _edit, Label name, RJTextBox name_edit, Button delete, Button save, Button cancel, bool reg, Panel pl_content, IconButton button)
         {
             try
             {
-                if (_editNameMember)
-                {
-                    // NOME DO MEMBRO DA FAMILIA, APARECE
-                    member.Visible = true;
-                    // EDITAR NOME DA FAMILIA, ESCONDE E LIMPA
-                    Editname.Visible = false;
-                    Editname.Texts = string.Empty;
-                }
+                EditName(_edit, name, name_edit, delete, save, cancel);
             }
             finally
             {
-                if (_editNameMember)
-                {
-                    // VARIAVEL DA EDIÇÃO
-                    _editNameMember = false;
+                // ATUALIZA O NOME EDITADO
+                TableMain();
 
-                    // ATUALIZA O NOME EDITADO
-                    TableMain();
-                }
-                else
-                {
-                    if (reg)
-                    {
-                        pl_content.Size = new Size(830, 500);
-                        button.IconChar = IconChar.AngleUp;
-                    }
-                    else
-                    {
-                        pl_content.Size = new Size(830, 70);
-                        button.IconChar = IconChar.AngleDown;
-                    }
-                }
+                PanelContent(reg, pl_content, button);
             }
         }
 
         // BOTÃO SALVAR
-        void BT_Save(DataGridView dataGridViews, int id, Label member, RJTextBox Editname)
+        void BT_Save(DataGridView dataGridViews, int id, Label name, bool _edit, RJTextBox name_edit, Button delete, Button save, Button cancel)
         {
-            if (_editNameMember)
+            if (_edit)
             {
-                if (string.IsNullOrEmpty(Editname.Texts))
+                if (string.IsNullOrEmpty(name_edit.Texts))
                 {
-                    Editname.BorderColor = Color.Red;
-                    Editname.BorderSize = 3;
+                    name_edit.BorderColor = Color.Red;
+                    name_edit.BorderSize = 3;
                 }
                 else
                 {
                     // TABELA EDITAR NOME DO MEMBRO DA FAMILIA
-                    TableEditNameMember(id, Editname);
-                    // NOME DO MEMBRO DA FAMILIA, APARECE
-                    member.Visible = true;
-                    // EDITAR NOME DA FAMILIA, ESCONDE E LIMPA
-                    Editname.Visible = false;
-                    Editname.Texts = string.Empty;
-                    // VARIAVEL DA EDIÇÃO
-                    _editNameMember = false;
+                    TableEditNameMember(id, name_edit);
+
+                    EditName(!_edit, name, name_edit, delete, save, cancel);
+                    MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     // ATUALIZA O NOME EDITADO
                     TableMain();
-
-                    MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+
             }
             else
             {
@@ -429,7 +400,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                         // ID - COLUNA 0
                         dataGridViews.Rows[i].Cells[0].Value = id;
                         // NOME DO MEMBRO DA FAMILIA - COLUNA - 1
-                        dataGridViews.Rows[i].Cells[1].Value = member;
+                        dataGridViews.Rows[i].Cells[1].Value = name;
                         // NOME DO CARTÃO DE CREDITO - COLUNA - 2
                         credit_card_name = dataGridViews.Rows[i].Cells[2].Value.ToString();
                         // VENCIMENTO DO CARTÃO DE CREDITO - COLUNA - 3
@@ -610,21 +581,67 @@ namespace Contas_Familia.PanelControll.Dashboard
         #region TEXT EDIT
         private void txt_name_01_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            txt_name_01.Visible = false;
-            
-            txt_name_edit_01.Visible = true;
-            txt_name_edit_01.Focus();
-
-            _editNameMember = true;
+            EditName(!_nameEdit[0], txt_name_01, txt_name_edit_01, bt_delet_01, bt_save_01, bt_cancel_01);        
         }
 
-
-        void EditTextMemberFamily()
+        private void txt_name_edit_02_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            txt_name_01.ForeColor = Color.White;
-            
+
         }
 
+        private void txt_name_edit_03_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void txt_name_edit_04_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void txt_name_edit_05_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void txt_name_edit_06_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void txt_name_edit_07_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void txt_name_edit_08_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        // LOGICA EDITAR NOME DO MEMBRO DA FAMILIA
+        void EditName(bool edit, Label name, RJTextBox name_edit, Button delete, Button save, Button cancel)
+        {
+            if (edit)
+            {
+                name.Visible = false;
+                name_edit.Visible = true;
+
+                delete.Visible = false;
+                save.Location = new Point(277, 14);
+                cancel.Location = new Point(405, 14);
+            }
+            else
+            {
+                name.Visible = true;
+                name_edit.Visible = false;
+                name_edit.Texts = string.Empty;
+
+                delete.Visible = true;
+                save.Location = new Point(16, 420);
+                cancel.Location = new Point(144, 420);
+            }
+        }
         #endregion
 
         // LIMPAR TEXTO - NOVO MEMBRO DA FAMILIA
@@ -672,6 +689,16 @@ namespace Contas_Familia.PanelControll.Dashboard
         {
             txt_name_edit_01.BorderColor = Color.Transparent;
             txt_name_edit_01.BorderSize = 0;
+        }
+
+        private void txt_name_edit_10_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_name_edit_09_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }
