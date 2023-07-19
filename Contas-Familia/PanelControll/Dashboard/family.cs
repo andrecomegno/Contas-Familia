@@ -22,6 +22,9 @@ namespace Contas_Familia.PanelControll.Dashboard
         // BOTÃO EDITAR
         private bool[] _edit = new bool[10];
 
+        // BOTÃO DELETAR / SALVAR NOVO NOME
+        private bool _editNameMember;
+
         // BOTÃO SALVAR - ATRIBUI NOVOS DADOS A TABELA
         string credit_card_name;
         DateTime credit_card_payday;
@@ -39,15 +42,15 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         #region TABLES
         // TODAS AS TABELAS DOS MEMBROS, ATRIBUIDAS COM OS SEUS SEGUINTES NOMES REGISTRADOS
-        private void TableAll()
+        private void TableMain()
         {
             configdb database = new configdb();
             database.openConnection();
 
             DataGridView[] dataGridViews = { dataGridView1, dataGridView2, dataGridView3, dataGridView4, dataGridView5, dataGridView6, dataGridView7, dataGridView8, dataGridView9, dataGridView10 };
             Panel[] panels = { pl_content_01, pl_content_02, pl_content_03, pl_content_04, pl_content_05, pl_content_06, pl_content_07, pl_content_08, pl_content_09, pl_content_10 };
-            Label[] lbNames = { lb_name_01, lb_name_02, lb_name_03, lb_name_04, lb_name_05, lb_name_06, lb_name_07, lb_name_08, lb_name_09, lb_name_10 };
-            Label[] lbtotal = { txt_total_01, txt_total_02, txt_total_03, txt_total_04, txt_total_05, txt_total_06, txt_total_07, txt_total_08, txt_total_09, txt_total_10 };
+            Label[] TxtNames = { txt_name_01, txt_name_02, txt_name_03, txt_name_04, txt_name_05, txt_name_06, txt_name_07, txt_name_08, txt_name_09, txt_name_10 };
+            Label[] TxtTotal = { txt_total_01, txt_total_02, txt_total_03, txt_total_04, txt_total_05, txt_total_06, txt_total_07, txt_total_08, txt_total_09, txt_total_10 };
 
             string query = "select ID_REGISTER_FAMILY_MEMBER, FAMILY_MEMBER, ID_REGISTER_FAMILY from familypayday.register_family_member";
 
@@ -84,19 +87,19 @@ namespace Contas_Familia.PanelControll.Dashboard
             for (int i = 0; i < dgv_family_member.Rows.Count; i++)
             {
                 // PASSA TODOS OS MEMBROS AO LABEL
-                lbNames[i].Text = family_member[i];
+                TxtNames[i].Text = family_member[i];
 
                 // TODAS AS DATAGRIDVIEWS, PASSANDO OS MEMBROS DA FAMILIA PARA CADA TABELA
-                dataGridViews[i].DataSource = ExecuteQuery(lbNames[i].Text);
+                dataGridViews[i].DataSource = ExecuteQuery(TxtNames[i].Text);
             }
 
             // HABILITA / DESABILITA TODAS OS PAINEIS 
             for (int i = 0; i < dataGridViews.Length; i++)
             {
                 // TOTAL DAS DIVIDAS DE CADA TABELAS
-                lbtotal[i].Text = SumTotal(dataGridViews[i]).ToString("c");
+                TxtTotal[i].Text = SumTotal(dataGridViews[i]).ToString("c");
 
-                if (String.IsNullOrEmpty(lbNames[i].Text) || dgv_family_member.Rows.Count == 0)
+                if (String.IsNullOrEmpty(TxtNames[i].Text) || dgv_family_member.Rows.Count == 0)
                 {
                     panels[i].Visible = false;
                 }
@@ -115,19 +118,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             database.closeConnection();
 
             // VERIFICA SE EXISTE ALGUMA PAINEL VISIVEL SE NAO TIVER, MOSTRA O AVISO PARA ADD UM NOVO MEMBRO  
-            bool anyPanelVisible = false;
-            foreach (Panel panel in panels)
-            {
-                if (panel.Visible)
-                {
-                    anyPanelVisible = true;
-                    // SAI DO LOOP ASSIM QUE ENCONTRAR UM PAINEL VISIVEL
-                    break; 
-                }
-            }
-
-            // VARIAVEL PARA AUMENTAR / DIMINUIR O TAMANHO DO PAINEL 
-            pl_add.Size = anyPanelVisible ? new Size(1222, 70) : new Size(1222, 458);
+            SearchPanels();
         }
 
         // SOMAR O VALOR TOTAL DAS DIVIDAS A PAGAR
@@ -196,10 +187,9 @@ namespace Contas_Familia.PanelControll.Dashboard
             MySqlCommand cmd = new MySqlCommand("INSERT INTO familypayday.register_family_member (id_register_family_member, family_member, id_register_family) VALUES (null, @family_member, @id_register_family)", database.getConnection());
             cmd.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = txt_add_family_name.Texts;
             cmd.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
-
             cmd.ExecuteNonQuery();
-            database.closeConnection();
 
+            database.closeConnection();
         }
 
         // TABELA DELETAR MEMBRO
@@ -216,6 +206,58 @@ namespace Contas_Familia.PanelControll.Dashboard
             database.closeConnection();
         }
 
+        // TABELA DE CONTAS A PAGAR
+        void TableMemberPayDay(int id)
+        {
+            // BANCO DE DADOS
+            configdb database = new configdb();
+            database.openConnection();
+
+            // PRODUTOS
+            MySqlCommand cmdProducts = new MySqlCommand("INSERT INTO familypayday.products (id_products, store_name, product_name, id_register_family_member) VALUES (null, @store_name, @product_name, @id_register_family_member)", database.getConnection());
+            cmdProducts.Parameters.Add("@store_name", MySqlDbType.VarChar, 50).Value = store_name;
+            cmdProducts.Parameters.Add("@product_name", MySqlDbType.VarChar, 245).Value = product_name;
+            cmdProducts.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id;
+
+            cmdProducts.ExecuteNonQuery();
+            long id_products = cmdProducts.LastInsertedId;
+
+            // CARTÃO DE CREDITO
+            MySqlCommand cmdCreditCard = new MySqlCommand("INSERT INTO familypayday.credit_card (id_credit_card, credit_card_name, credit_card_payday, credit_card_installment, id_products) VALUES (null, @credit_card_name, @credit_card_payday, @credit_card_installment, @id_products)", database.getConnection());
+            cmdCreditCard.Parameters.Add("@credit_card_name", MySqlDbType.VarChar, 45).Value = credit_card_name;
+            cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.Date).Value = credit_card_payday;
+            cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = card_credit_installment;
+            cmdCreditCard.Parameters.Add("@id_products", MySqlDbType.Int32).Value = id_products;
+
+            cmdCreditCard.ExecuteNonQuery();
+            long id_credit_card = cmdCreditCard.LastInsertedId;
+
+            // TOTAL
+            MySqlCommand cmdTotal = new MySqlCommand("INSERT INTO familypayday.total_credit_card (id_total_credit_card, total_payble, total_payable_installment, id_credit_card) VALUES (null, @total_payble, @total_payable_installment, @id_credit_card)", database.getConnection());
+            cmdTotal.Parameters.Add("@total_payble", MySqlDbType.Decimal).Value = total_payble;
+            cmdTotal.Parameters.Add("@total_payable_installment", MySqlDbType.Decimal).Value = total_payable_installment;
+            cmdTotal.Parameters.Add("@id_credit_card", MySqlDbType.Int32).Value = id_credit_card;
+
+            cmdTotal.ExecuteNonQuery();
+            database.closeConnection();
+        }
+
+        // TABELA DE EDIÇÃO DO NOME DO MEMBRO DA FAMILIA
+        void TableEditNameMember(int id, RJTextBox Editname)
+        {
+            configdb database = new configdb();
+            database.openConnection();
+
+            // EDITAR NOME DO MEMBRO DA FAMILIA
+            MySqlCommand cmdRegisterFamilyMember = new MySqlCommand("UPDATE familypayday.register_family_member SET family_member = @family_member WHERE (id_register_family_member = @id_register_family_member) and (id_register_family = @id_register_family) ", database.getConnection());
+            cmdRegisterFamilyMember.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = Editname.Texts;
+            cmdRegisterFamilyMember.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
+            cmdRegisterFamilyMember.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id;
+            cmdRegisterFamilyMember.ExecuteNonQuery();
+
+            database.closeConnection();
+        }
+
         #endregion
 
         #region BUTTON TABELA MEMBER FAMILY
@@ -223,117 +265,162 @@ namespace Contas_Familia.PanelControll.Dashboard
         // BOTÃO 1
         private void bt_edit_01_Click(object sender, EventArgs e) => PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
 
-        private void bt_cancel_01_Click(object sender, EventArgs e) => PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
+        private void bt_cancel_01_Click(object sender, EventArgs e) => BT_Cancel(dataGridView1, _edit[0] = !_edit[0], pl_content_01, bt_edit_01, txt_name_01, txt_name_edit_01);
 
-        private void bt_delete_01_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[0], pl_content_01, lb_name_01);
+        private void bt_delete_01_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[0], pl_content_01, txt_name_01);
 
-        private void bt_save_01_Click(object sender, EventArgs e) => BT_Save(dataGridView1, id_register_family_member[0], lb_name_01.Text);
+        private void bt_save_01_Click(object sender, EventArgs e) => BT_Save(dataGridView1, id_register_family_member[0], txt_name_01 ,txt_name_edit_01);
 
         // BOTÃO 2
         private void bt_edit_02_Click(object sender, EventArgs e) => PanelContent(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
 
         private void bt_cancel_02_Click(object sender, EventArgs e) => PanelContent(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
 
-        private void bt_delet_02_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[1], pl_content_02, lb_name_02);
+        private void bt_delet_02_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[1], pl_content_02, txt_name_02);
 
-        private void bt_save_02_Click(object sender, EventArgs e) => BT_Save(dataGridView2, id_register_family_member[1], lb_name_02.Text);
+        private void bt_save_02_Click(object sender, EventArgs e) => BT_Save(dataGridView2, id_register_family_member[1], txt_name_02, txt_name_edit_02);
 
         // BOTÃO 3
         private void bt_edit_03_Click(object sender, EventArgs e) => PanelContent(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
 
         private void bt_cancel_03_Click(object sender, EventArgs e) => PanelContent(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
 
-        private void bt_delet_03_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[2], pl_content_03, lb_name_03);
+        private void bt_delet_03_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[2], pl_content_03, txt_name_03);
 
-        private void bt_save_03_Click(object sender, EventArgs e) => BT_Save(dataGridView3, id_register_family_member[2], lb_name_03.Text);
+        private void bt_save_03_Click(object sender, EventArgs e) => BT_Save(dataGridView3, id_register_family_member[2], txt_name_03, txt_name_edit_03);
 
         // BOTÃO 4
         private void bt_edit_04_Click(object sender, EventArgs e) => PanelContent(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
 
         private void bt_cancel_04_Click(object sender, EventArgs e) => PanelContent(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
 
-        private void bt_delet_04_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[3], pl_content_04, lb_name_04);
+        private void bt_delet_04_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[3], pl_content_04, txt_name_04);
 
-        private void bt_save_04_Click(object sender, EventArgs e) => BT_Save(dataGridView4, id_register_family_member[3], lb_name_04.Text);
+        private void bt_save_04_Click(object sender, EventArgs e) => BT_Save(dataGridView4, id_register_family_member[3], txt_name_04, txt_name_edit_04);
 
         // BOTÃO 5
         private void bt_edit_05_Click(object sender, EventArgs e) => PanelContent(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
 
         private void bt_cancel_05_Click(object sender, EventArgs e) => PanelContent(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
 
-        private void bt_delet_05_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[4], pl_content_05, lb_name_05);
+        private void bt_delet_05_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[4], pl_content_05, txt_name_05);
 
-        private void bt_save_05_Click(object sender, EventArgs e) => BT_Save(dataGridView5, id_register_family_member[4], lb_name_05.Text);
+        private void bt_save_05_Click(object sender, EventArgs e) => BT_Save(dataGridView5, id_register_family_member[4], txt_name_05, txt_name_edit_05);
 
         // BOTÃO 6
         private void bt_edit_06_Click(object sender, EventArgs e) => PanelContent(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
 
         private void bt_cancel_06_Click(object sender, EventArgs e) => PanelContent(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
 
-        private void bt_delet_06_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[5], pl_content_06, lb_name_06);
+        private void bt_delet_06_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[5], pl_content_06, txt_name_06);
 
-        private void bt_save_06_Click(object sender, EventArgs e) => BT_Save(dataGridView6, id_register_family_member[5], lb_name_06.Text);
+        private void bt_save_06_Click(object sender, EventArgs e) => BT_Save(dataGridView6, id_register_family_member[5], txt_name_06, txt_name_edit_06);
 
         // BOTÃO 7
         private void bt_edit_07_Click(object sender, EventArgs e) => PanelContent(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
 
         private void bt_cancel_07_Click(object sender, EventArgs e) => PanelContent(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
 
-        private void bt_delet_07_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[6], pl_content_07, lb_name_07);
+        private void bt_delet_07_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[6], pl_content_07, txt_name_07);
 
-        private void bt_save_07_Click(object sender, EventArgs e) => BT_Save(dataGridView7, id_register_family_member[6], lb_name_07.Text);
+        private void bt_save_07_Click(object sender, EventArgs e) => BT_Save(dataGridView7, id_register_family_member[6], txt_name_07, txt_name_edit_07);
 
         // BOTÃO 8
         private void bt_edit_08_Click(object sender, EventArgs e) => PanelContent(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
 
         private void bt_cancel_08_Click(object sender, EventArgs e) => PanelContent(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
 
-        private void bt_delet_08_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[7], pl_content_08, lb_name_08);
+        private void bt_delet_08_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[7], pl_content_08, txt_name_08);
 
-        private void bt_save_08_Click(object sender, EventArgs e) => BT_Save(dataGridView8, id_register_family_member[7], lb_name_08.Text);
+        private void bt_save_08_Click(object sender, EventArgs e) => BT_Save(dataGridView8, id_register_family_member[7], txt_name_08, txt_name_edit_08);
 
         // BOTÃO 9
         private void bt_edit_09_Click(object sender, EventArgs e) => PanelContent(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
 
         private void bt_cancel_09_Click(object sender, EventArgs e) => PanelContent(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
 
-        private void bt_delet_09_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[8], pl_content_09, lb_name_09);
+        private void bt_delet_09_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[8], pl_content_09, txt_name_09);
 
-        private void bt_save_09_Click(object sender, EventArgs e) => BT_Save(dataGridView9, id_register_family_member[8], lb_name_09.Text);
+        private void bt_save_09_Click(object sender, EventArgs e) => BT_Save(dataGridView9, id_register_family_member[8], txt_name_09, txt_name_edit_09);
 
         // BOTÃO 10
         private void bt_edit_10_Click(object sender, EventArgs e) => PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
 
         private void bt_cancel_10_Click(object sender, EventArgs e) => PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
 
-        private void bt_delet_10_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[9], pl_content_10, lb_name_10);
+        private void bt_delet_10_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[9], pl_content_10, txt_name_10);
 
-        private void bt_save_10_Click(object sender, EventArgs e) => BT_Save(dataGridView10, id_register_family_member[9], lb_name_10.Text);
+        private void bt_save_10_Click(object sender, EventArgs e) => BT_Save(dataGridView10, id_register_family_member[9], txt_name_10, txt_name_edit_10);
 
-        void BT_Cancel(DataGridView dataGridViews, bool reg, Panel pl_content, IconButton button)
+        // BOTÃO CAMCELAR
+        void BT_Cancel(DataGridView dataGridViews, bool reg, Panel pl_content, IconButton button, Label member, RJTextBox Editname)
         {
             try
             {
-
+                if (_editNameMember)
+                {
+                    // NOME DO MEMBRO DA FAMILIA, APARECE
+                    member.Visible = true;
+                    // EDITAR NOME DA FAMILIA, ESCONDE E LIMPA
+                    Editname.Visible = false;
+                    Editname.Texts = string.Empty;
+                }
             }
             finally
             {
-                if (reg)
+                if (_editNameMember)
                 {
-                    pl_content.Size = new Size(830, 500);
-                    button.IconChar = IconChar.AngleUp;
+                    // VARIAVEL DA EDIÇÃO
+                    _editNameMember = false;
+
+                    // ATUALIZA O NOME EDITADO
+                    TableMain();
                 }
                 else
                 {
-                    pl_content.Size = new Size(830, 70);
-                    button.IconChar = IconChar.AngleDown;
+                    if (reg)
+                    {
+                        pl_content.Size = new Size(830, 500);
+                        button.IconChar = IconChar.AngleUp;
+                    }
+                    else
+                    {
+                        pl_content.Size = new Size(830, 70);
+                        button.IconChar = IconChar.AngleDown;
+                    }
                 }
             }
         }
 
-        void BT_Save(DataGridView dataGridViews, int id, string member)
+        // BOTÃO SALVAR
+        void BT_Save(DataGridView dataGridViews, int id, Label member, RJTextBox Editname)
         {
-            try
+            if (_editNameMember)
+            {
+                if (string.IsNullOrEmpty(Editname.Texts))
+                {
+                    Editname.BorderColor = Color.Red;
+                    Editname.BorderSize = 3;
+                }
+                else
+                {
+                    // TABELA EDITAR NOME DO MEMBRO DA FAMILIA
+                    TableEditNameMember(id, Editname);
+                    // NOME DO MEMBRO DA FAMILIA, APARECE
+                    member.Visible = true;
+                    // EDITAR NOME DA FAMILIA, ESCONDE E LIMPA
+                    Editname.Visible = false;
+                    Editname.Texts = string.Empty;
+                    // VARIAVEL DA EDIÇÃO
+                    _editNameMember = false;
+
+                    // ATUALIZA O NOME EDITADO
+                    TableMain();
+
+                    MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
             {
                 if (dataGridViews.Rows.Count > 1)
                 {
@@ -359,50 +446,19 @@ namespace Contas_Familia.PanelControll.Dashboard
                         total_payable_installment = Convert.ToDecimal(dataGridViews.Rows[i].Cells[8].Value);
                     }
 
-                    // BANCO DE DADOS
-                    configdb database = new configdb();
-                    database.openConnection();
+                    // TABELA DAS CONTAS A PAGAR
+                    TableMemberPayDay(id);
 
-                    // PRODUTOS
-                    MySqlCommand cmdProducts = new MySqlCommand("INSERT INTO familypayday.products (id_products, store_name, product_name, id_register_family_member) VALUES (null, @store_name, @product_name, @id_register_family_member)", database.getConnection());
-                    cmdProducts.Parameters.Add("@store_name", MySqlDbType.VarChar, 50).Value = store_name;
-                    cmdProducts.Parameters.Add("@product_name", MySqlDbType.VarChar, 245).Value = product_name;
-                    cmdProducts.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id;
-
-                    cmdProducts.ExecuteNonQuery();
-                    long id_products = cmdProducts.LastInsertedId;
-
-                    // CARTÃO DE CREDITO
-                    MySqlCommand cmdCreditCard = new MySqlCommand("INSERT INTO familypayday.credit_card (id_credit_card, credit_card_name, credit_card_payday, credit_card_installment, id_products) VALUES (null, @credit_card_name, @credit_card_payday, @credit_card_installment, @id_products)", database.getConnection());
-                    cmdCreditCard.Parameters.Add("@credit_card_name", MySqlDbType.VarChar, 45).Value = credit_card_name;
-                    cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.Date).Value = credit_card_payday;
-                    cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = card_credit_installment;
-                    cmdCreditCard.Parameters.Add("@id_products", MySqlDbType.Int32).Value = id_products;
-
-                    cmdCreditCard.ExecuteNonQuery();
-                    long id_credit_card = cmdCreditCard.LastInsertedId;
-
-                    // TOTAL
-                    MySqlCommand cmdTotal = new MySqlCommand("INSERT INTO familypayday.total_credit_card (id_total_credit_card, total_payble, total_payable_installment, id_credit_card) VALUES (null, @total_payble, @total_payable_installment, @id_credit_card)", database.getConnection());
-                    cmdTotal.Parameters.Add("@total_payble", MySqlDbType.Decimal).Value = total_payble;
-                    cmdTotal.Parameters.Add("@total_payable_installment", MySqlDbType.Decimal).Value = total_payable_installment;
-                    cmdTotal.Parameters.Add("@id_credit_card", MySqlDbType.Int32).Value = id_credit_card;
-
-                    cmdTotal.ExecuteNonQuery();
-
-                    database.closeConnection();
+                    MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
-            finally
-            {
-                MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        void BT_Delete(int id_member, Panel pl, Label lbname)
+        // BOTÃO DELETAR
+        void BT_Delete(int id_member, Panel pl, Label name)
         {
             try
-            {
+            {               
                 DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 switch (dr)
@@ -413,7 +469,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                         // DESABILITA O PAINEL DO MEMBRO DA FAMILIA
                         pl.Visible = false;
                         // LIMPA O NOME DO MEMBRO NO PAINEL
-                        lbname.Text = string.Empty;
+                        name.Text = string.Empty;
                         break;
                     case DialogResult.No:
                         break;
@@ -424,6 +480,11 @@ namespace Contas_Familia.PanelControll.Dashboard
             catch (Exception ex)
             {
                 MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                // VERIFICA SE EXISTE ALGUMA PAINEL VISIVEL SE NAO TIVER, MOSTRA O AVISO PARA ADD UM NOVO MEMBRO  
+                SearchPanels();
             }
         }
         #endregion
@@ -451,8 +512,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                     MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     // ATUALIZA OS PAINEL QUANDO CRIADO UM NOVO MEMBRO DA FAMILIA
-                    TableAll();
-                    
+                    TableMain();                    
 
                     ButtonAddFamilyName(bt_add, bt_save, bt_cancel, false);
                     TextAddFamilyName(txt_add_family_name, false);
@@ -504,9 +564,31 @@ namespace Contas_Familia.PanelControll.Dashboard
         }
         #endregion
 
+        // VERIFICA SE EXISTE ALGUMA PAINEL VISIVEL SE NAO TIVER, MOSTRA O AVISO PARA ADD UM NOVO MEMBRO  
+        void SearchPanels()
+        {
+            Panel[] panels = { pl_content_01, pl_content_02, pl_content_03, pl_content_04, pl_content_05, pl_content_06, pl_content_07, pl_content_08, pl_content_09, pl_content_10 };
+            // VARIVALE PARA VERIFICAR 
+            bool anyPanelVisible = false;
+            // PROCURAR TABELAS
+            foreach (Panel panel in panels)
+            {
+                if (panel.Visible)
+                {
+                    anyPanelVisible = true;
+                    // SAI DO LOOP ASSIM QUE ENCONTRAR UM PAINEL VISIVEL
+                    break;
+                }
+            }
+
+            // VARIAVEL PARA AUMENTAR / DIMINUIR O TAMANHO DO PAINEL 
+            pl_add.Size = anyPanelVisible ? new Size(1222, 70) : new Size(1222, 458);
+        }
+
         // PAINEL DOS MEMBROS DA FAMILIA
         void StartPanelFamily()
         {
+            // PAINEIS 
             PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
             PanelContent(_edit[1], pl_content_02, bt_edit_02);
             PanelContent(_edit[2], pl_content_03, bt_edit_03);
@@ -519,13 +601,50 @@ namespace Contas_Familia.PanelControll.Dashboard
             PanelContent(_edit[9], pl_content_10, bt_edit_10);
 
             // TABELA OCULTA DOS MEMBBROS DA FAMILIA
-            //pl_table_member_family.Visible = false;
+            pl_table_member_family.Visible = false;
+
+            // TEXTBOX EDITAR NOME DO MEMBRO
+            TextEditName();
         }
 
+        #region TEXT EDIT
+        private void txt_name_01_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            txt_name_01.Visible = false;
+            
+            txt_name_edit_01.Visible = true;
+            txt_name_edit_01.Focus();
+
+            _editNameMember = true;
+        }
+
+
+        void EditTextMemberFamily()
+        {
+            txt_name_01.ForeColor = Color.White;
+            
+        }
+
+        #endregion
+
+        // LIMPAR TEXTO - NOVO MEMBRO DA FAMILIA
         private void txt_add_family_name_Leave(object sender, EventArgs e)
         {
             txt_add_family_name.BorderColor = Color.Transparent;
             txt_add_family_name.BorderSize = 0;
+        }
+
+        // TODOS OS TEXTBOX EDIT NOME DO MEMBRO DA FAMILIA
+        void TextEditName()
+        {
+            RJTextBox[] textedit = { txt_name_edit_01, txt_name_edit_02, txt_name_edit_03, txt_name_edit_04, txt_name_edit_05, txt_name_edit_06, txt_name_edit_07, txt_name_edit_08, txt_name_edit_09, txt_name_edit_10 };
+
+            // DESABILITA TODOS OS TEXTO BOX 
+            for (int i = 0; i < textedit.Length; i++)
+            {
+                textedit[i].Visible = false;
+            }
+            
         }
 
         // PAINEL DE CADA MEMBRO DA FAMILIA DIMINIU/AUMENTA DE TAMANHO AO CLICAR NO BOTÃO EDITAR
@@ -546,9 +665,13 @@ namespace Contas_Familia.PanelControll.Dashboard
         private void family_Load(object sender, EventArgs e)
         {
             Main.Instance.ButtonMenuDisabled(true);            
-            TableAll();
+            TableMain();
         }
 
-
+        private void txt_name_edit_01_Leave(object sender, EventArgs e)
+        {
+            txt_name_edit_01.BorderColor = Color.Transparent;
+            txt_name_edit_01.BorderSize = 0;
+        }
     }
 }
