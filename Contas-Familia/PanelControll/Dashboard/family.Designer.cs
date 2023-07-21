@@ -29,39 +29,40 @@ namespace Contas_Familia.PanelControll.Dashboard
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle364 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle365 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle366 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle367 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle368 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle369 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle370 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle371 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle372 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle373 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle374 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle375 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle376 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle377 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle378 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle379 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle380 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle381 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle382 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle383 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle384 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle385 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle386 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle387 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle388 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle389 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle390 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle391 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle392 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle393 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle394 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle395 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle396 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pl_family_01 = new System.Windows.Forms.Panel();
             this.txt_name_01 = new System.Windows.Forms.Label();
             this.txt_name_edit_01 = new Contas_Familia.Script.RJTextBox();
@@ -70,7 +71,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_total_01 = new System.Windows.Forms.Label();
             this.bt_edit_01 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_01 = new System.Windows.Forms.Button();
-            this.bt_delet_01 = new System.Windows.Forms.Button();
+            this.bt_delete_01 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pl_content_01 = new System.Windows.Forms.Panel();
             this.pl_content_02 = new System.Windows.Forms.Panel();
@@ -83,7 +84,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_total_02 = new System.Windows.Forms.Label();
             this.bt_edit_02 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_02 = new System.Windows.Forms.Button();
-            this.bt_delet_02 = new System.Windows.Forms.Button();
+            this.bt_delete_02 = new System.Windows.Forms.Button();
             this.pl_content_03 = new System.Windows.Forms.Panel();
             this.pl_family_03 = new System.Windows.Forms.Panel();
             this.txt_name_03 = new System.Windows.Forms.Label();
@@ -94,7 +95,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_total_03 = new System.Windows.Forms.Label();
             this.bt_edit_03 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_03 = new System.Windows.Forms.Button();
-            this.bt_delet_03 = new System.Windows.Forms.Button();
+            this.bt_delete_03 = new System.Windows.Forms.Button();
             this.pl_content_04 = new System.Windows.Forms.Panel();
             this.pl_family_04 = new System.Windows.Forms.Panel();
             this.txt_name_04 = new System.Windows.Forms.Label();
@@ -105,7 +106,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_total_04 = new System.Windows.Forms.Label();
             this.bt_edit_04 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_04 = new System.Windows.Forms.Button();
-            this.bt_delet_04 = new System.Windows.Forms.Button();
+            this.bt_delete_04 = new System.Windows.Forms.Button();
             this.pl_content_05 = new System.Windows.Forms.Panel();
             this.pl_family_05 = new System.Windows.Forms.Panel();
             this.txt_name_05 = new System.Windows.Forms.Label();
@@ -116,7 +117,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_total_05 = new System.Windows.Forms.Label();
             this.bt_edit_05 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_05 = new System.Windows.Forms.Button();
-            this.bt_delet_05 = new System.Windows.Forms.Button();
+            this.bt_delete_05 = new System.Windows.Forms.Button();
             this.pl_content_06 = new System.Windows.Forms.Panel();
             this.pl_family_06 = new System.Windows.Forms.Panel();
             this.txt_name_06 = new System.Windows.Forms.Label();
@@ -127,7 +128,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_total_06 = new System.Windows.Forms.Label();
             this.bt_edit_06 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_06 = new System.Windows.Forms.Button();
-            this.bt_delet_06 = new System.Windows.Forms.Button();
+            this.bt_delete_06 = new System.Windows.Forms.Button();
             this.pl_content_07 = new System.Windows.Forms.Panel();
             this.pl_family_07 = new System.Windows.Forms.Panel();
             this.txt_name_07 = new System.Windows.Forms.Label();
@@ -138,7 +139,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_total_07 = new System.Windows.Forms.Label();
             this.bt_edit_07 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_07 = new System.Windows.Forms.Button();
-            this.bt_delet_07 = new System.Windows.Forms.Button();
+            this.bt_delete_07 = new System.Windows.Forms.Button();
             this.pl_content_08 = new System.Windows.Forms.Panel();
             this.pl_family_08 = new System.Windows.Forms.Panel();
             this.txt_name_08 = new System.Windows.Forms.Label();
@@ -149,7 +150,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_total_08 = new System.Windows.Forms.Label();
             this.bt_edit_08 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_08 = new System.Windows.Forms.Button();
-            this.bt_delet_08 = new System.Windows.Forms.Button();
+            this.bt_delete_08 = new System.Windows.Forms.Button();
             this.pl_content_09 = new System.Windows.Forms.Panel();
             this.pl_family_09 = new System.Windows.Forms.Panel();
             this.txt_name_09 = new System.Windows.Forms.Label();
@@ -160,7 +161,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_total_09 = new System.Windows.Forms.Label();
             this.bt_edit_09 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_09 = new System.Windows.Forms.Button();
-            this.bt_delet_09 = new System.Windows.Forms.Button();
+            this.bt_delete_09 = new System.Windows.Forms.Button();
             this.pl_content_10 = new System.Windows.Forms.Panel();
             this.pl_family_10 = new System.Windows.Forms.Panel();
             this.txt_name_10 = new System.Windows.Forms.Label();
@@ -171,7 +172,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_total_10 = new System.Windows.Forms.Label();
             this.bt_edit_10 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_10 = new System.Windows.Forms.Button();
-            this.bt_delet_10 = new System.Windows.Forms.Button();
+            this.bt_delete_10 = new System.Windows.Forms.Button();
             this.pl_add = new System.Windows.Forms.Panel();
             this.lb_alert_member = new System.Windows.Forms.Label();
             this.pl_add_family_member = new System.Windows.Forms.Panel();
@@ -183,6 +184,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_table_member_family = new System.Windows.Forms.Label();
             this.dgv_family_member = new System.Windows.Forms.DataGridView();
             this.pl_table_member_family = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pl_family_01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pl_content_01.SuspendLayout();
@@ -231,7 +233,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_01.Controls.Add(this.lb_total_01);
             this.pl_family_01.Controls.Add(this.bt_edit_01);
             this.pl_family_01.Controls.Add(this.bt_cancel_01);
-            this.pl_family_01.Controls.Add(this.bt_delet_01);
+            this.pl_family_01.Controls.Add(this.bt_delete_01);
             this.pl_family_01.Controls.Add(this.dataGridView1);
             this.pl_family_01.Location = new System.Drawing.Point(25, 8);
             this.pl_family_01.Name = "pl_family_01";
@@ -241,6 +243,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // txt_name_01
             // 
             this.txt_name_01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(196)))), ((int)(((byte)(125)))));
+            this.txt_name_01.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_name_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name_01.ForeColor = System.Drawing.Color.White;
             this.txt_name_01.Location = new System.Drawing.Point(18, 12);
@@ -248,6 +251,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_01.Size = new System.Drawing.Size(250, 40);
             this.txt_name_01.TabIndex = 83;
             this.txt_name_01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.txt_name_01, "Double click to edit NAME");
             this.txt_name_01.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_01_MouseDoubleClick);
             // 
             // txt_name_edit_01
@@ -355,21 +359,21 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_cancel_01.UseVisualStyleBackColor = false;
             this.bt_cancel_01.Click += new System.EventHandler(this.bt_cancel_01_Click);
             // 
-            // bt_delet_01
+            // bt_delete_01
             // 
-            this.bt_delet_01.BackColor = System.Drawing.Color.Crimson;
-            this.bt_delet_01.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_delet_01.FlatAppearance.BorderSize = 0;
-            this.bt_delet_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_delet_01.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delet_01.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_01.Location = new System.Drawing.Point(277, 14);
-            this.bt_delet_01.Name = "bt_delet_01";
-            this.bt_delet_01.Size = new System.Drawing.Size(122, 36);
-            this.bt_delet_01.TabIndex = 68;
-            this.bt_delet_01.Text = "Delet";
-            this.bt_delet_01.UseVisualStyleBackColor = false;
-            this.bt_delet_01.Click += new System.EventHandler(this.bt_delete_01_Click);
+            this.bt_delete_01.BackColor = System.Drawing.Color.Crimson;
+            this.bt_delete_01.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_delete_01.FlatAppearance.BorderSize = 0;
+            this.bt_delete_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_delete_01.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete_01.ForeColor = System.Drawing.Color.White;
+            this.bt_delete_01.Location = new System.Drawing.Point(277, 14);
+            this.bt_delete_01.Name = "bt_delete_01";
+            this.bt_delete_01.Size = new System.Drawing.Size(122, 36);
+            this.bt_delete_01.TabIndex = 68;
+            this.bt_delete_01.Text = "Delete";
+            this.bt_delete_01.UseVisualStyleBackColor = false;
+            this.bt_delete_01.Click += new System.EventHandler(this.bt_delete_01_Click);
             // 
             // dataGridView1
             // 
@@ -380,31 +384,31 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle364.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle364.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle364.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle364.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle364.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle364.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle364.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle364;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.dataGridView1.ColumnHeadersHeight = 50;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle365.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle365.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle365.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle365.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle365.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle365.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle365.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle365;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle35;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(16, 65);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle366.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle366.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle366;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.ShowCellToolTips = false;
@@ -442,7 +446,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_02.Controls.Add(this.lb_total_02);
             this.pl_family_02.Controls.Add(this.bt_edit_02);
             this.pl_family_02.Controls.Add(this.bt_cancel_02);
-            this.pl_family_02.Controls.Add(this.bt_delet_02);
+            this.pl_family_02.Controls.Add(this.bt_delete_02);
             this.pl_family_02.Location = new System.Drawing.Point(25, 6);
             this.pl_family_02.Name = "pl_family_02";
             this.pl_family_02.Size = new System.Drawing.Size(1171, 480);
@@ -451,6 +455,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // txt_name_02
             // 
             this.txt_name_02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(196)))), ((int)(((byte)(125)))));
+            this.txt_name_02.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_name_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name_02.ForeColor = System.Drawing.Color.White;
             this.txt_name_02.Location = new System.Drawing.Point(18, 12);
@@ -458,6 +463,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_02.Size = new System.Drawing.Size(250, 40);
             this.txt_name_02.TabIndex = 84;
             this.txt_name_02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.txt_name_02, "Double click to edit NAME");
+            this.txt_name_02.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_02_MouseDoubleClick);
             // 
             // txt_name_edit_02
             // 
@@ -467,7 +474,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_02.BorderRadius = 0;
             this.txt_name_edit_02.BorderSize = 1;
             this.txt_name_edit_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_02.ForeColor = System.Drawing.Color.White;
+            this.txt_name_edit_02.ForeColor = System.Drawing.Color.Black;
             this.txt_name_edit_02.Location = new System.Drawing.Point(18, 12);
             this.txt_name_edit_02.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name_edit_02.Multiline = false;
@@ -480,7 +487,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_02.TabIndex = 83;
             this.txt_name_edit_02.Texts = "";
             this.txt_name_edit_02.UnderlinedStyle = false;
-            this.txt_name_edit_02.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_edit_02_MouseDoubleClick);
+            this.txt_name_edit_02.Leave += new System.EventHandler(this.txt_name_edit_02_Leave);
             // 
             // txt_total_02
             // 
@@ -519,31 +526,31 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.dataGridView2.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle367.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle367.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle367.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle367.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle367.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle367.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle367.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle367;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.dataGridView2.ColumnHeadersHeight = 50;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle368.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle368.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle368.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle368.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle368.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle368.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle368.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle368;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle38;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.Location = new System.Drawing.Point(16, 65);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
-            dataGridViewCellStyle369.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle369.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle369;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -604,21 +611,21 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_cancel_02.UseVisualStyleBackColor = false;
             this.bt_cancel_02.Click += new System.EventHandler(this.bt_cancel_02_Click);
             // 
-            // bt_delet_02
+            // bt_delete_02
             // 
-            this.bt_delet_02.BackColor = System.Drawing.Color.Crimson;
-            this.bt_delet_02.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_delet_02.FlatAppearance.BorderSize = 0;
-            this.bt_delet_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_delet_02.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delet_02.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_02.Location = new System.Drawing.Point(277, 14);
-            this.bt_delet_02.Name = "bt_delet_02";
-            this.bt_delet_02.Size = new System.Drawing.Size(122, 36);
-            this.bt_delet_02.TabIndex = 68;
-            this.bt_delet_02.Text = "Delet";
-            this.bt_delet_02.UseVisualStyleBackColor = false;
-            this.bt_delet_02.Click += new System.EventHandler(this.bt_delet_02_Click);
+            this.bt_delete_02.BackColor = System.Drawing.Color.Crimson;
+            this.bt_delete_02.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_delete_02.FlatAppearance.BorderSize = 0;
+            this.bt_delete_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_delete_02.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete_02.ForeColor = System.Drawing.Color.White;
+            this.bt_delete_02.Location = new System.Drawing.Point(277, 14);
+            this.bt_delete_02.Name = "bt_delete_02";
+            this.bt_delete_02.Size = new System.Drawing.Size(122, 36);
+            this.bt_delete_02.TabIndex = 68;
+            this.bt_delete_02.Text = "Delete";
+            this.bt_delete_02.UseVisualStyleBackColor = false;
+            this.bt_delete_02.Click += new System.EventHandler(this.bt_delete_02_Click);
             // 
             // pl_content_03
             // 
@@ -642,7 +649,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_03.Controls.Add(this.lb_total_03);
             this.pl_family_03.Controls.Add(this.bt_edit_03);
             this.pl_family_03.Controls.Add(this.bt_cancel_03);
-            this.pl_family_03.Controls.Add(this.bt_delet_03);
+            this.pl_family_03.Controls.Add(this.bt_delete_03);
             this.pl_family_03.Location = new System.Drawing.Point(25, 6);
             this.pl_family_03.Name = "pl_family_03";
             this.pl_family_03.Size = new System.Drawing.Size(1171, 480);
@@ -651,6 +658,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // txt_name_03
             // 
             this.txt_name_03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(196)))), ((int)(((byte)(125)))));
+            this.txt_name_03.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_name_03.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name_03.ForeColor = System.Drawing.Color.White;
             this.txt_name_03.Location = new System.Drawing.Point(18, 12);
@@ -658,6 +666,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_03.Size = new System.Drawing.Size(250, 40);
             this.txt_name_03.TabIndex = 85;
             this.txt_name_03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.txt_name_03, "Double click to edit NAME");
+            this.txt_name_03.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_03_MouseDoubleClick);
             // 
             // txt_name_edit_03
             // 
@@ -667,7 +677,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_03.BorderRadius = 0;
             this.txt_name_edit_03.BorderSize = 1;
             this.txt_name_edit_03.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_03.ForeColor = System.Drawing.Color.White;
+            this.txt_name_edit_03.ForeColor = System.Drawing.Color.Black;
             this.txt_name_edit_03.Location = new System.Drawing.Point(18, 12);
             this.txt_name_edit_03.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name_edit_03.Multiline = false;
@@ -680,7 +690,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_03.TabIndex = 84;
             this.txt_name_edit_03.Texts = "";
             this.txt_name_edit_03.UnderlinedStyle = false;
-            this.txt_name_edit_03.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_edit_03_MouseDoubleClick);
+            this.txt_name_edit_03.Leave += new System.EventHandler(this.txt_name_edit_03_Leave);
             // 
             // txt_total_03
             // 
@@ -719,31 +729,31 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.dataGridView3.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle370.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle370.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle370.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle370.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle370.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle370.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle370.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle370;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle40;
             this.dataGridView3.ColumnHeadersHeight = 50;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle371.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle371.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle371.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle371.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle371.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle371.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle371.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle371;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle41;
             this.dataGridView3.EnableHeadersVisualStyles = false;
             this.dataGridView3.Location = new System.Drawing.Point(16, 65);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
-            dataGridViewCellStyle372.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle372.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle372;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -804,21 +814,21 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_cancel_03.UseVisualStyleBackColor = false;
             this.bt_cancel_03.Click += new System.EventHandler(this.bt_cancel_03_Click);
             // 
-            // bt_delet_03
+            // bt_delete_03
             // 
-            this.bt_delet_03.BackColor = System.Drawing.Color.Crimson;
-            this.bt_delet_03.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_delet_03.FlatAppearance.BorderSize = 0;
-            this.bt_delet_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_delet_03.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delet_03.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_03.Location = new System.Drawing.Point(277, 14);
-            this.bt_delet_03.Name = "bt_delet_03";
-            this.bt_delet_03.Size = new System.Drawing.Size(122, 36);
-            this.bt_delet_03.TabIndex = 68;
-            this.bt_delet_03.Text = "Delet";
-            this.bt_delet_03.UseVisualStyleBackColor = false;
-            this.bt_delet_03.Click += new System.EventHandler(this.bt_delet_03_Click);
+            this.bt_delete_03.BackColor = System.Drawing.Color.Crimson;
+            this.bt_delete_03.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_delete_03.FlatAppearance.BorderSize = 0;
+            this.bt_delete_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_delete_03.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete_03.ForeColor = System.Drawing.Color.White;
+            this.bt_delete_03.Location = new System.Drawing.Point(277, 14);
+            this.bt_delete_03.Name = "bt_delete_03";
+            this.bt_delete_03.Size = new System.Drawing.Size(122, 36);
+            this.bt_delete_03.TabIndex = 68;
+            this.bt_delete_03.Text = "Delete";
+            this.bt_delete_03.UseVisualStyleBackColor = false;
+            this.bt_delete_03.Click += new System.EventHandler(this.bt_delete_03_Click);
             // 
             // pl_content_04
             // 
@@ -842,7 +852,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_04.Controls.Add(this.lb_total_04);
             this.pl_family_04.Controls.Add(this.bt_edit_04);
             this.pl_family_04.Controls.Add(this.bt_cancel_04);
-            this.pl_family_04.Controls.Add(this.bt_delet_04);
+            this.pl_family_04.Controls.Add(this.bt_delete_04);
             this.pl_family_04.Location = new System.Drawing.Point(25, 6);
             this.pl_family_04.Name = "pl_family_04";
             this.pl_family_04.Size = new System.Drawing.Size(1171, 480);
@@ -851,6 +861,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // txt_name_04
             // 
             this.txt_name_04.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(196)))), ((int)(((byte)(125)))));
+            this.txt_name_04.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_name_04.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name_04.ForeColor = System.Drawing.Color.White;
             this.txt_name_04.Location = new System.Drawing.Point(18, 12);
@@ -858,6 +869,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_04.Size = new System.Drawing.Size(250, 40);
             this.txt_name_04.TabIndex = 94;
             this.txt_name_04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.txt_name_04, "Double click to edit NAME");
+            this.txt_name_04.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_04_MouseDoubleClick);
             // 
             // txt_name_edit_04
             // 
@@ -867,7 +880,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_04.BorderRadius = 0;
             this.txt_name_edit_04.BorderSize = 1;
             this.txt_name_edit_04.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_04.ForeColor = System.Drawing.Color.White;
+            this.txt_name_edit_04.ForeColor = System.Drawing.Color.Black;
             this.txt_name_edit_04.Location = new System.Drawing.Point(18, 12);
             this.txt_name_edit_04.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name_edit_04.Multiline = false;
@@ -880,7 +893,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_04.TabIndex = 93;
             this.txt_name_edit_04.Texts = "";
             this.txt_name_edit_04.UnderlinedStyle = false;
-            this.txt_name_edit_04.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_edit_04_MouseDoubleClick);
+            this.txt_name_edit_04.Leave += new System.EventHandler(this.txt_name_edit_04_Leave);
             // 
             // txt_total_04
             // 
@@ -919,31 +932,31 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.dataGridView4.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle373.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle373.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle373.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle373.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle373.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle373.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle373.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle373;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle43;
             this.dataGridView4.ColumnHeadersHeight = 50;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle374.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle374.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle374.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle374.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle374.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle374.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle374.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle374;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle44;
             this.dataGridView4.EnableHeadersVisualStyles = false;
             this.dataGridView4.Location = new System.Drawing.Point(16, 65);
             this.dataGridView4.MultiSelect = false;
             this.dataGridView4.Name = "dataGridView4";
-            dataGridViewCellStyle375.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle375.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle375;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle45;
             this.dataGridView4.RowHeadersVisible = false;
             this.dataGridView4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -1004,21 +1017,21 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_cancel_04.UseVisualStyleBackColor = false;
             this.bt_cancel_04.Click += new System.EventHandler(this.bt_cancel_04_Click);
             // 
-            // bt_delet_04
+            // bt_delete_04
             // 
-            this.bt_delet_04.BackColor = System.Drawing.Color.Crimson;
-            this.bt_delet_04.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_delet_04.FlatAppearance.BorderSize = 0;
-            this.bt_delet_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_delet_04.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delet_04.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_04.Location = new System.Drawing.Point(277, 14);
-            this.bt_delet_04.Name = "bt_delet_04";
-            this.bt_delet_04.Size = new System.Drawing.Size(122, 36);
-            this.bt_delet_04.TabIndex = 68;
-            this.bt_delet_04.Text = "Delet";
-            this.bt_delet_04.UseVisualStyleBackColor = false;
-            this.bt_delet_04.Click += new System.EventHandler(this.bt_delet_04_Click);
+            this.bt_delete_04.BackColor = System.Drawing.Color.Crimson;
+            this.bt_delete_04.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_delete_04.FlatAppearance.BorderSize = 0;
+            this.bt_delete_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_delete_04.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete_04.ForeColor = System.Drawing.Color.White;
+            this.bt_delete_04.Location = new System.Drawing.Point(277, 14);
+            this.bt_delete_04.Name = "bt_delete_04";
+            this.bt_delete_04.Size = new System.Drawing.Size(122, 36);
+            this.bt_delete_04.TabIndex = 68;
+            this.bt_delete_04.Text = "Delete";
+            this.bt_delete_04.UseVisualStyleBackColor = false;
+            this.bt_delete_04.Click += new System.EventHandler(this.bt_delete_04_Click);
             // 
             // pl_content_05
             // 
@@ -1042,7 +1055,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_05.Controls.Add(this.lb_total_05);
             this.pl_family_05.Controls.Add(this.bt_edit_05);
             this.pl_family_05.Controls.Add(this.bt_cancel_05);
-            this.pl_family_05.Controls.Add(this.bt_delet_05);
+            this.pl_family_05.Controls.Add(this.bt_delete_05);
             this.pl_family_05.Location = new System.Drawing.Point(25, 6);
             this.pl_family_05.Name = "pl_family_05";
             this.pl_family_05.Size = new System.Drawing.Size(1171, 480);
@@ -1051,6 +1064,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // txt_name_05
             // 
             this.txt_name_05.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(196)))), ((int)(((byte)(125)))));
+            this.txt_name_05.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_name_05.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name_05.ForeColor = System.Drawing.Color.White;
             this.txt_name_05.Location = new System.Drawing.Point(18, 12);
@@ -1058,6 +1072,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_05.Size = new System.Drawing.Size(250, 40);
             this.txt_name_05.TabIndex = 93;
             this.txt_name_05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.txt_name_05, "Double click to edit NAME");
+            this.txt_name_05.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_05_MouseDoubleClick);
             // 
             // txt_name_edit_05
             // 
@@ -1067,7 +1083,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_05.BorderRadius = 0;
             this.txt_name_edit_05.BorderSize = 1;
             this.txt_name_edit_05.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_05.ForeColor = System.Drawing.Color.White;
+            this.txt_name_edit_05.ForeColor = System.Drawing.Color.Black;
             this.txt_name_edit_05.Location = new System.Drawing.Point(18, 12);
             this.txt_name_edit_05.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name_edit_05.Multiline = false;
@@ -1080,7 +1096,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_05.TabIndex = 92;
             this.txt_name_edit_05.Texts = "";
             this.txt_name_edit_05.UnderlinedStyle = false;
-            this.txt_name_edit_05.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_edit_05_MouseDoubleClick);
+            this.txt_name_edit_05.Leave += new System.EventHandler(this.txt_name_edit_05_Leave);
             // 
             // txt_total_05
             // 
@@ -1119,31 +1135,31 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.dataGridView5.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView5.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle376.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle376.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle376.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle376.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle376.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle376.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle376.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle376;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
             this.dataGridView5.ColumnHeadersHeight = 50;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle377.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle377.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle377.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle377.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle377.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle377.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle377.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle377;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle47.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle47;
             this.dataGridView5.EnableHeadersVisualStyles = false;
             this.dataGridView5.Location = new System.Drawing.Point(16, 65);
             this.dataGridView5.MultiSelect = false;
             this.dataGridView5.Name = "dataGridView5";
-            dataGridViewCellStyle378.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle378.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle378;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle48;
             this.dataGridView5.RowHeadersVisible = false;
             this.dataGridView5.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -1204,21 +1220,21 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_cancel_05.UseVisualStyleBackColor = false;
             this.bt_cancel_05.Click += new System.EventHandler(this.bt_cancel_05_Click);
             // 
-            // bt_delet_05
+            // bt_delete_05
             // 
-            this.bt_delet_05.BackColor = System.Drawing.Color.Crimson;
-            this.bt_delet_05.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_delet_05.FlatAppearance.BorderSize = 0;
-            this.bt_delet_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_delet_05.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delet_05.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_05.Location = new System.Drawing.Point(277, 14);
-            this.bt_delet_05.Name = "bt_delet_05";
-            this.bt_delet_05.Size = new System.Drawing.Size(122, 36);
-            this.bt_delet_05.TabIndex = 68;
-            this.bt_delet_05.Text = "Delet";
-            this.bt_delet_05.UseVisualStyleBackColor = false;
-            this.bt_delet_05.Click += new System.EventHandler(this.bt_delet_05_Click);
+            this.bt_delete_05.BackColor = System.Drawing.Color.Crimson;
+            this.bt_delete_05.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_delete_05.FlatAppearance.BorderSize = 0;
+            this.bt_delete_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_delete_05.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete_05.ForeColor = System.Drawing.Color.White;
+            this.bt_delete_05.Location = new System.Drawing.Point(277, 14);
+            this.bt_delete_05.Name = "bt_delete_05";
+            this.bt_delete_05.Size = new System.Drawing.Size(122, 36);
+            this.bt_delete_05.TabIndex = 68;
+            this.bt_delete_05.Text = "Delete";
+            this.bt_delete_05.UseVisualStyleBackColor = false;
+            this.bt_delete_05.Click += new System.EventHandler(this.bt_delete_05_Click);
             // 
             // pl_content_06
             // 
@@ -1242,7 +1258,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_06.Controls.Add(this.lb_total_06);
             this.pl_family_06.Controls.Add(this.bt_edit_06);
             this.pl_family_06.Controls.Add(this.bt_cancel_06);
-            this.pl_family_06.Controls.Add(this.bt_delet_06);
+            this.pl_family_06.Controls.Add(this.bt_delete_06);
             this.pl_family_06.Location = new System.Drawing.Point(25, 6);
             this.pl_family_06.Name = "pl_family_06";
             this.pl_family_06.Size = new System.Drawing.Size(1171, 480);
@@ -1251,6 +1267,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // txt_name_06
             // 
             this.txt_name_06.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(196)))), ((int)(((byte)(125)))));
+            this.txt_name_06.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_name_06.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name_06.ForeColor = System.Drawing.Color.White;
             this.txt_name_06.Location = new System.Drawing.Point(18, 12);
@@ -1258,6 +1275,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_06.Size = new System.Drawing.Size(250, 40);
             this.txt_name_06.TabIndex = 92;
             this.txt_name_06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.txt_name_06, "Double click to edit NAME");
+            this.txt_name_06.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_06_MouseDoubleClick);
             // 
             // txt_name_edit_06
             // 
@@ -1267,7 +1286,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_06.BorderRadius = 0;
             this.txt_name_edit_06.BorderSize = 1;
             this.txt_name_edit_06.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_06.ForeColor = System.Drawing.Color.White;
+            this.txt_name_edit_06.ForeColor = System.Drawing.Color.Black;
             this.txt_name_edit_06.Location = new System.Drawing.Point(18, 12);
             this.txt_name_edit_06.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name_edit_06.Multiline = false;
@@ -1280,7 +1299,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_06.TabIndex = 91;
             this.txt_name_edit_06.Texts = "";
             this.txt_name_edit_06.UnderlinedStyle = false;
-            this.txt_name_edit_06.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_edit_06_MouseDoubleClick);
+            this.txt_name_edit_06.Leave += new System.EventHandler(this.txt_name_edit_06_Leave);
             // 
             // txt_total_06
             // 
@@ -1319,31 +1338,31 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.dataGridView6.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView6.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle379.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle379.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle379.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle379.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle379.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle379.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle379.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle379;
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
             this.dataGridView6.ColumnHeadersHeight = 50;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle380.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle380.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle380.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle380.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle380.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle380.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle380.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle380;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle50.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle50;
             this.dataGridView6.EnableHeadersVisualStyles = false;
             this.dataGridView6.Location = new System.Drawing.Point(16, 65);
             this.dataGridView6.MultiSelect = false;
             this.dataGridView6.Name = "dataGridView6";
-            dataGridViewCellStyle381.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle381.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView6.RowHeadersDefaultCellStyle = dataGridViewCellStyle381;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView6.RowHeadersDefaultCellStyle = dataGridViewCellStyle51;
             this.dataGridView6.RowHeadersVisible = false;
             this.dataGridView6.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -1404,21 +1423,21 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_cancel_06.UseVisualStyleBackColor = false;
             this.bt_cancel_06.Click += new System.EventHandler(this.bt_cancel_06_Click);
             // 
-            // bt_delet_06
+            // bt_delete_06
             // 
-            this.bt_delet_06.BackColor = System.Drawing.Color.Crimson;
-            this.bt_delet_06.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_delet_06.FlatAppearance.BorderSize = 0;
-            this.bt_delet_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_delet_06.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delet_06.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_06.Location = new System.Drawing.Point(277, 14);
-            this.bt_delet_06.Name = "bt_delet_06";
-            this.bt_delet_06.Size = new System.Drawing.Size(122, 36);
-            this.bt_delet_06.TabIndex = 68;
-            this.bt_delet_06.Text = "Delet";
-            this.bt_delet_06.UseVisualStyleBackColor = false;
-            this.bt_delet_06.Click += new System.EventHandler(this.bt_delet_06_Click);
+            this.bt_delete_06.BackColor = System.Drawing.Color.Crimson;
+            this.bt_delete_06.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_delete_06.FlatAppearance.BorderSize = 0;
+            this.bt_delete_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_delete_06.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete_06.ForeColor = System.Drawing.Color.White;
+            this.bt_delete_06.Location = new System.Drawing.Point(277, 14);
+            this.bt_delete_06.Name = "bt_delete_06";
+            this.bt_delete_06.Size = new System.Drawing.Size(122, 36);
+            this.bt_delete_06.TabIndex = 68;
+            this.bt_delete_06.Text = "Delete";
+            this.bt_delete_06.UseVisualStyleBackColor = false;
+            this.bt_delete_06.Click += new System.EventHandler(this.bt_delete_06_Click);
             // 
             // pl_content_07
             // 
@@ -1442,7 +1461,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_07.Controls.Add(this.lb_total_07);
             this.pl_family_07.Controls.Add(this.bt_edit_07);
             this.pl_family_07.Controls.Add(this.bt_cancel_07);
-            this.pl_family_07.Controls.Add(this.bt_delet_07);
+            this.pl_family_07.Controls.Add(this.bt_delete_07);
             this.pl_family_07.Location = new System.Drawing.Point(25, 6);
             this.pl_family_07.Name = "pl_family_07";
             this.pl_family_07.Size = new System.Drawing.Size(1171, 480);
@@ -1451,6 +1470,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // txt_name_07
             // 
             this.txt_name_07.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(196)))), ((int)(((byte)(125)))));
+            this.txt_name_07.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_name_07.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name_07.ForeColor = System.Drawing.Color.White;
             this.txt_name_07.Location = new System.Drawing.Point(18, 12);
@@ -1458,6 +1478,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_07.Size = new System.Drawing.Size(250, 40);
             this.txt_name_07.TabIndex = 91;
             this.txt_name_07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.txt_name_07, "Double click to edit NAME");
+            this.txt_name_07.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_07_MouseDoubleClick);
             // 
             // txt_name_edit_07
             // 
@@ -1467,7 +1489,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_07.BorderRadius = 0;
             this.txt_name_edit_07.BorderSize = 1;
             this.txt_name_edit_07.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_07.ForeColor = System.Drawing.Color.White;
+            this.txt_name_edit_07.ForeColor = System.Drawing.Color.Black;
             this.txt_name_edit_07.Location = new System.Drawing.Point(18, 12);
             this.txt_name_edit_07.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name_edit_07.Multiline = false;
@@ -1480,7 +1502,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_07.TabIndex = 90;
             this.txt_name_edit_07.Texts = "";
             this.txt_name_edit_07.UnderlinedStyle = false;
-            this.txt_name_edit_07.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_edit_07_MouseDoubleClick);
+            this.txt_name_edit_07.Leave += new System.EventHandler(this.txt_name_edit_07_Leave);
             // 
             // txt_total_07
             // 
@@ -1519,31 +1541,31 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.dataGridView7.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView7.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle382.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle382.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle382.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle382.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle382.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle382.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle382.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView7.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle382;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle52.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView7.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle52;
             this.dataGridView7.ColumnHeadersHeight = 50;
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle383.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle383.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle383.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle383.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle383.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle383.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle383.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView7.DefaultCellStyle = dataGridViewCellStyle383;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle53.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView7.DefaultCellStyle = dataGridViewCellStyle53;
             this.dataGridView7.EnableHeadersVisualStyles = false;
             this.dataGridView7.Location = new System.Drawing.Point(16, 65);
             this.dataGridView7.MultiSelect = false;
             this.dataGridView7.Name = "dataGridView7";
-            dataGridViewCellStyle384.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle384.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView7.RowHeadersDefaultCellStyle = dataGridViewCellStyle384;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView7.RowHeadersDefaultCellStyle = dataGridViewCellStyle54;
             this.dataGridView7.RowHeadersVisible = false;
             this.dataGridView7.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView7.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -1604,21 +1626,21 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_cancel_07.UseVisualStyleBackColor = false;
             this.bt_cancel_07.Click += new System.EventHandler(this.bt_cancel_07_Click);
             // 
-            // bt_delet_07
+            // bt_delete_07
             // 
-            this.bt_delet_07.BackColor = System.Drawing.Color.Crimson;
-            this.bt_delet_07.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_delet_07.FlatAppearance.BorderSize = 0;
-            this.bt_delet_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_delet_07.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delet_07.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_07.Location = new System.Drawing.Point(277, 14);
-            this.bt_delet_07.Name = "bt_delet_07";
-            this.bt_delet_07.Size = new System.Drawing.Size(122, 36);
-            this.bt_delet_07.TabIndex = 68;
-            this.bt_delet_07.Text = "Delet";
-            this.bt_delet_07.UseVisualStyleBackColor = false;
-            this.bt_delet_07.Click += new System.EventHandler(this.bt_delet_07_Click);
+            this.bt_delete_07.BackColor = System.Drawing.Color.Crimson;
+            this.bt_delete_07.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_delete_07.FlatAppearance.BorderSize = 0;
+            this.bt_delete_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_delete_07.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete_07.ForeColor = System.Drawing.Color.White;
+            this.bt_delete_07.Location = new System.Drawing.Point(277, 14);
+            this.bt_delete_07.Name = "bt_delete_07";
+            this.bt_delete_07.Size = new System.Drawing.Size(122, 36);
+            this.bt_delete_07.TabIndex = 68;
+            this.bt_delete_07.Text = "Delete";
+            this.bt_delete_07.UseVisualStyleBackColor = false;
+            this.bt_delete_07.Click += new System.EventHandler(this.bt_delete_07_Click);
             // 
             // pl_content_08
             // 
@@ -1642,7 +1664,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_08.Controls.Add(this.lb_total_08);
             this.pl_family_08.Controls.Add(this.bt_edit_08);
             this.pl_family_08.Controls.Add(this.bt_cancel_08);
-            this.pl_family_08.Controls.Add(this.bt_delet_08);
+            this.pl_family_08.Controls.Add(this.bt_delete_08);
             this.pl_family_08.Location = new System.Drawing.Point(25, 6);
             this.pl_family_08.Name = "pl_family_08";
             this.pl_family_08.Size = new System.Drawing.Size(1171, 480);
@@ -1651,6 +1673,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // txt_name_08
             // 
             this.txt_name_08.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(196)))), ((int)(((byte)(125)))));
+            this.txt_name_08.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_name_08.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name_08.ForeColor = System.Drawing.Color.White;
             this.txt_name_08.Location = new System.Drawing.Point(18, 12);
@@ -1658,6 +1681,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_08.Size = new System.Drawing.Size(250, 40);
             this.txt_name_08.TabIndex = 90;
             this.txt_name_08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.txt_name_08, "Double click to edit NAME");
+            this.txt_name_08.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_08_MouseDoubleClick);
             // 
             // txt_name_edit_08
             // 
@@ -1667,7 +1692,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_08.BorderRadius = 0;
             this.txt_name_edit_08.BorderSize = 1;
             this.txt_name_edit_08.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_08.ForeColor = System.Drawing.Color.White;
+            this.txt_name_edit_08.ForeColor = System.Drawing.Color.Black;
             this.txt_name_edit_08.Location = new System.Drawing.Point(18, 12);
             this.txt_name_edit_08.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name_edit_08.Multiline = false;
@@ -1680,7 +1705,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_08.TabIndex = 89;
             this.txt_name_edit_08.Texts = "";
             this.txt_name_edit_08.UnderlinedStyle = false;
-            this.txt_name_edit_08.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_edit_08_MouseDoubleClick);
+            this.txt_name_edit_08.Leave += new System.EventHandler(this.txt_name_edit_08_Leave);
             // 
             // txt_total_08
             // 
@@ -1719,31 +1744,31 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.dataGridView8.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView8.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle385.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle385.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle385.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle385.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle385.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle385.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle385.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView8.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle385;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle55.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle55.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle55.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView8.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle55;
             this.dataGridView8.ColumnHeadersHeight = 50;
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle386.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle386.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle386.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle386.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle386.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle386.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle386.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView8.DefaultCellStyle = dataGridViewCellStyle386;
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle56.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle56.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle56.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView8.DefaultCellStyle = dataGridViewCellStyle56;
             this.dataGridView8.EnableHeadersVisualStyles = false;
             this.dataGridView8.Location = new System.Drawing.Point(16, 65);
             this.dataGridView8.MultiSelect = false;
             this.dataGridView8.Name = "dataGridView8";
-            dataGridViewCellStyle387.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle387.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView8.RowHeadersDefaultCellStyle = dataGridViewCellStyle387;
+            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView8.RowHeadersDefaultCellStyle = dataGridViewCellStyle57;
             this.dataGridView8.RowHeadersVisible = false;
             this.dataGridView8.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView8.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -1804,21 +1829,21 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_cancel_08.UseVisualStyleBackColor = false;
             this.bt_cancel_08.Click += new System.EventHandler(this.bt_cancel_08_Click);
             // 
-            // bt_delet_08
+            // bt_delete_08
             // 
-            this.bt_delet_08.BackColor = System.Drawing.Color.Crimson;
-            this.bt_delet_08.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_delet_08.FlatAppearance.BorderSize = 0;
-            this.bt_delet_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_delet_08.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delet_08.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_08.Location = new System.Drawing.Point(277, 14);
-            this.bt_delet_08.Name = "bt_delet_08";
-            this.bt_delet_08.Size = new System.Drawing.Size(122, 36);
-            this.bt_delet_08.TabIndex = 68;
-            this.bt_delet_08.Text = "Delet";
-            this.bt_delet_08.UseVisualStyleBackColor = false;
-            this.bt_delet_08.Click += new System.EventHandler(this.bt_delet_08_Click);
+            this.bt_delete_08.BackColor = System.Drawing.Color.Crimson;
+            this.bt_delete_08.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_delete_08.FlatAppearance.BorderSize = 0;
+            this.bt_delete_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_delete_08.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete_08.ForeColor = System.Drawing.Color.White;
+            this.bt_delete_08.Location = new System.Drawing.Point(277, 14);
+            this.bt_delete_08.Name = "bt_delete_08";
+            this.bt_delete_08.Size = new System.Drawing.Size(122, 36);
+            this.bt_delete_08.TabIndex = 68;
+            this.bt_delete_08.Text = "Delete";
+            this.bt_delete_08.UseVisualStyleBackColor = false;
+            this.bt_delete_08.Click += new System.EventHandler(this.bt_delete_08_Click);
             // 
             // pl_content_09
             // 
@@ -1842,7 +1867,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_09.Controls.Add(this.lb_total_09);
             this.pl_family_09.Controls.Add(this.bt_edit_09);
             this.pl_family_09.Controls.Add(this.bt_cancel_09);
-            this.pl_family_09.Controls.Add(this.bt_delet_09);
+            this.pl_family_09.Controls.Add(this.bt_delete_09);
             this.pl_family_09.Location = new System.Drawing.Point(25, 6);
             this.pl_family_09.Name = "pl_family_09";
             this.pl_family_09.Size = new System.Drawing.Size(1171, 480);
@@ -1851,6 +1876,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // txt_name_09
             // 
             this.txt_name_09.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(196)))), ((int)(((byte)(125)))));
+            this.txt_name_09.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_name_09.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name_09.ForeColor = System.Drawing.Color.White;
             this.txt_name_09.Location = new System.Drawing.Point(18, 12);
@@ -1858,6 +1884,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_09.Size = new System.Drawing.Size(250, 40);
             this.txt_name_09.TabIndex = 90;
             this.txt_name_09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.txt_name_09, "Double click to edit NAME");
+            this.txt_name_09.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_09_MouseDoubleClick);
             // 
             // txt_name_edit_09
             // 
@@ -1867,7 +1895,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_09.BorderRadius = 0;
             this.txt_name_edit_09.BorderSize = 1;
             this.txt_name_edit_09.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_09.ForeColor = System.Drawing.Color.White;
+            this.txt_name_edit_09.ForeColor = System.Drawing.Color.Black;
             this.txt_name_edit_09.Location = new System.Drawing.Point(18, 12);
             this.txt_name_edit_09.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name_edit_09.Multiline = false;
@@ -1919,31 +1947,31 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.dataGridView9.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView9.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle388.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle388.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle388.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle388.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle388.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle388.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle388.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView9.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle388;
+            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle58.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle58.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView9.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle58;
             this.dataGridView9.ColumnHeadersHeight = 50;
             this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle389.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle389.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle389.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle389.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle389.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle389.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle389.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView9.DefaultCellStyle = dataGridViewCellStyle389;
+            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle59.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle59.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView9.DefaultCellStyle = dataGridViewCellStyle59;
             this.dataGridView9.EnableHeadersVisualStyles = false;
             this.dataGridView9.Location = new System.Drawing.Point(16, 65);
             this.dataGridView9.MultiSelect = false;
             this.dataGridView9.Name = "dataGridView9";
-            dataGridViewCellStyle390.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle390.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView9.RowHeadersDefaultCellStyle = dataGridViewCellStyle390;
+            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView9.RowHeadersDefaultCellStyle = dataGridViewCellStyle60;
             this.dataGridView9.RowHeadersVisible = false;
             this.dataGridView9.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView9.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -2004,21 +2032,21 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_cancel_09.UseVisualStyleBackColor = false;
             this.bt_cancel_09.Click += new System.EventHandler(this.bt_cancel_09_Click);
             // 
-            // bt_delet_09
+            // bt_delete_09
             // 
-            this.bt_delet_09.BackColor = System.Drawing.Color.Crimson;
-            this.bt_delet_09.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_delet_09.FlatAppearance.BorderSize = 0;
-            this.bt_delet_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_delet_09.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delet_09.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_09.Location = new System.Drawing.Point(277, 14);
-            this.bt_delet_09.Name = "bt_delet_09";
-            this.bt_delet_09.Size = new System.Drawing.Size(122, 36);
-            this.bt_delet_09.TabIndex = 68;
-            this.bt_delet_09.Text = "Delet";
-            this.bt_delet_09.UseVisualStyleBackColor = false;
-            this.bt_delet_09.Click += new System.EventHandler(this.bt_delet_09_Click);
+            this.bt_delete_09.BackColor = System.Drawing.Color.Crimson;
+            this.bt_delete_09.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_delete_09.FlatAppearance.BorderSize = 0;
+            this.bt_delete_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_delete_09.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete_09.ForeColor = System.Drawing.Color.White;
+            this.bt_delete_09.Location = new System.Drawing.Point(277, 14);
+            this.bt_delete_09.Name = "bt_delete_09";
+            this.bt_delete_09.Size = new System.Drawing.Size(122, 36);
+            this.bt_delete_09.TabIndex = 68;
+            this.bt_delete_09.Text = "Delete";
+            this.bt_delete_09.UseVisualStyleBackColor = false;
+            this.bt_delete_09.Click += new System.EventHandler(this.bt_delete_09_Click);
             // 
             // pl_content_10
             // 
@@ -2042,7 +2070,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_10.Controls.Add(this.lb_total_10);
             this.pl_family_10.Controls.Add(this.bt_edit_10);
             this.pl_family_10.Controls.Add(this.bt_cancel_10);
-            this.pl_family_10.Controls.Add(this.bt_delet_10);
+            this.pl_family_10.Controls.Add(this.bt_delete_10);
             this.pl_family_10.Location = new System.Drawing.Point(25, 6);
             this.pl_family_10.Name = "pl_family_10";
             this.pl_family_10.Size = new System.Drawing.Size(1171, 480);
@@ -2051,6 +2079,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // txt_name_10
             // 
             this.txt_name_10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(196)))), ((int)(((byte)(125)))));
+            this.txt_name_10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txt_name_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name_10.ForeColor = System.Drawing.Color.White;
             this.txt_name_10.Location = new System.Drawing.Point(18, 12);
@@ -2058,6 +2087,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_10.Size = new System.Drawing.Size(250, 40);
             this.txt_name_10.TabIndex = 89;
             this.txt_name_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.txt_name_10, "Double click to edit NAME");
+            this.txt_name_10.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_10_MouseDoubleClick);
             // 
             // txt_name_edit_10
             // 
@@ -2067,7 +2098,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_10.BorderRadius = 0;
             this.txt_name_edit_10.BorderSize = 1;
             this.txt_name_edit_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_10.ForeColor = System.Drawing.Color.White;
+            this.txt_name_edit_10.ForeColor = System.Drawing.Color.Black;
             this.txt_name_edit_10.Location = new System.Drawing.Point(18, 12);
             this.txt_name_edit_10.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name_edit_10.Multiline = false;
@@ -2080,7 +2111,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_10.TabIndex = 88;
             this.txt_name_edit_10.Texts = "";
             this.txt_name_edit_10.UnderlinedStyle = false;
-            this.txt_name_edit_10.MouseLeave += new System.EventHandler(this.txt_name_edit_10_MouseLeave);
+            this.txt_name_edit_10.Leave += new System.EventHandler(this.txt_name_edit_10_Leave);
             // 
             // txt_total_10
             // 
@@ -2119,31 +2150,31 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView10.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.dataGridView10.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView10.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle391.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle391.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle391.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle391.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle391.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle391.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle391.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView10.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle391;
+            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle61.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle61.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle61.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle61.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle61.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView10.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle61;
             this.dataGridView10.ColumnHeadersHeight = 50;
             this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle392.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle392.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle392.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle392.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle392.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle392.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle392.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView10.DefaultCellStyle = dataGridViewCellStyle392;
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle62.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle62.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView10.DefaultCellStyle = dataGridViewCellStyle62;
             this.dataGridView10.EnableHeadersVisualStyles = false;
             this.dataGridView10.Location = new System.Drawing.Point(16, 65);
             this.dataGridView10.MultiSelect = false;
             this.dataGridView10.Name = "dataGridView10";
-            dataGridViewCellStyle393.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle393.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView10.RowHeadersDefaultCellStyle = dataGridViewCellStyle393;
+            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView10.RowHeadersDefaultCellStyle = dataGridViewCellStyle63;
             this.dataGridView10.RowHeadersVisible = false;
             this.dataGridView10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView10.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -2204,21 +2235,21 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_cancel_10.UseVisualStyleBackColor = false;
             this.bt_cancel_10.Click += new System.EventHandler(this.bt_cancel_10_Click);
             // 
-            // bt_delet_10
+            // bt_delete_10
             // 
-            this.bt_delet_10.BackColor = System.Drawing.Color.Crimson;
-            this.bt_delet_10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_delet_10.FlatAppearance.BorderSize = 0;
-            this.bt_delet_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_delet_10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delet_10.ForeColor = System.Drawing.Color.White;
-            this.bt_delet_10.Location = new System.Drawing.Point(277, 14);
-            this.bt_delet_10.Name = "bt_delet_10";
-            this.bt_delet_10.Size = new System.Drawing.Size(122, 36);
-            this.bt_delet_10.TabIndex = 68;
-            this.bt_delet_10.Text = "Delet";
-            this.bt_delet_10.UseVisualStyleBackColor = false;
-            this.bt_delet_10.Click += new System.EventHandler(this.bt_delet_10_Click);
+            this.bt_delete_10.BackColor = System.Drawing.Color.Crimson;
+            this.bt_delete_10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_delete_10.FlatAppearance.BorderSize = 0;
+            this.bt_delete_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_delete_10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete_10.ForeColor = System.Drawing.Color.White;
+            this.bt_delete_10.Location = new System.Drawing.Point(277, 14);
+            this.bt_delete_10.Name = "bt_delete_10";
+            this.bt_delete_10.Size = new System.Drawing.Size(122, 36);
+            this.bt_delete_10.TabIndex = 68;
+            this.bt_delete_10.Text = "Delete";
+            this.bt_delete_10.UseVisualStyleBackColor = false;
+            this.bt_delete_10.Click += new System.EventHandler(this.bt_delete_10_Click);
             // 
             // pl_add
             // 
@@ -2359,31 +2390,31 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dgv_family_member.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
             this.dgv_family_member.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dgv_family_member.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle394.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle394.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle394.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle394.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle394.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle394.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle394.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_family_member.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle394;
+            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle64.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle64.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle64.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle64.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_family_member.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle64;
             this.dgv_family_member.ColumnHeadersHeight = 50;
             this.dgv_family_member.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle395.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle395.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle395.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle395.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle395.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle395.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle395.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_family_member.DefaultCellStyle = dataGridViewCellStyle395;
+            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle65.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle65.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle65.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle65.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle65.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle65.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_family_member.DefaultCellStyle = dataGridViewCellStyle65;
             this.dgv_family_member.EnableHeadersVisualStyles = false;
             this.dgv_family_member.Location = new System.Drawing.Point(25, 6);
             this.dgv_family_member.MultiSelect = false;
             this.dgv_family_member.Name = "dgv_family_member";
-            dataGridViewCellStyle396.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle396.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_family_member.RowHeadersDefaultCellStyle = dataGridViewCellStyle396;
+            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle66.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_family_member.RowHeadersDefaultCellStyle = dataGridViewCellStyle66;
             this.dgv_family_member.RowHeadersVisible = false;
             this.dgv_family_member.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgv_family_member.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -2477,7 +2508,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private System.Windows.Forms.Panel pl_family_01;
         private System.Windows.Forms.Button bt_cancel_01;
-        private System.Windows.Forms.Button bt_delet_01;
+        private System.Windows.Forms.Button bt_delete_01;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel pl_content_01;
         private FontAwesome.Sharp.IconButton bt_edit_01;
@@ -2485,47 +2516,47 @@ namespace Contas_Familia.PanelControll.Dashboard
         private System.Windows.Forms.Panel pl_family_02;
         private FontAwesome.Sharp.IconButton bt_edit_02;
         private System.Windows.Forms.Button bt_cancel_02;
-        private System.Windows.Forms.Button bt_delet_02;
+        private System.Windows.Forms.Button bt_delete_02;
         private System.Windows.Forms.Panel pl_content_03;
         private System.Windows.Forms.Panel pl_family_03;
         private FontAwesome.Sharp.IconButton bt_edit_03;
         private System.Windows.Forms.Button bt_cancel_03;
-        private System.Windows.Forms.Button bt_delet_03;
+        private System.Windows.Forms.Button bt_delete_03;
         private System.Windows.Forms.Panel pl_content_04;
         private System.Windows.Forms.Panel pl_family_04;
         private FontAwesome.Sharp.IconButton bt_edit_04;
         private System.Windows.Forms.Button bt_cancel_04;
-        private System.Windows.Forms.Button bt_delet_04;
+        private System.Windows.Forms.Button bt_delete_04;
         private System.Windows.Forms.Panel pl_content_05;
         private System.Windows.Forms.Panel pl_family_05;
         private FontAwesome.Sharp.IconButton bt_edit_05;
         private System.Windows.Forms.Button bt_cancel_05;
-        private System.Windows.Forms.Button bt_delet_05;
+        private System.Windows.Forms.Button bt_delete_05;
         private System.Windows.Forms.Panel pl_content_06;
         private System.Windows.Forms.Panel pl_family_06;
         private FontAwesome.Sharp.IconButton bt_edit_06;
         private System.Windows.Forms.Button bt_cancel_06;
-        private System.Windows.Forms.Button bt_delet_06;
+        private System.Windows.Forms.Button bt_delete_06;
         private System.Windows.Forms.Panel pl_content_07;
         private System.Windows.Forms.Panel pl_family_07;
         private FontAwesome.Sharp.IconButton bt_edit_07;
         private System.Windows.Forms.Button bt_cancel_07;
-        private System.Windows.Forms.Button bt_delet_07;
+        private System.Windows.Forms.Button bt_delete_07;
         private System.Windows.Forms.Panel pl_content_08;
         private System.Windows.Forms.Panel pl_family_08;
         private FontAwesome.Sharp.IconButton bt_edit_08;
         private System.Windows.Forms.Button bt_cancel_08;
-        private System.Windows.Forms.Button bt_delet_08;
+        private System.Windows.Forms.Button bt_delete_08;
         private System.Windows.Forms.Panel pl_content_09;
         private System.Windows.Forms.Panel pl_family_09;
         private FontAwesome.Sharp.IconButton bt_edit_09;
         private System.Windows.Forms.Button bt_cancel_09;
-        private System.Windows.Forms.Button bt_delet_09;
+        private System.Windows.Forms.Button bt_delete_09;
         private System.Windows.Forms.Panel pl_content_10;
         private System.Windows.Forms.Panel pl_family_10;
         private FontAwesome.Sharp.IconButton bt_edit_10;
         private System.Windows.Forms.Button bt_cancel_10;
-        private System.Windows.Forms.Button bt_delet_10;
+        private System.Windows.Forms.Button bt_delete_10;
         private System.Windows.Forms.Label lb_total_01;
         private System.Windows.Forms.Label lb_total_02;
         private System.Windows.Forms.Label lb_total_03;
@@ -2596,5 +2627,6 @@ namespace Contas_Familia.PanelControll.Dashboard
         private System.Windows.Forms.Label txt_name_08;
         private System.Windows.Forms.Label txt_name_09;
         private System.Windows.Forms.Label txt_name_10;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
