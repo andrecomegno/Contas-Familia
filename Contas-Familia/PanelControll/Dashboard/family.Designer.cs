@@ -33,6 +33,9 @@ namespace Contas_Familia.PanelControll.Dashboard
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -60,10 +63,9 @@ namespace Contas_Familia.PanelControll.Dashboard
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pl_family_01 = new System.Windows.Forms.Panel();
+            this.bt_save_edit_01 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_01 = new System.Windows.Forms.Button();
             this.txt_name_01 = new System.Windows.Forms.Label();
             this.txt_total_01 = new System.Windows.Forms.Label();
             this.bt_save_01 = new System.Windows.Forms.Button();
@@ -75,90 +77,99 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_content_01 = new System.Windows.Forms.Panel();
             this.pl_content_02 = new System.Windows.Forms.Panel();
             this.pl_family_02 = new System.Windows.Forms.Panel();
+            this.bt_save_edit_02 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_02 = new System.Windows.Forms.Button();
             this.txt_name_02 = new System.Windows.Forms.Label();
             this.txt_total_02 = new System.Windows.Forms.Label();
             this.bt_save_02 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lb_total_02 = new System.Windows.Forms.Label();
             this.bt_edit_02 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_02 = new System.Windows.Forms.Button();
             this.bt_delete_02 = new System.Windows.Forms.Button();
             this.pl_content_03 = new System.Windows.Forms.Panel();
             this.pl_family_03 = new System.Windows.Forms.Panel();
+            this.bt_save_edit_03 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_03 = new System.Windows.Forms.Button();
             this.txt_name_03 = new System.Windows.Forms.Label();
             this.txt_total_03 = new System.Windows.Forms.Label();
             this.bt_save_03 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.lb_total_03 = new System.Windows.Forms.Label();
             this.bt_edit_03 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_03 = new System.Windows.Forms.Button();
             this.bt_delete_03 = new System.Windows.Forms.Button();
             this.pl_content_04 = new System.Windows.Forms.Panel();
             this.pl_family_04 = new System.Windows.Forms.Panel();
+            this.bt_save_edit_04 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_04 = new System.Windows.Forms.Button();
             this.txt_name_04 = new System.Windows.Forms.Label();
             this.txt_total_04 = new System.Windows.Forms.Label();
             this.bt_save_04 = new System.Windows.Forms.Button();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.lb_total_04 = new System.Windows.Forms.Label();
             this.bt_edit_04 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_04 = new System.Windows.Forms.Button();
             this.bt_delete_04 = new System.Windows.Forms.Button();
             this.pl_content_05 = new System.Windows.Forms.Panel();
             this.pl_family_05 = new System.Windows.Forms.Panel();
+            this.bt_save_edit_05 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_05 = new System.Windows.Forms.Button();
             this.txt_name_05 = new System.Windows.Forms.Label();
             this.txt_total_05 = new System.Windows.Forms.Label();
             this.bt_save_05 = new System.Windows.Forms.Button();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.lb_total_05 = new System.Windows.Forms.Label();
             this.bt_edit_05 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_05 = new System.Windows.Forms.Button();
             this.bt_delete_05 = new System.Windows.Forms.Button();
             this.pl_content_06 = new System.Windows.Forms.Panel();
             this.pl_family_06 = new System.Windows.Forms.Panel();
+            this.bt_save_edit_06 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_06 = new System.Windows.Forms.Button();
             this.txt_name_06 = new System.Windows.Forms.Label();
             this.txt_total_06 = new System.Windows.Forms.Label();
             this.bt_save_06 = new System.Windows.Forms.Button();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.lb_total_06 = new System.Windows.Forms.Label();
             this.bt_edit_06 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_06 = new System.Windows.Forms.Button();
             this.bt_delete_06 = new System.Windows.Forms.Button();
             this.pl_content_07 = new System.Windows.Forms.Panel();
             this.pl_family_07 = new System.Windows.Forms.Panel();
+            this.bt_save_edit_07 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_07 = new System.Windows.Forms.Button();
             this.txt_name_07 = new System.Windows.Forms.Label();
             this.txt_total_07 = new System.Windows.Forms.Label();
             this.bt_save_07 = new System.Windows.Forms.Button();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.lb_total_07 = new System.Windows.Forms.Label();
             this.bt_edit_07 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_07 = new System.Windows.Forms.Button();
             this.bt_delete_07 = new System.Windows.Forms.Button();
             this.pl_content_08 = new System.Windows.Forms.Panel();
             this.pl_family_08 = new System.Windows.Forms.Panel();
+            this.bt_save_edit_08 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_08 = new System.Windows.Forms.Button();
             this.txt_name_08 = new System.Windows.Forms.Label();
             this.txt_total_08 = new System.Windows.Forms.Label();
             this.bt_save_08 = new System.Windows.Forms.Button();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.lb_total_08 = new System.Windows.Forms.Label();
             this.bt_edit_08 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_08 = new System.Windows.Forms.Button();
             this.bt_delete_08 = new System.Windows.Forms.Button();
             this.pl_content_09 = new System.Windows.Forms.Panel();
             this.pl_family_09 = new System.Windows.Forms.Panel();
+            this.bt_save_edit_09 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_09 = new System.Windows.Forms.Button();
             this.txt_name_09 = new System.Windows.Forms.Label();
             this.txt_total_09 = new System.Windows.Forms.Label();
             this.bt_save_09 = new System.Windows.Forms.Button();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
             this.lb_total_09 = new System.Windows.Forms.Label();
             this.bt_edit_09 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_09 = new System.Windows.Forms.Button();
             this.bt_delete_09 = new System.Windows.Forms.Button();
             this.pl_content_10 = new System.Windows.Forms.Panel();
             this.pl_family_10 = new System.Windows.Forms.Panel();
+            this.bt_save_edit_10 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_10 = new System.Windows.Forms.Button();
             this.txt_name_10 = new System.Windows.Forms.Label();
             this.txt_total_10 = new System.Windows.Forms.Label();
             this.bt_save_10 = new System.Windows.Forms.Button();
-            this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.lb_total_10 = new System.Windows.Forms.Label();
             this.bt_edit_10 = new FontAwesome.Sharp.IconButton();
             this.bt_cancel_10 = new System.Windows.Forms.Button();
@@ -174,26 +185,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dgv_family_member = new System.Windows.Forms.DataGridView();
             this.pl_table_member_family = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.bt_save_edit_01 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_01 = new System.Windows.Forms.Button();
-            this.bt_save_edit_02 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_02 = new System.Windows.Forms.Button();
-            this.bt_save_edit_03 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_03 = new System.Windows.Forms.Button();
-            this.bt_save_edit_04 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_04 = new System.Windows.Forms.Button();
-            this.bt_save_edit_05 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_05 = new System.Windows.Forms.Button();
-            this.bt_save_edit_06 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_06 = new System.Windows.Forms.Button();
-            this.bt_save_edit_07 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_07 = new System.Windows.Forms.Button();
-            this.bt_save_edit_08 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_08 = new System.Windows.Forms.Button();
-            this.bt_save_edit_09 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_09 = new System.Windows.Forms.Button();
-            this.bt_save_edit_10 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_10 = new System.Windows.Forms.Button();
             this.txt_name_edit_10 = new Contas_Familia.Script.RJTextBox();
             this.txt_name_edit_09 = new Contas_Familia.Script.RJTextBox();
             this.txt_name_edit_08 = new Contas_Familia.Script.RJTextBox();
@@ -205,40 +196,49 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_edit_02 = new Contas_Familia.Script.RJTextBox();
             this.txt_name_edit_01 = new Contas_Familia.Script.RJTextBox();
             this.txt_add_family_name = new Contas_Familia.Script.RJTextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.pl_family_01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pl_content_01.SuspendLayout();
             this.pl_content_02.SuspendLayout();
             this.pl_family_02.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.pl_content_03.SuspendLayout();
             this.pl_family_03.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.pl_content_04.SuspendLayout();
             this.pl_family_04.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.pl_content_05.SuspendLayout();
             this.pl_family_05.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.pl_content_06.SuspendLayout();
             this.pl_family_06.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.pl_content_07.SuspendLayout();
             this.pl_family_07.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             this.pl_content_08.SuspendLayout();
             this.pl_family_08.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             this.pl_content_09.SuspendLayout();
             this.pl_family_09.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             this.pl_content_10.SuspendLayout();
             this.pl_family_10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             this.pl_add.SuspendLayout();
             this.pl_add_family_member.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_family_member)).BeginInit();
             this.pl_table_member_family.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             this.SuspendLayout();
             // 
             // pl_family_01
@@ -261,6 +261,38 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_01.Name = "pl_family_01";
             this.pl_family_01.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_01.TabIndex = 10;
+            // 
+            // bt_save_edit_01
+            // 
+            this.bt_save_edit_01.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_save_edit_01.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_save_edit_01.FlatAppearance.BorderSize = 0;
+            this.bt_save_edit_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_save_edit_01.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save_edit_01.ForeColor = System.Drawing.Color.White;
+            this.bt_save_edit_01.Location = new System.Drawing.Point(405, 14);
+            this.bt_save_edit_01.Name = "bt_save_edit_01";
+            this.bt_save_edit_01.Size = new System.Drawing.Size(122, 36);
+            this.bt_save_edit_01.TabIndex = 85;
+            this.bt_save_edit_01.Text = "Save";
+            this.bt_save_edit_01.UseVisualStyleBackColor = false;
+            this.bt_save_edit_01.Click += new System.EventHandler(this.bt_save_edit_01_Click);
+            // 
+            // bt_cancel_edit_01
+            // 
+            this.bt_cancel_edit_01.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_cancel_edit_01.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_cancel_edit_01.FlatAppearance.BorderSize = 0;
+            this.bt_cancel_edit_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_cancel_edit_01.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cancel_edit_01.ForeColor = System.Drawing.Color.White;
+            this.bt_cancel_edit_01.Location = new System.Drawing.Point(533, 14);
+            this.bt_cancel_edit_01.Name = "bt_cancel_edit_01";
+            this.bt_cancel_edit_01.Size = new System.Drawing.Size(122, 36);
+            this.bt_cancel_edit_01.TabIndex = 84;
+            this.bt_cancel_edit_01.Text = "Cancel";
+            this.bt_cancel_edit_01.UseVisualStyleBackColor = false;
+            this.bt_cancel_edit_01.Click += new System.EventHandler(this.bt_cancel_edit_01_Click);
             // 
             // txt_name_01
             // 
@@ -408,10 +440,11 @@ namespace Contas_Familia.PanelControll.Dashboard
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.ShowCellToolTips = false;
             this.dataGridView1.Size = new System.Drawing.Size(1139, 350);
             this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
             // pl_content_01
             // 
@@ -436,13 +469,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_02.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_family_02.Controls.Add(this.dataGridView2);
             this.pl_family_02.Controls.Add(this.bt_save_edit_02);
             this.pl_family_02.Controls.Add(this.bt_cancel_edit_02);
             this.pl_family_02.Controls.Add(this.txt_name_02);
             this.pl_family_02.Controls.Add(this.txt_name_edit_02);
             this.pl_family_02.Controls.Add(this.txt_total_02);
             this.pl_family_02.Controls.Add(this.bt_save_02);
-            this.pl_family_02.Controls.Add(this.dataGridView2);
             this.pl_family_02.Controls.Add(this.lb_total_02);
             this.pl_family_02.Controls.Add(this.bt_edit_02);
             this.pl_family_02.Controls.Add(this.bt_cancel_02);
@@ -451,6 +484,38 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_02.Name = "pl_family_02";
             this.pl_family_02.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_02.TabIndex = 10;
+            // 
+            // bt_save_edit_02
+            // 
+            this.bt_save_edit_02.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_save_edit_02.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_save_edit_02.FlatAppearance.BorderSize = 0;
+            this.bt_save_edit_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_save_edit_02.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save_edit_02.ForeColor = System.Drawing.Color.White;
+            this.bt_save_edit_02.Location = new System.Drawing.Point(405, 14);
+            this.bt_save_edit_02.Name = "bt_save_edit_02";
+            this.bt_save_edit_02.Size = new System.Drawing.Size(122, 36);
+            this.bt_save_edit_02.TabIndex = 87;
+            this.bt_save_edit_02.Text = "Save";
+            this.bt_save_edit_02.UseVisualStyleBackColor = false;
+            this.bt_save_edit_02.Click += new System.EventHandler(this.bt_save_edit_02_Click);
+            // 
+            // bt_cancel_edit_02
+            // 
+            this.bt_cancel_edit_02.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_cancel_edit_02.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_cancel_edit_02.FlatAppearance.BorderSize = 0;
+            this.bt_cancel_edit_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_cancel_edit_02.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cancel_edit_02.ForeColor = System.Drawing.Color.White;
+            this.bt_cancel_edit_02.Location = new System.Drawing.Point(533, 14);
+            this.bt_cancel_edit_02.Name = "bt_cancel_edit_02";
+            this.bt_cancel_edit_02.Size = new System.Drawing.Size(122, 36);
+            this.bt_cancel_edit_02.TabIndex = 86;
+            this.bt_cancel_edit_02.Text = "Cancel";
+            this.bt_cancel_edit_02.UseVisualStyleBackColor = false;
+            this.bt_cancel_edit_02.Click += new System.EventHandler(this.bt_cancel_edit_02_Click);
             // 
             // txt_name_02
             // 
@@ -493,47 +558,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_02.Text = "Save";
             this.bt_save_02.UseVisualStyleBackColor = false;
             this.bt_save_02.Click += new System.EventHandler(this.bt_save_02_Click);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToResizeRows = false;
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.dataGridView2.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView2.ColumnHeadersHeight = 50;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.Location = new System.Drawing.Point(16, 65);
-            this.dataGridView2.MultiSelect = false;
-            this.dataGridView2.Name = "dataGridView2";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView2.ShowCellToolTips = false;
-            this.dataGridView2.Size = new System.Drawing.Size(1139, 350);
-            this.dataGridView2.TabIndex = 75;
             // 
             // lb_total_02
             // 
@@ -618,13 +642,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_03.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_family_03.Controls.Add(this.dataGridView3);
             this.pl_family_03.Controls.Add(this.bt_save_edit_03);
             this.pl_family_03.Controls.Add(this.bt_cancel_edit_03);
             this.pl_family_03.Controls.Add(this.txt_name_03);
             this.pl_family_03.Controls.Add(this.txt_name_edit_03);
             this.pl_family_03.Controls.Add(this.txt_total_03);
             this.pl_family_03.Controls.Add(this.bt_save_03);
-            this.pl_family_03.Controls.Add(this.dataGridView3);
             this.pl_family_03.Controls.Add(this.lb_total_03);
             this.pl_family_03.Controls.Add(this.bt_edit_03);
             this.pl_family_03.Controls.Add(this.bt_cancel_03);
@@ -633,6 +657,38 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_03.Name = "pl_family_03";
             this.pl_family_03.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_03.TabIndex = 11;
+            // 
+            // bt_save_edit_03
+            // 
+            this.bt_save_edit_03.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_save_edit_03.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_save_edit_03.FlatAppearance.BorderSize = 0;
+            this.bt_save_edit_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_save_edit_03.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save_edit_03.ForeColor = System.Drawing.Color.White;
+            this.bt_save_edit_03.Location = new System.Drawing.Point(405, 14);
+            this.bt_save_edit_03.Name = "bt_save_edit_03";
+            this.bt_save_edit_03.Size = new System.Drawing.Size(122, 36);
+            this.bt_save_edit_03.TabIndex = 87;
+            this.bt_save_edit_03.Text = "Save";
+            this.bt_save_edit_03.UseVisualStyleBackColor = false;
+            this.bt_save_edit_03.Click += new System.EventHandler(this.bt_save_edit_03_Click);
+            // 
+            // bt_cancel_edit_03
+            // 
+            this.bt_cancel_edit_03.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_cancel_edit_03.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_cancel_edit_03.FlatAppearance.BorderSize = 0;
+            this.bt_cancel_edit_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_cancel_edit_03.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cancel_edit_03.ForeColor = System.Drawing.Color.White;
+            this.bt_cancel_edit_03.Location = new System.Drawing.Point(533, 14);
+            this.bt_cancel_edit_03.Name = "bt_cancel_edit_03";
+            this.bt_cancel_edit_03.Size = new System.Drawing.Size(122, 36);
+            this.bt_cancel_edit_03.TabIndex = 86;
+            this.bt_cancel_edit_03.Text = "Cancel";
+            this.bt_cancel_edit_03.UseVisualStyleBackColor = false;
+            this.bt_cancel_edit_03.Click += new System.EventHandler(this.bt_cancel_edit_03_Click);
             // 
             // txt_name_03
             // 
@@ -675,47 +731,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_03.Text = "Save";
             this.bt_save_03.UseVisualStyleBackColor = false;
             this.bt_save_03.Click += new System.EventHandler(this.bt_save_03_Click);
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToResizeRows = false;
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.dataGridView3.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.dataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView3.ColumnHeadersHeight = 50;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView3.EnableHeadersVisualStyles = false;
-            this.dataGridView3.Location = new System.Drawing.Point(16, 65);
-            this.dataGridView3.MultiSelect = false;
-            this.dataGridView3.Name = "dataGridView3";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView3.ShowCellToolTips = false;
-            this.dataGridView3.Size = new System.Drawing.Size(1139, 350);
-            this.dataGridView3.TabIndex = 78;
             // 
             // lb_total_03
             // 
@@ -800,13 +815,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_04.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_04.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_family_04.Controls.Add(this.dataGridView4);
             this.pl_family_04.Controls.Add(this.bt_save_edit_04);
             this.pl_family_04.Controls.Add(this.bt_cancel_edit_04);
             this.pl_family_04.Controls.Add(this.txt_name_04);
             this.pl_family_04.Controls.Add(this.txt_name_edit_04);
             this.pl_family_04.Controls.Add(this.txt_total_04);
             this.pl_family_04.Controls.Add(this.bt_save_04);
-            this.pl_family_04.Controls.Add(this.dataGridView4);
             this.pl_family_04.Controls.Add(this.lb_total_04);
             this.pl_family_04.Controls.Add(this.bt_edit_04);
             this.pl_family_04.Controls.Add(this.bt_cancel_04);
@@ -815,6 +830,38 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_04.Name = "pl_family_04";
             this.pl_family_04.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_04.TabIndex = 10;
+            // 
+            // bt_save_edit_04
+            // 
+            this.bt_save_edit_04.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_save_edit_04.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_save_edit_04.FlatAppearance.BorderSize = 0;
+            this.bt_save_edit_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_save_edit_04.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save_edit_04.ForeColor = System.Drawing.Color.White;
+            this.bt_save_edit_04.Location = new System.Drawing.Point(405, 14);
+            this.bt_save_edit_04.Name = "bt_save_edit_04";
+            this.bt_save_edit_04.Size = new System.Drawing.Size(122, 36);
+            this.bt_save_edit_04.TabIndex = 89;
+            this.bt_save_edit_04.Text = "Save";
+            this.bt_save_edit_04.UseVisualStyleBackColor = false;
+            this.bt_save_edit_04.Click += new System.EventHandler(this.bt_save_edit_04_Click);
+            // 
+            // bt_cancel_edit_04
+            // 
+            this.bt_cancel_edit_04.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_cancel_edit_04.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_cancel_edit_04.FlatAppearance.BorderSize = 0;
+            this.bt_cancel_edit_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_cancel_edit_04.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cancel_edit_04.ForeColor = System.Drawing.Color.White;
+            this.bt_cancel_edit_04.Location = new System.Drawing.Point(533, 14);
+            this.bt_cancel_edit_04.Name = "bt_cancel_edit_04";
+            this.bt_cancel_edit_04.Size = new System.Drawing.Size(122, 36);
+            this.bt_cancel_edit_04.TabIndex = 88;
+            this.bt_cancel_edit_04.Text = "Cancel";
+            this.bt_cancel_edit_04.UseVisualStyleBackColor = false;
+            this.bt_cancel_edit_04.Click += new System.EventHandler(this.bt_cancel_edit_04_Click);
             // 
             // txt_name_04
             // 
@@ -857,47 +904,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_04.Text = "Save";
             this.bt_save_04.UseVisualStyleBackColor = false;
             this.bt_save_04.Click += new System.EventHandler(this.bt_save_04_Click);
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.AllowUserToResizeRows = false;
-            this.dataGridView4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.dataGridView4.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.dataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView4.ColumnHeadersHeight = 50;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridView4.EnableHeadersVisualStyles = false;
-            this.dataGridView4.Location = new System.Drawing.Point(16, 65);
-            this.dataGridView4.MultiSelect = false;
-            this.dataGridView4.Name = "dataGridView4";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridView4.RowHeadersVisible = false;
-            this.dataGridView4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView4.ShowCellToolTips = false;
-            this.dataGridView4.Size = new System.Drawing.Size(1139, 350);
-            this.dataGridView4.TabIndex = 79;
             // 
             // lb_total_04
             // 
@@ -982,13 +988,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_05.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_05.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_family_05.Controls.Add(this.dataGridView5);
             this.pl_family_05.Controls.Add(this.bt_save_edit_05);
             this.pl_family_05.Controls.Add(this.bt_cancel_edit_05);
             this.pl_family_05.Controls.Add(this.txt_name_05);
             this.pl_family_05.Controls.Add(this.txt_name_edit_05);
             this.pl_family_05.Controls.Add(this.txt_total_05);
             this.pl_family_05.Controls.Add(this.bt_save_05);
-            this.pl_family_05.Controls.Add(this.dataGridView5);
             this.pl_family_05.Controls.Add(this.lb_total_05);
             this.pl_family_05.Controls.Add(this.bt_edit_05);
             this.pl_family_05.Controls.Add(this.bt_cancel_05);
@@ -997,6 +1003,38 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_05.Name = "pl_family_05";
             this.pl_family_05.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_05.TabIndex = 10;
+            // 
+            // bt_save_edit_05
+            // 
+            this.bt_save_edit_05.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_save_edit_05.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_save_edit_05.FlatAppearance.BorderSize = 0;
+            this.bt_save_edit_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_save_edit_05.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save_edit_05.ForeColor = System.Drawing.Color.White;
+            this.bt_save_edit_05.Location = new System.Drawing.Point(405, 16);
+            this.bt_save_edit_05.Name = "bt_save_edit_05";
+            this.bt_save_edit_05.Size = new System.Drawing.Size(122, 36);
+            this.bt_save_edit_05.TabIndex = 95;
+            this.bt_save_edit_05.Text = "Save";
+            this.bt_save_edit_05.UseVisualStyleBackColor = false;
+            this.bt_save_edit_05.Click += new System.EventHandler(this.bt_save_edit_05_Click);
+            // 
+            // bt_cancel_edit_05
+            // 
+            this.bt_cancel_edit_05.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_cancel_edit_05.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_cancel_edit_05.FlatAppearance.BorderSize = 0;
+            this.bt_cancel_edit_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_cancel_edit_05.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cancel_edit_05.ForeColor = System.Drawing.Color.White;
+            this.bt_cancel_edit_05.Location = new System.Drawing.Point(533, 16);
+            this.bt_cancel_edit_05.Name = "bt_cancel_edit_05";
+            this.bt_cancel_edit_05.Size = new System.Drawing.Size(122, 36);
+            this.bt_cancel_edit_05.TabIndex = 94;
+            this.bt_cancel_edit_05.Text = "Cancel";
+            this.bt_cancel_edit_05.UseVisualStyleBackColor = false;
+            this.bt_cancel_edit_05.Click += new System.EventHandler(this.bt_cancel_edit_05_Click);
             // 
             // txt_name_05
             // 
@@ -1039,47 +1077,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_05.Text = "Save";
             this.bt_save_05.UseVisualStyleBackColor = false;
             this.bt_save_05.Click += new System.EventHandler(this.bt_save_05_Click);
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.AllowUserToResizeRows = false;
-            this.dataGridView5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.dataGridView5.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.dataGridView5.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.dataGridView5.ColumnHeadersHeight = 50;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridView5.EnableHeadersVisualStyles = false;
-            this.dataGridView5.Location = new System.Drawing.Point(16, 65);
-            this.dataGridView5.MultiSelect = false;
-            this.dataGridView5.Name = "dataGridView5";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGridView5.RowHeadersVisible = false;
-            this.dataGridView5.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView5.ShowCellToolTips = false;
-            this.dataGridView5.Size = new System.Drawing.Size(1139, 350);
-            this.dataGridView5.TabIndex = 80;
             // 
             // lb_total_05
             // 
@@ -1164,13 +1161,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_06.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_06.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_family_06.Controls.Add(this.dataGridView6);
             this.pl_family_06.Controls.Add(this.bt_save_edit_06);
             this.pl_family_06.Controls.Add(this.bt_cancel_edit_06);
             this.pl_family_06.Controls.Add(this.txt_name_06);
             this.pl_family_06.Controls.Add(this.txt_name_edit_06);
             this.pl_family_06.Controls.Add(this.txt_total_06);
             this.pl_family_06.Controls.Add(this.bt_save_06);
-            this.pl_family_06.Controls.Add(this.dataGridView6);
             this.pl_family_06.Controls.Add(this.lb_total_06);
             this.pl_family_06.Controls.Add(this.bt_edit_06);
             this.pl_family_06.Controls.Add(this.bt_cancel_06);
@@ -1179,6 +1176,38 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_06.Name = "pl_family_06";
             this.pl_family_06.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_06.TabIndex = 10;
+            // 
+            // bt_save_edit_06
+            // 
+            this.bt_save_edit_06.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_save_edit_06.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_save_edit_06.FlatAppearance.BorderSize = 0;
+            this.bt_save_edit_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_save_edit_06.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save_edit_06.ForeColor = System.Drawing.Color.White;
+            this.bt_save_edit_06.Location = new System.Drawing.Point(405, 14);
+            this.bt_save_edit_06.Name = "bt_save_edit_06";
+            this.bt_save_edit_06.Size = new System.Drawing.Size(122, 36);
+            this.bt_save_edit_06.TabIndex = 94;
+            this.bt_save_edit_06.Text = "Save";
+            this.bt_save_edit_06.UseVisualStyleBackColor = false;
+            this.bt_save_edit_06.Click += new System.EventHandler(this.bt_save_edit_06_Click);
+            // 
+            // bt_cancel_edit_06
+            // 
+            this.bt_cancel_edit_06.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_cancel_edit_06.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_cancel_edit_06.FlatAppearance.BorderSize = 0;
+            this.bt_cancel_edit_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_cancel_edit_06.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cancel_edit_06.ForeColor = System.Drawing.Color.White;
+            this.bt_cancel_edit_06.Location = new System.Drawing.Point(533, 14);
+            this.bt_cancel_edit_06.Name = "bt_cancel_edit_06";
+            this.bt_cancel_edit_06.Size = new System.Drawing.Size(122, 36);
+            this.bt_cancel_edit_06.TabIndex = 93;
+            this.bt_cancel_edit_06.Text = "Cancel";
+            this.bt_cancel_edit_06.UseVisualStyleBackColor = false;
+            this.bt_cancel_edit_06.Click += new System.EventHandler(this.bt_cancel_edit_06_Click);
             // 
             // txt_name_06
             // 
@@ -1221,47 +1250,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_06.Text = "Save";
             this.bt_save_06.UseVisualStyleBackColor = false;
             this.bt_save_06.Click += new System.EventHandler(this.bt_save_06_Click);
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.AllowUserToResizeRows = false;
-            this.dataGridView6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.dataGridView6.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.dataGridView6.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
-            this.dataGridView6.ColumnHeadersHeight = 50;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle17;
-            this.dataGridView6.EnableHeadersVisualStyles = false;
-            this.dataGridView6.Location = new System.Drawing.Point(16, 65);
-            this.dataGridView6.MultiSelect = false;
-            this.dataGridView6.Name = "dataGridView6";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView6.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridView6.RowHeadersVisible = false;
-            this.dataGridView6.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView6.ShowCellToolTips = false;
-            this.dataGridView6.Size = new System.Drawing.Size(1139, 350);
-            this.dataGridView6.TabIndex = 81;
             // 
             // lb_total_06
             // 
@@ -1346,13 +1334,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_07.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_07.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_family_07.Controls.Add(this.dataGridView7);
             this.pl_family_07.Controls.Add(this.bt_save_edit_07);
             this.pl_family_07.Controls.Add(this.bt_cancel_edit_07);
             this.pl_family_07.Controls.Add(this.txt_name_07);
             this.pl_family_07.Controls.Add(this.txt_name_edit_07);
             this.pl_family_07.Controls.Add(this.txt_total_07);
             this.pl_family_07.Controls.Add(this.bt_save_07);
-            this.pl_family_07.Controls.Add(this.dataGridView7);
             this.pl_family_07.Controls.Add(this.lb_total_07);
             this.pl_family_07.Controls.Add(this.bt_edit_07);
             this.pl_family_07.Controls.Add(this.bt_cancel_07);
@@ -1361,6 +1349,38 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_07.Name = "pl_family_07";
             this.pl_family_07.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_07.TabIndex = 10;
+            // 
+            // bt_save_edit_07
+            // 
+            this.bt_save_edit_07.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_save_edit_07.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_save_edit_07.FlatAppearance.BorderSize = 0;
+            this.bt_save_edit_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_save_edit_07.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save_edit_07.ForeColor = System.Drawing.Color.White;
+            this.bt_save_edit_07.Location = new System.Drawing.Point(405, 14);
+            this.bt_save_edit_07.Name = "bt_save_edit_07";
+            this.bt_save_edit_07.Size = new System.Drawing.Size(122, 36);
+            this.bt_save_edit_07.TabIndex = 93;
+            this.bt_save_edit_07.Text = "Save";
+            this.bt_save_edit_07.UseVisualStyleBackColor = false;
+            this.bt_save_edit_07.Click += new System.EventHandler(this.bt_save_edit_07_Click);
+            // 
+            // bt_cancel_edit_07
+            // 
+            this.bt_cancel_edit_07.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_cancel_edit_07.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_cancel_edit_07.FlatAppearance.BorderSize = 0;
+            this.bt_cancel_edit_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_cancel_edit_07.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cancel_edit_07.ForeColor = System.Drawing.Color.White;
+            this.bt_cancel_edit_07.Location = new System.Drawing.Point(533, 14);
+            this.bt_cancel_edit_07.Name = "bt_cancel_edit_07";
+            this.bt_cancel_edit_07.Size = new System.Drawing.Size(122, 36);
+            this.bt_cancel_edit_07.TabIndex = 92;
+            this.bt_cancel_edit_07.Text = "Cancel";
+            this.bt_cancel_edit_07.UseVisualStyleBackColor = false;
+            this.bt_cancel_edit_07.Click += new System.EventHandler(this.bt_cancel_edit_07_Click);
             // 
             // txt_name_07
             // 
@@ -1403,47 +1423,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_07.Text = "Save";
             this.bt_save_07.UseVisualStyleBackColor = false;
             this.bt_save_07.Click += new System.EventHandler(this.bt_save_07_Click);
-            // 
-            // dataGridView7
-            // 
-            this.dataGridView7.AllowUserToResizeRows = false;
-            this.dataGridView7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.dataGridView7.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.dataGridView7.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView7.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.dataGridView7.ColumnHeadersHeight = 50;
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView7.DefaultCellStyle = dataGridViewCellStyle20;
-            this.dataGridView7.EnableHeadersVisualStyles = false;
-            this.dataGridView7.Location = new System.Drawing.Point(16, 65);
-            this.dataGridView7.MultiSelect = false;
-            this.dataGridView7.Name = "dataGridView7";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView7.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
-            this.dataGridView7.RowHeadersVisible = false;
-            this.dataGridView7.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView7.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView7.ShowCellToolTips = false;
-            this.dataGridView7.Size = new System.Drawing.Size(1139, 350);
-            this.dataGridView7.TabIndex = 82;
             // 
             // lb_total_07
             // 
@@ -1528,13 +1507,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_08.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_08.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_family_08.Controls.Add(this.dataGridView8);
             this.pl_family_08.Controls.Add(this.bt_save_edit_08);
             this.pl_family_08.Controls.Add(this.bt_cancel_edit_08);
             this.pl_family_08.Controls.Add(this.txt_name_08);
             this.pl_family_08.Controls.Add(this.txt_name_edit_08);
             this.pl_family_08.Controls.Add(this.txt_total_08);
             this.pl_family_08.Controls.Add(this.bt_save_08);
-            this.pl_family_08.Controls.Add(this.dataGridView8);
             this.pl_family_08.Controls.Add(this.lb_total_08);
             this.pl_family_08.Controls.Add(this.bt_edit_08);
             this.pl_family_08.Controls.Add(this.bt_cancel_08);
@@ -1543,6 +1522,38 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_08.Name = "pl_family_08";
             this.pl_family_08.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_08.TabIndex = 10;
+            // 
+            // bt_save_edit_08
+            // 
+            this.bt_save_edit_08.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_save_edit_08.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_save_edit_08.FlatAppearance.BorderSize = 0;
+            this.bt_save_edit_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_save_edit_08.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save_edit_08.ForeColor = System.Drawing.Color.White;
+            this.bt_save_edit_08.Location = new System.Drawing.Point(405, 14);
+            this.bt_save_edit_08.Name = "bt_save_edit_08";
+            this.bt_save_edit_08.Size = new System.Drawing.Size(122, 36);
+            this.bt_save_edit_08.TabIndex = 92;
+            this.bt_save_edit_08.Text = "Save";
+            this.bt_save_edit_08.UseVisualStyleBackColor = false;
+            this.bt_save_edit_08.Click += new System.EventHandler(this.bt_save_edit_08_Click);
+            // 
+            // bt_cancel_edit_08
+            // 
+            this.bt_cancel_edit_08.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_cancel_edit_08.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_cancel_edit_08.FlatAppearance.BorderSize = 0;
+            this.bt_cancel_edit_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_cancel_edit_08.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cancel_edit_08.ForeColor = System.Drawing.Color.White;
+            this.bt_cancel_edit_08.Location = new System.Drawing.Point(533, 14);
+            this.bt_cancel_edit_08.Name = "bt_cancel_edit_08";
+            this.bt_cancel_edit_08.Size = new System.Drawing.Size(122, 36);
+            this.bt_cancel_edit_08.TabIndex = 91;
+            this.bt_cancel_edit_08.Text = "Cancel";
+            this.bt_cancel_edit_08.UseVisualStyleBackColor = false;
+            this.bt_cancel_edit_08.Click += new System.EventHandler(this.bt_cancel_edit_08_Click);
             // 
             // txt_name_08
             // 
@@ -1585,47 +1596,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_08.Text = "Save";
             this.bt_save_08.UseVisualStyleBackColor = false;
             this.bt_save_08.Click += new System.EventHandler(this.bt_save_08_Click);
-            // 
-            // dataGridView8
-            // 
-            this.dataGridView8.AllowUserToResizeRows = false;
-            this.dataGridView8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView8.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.dataGridView8.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.dataGridView8.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView8.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
-            this.dataGridView8.ColumnHeadersHeight = 50;
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView8.DefaultCellStyle = dataGridViewCellStyle23;
-            this.dataGridView8.EnableHeadersVisualStyles = false;
-            this.dataGridView8.Location = new System.Drawing.Point(16, 65);
-            this.dataGridView8.MultiSelect = false;
-            this.dataGridView8.Name = "dataGridView8";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView8.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
-            this.dataGridView8.RowHeadersVisible = false;
-            this.dataGridView8.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView8.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView8.ShowCellToolTips = false;
-            this.dataGridView8.Size = new System.Drawing.Size(1139, 350);
-            this.dataGridView8.TabIndex = 83;
             // 
             // lb_total_08
             // 
@@ -1710,13 +1680,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_09.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_09.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_family_09.Controls.Add(this.dataGridView9);
             this.pl_family_09.Controls.Add(this.bt_save_edit_09);
             this.pl_family_09.Controls.Add(this.bt_cancel_edit_09);
             this.pl_family_09.Controls.Add(this.txt_name_09);
             this.pl_family_09.Controls.Add(this.txt_name_edit_09);
             this.pl_family_09.Controls.Add(this.txt_total_09);
             this.pl_family_09.Controls.Add(this.bt_save_09);
-            this.pl_family_09.Controls.Add(this.dataGridView9);
             this.pl_family_09.Controls.Add(this.lb_total_09);
             this.pl_family_09.Controls.Add(this.bt_edit_09);
             this.pl_family_09.Controls.Add(this.bt_cancel_09);
@@ -1725,6 +1695,38 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_09.Name = "pl_family_09";
             this.pl_family_09.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_09.TabIndex = 10;
+            // 
+            // bt_save_edit_09
+            // 
+            this.bt_save_edit_09.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_save_edit_09.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_save_edit_09.FlatAppearance.BorderSize = 0;
+            this.bt_save_edit_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_save_edit_09.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save_edit_09.ForeColor = System.Drawing.Color.White;
+            this.bt_save_edit_09.Location = new System.Drawing.Point(405, 14);
+            this.bt_save_edit_09.Name = "bt_save_edit_09";
+            this.bt_save_edit_09.Size = new System.Drawing.Size(122, 36);
+            this.bt_save_edit_09.TabIndex = 92;
+            this.bt_save_edit_09.Text = "Save";
+            this.bt_save_edit_09.UseVisualStyleBackColor = false;
+            this.bt_save_edit_09.Click += new System.EventHandler(this.bt_save_edit_09_Click);
+            // 
+            // bt_cancel_edit_09
+            // 
+            this.bt_cancel_edit_09.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_cancel_edit_09.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_cancel_edit_09.FlatAppearance.BorderSize = 0;
+            this.bt_cancel_edit_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_cancel_edit_09.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cancel_edit_09.ForeColor = System.Drawing.Color.White;
+            this.bt_cancel_edit_09.Location = new System.Drawing.Point(533, 14);
+            this.bt_cancel_edit_09.Name = "bt_cancel_edit_09";
+            this.bt_cancel_edit_09.Size = new System.Drawing.Size(122, 36);
+            this.bt_cancel_edit_09.TabIndex = 91;
+            this.bt_cancel_edit_09.Text = "Cancel";
+            this.bt_cancel_edit_09.UseVisualStyleBackColor = false;
+            this.bt_cancel_edit_09.Click += new System.EventHandler(this.bt_cancel_edit_09_Click);
             // 
             // txt_name_09
             // 
@@ -1767,47 +1769,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_09.Text = "Save";
             this.bt_save_09.UseVisualStyleBackColor = false;
             this.bt_save_09.Click += new System.EventHandler(this.bt_save_09_Click);
-            // 
-            // dataGridView9
-            // 
-            this.dataGridView9.AllowUserToResizeRows = false;
-            this.dataGridView9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView9.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.dataGridView9.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.dataGridView9.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView9.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
-            this.dataGridView9.ColumnHeadersHeight = 50;
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView9.DefaultCellStyle = dataGridViewCellStyle26;
-            this.dataGridView9.EnableHeadersVisualStyles = false;
-            this.dataGridView9.Location = new System.Drawing.Point(16, 65);
-            this.dataGridView9.MultiSelect = false;
-            this.dataGridView9.Name = "dataGridView9";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView9.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            this.dataGridView9.RowHeadersVisible = false;
-            this.dataGridView9.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView9.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView9.ShowCellToolTips = false;
-            this.dataGridView9.Size = new System.Drawing.Size(1139, 350);
-            this.dataGridView9.TabIndex = 84;
             // 
             // lb_total_09
             // 
@@ -1892,13 +1853,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_family_10.Controls.Add(this.dataGridView10);
             this.pl_family_10.Controls.Add(this.bt_save_edit_10);
             this.pl_family_10.Controls.Add(this.bt_cancel_edit_10);
             this.pl_family_10.Controls.Add(this.txt_name_10);
             this.pl_family_10.Controls.Add(this.txt_name_edit_10);
             this.pl_family_10.Controls.Add(this.txt_total_10);
             this.pl_family_10.Controls.Add(this.bt_save_10);
-            this.pl_family_10.Controls.Add(this.dataGridView10);
             this.pl_family_10.Controls.Add(this.lb_total_10);
             this.pl_family_10.Controls.Add(this.bt_edit_10);
             this.pl_family_10.Controls.Add(this.bt_cancel_10);
@@ -1907,6 +1868,38 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_10.Name = "pl_family_10";
             this.pl_family_10.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_10.TabIndex = 10;
+            // 
+            // bt_save_edit_10
+            // 
+            this.bt_save_edit_10.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_save_edit_10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_save_edit_10.FlatAppearance.BorderSize = 0;
+            this.bt_save_edit_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_save_edit_10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save_edit_10.ForeColor = System.Drawing.Color.White;
+            this.bt_save_edit_10.Location = new System.Drawing.Point(405, 14);
+            this.bt_save_edit_10.Name = "bt_save_edit_10";
+            this.bt_save_edit_10.Size = new System.Drawing.Size(122, 36);
+            this.bt_save_edit_10.TabIndex = 91;
+            this.bt_save_edit_10.Text = "Save";
+            this.bt_save_edit_10.UseVisualStyleBackColor = false;
+            this.bt_save_edit_10.Click += new System.EventHandler(this.bt_save_edit_10_Click);
+            // 
+            // bt_cancel_edit_10
+            // 
+            this.bt_cancel_edit_10.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_cancel_edit_10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_cancel_edit_10.FlatAppearance.BorderSize = 0;
+            this.bt_cancel_edit_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_cancel_edit_10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cancel_edit_10.ForeColor = System.Drawing.Color.White;
+            this.bt_cancel_edit_10.Location = new System.Drawing.Point(533, 14);
+            this.bt_cancel_edit_10.Name = "bt_cancel_edit_10";
+            this.bt_cancel_edit_10.Size = new System.Drawing.Size(122, 36);
+            this.bt_cancel_edit_10.TabIndex = 90;
+            this.bt_cancel_edit_10.Text = "Cancel";
+            this.bt_cancel_edit_10.UseVisualStyleBackColor = false;
+            this.bt_cancel_edit_10.Click += new System.EventHandler(this.bt_cancel_edit_10_Click);
             // 
             // txt_name_10
             // 
@@ -1949,47 +1942,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_10.Text = "Save";
             this.bt_save_10.UseVisualStyleBackColor = false;
             this.bt_save_10.Click += new System.EventHandler(this.bt_save_10_Click);
-            // 
-            // dataGridView10
-            // 
-            this.dataGridView10.AllowUserToResizeRows = false;
-            this.dataGridView10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView10.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView10.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.dataGridView10.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.dataGridView10.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView10.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridView10.ColumnHeadersHeight = 50;
-            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView10.DefaultCellStyle = dataGridViewCellStyle29;
-            this.dataGridView10.EnableHeadersVisualStyles = false;
-            this.dataGridView10.Location = new System.Drawing.Point(16, 65);
-            this.dataGridView10.MultiSelect = false;
-            this.dataGridView10.Name = "dataGridView10";
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView10.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
-            this.dataGridView10.RowHeadersVisible = false;
-            this.dataGridView10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView10.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView10.ShowCellToolTips = false;
-            this.dataGridView10.Size = new System.Drawing.Size(1139, 350);
-            this.dataGridView10.TabIndex = 85;
             // 
             // lb_total_10
             // 
@@ -2217,326 +2169,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_table_member_family.Size = new System.Drawing.Size(1222, 258);
             this.pl_table_member_family.TabIndex = 166;
             this.pl_table_member_family.Visible = false;
-            // 
-            // bt_save_edit_01
-            // 
-            this.bt_save_edit_01.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_save_edit_01.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_save_edit_01.FlatAppearance.BorderSize = 0;
-            this.bt_save_edit_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_save_edit_01.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save_edit_01.ForeColor = System.Drawing.Color.White;
-            this.bt_save_edit_01.Location = new System.Drawing.Point(405, 14);
-            this.bt_save_edit_01.Name = "bt_save_edit_01";
-            this.bt_save_edit_01.Size = new System.Drawing.Size(122, 36);
-            this.bt_save_edit_01.TabIndex = 85;
-            this.bt_save_edit_01.Text = "Save";
-            this.bt_save_edit_01.UseVisualStyleBackColor = false;
-            this.bt_save_edit_01.Click += new System.EventHandler(this.bt_save_edit_01_Click);
-            // 
-            // bt_cancel_edit_01
-            // 
-            this.bt_cancel_edit_01.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_cancel_edit_01.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cancel_edit_01.FlatAppearance.BorderSize = 0;
-            this.bt_cancel_edit_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cancel_edit_01.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancel_edit_01.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_edit_01.Location = new System.Drawing.Point(533, 14);
-            this.bt_cancel_edit_01.Name = "bt_cancel_edit_01";
-            this.bt_cancel_edit_01.Size = new System.Drawing.Size(122, 36);
-            this.bt_cancel_edit_01.TabIndex = 84;
-            this.bt_cancel_edit_01.Text = "Cancel";
-            this.bt_cancel_edit_01.UseVisualStyleBackColor = false;
-            this.bt_cancel_edit_01.Click += new System.EventHandler(this.bt_cancel_edit_01_Click);
-            // 
-            // bt_save_edit_02
-            // 
-            this.bt_save_edit_02.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_save_edit_02.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_save_edit_02.FlatAppearance.BorderSize = 0;
-            this.bt_save_edit_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_save_edit_02.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save_edit_02.ForeColor = System.Drawing.Color.White;
-            this.bt_save_edit_02.Location = new System.Drawing.Point(405, 14);
-            this.bt_save_edit_02.Name = "bt_save_edit_02";
-            this.bt_save_edit_02.Size = new System.Drawing.Size(122, 36);
-            this.bt_save_edit_02.TabIndex = 87;
-            this.bt_save_edit_02.Text = "Save";
-            this.bt_save_edit_02.UseVisualStyleBackColor = false;
-            this.bt_save_edit_02.Click += new System.EventHandler(this.bt_save_edit_02_Click);
-            // 
-            // bt_cancel_edit_02
-            // 
-            this.bt_cancel_edit_02.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_cancel_edit_02.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cancel_edit_02.FlatAppearance.BorderSize = 0;
-            this.bt_cancel_edit_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cancel_edit_02.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancel_edit_02.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_edit_02.Location = new System.Drawing.Point(533, 14);
-            this.bt_cancel_edit_02.Name = "bt_cancel_edit_02";
-            this.bt_cancel_edit_02.Size = new System.Drawing.Size(122, 36);
-            this.bt_cancel_edit_02.TabIndex = 86;
-            this.bt_cancel_edit_02.Text = "Cancel";
-            this.bt_cancel_edit_02.UseVisualStyleBackColor = false;
-            this.bt_cancel_edit_02.Click += new System.EventHandler(this.bt_cancel_edit_02_Click);
-            // 
-            // bt_save_edit_03
-            // 
-            this.bt_save_edit_03.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_save_edit_03.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_save_edit_03.FlatAppearance.BorderSize = 0;
-            this.bt_save_edit_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_save_edit_03.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save_edit_03.ForeColor = System.Drawing.Color.White;
-            this.bt_save_edit_03.Location = new System.Drawing.Point(405, 14);
-            this.bt_save_edit_03.Name = "bt_save_edit_03";
-            this.bt_save_edit_03.Size = new System.Drawing.Size(122, 36);
-            this.bt_save_edit_03.TabIndex = 87;
-            this.bt_save_edit_03.Text = "Save";
-            this.bt_save_edit_03.UseVisualStyleBackColor = false;
-            this.bt_save_edit_03.Click += new System.EventHandler(this.bt_save_edit_03_Click);
-            // 
-            // bt_cancel_edit_03
-            // 
-            this.bt_cancel_edit_03.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_cancel_edit_03.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cancel_edit_03.FlatAppearance.BorderSize = 0;
-            this.bt_cancel_edit_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cancel_edit_03.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancel_edit_03.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_edit_03.Location = new System.Drawing.Point(533, 14);
-            this.bt_cancel_edit_03.Name = "bt_cancel_edit_03";
-            this.bt_cancel_edit_03.Size = new System.Drawing.Size(122, 36);
-            this.bt_cancel_edit_03.TabIndex = 86;
-            this.bt_cancel_edit_03.Text = "Cancel";
-            this.bt_cancel_edit_03.UseVisualStyleBackColor = false;
-            this.bt_cancel_edit_03.Click += new System.EventHandler(this.bt_cancel_edit_03_Click);
-            // 
-            // bt_save_edit_04
-            // 
-            this.bt_save_edit_04.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_save_edit_04.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_save_edit_04.FlatAppearance.BorderSize = 0;
-            this.bt_save_edit_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_save_edit_04.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save_edit_04.ForeColor = System.Drawing.Color.White;
-            this.bt_save_edit_04.Location = new System.Drawing.Point(405, 14);
-            this.bt_save_edit_04.Name = "bt_save_edit_04";
-            this.bt_save_edit_04.Size = new System.Drawing.Size(122, 36);
-            this.bt_save_edit_04.TabIndex = 89;
-            this.bt_save_edit_04.Text = "Save";
-            this.bt_save_edit_04.UseVisualStyleBackColor = false;
-            this.bt_save_edit_04.Click += new System.EventHandler(this.bt_save_edit_04_Click);
-            // 
-            // bt_cancel_edit_04
-            // 
-            this.bt_cancel_edit_04.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_cancel_edit_04.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cancel_edit_04.FlatAppearance.BorderSize = 0;
-            this.bt_cancel_edit_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cancel_edit_04.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancel_edit_04.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_edit_04.Location = new System.Drawing.Point(533, 14);
-            this.bt_cancel_edit_04.Name = "bt_cancel_edit_04";
-            this.bt_cancel_edit_04.Size = new System.Drawing.Size(122, 36);
-            this.bt_cancel_edit_04.TabIndex = 88;
-            this.bt_cancel_edit_04.Text = "Cancel";
-            this.bt_cancel_edit_04.UseVisualStyleBackColor = false;
-            this.bt_cancel_edit_04.Click += new System.EventHandler(this.bt_cancel_edit_04_Click);
-            // 
-            // bt_save_edit_05
-            // 
-            this.bt_save_edit_05.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_save_edit_05.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_save_edit_05.FlatAppearance.BorderSize = 0;
-            this.bt_save_edit_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_save_edit_05.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save_edit_05.ForeColor = System.Drawing.Color.White;
-            this.bt_save_edit_05.Location = new System.Drawing.Point(405, 16);
-            this.bt_save_edit_05.Name = "bt_save_edit_05";
-            this.bt_save_edit_05.Size = new System.Drawing.Size(122, 36);
-            this.bt_save_edit_05.TabIndex = 95;
-            this.bt_save_edit_05.Text = "Save";
-            this.bt_save_edit_05.UseVisualStyleBackColor = false;
-            this.bt_save_edit_05.Click += new System.EventHandler(this.bt_save_edit_05_Click);
-            // 
-            // bt_cancel_edit_05
-            // 
-            this.bt_cancel_edit_05.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_cancel_edit_05.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cancel_edit_05.FlatAppearance.BorderSize = 0;
-            this.bt_cancel_edit_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cancel_edit_05.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancel_edit_05.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_edit_05.Location = new System.Drawing.Point(533, 16);
-            this.bt_cancel_edit_05.Name = "bt_cancel_edit_05";
-            this.bt_cancel_edit_05.Size = new System.Drawing.Size(122, 36);
-            this.bt_cancel_edit_05.TabIndex = 94;
-            this.bt_cancel_edit_05.Text = "Cancel";
-            this.bt_cancel_edit_05.UseVisualStyleBackColor = false;
-            this.bt_cancel_edit_05.Click += new System.EventHandler(this.bt_cancel_edit_05_Click);
-            // 
-            // bt_save_edit_06
-            // 
-            this.bt_save_edit_06.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_save_edit_06.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_save_edit_06.FlatAppearance.BorderSize = 0;
-            this.bt_save_edit_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_save_edit_06.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save_edit_06.ForeColor = System.Drawing.Color.White;
-            this.bt_save_edit_06.Location = new System.Drawing.Point(405, 14);
-            this.bt_save_edit_06.Name = "bt_save_edit_06";
-            this.bt_save_edit_06.Size = new System.Drawing.Size(122, 36);
-            this.bt_save_edit_06.TabIndex = 94;
-            this.bt_save_edit_06.Text = "Save";
-            this.bt_save_edit_06.UseVisualStyleBackColor = false;
-            this.bt_save_edit_06.Click += new System.EventHandler(this.bt_save_edit_06_Click);
-            // 
-            // bt_cancel_edit_06
-            // 
-            this.bt_cancel_edit_06.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_cancel_edit_06.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cancel_edit_06.FlatAppearance.BorderSize = 0;
-            this.bt_cancel_edit_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cancel_edit_06.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancel_edit_06.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_edit_06.Location = new System.Drawing.Point(533, 14);
-            this.bt_cancel_edit_06.Name = "bt_cancel_edit_06";
-            this.bt_cancel_edit_06.Size = new System.Drawing.Size(122, 36);
-            this.bt_cancel_edit_06.TabIndex = 93;
-            this.bt_cancel_edit_06.Text = "Cancel";
-            this.bt_cancel_edit_06.UseVisualStyleBackColor = false;
-            this.bt_cancel_edit_06.Click += new System.EventHandler(this.bt_cancel_edit_06_Click);
-            // 
-            // bt_save_edit_07
-            // 
-            this.bt_save_edit_07.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_save_edit_07.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_save_edit_07.FlatAppearance.BorderSize = 0;
-            this.bt_save_edit_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_save_edit_07.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save_edit_07.ForeColor = System.Drawing.Color.White;
-            this.bt_save_edit_07.Location = new System.Drawing.Point(405, 14);
-            this.bt_save_edit_07.Name = "bt_save_edit_07";
-            this.bt_save_edit_07.Size = new System.Drawing.Size(122, 36);
-            this.bt_save_edit_07.TabIndex = 93;
-            this.bt_save_edit_07.Text = "Save";
-            this.bt_save_edit_07.UseVisualStyleBackColor = false;
-            this.bt_save_edit_07.Click += new System.EventHandler(this.bt_save_edit_07_Click);
-            // 
-            // bt_cancel_edit_07
-            // 
-            this.bt_cancel_edit_07.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_cancel_edit_07.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cancel_edit_07.FlatAppearance.BorderSize = 0;
-            this.bt_cancel_edit_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cancel_edit_07.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancel_edit_07.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_edit_07.Location = new System.Drawing.Point(533, 14);
-            this.bt_cancel_edit_07.Name = "bt_cancel_edit_07";
-            this.bt_cancel_edit_07.Size = new System.Drawing.Size(122, 36);
-            this.bt_cancel_edit_07.TabIndex = 92;
-            this.bt_cancel_edit_07.Text = "Cancel";
-            this.bt_cancel_edit_07.UseVisualStyleBackColor = false;
-            this.bt_cancel_edit_07.Click += new System.EventHandler(this.bt_cancel_edit_07_Click);
-            // 
-            // bt_save_edit_08
-            // 
-            this.bt_save_edit_08.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_save_edit_08.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_save_edit_08.FlatAppearance.BorderSize = 0;
-            this.bt_save_edit_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_save_edit_08.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save_edit_08.ForeColor = System.Drawing.Color.White;
-            this.bt_save_edit_08.Location = new System.Drawing.Point(405, 14);
-            this.bt_save_edit_08.Name = "bt_save_edit_08";
-            this.bt_save_edit_08.Size = new System.Drawing.Size(122, 36);
-            this.bt_save_edit_08.TabIndex = 92;
-            this.bt_save_edit_08.Text = "Save";
-            this.bt_save_edit_08.UseVisualStyleBackColor = false;
-            this.bt_save_edit_08.Click += new System.EventHandler(this.bt_save_edit_08_Click);
-            // 
-            // bt_cancel_edit_08
-            // 
-            this.bt_cancel_edit_08.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_cancel_edit_08.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cancel_edit_08.FlatAppearance.BorderSize = 0;
-            this.bt_cancel_edit_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cancel_edit_08.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancel_edit_08.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_edit_08.Location = new System.Drawing.Point(533, 14);
-            this.bt_cancel_edit_08.Name = "bt_cancel_edit_08";
-            this.bt_cancel_edit_08.Size = new System.Drawing.Size(122, 36);
-            this.bt_cancel_edit_08.TabIndex = 91;
-            this.bt_cancel_edit_08.Text = "Cancel";
-            this.bt_cancel_edit_08.UseVisualStyleBackColor = false;
-            this.bt_cancel_edit_08.Click += new System.EventHandler(this.bt_cancel_edit_08_Click);
-            // 
-            // bt_save_edit_09
-            // 
-            this.bt_save_edit_09.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_save_edit_09.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_save_edit_09.FlatAppearance.BorderSize = 0;
-            this.bt_save_edit_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_save_edit_09.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save_edit_09.ForeColor = System.Drawing.Color.White;
-            this.bt_save_edit_09.Location = new System.Drawing.Point(405, 14);
-            this.bt_save_edit_09.Name = "bt_save_edit_09";
-            this.bt_save_edit_09.Size = new System.Drawing.Size(122, 36);
-            this.bt_save_edit_09.TabIndex = 92;
-            this.bt_save_edit_09.Text = "Save";
-            this.bt_save_edit_09.UseVisualStyleBackColor = false;
-            this.bt_save_edit_09.Click += new System.EventHandler(this.bt_save_edit_09_Click);
-            // 
-            // bt_cancel_edit_09
-            // 
-            this.bt_cancel_edit_09.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_cancel_edit_09.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cancel_edit_09.FlatAppearance.BorderSize = 0;
-            this.bt_cancel_edit_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cancel_edit_09.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancel_edit_09.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_edit_09.Location = new System.Drawing.Point(533, 14);
-            this.bt_cancel_edit_09.Name = "bt_cancel_edit_09";
-            this.bt_cancel_edit_09.Size = new System.Drawing.Size(122, 36);
-            this.bt_cancel_edit_09.TabIndex = 91;
-            this.bt_cancel_edit_09.Text = "Cancel";
-            this.bt_cancel_edit_09.UseVisualStyleBackColor = false;
-            this.bt_cancel_edit_09.Click += new System.EventHandler(this.bt_cancel_edit_09_Click);
-            // 
-            // bt_save_edit_10
-            // 
-            this.bt_save_edit_10.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_save_edit_10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_save_edit_10.FlatAppearance.BorderSize = 0;
-            this.bt_save_edit_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_save_edit_10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save_edit_10.ForeColor = System.Drawing.Color.White;
-            this.bt_save_edit_10.Location = new System.Drawing.Point(405, 14);
-            this.bt_save_edit_10.Name = "bt_save_edit_10";
-            this.bt_save_edit_10.Size = new System.Drawing.Size(122, 36);
-            this.bt_save_edit_10.TabIndex = 91;
-            this.bt_save_edit_10.Text = "Save";
-            this.bt_save_edit_10.UseVisualStyleBackColor = false;
-            this.bt_save_edit_10.Click += new System.EventHandler(this.bt_save_edit_10_Click);
-            // 
-            // bt_cancel_edit_10
-            // 
-            this.bt_cancel_edit_10.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_cancel_edit_10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cancel_edit_10.FlatAppearance.BorderSize = 0;
-            this.bt_cancel_edit_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cancel_edit_10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancel_edit_10.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_edit_10.Location = new System.Drawing.Point(533, 14);
-            this.bt_cancel_edit_10.Name = "bt_cancel_edit_10";
-            this.bt_cancel_edit_10.Size = new System.Drawing.Size(122, 36);
-            this.bt_cancel_edit_10.TabIndex = 90;
-            this.bt_cancel_edit_10.Text = "Cancel";
-            this.bt_cancel_edit_10.UseVisualStyleBackColor = false;
-            this.bt_cancel_edit_10.Click += new System.EventHandler(this.bt_cancel_edit_10_Click);
             // 
             // txt_name_edit_10
             // 
@@ -2793,6 +2425,375 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_add_family_name.UnderlinedStyle = false;
             this.txt_add_family_name.Leave += new System.EventHandler(this.txt_add_family_name_Leave);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToResizeRows = false;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.dataGridView2.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView2.ColumnHeadersHeight = 50;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView2.EnableHeadersVisualStyles = false;
+            this.dataGridView2.Location = new System.Drawing.Point(16, 65);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView2.ShowCellToolTips = false;
+            this.dataGridView2.Size = new System.Drawing.Size(1139, 350);
+            this.dataGridView2.TabIndex = 88;
+            this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
+            this.dataGridView2.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView2_UserDeletingRow);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToResizeRows = false;
+            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.dataGridView3.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView3.ColumnHeadersHeight = 50;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView3.EnableHeadersVisualStyles = false;
+            this.dataGridView3.Location = new System.Drawing.Point(16, 65);
+            this.dataGridView3.MultiSelect = false;
+            this.dataGridView3.Name = "dataGridView3";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView3.ShowCellToolTips = false;
+            this.dataGridView3.Size = new System.Drawing.Size(1139, 350);
+            this.dataGridView3.TabIndex = 89;
+            this.dataGridView3.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView3_CellMouseClick);
+            this.dataGridView3.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView3_UserDeletingRow);
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToResizeRows = false;
+            this.dataGridView4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.dataGridView4.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView4.ColumnHeadersHeight = 50;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridView4.EnableHeadersVisualStyles = false;
+            this.dataGridView4.Location = new System.Drawing.Point(16, 65);
+            this.dataGridView4.MultiSelect = false;
+            this.dataGridView4.Name = "dataGridView4";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridView4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView4.ShowCellToolTips = false;
+            this.dataGridView4.Size = new System.Drawing.Size(1139, 350);
+            this.dataGridView4.TabIndex = 95;
+            this.dataGridView4.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView4_CellMouseClick);
+            this.dataGridView4.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView4_UserDeletingRow);
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AllowUserToResizeRows = false;
+            this.dataGridView5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.dataGridView5.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dataGridView5.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridView5.ColumnHeadersHeight = 50;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridView5.EnableHeadersVisualStyles = false;
+            this.dataGridView5.Location = new System.Drawing.Point(16, 65);
+            this.dataGridView5.MultiSelect = false;
+            this.dataGridView5.Name = "dataGridView5";
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridView5.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView5.ShowCellToolTips = false;
+            this.dataGridView5.Size = new System.Drawing.Size(1139, 350);
+            this.dataGridView5.TabIndex = 96;
+            this.dataGridView5.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView5_CellMouseClick);
+            this.dataGridView5.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView5_UserDeletingRow);
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.AllowUserToResizeRows = false;
+            this.dataGridView6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.dataGridView6.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dataGridView6.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridView6.ColumnHeadersHeight = 50;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridView6.EnableHeadersVisualStyles = false;
+            this.dataGridView6.Location = new System.Drawing.Point(16, 65);
+            this.dataGridView6.MultiSelect = false;
+            this.dataGridView6.Name = "dataGridView6";
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView6.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridView6.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView6.ShowCellToolTips = false;
+            this.dataGridView6.Size = new System.Drawing.Size(1139, 350);
+            this.dataGridView6.TabIndex = 95;
+            this.dataGridView6.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView6_CellMouseClick);
+            this.dataGridView6.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView6_UserDeletingRow);
+            // 
+            // dataGridView7
+            // 
+            this.dataGridView7.AllowUserToResizeRows = false;
+            this.dataGridView7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.dataGridView7.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dataGridView7.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView7.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridView7.ColumnHeadersHeight = 50;
+            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView7.DefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridView7.EnableHeadersVisualStyles = false;
+            this.dataGridView7.Location = new System.Drawing.Point(16, 65);
+            this.dataGridView7.MultiSelect = false;
+            this.dataGridView7.Name = "dataGridView7";
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView7.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            this.dataGridView7.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView7.ShowCellToolTips = false;
+            this.dataGridView7.Size = new System.Drawing.Size(1139, 350);
+            this.dataGridView7.TabIndex = 94;
+            this.dataGridView7.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView7_CellMouseClick);
+            this.dataGridView7.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView7_UserDeletingRow);
+            // 
+            // dataGridView8
+            // 
+            this.dataGridView8.AllowUserToResizeRows = false;
+            this.dataGridView8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView8.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.dataGridView8.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dataGridView8.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView8.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            this.dataGridView8.ColumnHeadersHeight = 50;
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView8.DefaultCellStyle = dataGridViewCellStyle23;
+            this.dataGridView8.EnableHeadersVisualStyles = false;
+            this.dataGridView8.Location = new System.Drawing.Point(16, 65);
+            this.dataGridView8.MultiSelect = false;
+            this.dataGridView8.Name = "dataGridView8";
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView8.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            this.dataGridView8.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView8.ShowCellToolTips = false;
+            this.dataGridView8.Size = new System.Drawing.Size(1139, 350);
+            this.dataGridView8.TabIndex = 93;
+            this.dataGridView8.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView8_CellMouseClick);
+            this.dataGridView8.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView8_UserDeletingRow);
+            // 
+            // dataGridView9
+            // 
+            this.dataGridView9.AllowUserToResizeRows = false;
+            this.dataGridView9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView9.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.dataGridView9.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dataGridView9.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView9.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            this.dataGridView9.ColumnHeadersHeight = 50;
+            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView9.DefaultCellStyle = dataGridViewCellStyle26;
+            this.dataGridView9.EnableHeadersVisualStyles = false;
+            this.dataGridView9.Location = new System.Drawing.Point(16, 65);
+            this.dataGridView9.MultiSelect = false;
+            this.dataGridView9.Name = "dataGridView9";
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView9.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            this.dataGridView9.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView9.ShowCellToolTips = false;
+            this.dataGridView9.Size = new System.Drawing.Size(1139, 350);
+            this.dataGridView9.TabIndex = 93;
+            this.dataGridView9.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView9_CellMouseClick);
+            this.dataGridView9.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView9_UserDeletingRow);
+            // 
+            // dataGridView10
+            // 
+            this.dataGridView10.AllowUserToResizeRows = false;
+            this.dataGridView10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView10.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView10.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.dataGridView10.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dataGridView10.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView10.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            this.dataGridView10.ColumnHeadersHeight = 50;
+            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView10.DefaultCellStyle = dataGridViewCellStyle29;
+            this.dataGridView10.EnableHeadersVisualStyles = false;
+            this.dataGridView10.Location = new System.Drawing.Point(16, 65);
+            this.dataGridView10.MultiSelect = false;
+            this.dataGridView10.Name = "dataGridView10";
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView10.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            this.dataGridView10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView10.ShowCellToolTips = false;
+            this.dataGridView10.Size = new System.Drawing.Size(1139, 350);
+            this.dataGridView10.TabIndex = 92;
+            this.dataGridView10.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView10_CellMouseClick);
+            this.dataGridView10.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView10_UserDeletingRow);
+            // 
             // family
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2822,44 +2823,44 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_content_02.ResumeLayout(false);
             this.pl_family_02.ResumeLayout(false);
             this.pl_family_02.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.pl_content_03.ResumeLayout(false);
             this.pl_family_03.ResumeLayout(false);
             this.pl_family_03.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.pl_content_04.ResumeLayout(false);
             this.pl_family_04.ResumeLayout(false);
             this.pl_family_04.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.pl_content_05.ResumeLayout(false);
             this.pl_family_05.ResumeLayout(false);
             this.pl_family_05.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.pl_content_06.ResumeLayout(false);
             this.pl_family_06.ResumeLayout(false);
             this.pl_family_06.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.pl_content_07.ResumeLayout(false);
             this.pl_family_07.ResumeLayout(false);
             this.pl_family_07.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             this.pl_content_08.ResumeLayout(false);
             this.pl_family_08.ResumeLayout(false);
             this.pl_family_08.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             this.pl_content_09.ResumeLayout(false);
             this.pl_family_09.ResumeLayout(false);
             this.pl_family_09.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             this.pl_content_10.ResumeLayout(false);
             this.pl_family_10.ResumeLayout(false);
             this.pl_family_10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             this.pl_add.ResumeLayout(false);
             this.pl_add_family_member.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_family_member)).EndInit();
             this.pl_table_member_family.ResumeLayout(false);
             this.pl_table_member_family.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2869,7 +2870,6 @@ namespace Contas_Familia.PanelControll.Dashboard
         private System.Windows.Forms.Panel pl_family_01;
         private System.Windows.Forms.Button bt_cancel_01;
         private System.Windows.Forms.Button bt_delete_01;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel pl_content_01;
         private FontAwesome.Sharp.IconButton bt_edit_01;
         private System.Windows.Forms.Panel pl_content_02;
@@ -2927,15 +2927,6 @@ namespace Contas_Familia.PanelControll.Dashboard
         private System.Windows.Forms.Label lb_total_08;
         private System.Windows.Forms.Label lb_total_09;
         private System.Windows.Forms.Label lb_total_10;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.DataGridView dataGridView7;
-        private System.Windows.Forms.DataGridView dataGridView8;
-        private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.DataGridView dataGridView10;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Panel pl_add;
         private System.Windows.Forms.Panel pl_add_family_member;
         private System.Windows.Forms.Button bt_cancel;
@@ -3008,5 +2999,15 @@ namespace Contas_Familia.PanelControll.Dashboard
         private System.Windows.Forms.Button bt_cancel_edit_09;
         private System.Windows.Forms.Button bt_save_edit_10;
         private System.Windows.Forms.Button bt_cancel_edit_10;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.DataGridView dataGridView8;
+        private System.Windows.Forms.DataGridView dataGridView9;
+        private System.Windows.Forms.DataGridView dataGridView10;
     }
 }

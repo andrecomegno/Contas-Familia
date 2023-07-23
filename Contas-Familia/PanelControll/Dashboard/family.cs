@@ -16,6 +16,10 @@ namespace Contas_Familia.PanelControll.Dashboard
         private int id_register_family = list_family.Instance.select_id_register_family;        
         private int[] id_register_family_member = new int[10];
 
+        // COLETAR DADOS DA TABELA AO SELECIONAR
+        private int sl_id_register_family_member;
+        private int sl_id_products;
+
         // MEMBROS DA FAMILIA
         private string[] family_member = new string[10];
 
@@ -164,13 +168,13 @@ namespace Contas_Familia.PanelControll.Dashboard
             {
                 dataGridView.Columns[0].Visible = false; // id_register_family_member
                 dataGridView.Columns[1].Visible = false; // family_member
-                dataGridView.Columns[2].HeaderText = "CARTÕES";
-                dataGridView.Columns[3].HeaderText = "VENCIMENTO";
-                dataGridView.Columns[4].HeaderText = "LOJAS";
-                dataGridView.Columns[5].HeaderText = "PRODUTOS";
-                dataGridView.Columns[6].HeaderText = "PARCELAMENTO";
-                dataGridView.Columns[7].HeaderText = "VALOR TOTAL";
-                dataGridView.Columns[8].HeaderText = "VALOR PARCELADO";
+                dataGridView.Columns[2].HeaderText = "CARTÕES"; // credit_card_name
+                dataGridView.Columns[3].HeaderText = "VENCIMENTO"; // credit_card_payday
+                dataGridView.Columns[4].HeaderText = "LOJAS"; // store_name
+                dataGridView.Columns[5].HeaderText = "PRODUTOS"; // product_name
+                dataGridView.Columns[6].HeaderText = "PARCELAMENTO"; // credit_card_installment
+                dataGridView.Columns[7].HeaderText = "VALOR TOTAL"; // total_payble
+                dataGridView.Columns[8].HeaderText = "VALOR PARCELADO"; // total_payable_installment
                 dataGridView.Columns[9].Visible = false; // id_register_family
                 dataGridView.Columns[10].Visible = false; // id_credit_card
                 dataGridView.Columns[11].Visible = false; // id_products
@@ -193,7 +197,7 @@ namespace Contas_Familia.PanelControll.Dashboard
         }
 
         // TABELA DELETAR MEMBRO
-        void TableDelete(int id_member, Panel pl)
+        void TableDeleteMemberFamily(int id_member, Panel pl)
         {
             configdb database = new configdb();
             database.openConnection();
@@ -201,6 +205,20 @@ namespace Contas_Familia.PanelControll.Dashboard
             MySqlCommand cmd = new MySqlCommand("DELETE FROM familypayday.register_family_member WHERE id_register_family_member = @id_register_family_member and id_register_family = @id_register_family", database.getConnection());
             cmd.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id_member;
             cmd.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
+            cmd.ExecuteNonQuery();
+
+            database.closeConnection();
+        }
+
+        // TABELA DELETAR QUANDO SELECIONADO NA LINHA
+        void TableDeleteBillToPay()
+        {
+            configdb database = new configdb();
+            database.openConnection();
+
+            MySqlCommand cmd = new MySqlCommand("DELETE FROM familypayday.products WHERE(ID_PRODUCTS = @ID_PRODUCTS) and (ID_REGISTER_FAMILY_MEMBER = @ID_REGISTER_FAMILY_MEMBER)", database.getConnection());
+            cmd.Parameters.Add("@id_products", MySqlDbType.Int32).Value = sl_id_products;
+            cmd.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = sl_id_register_family_member;
             cmd.ExecuteNonQuery();
 
             database.closeConnection();
@@ -260,8 +278,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         #endregion
 
-        #region BUTTON PANEL TABLE FAMILY
-
+        #region BUTTONS PANEL TABLE
         // BOTÃO SALVAR
         void BT_Save(DataGridView dataGridViews, int id, Label name)
         {
@@ -293,6 +310,9 @@ namespace Contas_Familia.PanelControll.Dashboard
                 // TABELA DAS CONTAS A PAGAR
                 TableMemberPayDay(id);
 
+                // ATUALIZA A TABELA
+                TableMain();
+
                 MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -308,7 +328,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     case DialogResult.Yes:
                         // TABELA DELETAR 
-                        TableDelete(id_member, pl);
+                        TableDeleteMemberFamily(id_member, pl);
                         // DESABILITA O PAINEL DO MEMBRO DA FAMILIA
                         pl.Visible = false;
                         // LIMPA O NOME DO MEMBRO NO PAINEL
@@ -336,6 +356,23 @@ namespace Contas_Familia.PanelControll.Dashboard
         {
             // RECOLHE O PAINEL
             PanelContent(reg, pl_content, button);
+        }
+
+        // BOTÃO DELETAR LINHA DA TABELA
+        private void BT_DeleteRow(DataGridViewRowCancelEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            switch (dr)
+            {
+                case DialogResult.Yes:
+                    // TABELA DELETAR 
+                    TableDeleteBillToPay();
+                    break;
+                case DialogResult.No:
+                    e.Cancel = true;
+                    break;
+            }
         }
 
         // BOTÃO 1
@@ -428,7 +465,29 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         private void bt_save_10_Click(object sender, EventArgs e) => BT_Save(dataGridView10, id_register_family_member[9], txt_name_10);
 
-        #region BUTTON EDIT NAME MEMBER FAMILY
+        // BOTÃO DELETAR LINHA DA TABELA
+        private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
+
+        private void dataGridView2_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
+
+        private void dataGridView3_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
+
+        private void dataGridView4_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
+
+        private void dataGridView5_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
+
+        private void dataGridView6_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
+
+        private void dataGridView7_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
+
+        private void dataGridView8_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
+
+        private void dataGridView9_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
+
+        private void dataGridView10_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
+        #endregion
+
+        #region EDIT NAME MEMBER FAMILY
         // BOTÃO SAVAR
         void BT_Save_Edit(bool _edit, int id, Label name, RJTextBox name_edit, Button delete, Button save, Button cancel)
         {
@@ -512,6 +571,45 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         #endregion
 
+        #region SELECT ROW, COLLECT TABLE DATA
+        // SELECIONAR LINHA, COLETAR DADOS E DEPOIS DELETAR
+        void SelectDeleteRow(DataGridView dataGridViews)
+        {
+            if (dataGridViews.SelectedRows.Count > 0)
+            {
+                // OBTEM A LINHA SELECIONADA
+                DataRowView selectedRow = dataGridViews.SelectedRows[0].DataBoundItem as DataRowView;
+
+                if (selectedRow != null)
+                {
+                    // COLETA OS DADOS DA LINHA SELECIONADA DA TABELA
+                    if (selectedRow["id_products"] != DBNull.Value && selectedRow["id_register_family_member"] != DBNull.Value)
+                    {
+                        sl_id_products = Convert.ToInt32(selectedRow["id_products"]);
+                        sl_id_register_family_member = Convert.ToInt32(selectedRow["id_register_family_member"]);
+                    }
+                }
+            }
+        }
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView1);
+
+        private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView2);
+
+        private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView3);
+
+        private void dataGridView4_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView4);
+
+        private void dataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView5);
+
+        private void dataGridView6_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView6);
+
+        private void dataGridView7_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView7);
+
+        private void dataGridView8_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView8);
+
+        private void dataGridView9_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView9);
+
+        private void dataGridView10_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView10);
         #endregion
 
         #region ADD NEW FAMILY MEMEBR
@@ -735,6 +833,7 @@ namespace Contas_Familia.PanelControll.Dashboard
         }
         #endregion
 
+        #region STARTING
         // PAINEL DOS MEMBROS DA FAMILIA
         void StartPanelFamily()
         {
@@ -756,27 +855,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             // TEXTBOX EDITAR NOME DO MEMBRO
             TextEditName();
             ButtonEditName();
-        }
-
-        // VERIFICA SE EXISTE ALGUMA PAINEL VISIVEL SE NAO TIVER, MOSTRA O AVISO PARA ADD UM NOVO MEMBRO  
-        void SearchPanels()
-        {
-            Panel[] panels = { pl_content_01, pl_content_02, pl_content_03, pl_content_04, pl_content_05, pl_content_06, pl_content_07, pl_content_08, pl_content_09, pl_content_10 };
-            // VARIVALE PARA VERIFICAR 
-            bool anyPanelVisible = false;
-            // PROCURAR TABELAS
-            foreach (Panel panel in panels)
-            {
-                if (panel.Visible)
-                {
-                    anyPanelVisible = true;
-                    // SAI DO LOOP ASSIM QUE ENCONTRAR UM PAINEL VISIVEL
-                    break;
-                }
-            }
-
-            // VARIAVEL PARA AUMENTAR / DIMINUIR O TAMANHO DO PAINEL 
-            pl_add.Size = anyPanelVisible ? new Size(1222, 70) : new Size(1222, 458);
         }
 
         // TODOS OS TEXTBOX EDIT NOME DO MEMBRO DA FAMILIA
@@ -817,14 +895,33 @@ namespace Contas_Familia.PanelControll.Dashboard
                 button.IconChar = IconChar.AngleDown;
             }
         }
+        #endregion
+
+        // VERIFICA SE EXISTE ALGUMA PAINEL VISIVEL SE NAO TIVER, MOSTRA O AVISO PARA ADD UM NOVO MEMBRO  
+        void SearchPanels()
+        {
+            Panel[] panels = { pl_content_01, pl_content_02, pl_content_03, pl_content_04, pl_content_05, pl_content_06, pl_content_07, pl_content_08, pl_content_09, pl_content_10 };
+            // VARIVALE PARA VERIFICAR 
+            bool anyPanelVisible = false;
+            // PROCURAR TABELAS
+            foreach (Panel panel in panels)
+            {
+                if (panel.Visible)
+                {
+                    anyPanelVisible = true;
+                    // SAI DO LOOP ASSIM QUE ENCONTRAR UM PAINEL VISIVEL
+                    break;
+                }
+            }
+
+            // VARIAVEL PARA AUMENTAR / DIMINUIR O TAMANHO DO PAINEL 
+            pl_add.Size = anyPanelVisible ? new Size(1222, 70) : new Size(1222, 458);
+        }
 
         private void family_Load(object sender, EventArgs e)
         {
             Main.Instance.ButtonMenuDisabled(true);            
             TableMain();
         }
-
-
-
     }
 }
