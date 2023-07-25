@@ -38,10 +38,36 @@ namespace Contas_Familia.PanelControll.Dashboard
         decimal total_payble;
         decimal total_payable_installment;
 
+        DateTimePicker dtp = new DateTimePicker();
+        Rectangle rectangle;
+
         public family()
         {
             InitializeComponent();
             StartPanelFamily();
+
+            dataGridView1.Controls.Add(dtp);
+            dtp.Visible = false;
+            dtp.Format = DateTimePickerFormat.Custom;
+            dtp.TextChanged += new EventHandler(dtp_TextChange);
+        }
+
+        void teste()
+        {
+            /*
+            DataGridView[] dataGridViews = { dataGridView1, dataGridView2, dataGridView3, dataGridView4, dataGridView5, dataGridView6, dataGridView7, dataGridView8, dataGridView9, dataGridView10 };
+
+            for (int i = 0; i < dataGridViews.Length; i++)
+            {
+                if (dtp[i] != null)
+                {
+                    dataGridViews[i].Controls.Add(dtp[i]);
+                    dtp[i].Visible = false;
+                    dtp[i].Format = DateTimePickerFormat.Custom;
+                    dtp[i].TextChanged += new EventHandler(dtp_TextChange);
+                }
+            }
+            */
         }
 
         #region TABLES
@@ -110,7 +136,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 else
                 {
                     panels[i].Visible = true;
-                }               
+                }
             }
 
             // CONFIGURAÇÃO DE TODOS OS DATAGRIDVIEW
@@ -123,6 +149,8 @@ namespace Contas_Familia.PanelControll.Dashboard
 
             // VERIFICA SE EXISTE ALGUMA PAINEL VISIVEL SE NAO TIVER, MOSTRA O AVISO PARA ADD UM NOVO MEMBRO  
             SearchPanels();
+
+            //dtp.Visible = false;
         }
 
         // SOMAR O VALOR TOTAL DAS DIVIDAS A PAGAR
@@ -131,7 +159,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             double total = 0;
             for (int i = 0; i < dataGridViews.Rows.Count; i++)
             {
-                var cellValue = dataGridViews.Rows[i].Cells["total_payable_installment"].Value;
+                //  CELLS 8 = total_payable_installment
+                var cellValue = dataGridViews.Rows[i].Cells[8].Value;
                 if (cellValue != null && !string.IsNullOrEmpty(cellValue.ToString()) && double.TryParse(cellValue.ToString(), out double installment))
                 {
                     total += installment;
@@ -187,8 +216,10 @@ namespace Contas_Familia.PanelControll.Dashboard
             configdb database = new configdb();
             database.openConnection();
 
+            string query = "INSERT INTO familypayday.register_family_member (id_register_family_member, family_member, id_register_family) VALUES (null, @family_member, @id_register_family)";
+
             // ADD NOVO MEMBRO DA FAMILIA
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO familypayday.register_family_member (id_register_family_member, family_member, id_register_family) VALUES (null, @family_member, @id_register_family)", database.getConnection());
+            MySqlCommand cmd = new MySqlCommand(query, database.getConnection());            
             cmd.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = txt_add_family_name.Texts;
             cmd.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
             cmd.ExecuteNonQuery();
@@ -202,7 +233,9 @@ namespace Contas_Familia.PanelControll.Dashboard
             configdb database = new configdb();
             database.openConnection();
 
-            MySqlCommand cmd = new MySqlCommand("DELETE FROM familypayday.register_family_member WHERE id_register_family_member = @id_register_family_member and id_register_family = @id_register_family", database.getConnection());
+            string query = "DELETE FROM familypayday.register_family_member WHERE id_register_family_member = @id_register_family_member and id_register_family = @id_register_family";
+
+            MySqlCommand cmd = new MySqlCommand(query, database.getConnection());
             cmd.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id_member;
             cmd.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
             cmd.ExecuteNonQuery();
@@ -210,13 +243,15 @@ namespace Contas_Familia.PanelControll.Dashboard
             database.closeConnection();
         }
 
-        // TABELA DELETAR QUANDO SELECIONADO NA LINHA
+        // TABELA DELETAR QUANDO SELECIONADO UMA LINHA
         void TableDeleteBillToPay()
         {
             configdb database = new configdb();
             database.openConnection();
 
-            MySqlCommand cmd = new MySqlCommand("DELETE FROM familypayday.products WHERE(ID_PRODUCTS = @ID_PRODUCTS) and (ID_REGISTER_FAMILY_MEMBER = @ID_REGISTER_FAMILY_MEMBER)", database.getConnection());
+            string query = "DELETE FROM familypayday.products WHERE(ID_PRODUCTS = @ID_PRODUCTS) and (ID_REGISTER_FAMILY_MEMBER = @ID_REGISTER_FAMILY_MEMBER)";
+
+            MySqlCommand cmd = new MySqlCommand(query, database.getConnection());
             cmd.Parameters.Add("@id_products", MySqlDbType.Int32).Value = sl_id_products;
             cmd.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = sl_id_register_family_member;
             cmd.ExecuteNonQuery();
@@ -231,32 +266,34 @@ namespace Contas_Familia.PanelControll.Dashboard
             configdb database = new configdb();
             database.openConnection();
 
+            string queryProducts = "INSERT INTO familypayday.products (id_products, store_name, product_name, id_register_family_member) VALUES (null, @store_name, @product_name, @id_register_family_member)";
+            string queryCreditCard = "INSERT INTO familypayday.credit_card (id_credit_card, credit_card_name, credit_card_payday, credit_card_installment, id_products) VALUES (null, @credit_card_name, @credit_card_payday, @credit_card_installment, @id_products)";
+            string queryTotal = "INSERT INTO familypayday.total_credit_card (id_total_credit_card, total_payble, total_payable_installment, id_credit_card) VALUES (null, @total_payble, @total_payable_installment, @id_credit_card)";
+
             // PRODUTOS
-            MySqlCommand cmdProducts = new MySqlCommand("INSERT INTO familypayday.products (id_products, store_name, product_name, id_register_family_member) VALUES (null, @store_name, @product_name, @id_register_family_member)", database.getConnection());
+            MySqlCommand cmdProducts = new MySqlCommand(queryProducts, database.getConnection());
             cmdProducts.Parameters.Add("@store_name", MySqlDbType.VarChar, 50).Value = store_name;
             cmdProducts.Parameters.Add("@product_name", MySqlDbType.VarChar, 245).Value = product_name;
             cmdProducts.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id;
-
             cmdProducts.ExecuteNonQuery();
             long id_products = cmdProducts.LastInsertedId;
 
             // CARTÃO DE CREDITO
-            MySqlCommand cmdCreditCard = new MySqlCommand("INSERT INTO familypayday.credit_card (id_credit_card, credit_card_name, credit_card_payday, credit_card_installment, id_products) VALUES (null, @credit_card_name, @credit_card_payday, @credit_card_installment, @id_products)", database.getConnection());
+            MySqlCommand cmdCreditCard = new MySqlCommand(queryCreditCard, database.getConnection());
             cmdCreditCard.Parameters.Add("@credit_card_name", MySqlDbType.VarChar, 45).Value = credit_card_name;
             cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.Date).Value = credit_card_payday;
             cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = card_credit_installment;
             cmdCreditCard.Parameters.Add("@id_products", MySqlDbType.Int32).Value = id_products;
-
             cmdCreditCard.ExecuteNonQuery();
             long id_credit_card = cmdCreditCard.LastInsertedId;
 
             // TOTAL
-            MySqlCommand cmdTotal = new MySqlCommand("INSERT INTO familypayday.total_credit_card (id_total_credit_card, total_payble, total_payable_installment, id_credit_card) VALUES (null, @total_payble, @total_payable_installment, @id_credit_card)", database.getConnection());
+            MySqlCommand cmdTotal = new MySqlCommand(queryTotal, database.getConnection());
             cmdTotal.Parameters.Add("@total_payble", MySqlDbType.Decimal).Value = total_payble;
             cmdTotal.Parameters.Add("@total_payable_installment", MySqlDbType.Decimal).Value = total_payable_installment;
             cmdTotal.Parameters.Add("@id_credit_card", MySqlDbType.Int32).Value = id_credit_card;
-
             cmdTotal.ExecuteNonQuery();
+
             database.closeConnection();
         }
 
@@ -266,12 +303,14 @@ namespace Contas_Familia.PanelControll.Dashboard
             configdb database = new configdb();
             database.openConnection();
 
+            string query = "UPDATE familypayday.register_family_member SET family_member = @family_member WHERE (id_register_family_member = @id_register_family_member) and (id_register_family = @id_register_family) ";
+
             // EDITAR NOME DO MEMBRO DA FAMILIA
-            MySqlCommand cmdRegisterFamilyMember = new MySqlCommand("UPDATE familypayday.register_family_member SET family_member = @family_member WHERE (id_register_family_member = @id_register_family_member) and (id_register_family = @id_register_family) ", database.getConnection());
-            cmdRegisterFamilyMember.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = Editname.Texts;
-            cmdRegisterFamilyMember.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
-            cmdRegisterFamilyMember.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id;
-            cmdRegisterFamilyMember.ExecuteNonQuery();
+            MySqlCommand cmd = new MySqlCommand(query, database.getConnection());
+            cmd.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = Editname.Texts;
+            cmd.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
+            cmd.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id;
+            cmd.ExecuteNonQuery();
 
             database.closeConnection();
         }
@@ -375,116 +414,90 @@ namespace Contas_Familia.PanelControll.Dashboard
             }
         }
 
+        // ATUALIZA A SOMA TOTAL DAS DIVIDAS DA TABELA, QUANDO DELETADO OU O VALOR PAGO 
+        void SumTotalRefresh(DataGridView dataGridViews, Label total)
+        {
+            if (dataGridViews.Rows.Count > 1)
+            {
+                total.Text = SumTotal(dataGridViews).ToString("c");
+            }
+        }
+
         // BOTÃO 1
         private void bt_edit_01_Click(object sender, EventArgs e) => PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
-
         private void bt_cancel_01_Click(object sender, EventArgs e) => BT_Cancel(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
-
         private void bt_delete_01_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[0], pl_content_01, txt_name_01);
-
         private void bt_save_01_Click(object sender, EventArgs e) => BT_Save(dataGridView1, id_register_family_member[0], txt_name_01);
-
         // BOTÃO 2
         private void bt_edit_02_Click(object sender, EventArgs e) => PanelContent(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
-
         private void bt_cancel_02_Click(object sender, EventArgs e) => BT_Cancel(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
-
         private void bt_delete_02_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[1], pl_content_02, txt_name_02);
-
         private void bt_save_02_Click(object sender, EventArgs e) => BT_Save(dataGridView2, id_register_family_member[1], txt_name_02);
-
         // BOTÃO 3
         private void bt_edit_03_Click(object sender, EventArgs e) => PanelContent(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
-
         private void bt_cancel_03_Click(object sender, EventArgs e) => BT_Cancel(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
-
         private void bt_delete_03_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[2], pl_content_03, txt_name_03);
-
         private void bt_save_03_Click(object sender, EventArgs e) => BT_Save(dataGridView3, id_register_family_member[2], txt_name_03);
-
         // BOTÃO 4
         private void bt_edit_04_Click(object sender, EventArgs e) => PanelContent(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
-
         private void bt_cancel_04_Click(object sender, EventArgs e) => BT_Cancel(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
-
         private void bt_delete_04_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[3], pl_content_04, txt_name_04);
-
         private void bt_save_04_Click(object sender, EventArgs e) => BT_Save(dataGridView4, id_register_family_member[3], txt_name_04);
-
         // BOTÃO 5
         private void bt_edit_05_Click(object sender, EventArgs e) => PanelContent(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
-
         private void bt_cancel_05_Click(object sender, EventArgs e) => BT_Cancel(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
-
         private void bt_delete_05_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[4], pl_content_05, txt_name_05);
-
         private void bt_save_05_Click(object sender, EventArgs e) => BT_Save(dataGridView5, id_register_family_member[4], txt_name_05);
-
         // BOTÃO 6
         private void bt_edit_06_Click(object sender, EventArgs e) => PanelContent(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
-
         private void bt_cancel_06_Click(object sender, EventArgs e) => BT_Cancel(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
-
         private void bt_delete_06_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[5], pl_content_06, txt_name_06);
-
         private void bt_save_06_Click(object sender, EventArgs e) => BT_Save(dataGridView6, id_register_family_member[5], txt_name_06);
-
         // BOTÃO 7
         private void bt_edit_07_Click(object sender, EventArgs e) => PanelContent(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
-
         private void bt_cancel_07_Click(object sender, EventArgs e) => BT_Cancel(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
-
         private void bt_delete_07_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[6], pl_content_07, txt_name_07);
-
-        private void bt_save_07_Click(object sender, EventArgs e) => BT_Save(dataGridView7, id_register_family_member[6], txt_name_07);
-
+        private void bt_save_07_Click(object sender, EventArgs e) => BT_Save(dataGridView7, id_register_family_member[6], txt_name_07);        
         // BOTÃO 8
         private void bt_edit_08_Click(object sender, EventArgs e) => PanelContent(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
-
         private void bt_cancel_08_Click(object sender, EventArgs e) => BT_Cancel(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
-
         private void bt_delete_08_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[7], pl_content_08, txt_name_08);
-
         private void bt_save_08_Click(object sender, EventArgs e) => BT_Save(dataGridView8, id_register_family_member[7], txt_name_08);
-
         // BOTÃO 9
         private void bt_edit_09_Click(object sender, EventArgs e) => PanelContent(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
-
         private void bt_cancel_09_Click(object sender, EventArgs e) => BT_Cancel(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
-
         private void bt_delete_09_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[8], pl_content_09, txt_name_09);
-
         private void bt_save_09_Click(object sender, EventArgs e) => BT_Save(dataGridView9, id_register_family_member[8], txt_name_09);
-
         // BOTÃO 10
         private void bt_edit_10_Click(object sender, EventArgs e) => PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
-
         private void bt_cancel_10_Click(object sender, EventArgs e) => BT_Cancel(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
-
         private void bt_delete_10_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[9], pl_content_10, txt_name_10);
-
         private void bt_save_10_Click(object sender, EventArgs e) => BT_Save(dataGridView10, id_register_family_member[9], txt_name_10);
 
         // BOTÃO DELETAR LINHA DA TABELA
         private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
-
         private void dataGridView2_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
-
         private void dataGridView3_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
-
         private void dataGridView4_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
-
         private void dataGridView5_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
-
         private void dataGridView6_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
-
         private void dataGridView7_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
-
         private void dataGridView8_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
-
         private void dataGridView9_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
-
         private void dataGridView10_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
+
+        // ATUALIZA TABELA QUANDO DELETA UMA LINHA
+        private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) => SumTotalRefresh(dataGridView1, txt_total_01);
+        private void dataGridView2_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) => SumTotalRefresh(dataGridView2, txt_total_02);
+        private void dataGridView3_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) => SumTotalRefresh(dataGridView3, txt_total_03);
+        private void dataGridView4_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) => SumTotalRefresh(dataGridView4, txt_total_04);
+        private void dataGridView5_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) => SumTotalRefresh(dataGridView5, txt_total_05);
+        private void dataGridView6_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) => SumTotalRefresh(dataGridView6, txt_total_06);
+        private void dataGridView7_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) => SumTotalRefresh(dataGridView7, txt_total_07);
+        private void dataGridView8_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) => SumTotalRefresh(dataGridView8, txt_total_08);
+        private void dataGridView9_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) => SumTotalRefresh(dataGridView9, txt_total_09);
+        private void dataGridView10_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) => SumTotalRefresh(dataGridView10, txt_total_10);
+
         #endregion
 
         #region EDIT NAME MEMBER FAMILY
@@ -521,58 +534,39 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         // BOTÃO EDIT 1
         private void bt_save_edit_01_Click(object sender, EventArgs e) => BT_Save_Edit(_nameEdit[0] = !_nameEdit[0], id_register_family_member[0], txt_name_01, txt_name_edit_01, bt_delete_01, bt_save_edit_01, bt_cancel_edit_01);
-
         private void bt_cancel_edit_01_Click(object sender, EventArgs e) => BT_Cancel_Edit(_nameEdit[0] = !_nameEdit[0], txt_name_01, txt_name_edit_01, bt_delete_01, bt_save_edit_01, bt_cancel_edit_01);
-
         // BOTÃO EDIT 2
         private void bt_save_edit_02_Click(object sender, EventArgs e) => BT_Save_Edit(_nameEdit[1] = !_nameEdit[1], id_register_family_member[1], txt_name_02, txt_name_edit_02, bt_delete_02, bt_save_edit_02, bt_cancel_edit_02);
-
         private void bt_cancel_edit_02_Click(object sender, EventArgs e) => BT_Cancel_Edit(_nameEdit[1] = !_nameEdit[1], txt_name_02, txt_name_edit_02, bt_delete_02, bt_save_edit_02, bt_cancel_edit_02);
-
         // BOTÃO EDIT 3
         private void bt_save_edit_03_Click(object sender, EventArgs e) => BT_Save_Edit(_nameEdit[2] = !_nameEdit[2], id_register_family_member[2], txt_name_03, txt_name_edit_03, bt_delete_03, bt_save_edit_03, bt_cancel_edit_03);
-
         private void bt_cancel_edit_03_Click(object sender, EventArgs e) => BT_Cancel_Edit(_nameEdit[2] = !_nameEdit[2], txt_name_03, txt_name_edit_03, bt_delete_03, bt_save_edit_03, bt_cancel_edit_03);
-
         // BOTÃO EDIT 4
         private void bt_save_edit_04_Click(object sender, EventArgs e) => BT_Save_Edit(_nameEdit[3] = !_nameEdit[3], id_register_family_member[3], txt_name_04, txt_name_edit_04, bt_delete_04, bt_save_edit_04, bt_cancel_edit_04);
-
         private void bt_cancel_edit_04_Click(object sender, EventArgs e) => BT_Cancel_Edit(_nameEdit[3] = !_nameEdit[3], txt_name_04, txt_name_edit_04, bt_delete_04, bt_save_edit_04, bt_cancel_edit_04);
-
         // BOTÃO EDIT 5
         private void bt_save_edit_05_Click(object sender, EventArgs e) => BT_Save_Edit(_nameEdit[4] = !_nameEdit[4], id_register_family_member[4], txt_name_05, txt_name_edit_05, bt_delete_05, bt_save_edit_05, bt_cancel_edit_05);
-
         private void bt_cancel_edit_05_Click(object sender, EventArgs e) => BT_Cancel_Edit(_nameEdit[4] = !_nameEdit[4], txt_name_05, txt_name_edit_05, bt_delete_05, bt_save_edit_05, bt_cancel_edit_05);
-
         // BOTÃO EDIT 6
         private void bt_save_edit_06_Click(object sender, EventArgs e) => BT_Save_Edit(_nameEdit[5] = !_nameEdit[5], id_register_family_member[5], txt_name_06, txt_name_edit_06, bt_delete_06, bt_save_edit_06, bt_cancel_edit_06);
-
         private void bt_cancel_edit_06_Click(object sender, EventArgs e) => BT_Cancel_Edit(_nameEdit[5] = !_nameEdit[5], txt_name_06, txt_name_edit_06, bt_delete_06, bt_save_edit_06, bt_cancel_edit_06);
-
         // BOTÃO EDIT 7
         private void bt_save_edit_07_Click(object sender, EventArgs e) => BT_Save_Edit(_nameEdit[6] = !_nameEdit[6], id_register_family_member[6], txt_name_07, txt_name_edit_07, bt_delete_07, bt_save_edit_07, bt_cancel_edit_07);
-
         private void bt_cancel_edit_07_Click(object sender, EventArgs e) => BT_Cancel_Edit(_nameEdit[6] = !_nameEdit[6], txt_name_07, txt_name_edit_07, bt_delete_07, bt_save_edit_07, bt_cancel_edit_07);
-
         // BOTÃO EDIT 8
         private void bt_save_edit_08_Click(object sender, EventArgs e) => BT_Save_Edit(_nameEdit[7] = !_nameEdit[7], id_register_family_member[7], txt_name_08, txt_name_edit_08, bt_delete_08, bt_save_edit_08, bt_cancel_edit_08);
-
         private void bt_cancel_edit_08_Click(object sender, EventArgs e) => BT_Cancel_Edit(_nameEdit[7] = !_nameEdit[7], txt_name_08, txt_name_edit_08, bt_delete_08, bt_save_edit_08, bt_cancel_edit_08);
-
         // BOTÃO EDIT 9
         private void bt_save_edit_09_Click(object sender, EventArgs e) => BT_Save_Edit(_nameEdit[8] = !_nameEdit[8], id_register_family_member[8], txt_name_09, txt_name_edit_09, bt_delete_09, bt_save_edit_09, bt_cancel_edit_09);
-
         private void bt_cancel_edit_09_Click(object sender, EventArgs e) => BT_Cancel_Edit(_nameEdit[8] = !_nameEdit[8], txt_name_09, txt_name_edit_09, bt_delete_09, bt_save_edit_09, bt_cancel_edit_09);
-
         // BOTÃO EDIT 10
         private void bt_save_edit_10_Click(object sender, EventArgs e) => BT_Save_Edit(_nameEdit[9] = !_nameEdit[9], id_register_family_member[9], txt_name_10, txt_name_edit_10, bt_delete_10, bt_save_edit_10, bt_cancel_edit_10);
-
         private void bt_cancel_edit_10_Click(object sender, EventArgs e) => BT_Cancel_Edit(_nameEdit[9] = !_nameEdit[9], txt_name_10, txt_name_edit_10, bt_delete_10, bt_save_edit_10, bt_cancel_edit_10);
 
         #endregion
 
         #region SELECT ROW, COLLECT TABLE DATA
-        // SELECIONAR LINHA, COLETAR DADOS E DEPOIS DELETAR
+        // SELECIONAR LINHA, COLETAR DADOS 
         void SelectDeleteRow(DataGridView dataGridViews)
         {
             if (dataGridViews.SelectedRows.Count > 0)
@@ -592,23 +586,14 @@ namespace Contas_Familia.PanelControll.Dashboard
             }
         }
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView1);
-
         private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView2);
-
         private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView3);
-
         private void dataGridView4_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView4);
-
         private void dataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView5);
-
         private void dataGridView6_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView6);
-
         private void dataGridView7_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView7);
-
         private void dataGridView8_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView8);
-
         private void dataGridView9_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView9);
-
         private void dataGridView10_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView10);
         #endregion
 
@@ -685,6 +670,104 @@ namespace Contas_Familia.PanelControll.Dashboard
                 add.Texts = string.Empty;
             }
         }
+        #endregion
+
+        #region ADD DATETIMEPICKER TABLE
+        // ADD NA TABELA O DateTimePicker
+        void AddDateTimePickerTable(DataGridView dataGridViews, DataGridViewCellEventArgs e, DateTimePicker _dtp, Rectangle _rectangle)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridViews.Rows.Count && e.ColumnIndex >= 0 && e.ColumnIndex < dataGridViews.Columns.Count)
+            {
+                switch (dataGridViews.Columns[e.ColumnIndex].Name)
+                {
+                    case "Column4":
+                        _rectangle = dataGridViews.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
+                        _dtp.Size = new Size(_rectangle.Width, _rectangle.Height);
+                        _dtp.Location = new Point(_rectangle.X, _rectangle.Y);
+                        _dtp.Visible = true;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void dtp_TextChange(Object sender, EventArgs e)
+        {
+            DataGridView[] dataGridViews = { dataGridView1, dataGridView2, dataGridView3, dataGridView4, dataGridView5, dataGridView6, dataGridView7, dataGridView8, dataGridView9, dataGridView10 };
+
+            for (int i = 0; i < dataGridViews.Length; i++)
+            {
+                dataGridViews[i].CurrentCell.Value = dtp[i].Text.ToString();
+            } 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {            
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count && e.ColumnIndex >= 0 && e.ColumnIndex < dataGridView1.Columns.Count)
+            {
+                switch (dataGridView1.Columns[e.ColumnIndex].Index)
+                {
+                    case 3:
+                        rectangle = dataGridView1.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
+                        dtp.Size = new Size(rectangle.Width, rectangle.Height);
+                        dtp.Location = new Point(rectangle.X, rectangle.Y);
+                        dtp.Visible = true;
+
+                        break;
+                    default:
+                        break;
+                }
+
+                MessageBox.Show("1");
+            }            
+        }
+        //=> AddDateTimePickerTable(dataGridView1, e, dtp[0], rectangle[0]);
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView2.Rows.Count && e.ColumnIndex >= 0 && e.ColumnIndex < dataGridView2.Columns.Count)
+            {
+                switch (dataGridView2.Columns[e.ColumnIndex].Index)
+                {
+                    case 3:
+                        rectangle = dataGridView2.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
+                        dtp.Size = new Size(rectangle.Width, rectangle.Height);
+                        dtp.Location = new Point(rectangle.X, rectangle.Y);
+                        dtp.Visible = true;
+                        break;
+                    default:
+                        break;
+                }
+
+                MessageBox.Show("2");
+            }
+        } //=> AddDateTimePickerTable(dataGridView2, e, dtp[1], rectangle[1]);
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e){ }// => AddDateTimePickerTable(dataGridView3, e, dtp[2], rectangle[2]);
+        private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e) { } // => AddDateTimePickerTable(dataGridView4, e, dtp[3], rectangle[3]);
+        private void dataGridView5_CellClick(object sender, DataGridViewCellEventArgs e) { }// => AddDateTimePickerTable(dataGridView5, e, dtp[4], rectangle[4]);
+        private void dataGridView6_CellClick(object sender, DataGridViewCellEventArgs e) { }// => AddDateTimePickerTable(dataGridView6, e, dtp[5], rectangle[5]);
+        private void dataGridView7_CellClick(object sender, DataGridViewCellEventArgs e) { }//=> AddDateTimePickerTable(dataGridView7, e, dtp[6], rectangle[6]);
+        private void dataGridView8_CellClick(object sender, DataGridViewCellEventArgs e) { }// => AddDateTimePickerTable(dataGridView8, e, dtp[7], rectangle[7]);
+        private void dataGridView9_CellClick(object sender, DataGridViewCellEventArgs e) { }//=> AddDateTimePickerTable(dataGridView9, e, dtp[8], rectangle[8]);
+        private void dataGridView10_CellClick(object sender, DataGridViewCellEventArgs e) { }//=> AddDateTimePickerTable(dataGridView10, e, dtp[9], rectangle[9]);
+
+        private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
+        {
+            dtp.Visible = false;
+
+        }// => dtp[0].Visible = false;
+        private void dataGridView2_Scroll(object sender, ScrollEventArgs e)
+        {
+            dtp.Visible = false;
+        }// => dtp[1].Visible = false;
+        private void dataGridView3_Scroll(object sender, ScrollEventArgs e) { }// => dtp[2].Visible = false;
+        private void dataGridView4_Scroll(object sender, ScrollEventArgs e) { }// => dtp[3].Visible = false;
+        private void dataGridView5_Scroll(object sender, ScrollEventArgs e) { }// => dtp[4].Visible = false;
+        private void dataGridView6_Scroll(object sender, ScrollEventArgs e) { }// => dtp[5].Visible = false;
+        private void dataGridView7_Scroll(object sender, ScrollEventArgs e) { }// => dtp[6].Visible = false;
+        private void dataGridView8_Scroll(object sender, ScrollEventArgs e) { }// => dtp[7].Visible = false;
+        private void dataGridView9_Scroll(object sender, ScrollEventArgs e) { }// => dtp[8].Visible = false;
+        private void dataGridView10_Scroll(object sender, ScrollEventArgs e) { }// => dtp[9].Visible = false;
         #endregion
 
         #region TEXT EDIT
@@ -923,5 +1006,9 @@ namespace Contas_Familia.PanelControll.Dashboard
             Main.Instance.ButtonMenuDisabled(true);            
             TableMain();
         }
+
+
+
+
     }
 }

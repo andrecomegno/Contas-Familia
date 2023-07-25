@@ -110,6 +110,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="familypaydayDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>familypaydayDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PanelControll\Dashboard\family.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -204,6 +209,17 @@
     <EmbeddedResource Include="Window\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="familypaydayDataSet.xsc">
+      <DependentUpon>familypaydayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="familypaydayDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>familypaydayDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="familypaydayDataSet.xss">
+      <DependentUpon>familypaydayDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
