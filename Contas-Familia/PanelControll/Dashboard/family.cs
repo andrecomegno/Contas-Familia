@@ -31,43 +31,21 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         // BOTÃO SALVAR - ATRIBUI NOVOS DADOS A TABELA
         string credit_card_name;
-        DateTime credit_card_payday;
+        string credit_card_payday;
         string store_name;
         string product_name;
         string card_credit_installment;
         decimal total_payble;
         decimal total_payable_installment;
 
-        DateTimePicker dtp = new DateTimePicker();
-        Rectangle rectangle;
+        // DATA
+        DateTimePicker[] dtp = new DateTimePicker[10];
+        Rectangle[] rectangle = new Rectangle[10];
 
         public family()
         {
             InitializeComponent();
             StartPanelFamily();
-
-            dataGridView1.Controls.Add(dtp);
-            dtp.Visible = false;
-            dtp.Format = DateTimePickerFormat.Custom;
-            dtp.TextChanged += new EventHandler(dtp_TextChange);
-        }
-
-        void teste()
-        {
-            /*
-            DataGridView[] dataGridViews = { dataGridView1, dataGridView2, dataGridView3, dataGridView4, dataGridView5, dataGridView6, dataGridView7, dataGridView8, dataGridView9, dataGridView10 };
-
-            for (int i = 0; i < dataGridViews.Length; i++)
-            {
-                if (dtp[i] != null)
-                {
-                    dataGridViews[i].Controls.Add(dtp[i]);
-                    dtp[i].Visible = false;
-                    dtp[i].Format = DateTimePickerFormat.Custom;
-                    dtp[i].TextChanged += new EventHandler(dtp_TextChange);
-                }
-            }
-            */
         }
 
         #region TABLES
@@ -159,8 +137,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             double total = 0;
             for (int i = 0; i < dataGridViews.Rows.Count; i++)
             {
-                //  CELLS 8 = total_payable_installment
-                var cellValue = dataGridViews.Rows[i].Cells[8].Value;
+                //  CELLS 6 = total_payable_installment
+                var cellValue = dataGridViews.Rows[i].Cells[6].Value;
                 if (cellValue != null && !string.IsNullOrEmpty(cellValue.ToString()) && double.TryParse(cellValue.ToString(), out double installment))
                 {
                     total += installment;
@@ -176,7 +154,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             using (MySqlConnection connection = database.getConnection())
             {
                 connection.Open();
-                string query = "select rfm.id_register_family_member, rfm.family_member, cc.credit_card_name, cc.credit_card_payday, pr.store_name, pr.product_name, cc.credit_card_installment, tcc.total_payble, tcc.total_payable_installment, rf.id_register_family, cc.id_credit_card, pr.id_products from familypayday.login lo left join familypayday.register_family rf on rf.id_login = lo.id_login left join familypayday.register_family_member rfm on rfm.id_register_family = rf.id_register_family left join familypayday.products pr on pr.id_register_family_member = rfm.id_register_family_member left join familypayday.credit_card cc on cc.id_products = pr.id_products left join familypayday.total_credit_card tcc on tcc.id_credit_card = cc.id_credit_card where rfm.family_member = @family_member ";
+                string query = "select ccl.credit_card_name, cc.credit_card_payday, pr.store_name, pr.product_name, cc.credit_card_installment, tcc.total_payble, tcc.total_payable_installment, rfm.family_member, rfm.id_register_family_member, rf.id_register_family, cc.id_credit_card, pr.id_products from familypayday.login lo left join familypayday.register_family rf on rf.id_login = lo.id_login left join familypayday.register_family_member rfm on rfm.id_register_family = rf.id_register_family left join familypayday.products pr on pr.id_register_family_member = rfm.id_register_family_member left join familypayday.credit_card_list ccl on ccl.id_products = pr.id_products left join familypayday.credit_card cc on cc.id_credit_card_list = ccl.id_credit_card_list left join familypayday.total_credit_card tcc on tcc.id_credit_card = cc.id_credit_card where rfm.family_member = @family_member ";
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@family_member", familyMemberName);
@@ -195,15 +173,15 @@ namespace Contas_Familia.PanelControll.Dashboard
         {
             if (dataGridView.Columns.Count >= 12)
             {
-                dataGridView.Columns[0].Visible = false; // id_register_family_member
-                dataGridView.Columns[1].Visible = false; // family_member
-                dataGridView.Columns[2].HeaderText = "CARTÕES"; // credit_card_name
-                dataGridView.Columns[3].HeaderText = "VENCIMENTO"; // credit_card_payday
-                dataGridView.Columns[4].HeaderText = "LOJAS"; // store_name
-                dataGridView.Columns[5].HeaderText = "PRODUTOS"; // product_name
-                dataGridView.Columns[6].HeaderText = "PARCELAMENTO"; // credit_card_installment
-                dataGridView.Columns[7].HeaderText = "VALOR TOTAL"; // total_payble
-                dataGridView.Columns[8].HeaderText = "VALOR PARCELADO"; // total_payable_installment
+                dataGridView.Columns[0].HeaderText = "CARTÕES"; // credit_card_name
+                dataGridView.Columns[1].HeaderText = "VENCIMENTO"; // credit_card_payday
+                dataGridView.Columns[2].HeaderText = "LOJAS"; // store_name
+                dataGridView.Columns[3].HeaderText = "PRODUTOS"; // product_name
+                dataGridView.Columns[4].HeaderText = "PARCELAMENTO"; // credit_card_installment
+                dataGridView.Columns[5].HeaderText = "VALOR TOTAL"; // total_payble
+                dataGridView.Columns[6].HeaderText = "VALOR PARCELADO"; // total_payable_installment
+                dataGridView.Columns[7].Visible = false; // family_member
+                dataGridView.Columns[8].Visible = false; // id_register_family_member
                 dataGridView.Columns[9].Visible = false; // id_register_family
                 dataGridView.Columns[10].Visible = false; // id_credit_card
                 dataGridView.Columns[11].Visible = false; // id_products
@@ -267,7 +245,8 @@ namespace Contas_Familia.PanelControll.Dashboard
             database.openConnection();
 
             string queryProducts = "INSERT INTO familypayday.products (id_products, store_name, product_name, id_register_family_member) VALUES (null, @store_name, @product_name, @id_register_family_member)";
-            string queryCreditCard = "INSERT INTO familypayday.credit_card (id_credit_card, credit_card_name, credit_card_payday, credit_card_installment, id_products) VALUES (null, @credit_card_name, @credit_card_payday, @credit_card_installment, @id_products)";
+            string queryCreditCardList = "INSERT INTO familypayday.credit_card_list (id_credit_card_list, credit_card_name, id_products) VALUES (null, @credit_card_name, @id_products)";
+            string queryCreditCard = "INSERT INTO familypayday.credit_card (id_credit_card, credit_card_payday, credit_card_installment, id_credit_card_list) VALUES (null, @credit_card_payday, @credit_card_installment, @id_credit_card_list)";
             string queryTotal = "INSERT INTO familypayday.total_credit_card (id_total_credit_card, total_payble, total_payable_installment, id_credit_card) VALUES (null, @total_payble, @total_payable_installment, @id_credit_card)";
 
             // PRODUTOS
@@ -278,12 +257,18 @@ namespace Contas_Familia.PanelControll.Dashboard
             cmdProducts.ExecuteNonQuery();
             long id_products = cmdProducts.LastInsertedId;
 
+            //  LISTA DE CARTÕES DE CREDITOS
+            MySqlCommand cmdCreditCardList = new MySqlCommand(queryCreditCardList, database.getConnection());
+            cmdCreditCardList.Parameters.Add("@credit_card_name", MySqlDbType.VarChar, 45).Value = credit_card_name;
+            cmdCreditCardList.Parameters.Add("@id_products", MySqlDbType.Int32).Value = id_products;
+            cmdCreditCardList.ExecuteNonQuery();
+            long id_credit_card_list = cmdCreditCardList.LastInsertedId;
+
             // CARTÃO DE CREDITO
             MySqlCommand cmdCreditCard = new MySqlCommand(queryCreditCard, database.getConnection());
-            cmdCreditCard.Parameters.Add("@credit_card_name", MySqlDbType.VarChar, 45).Value = credit_card_name;
-            cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.Date).Value = credit_card_payday;
+            cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.VarChar, 10).Value = credit_card_payday;
             cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = card_credit_installment;
-            cmdCreditCard.Parameters.Add("@id_products", MySqlDbType.Int32).Value = id_products;
+            cmdCreditCard.Parameters.Add("@id_credit_card_list", MySqlDbType.Int32).Value = id_credit_card_list;
             cmdCreditCard.ExecuteNonQuery();
             long id_credit_card = cmdCreditCard.LastInsertedId;
 
@@ -326,24 +311,28 @@ namespace Contas_Familia.PanelControll.Dashboard
             {
                 for (int i = 0; i < dataGridViews.Rows.Count - 1; i++)
                 {
-                    // ID - COLUNA 0
-                    dataGridViews.Rows[i].Cells[0].Value = id;
-                    // NOME DO MEMBRO DA FAMILIA - COLUNA - 1
-                    dataGridViews.Rows[i].Cells[1].Value = name;
-                    // NOME DO CARTÃO DE CREDITO - COLUNA - 2
-                    credit_card_name = dataGridViews.Rows[i].Cells[2].Value.ToString();
-                    // VENCIMENTO DO CARTÃO DE CREDITO - COLUNA - 3
-                    credit_card_payday = Convert.ToDateTime(dataGridViews.Rows[i].Cells[3].Value);
-                    // NOME DA LOJA - COLUNA - 4
-                    store_name = dataGridViews.Rows[i].Cells[4].Value.ToString();
-                    // NOME DO PRODUTO - COLUNA - 5
-                    product_name = dataGridViews.Rows[i].Cells[5].Value.ToString();
-                    // PARCELAMENTO  - COLUNA - 6
-                    card_credit_installment = dataGridViews.Rows[i].Cells[6].Value.ToString();
-                    // VALOR TOTAL DA COMPRA - COLUNA - 7
-                    total_payble = Convert.ToDecimal(dataGridViews.Rows[i].Cells[7].Value);
-                    // VALOR A PAGAR PARCELADO - COLUNA - 8
-                    total_payable_installment = Convert.ToDecimal(dataGridViews.Rows[i].Cells[8].Value);
+                    // COLETA A DATA SELECIONADA, E ATRIBUI AO credit_card_payday
+                    credit_card_payday = dtp[i].Value.ToShortDateString();
+
+                    // NOME DO CARTÃO DE CREDITO
+                    credit_card_name = dataGridViews.Rows[i].Cells[0].Value.ToString();
+                    // VENCIMENTO DO CARTÃO DE CREDITO
+                    //credit_card_payday = dataGridViews.Rows[i].Cells[1].Value.ToString();
+                    dataGridViews.Rows[i].Cells[1].Value = credit_card_payday;
+                    // NOME DA LOJA
+                    store_name = dataGridViews.Rows[i].Cells[2].Value.ToString();
+                    // NOME DO PRODUTO
+                    product_name = dataGridViews.Rows[i].Cells[3].Value.ToString();
+                    // PARCELAMENTO
+                    card_credit_installment = dataGridViews.Rows[i].Cells[4].Value.ToString();
+                    // VALOR TOTAL DA COMPRA
+                    total_payble = Convert.ToDecimal(dataGridViews.Rows[i].Cells[5].Value);
+                    // VALOR A PAGAR PARCELADO
+                    total_payable_installment = Convert.ToDecimal(dataGridViews.Rows[i].Cells[6].Value);
+                    // NOME DO MEMBRO DA FAMILIA
+                    dataGridViews.Rows[i].Cells[7].Value = name;
+                    // ID FAMILY MEMBER
+                    dataGridViews.Rows[i].Cells[8].Value = id;
                 }
 
                 // TABELA DAS CONTAS A PAGAR
@@ -678,9 +667,9 @@ namespace Contas_Familia.PanelControll.Dashboard
         {
             if (e.RowIndex >= 0 && e.RowIndex < dataGridViews.Rows.Count && e.ColumnIndex >= 0 && e.ColumnIndex < dataGridViews.Columns.Count)
             {
-                switch (dataGridViews.Columns[e.ColumnIndex].Name)
+                switch (dataGridViews.Columns[e.ColumnIndex].Index)
                 {
-                    case "Column4":
+                    case 1:
                         _rectangle = dataGridViews.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
                         _dtp.Size = new Size(_rectangle.Width, _rectangle.Height);
                         _dtp.Location = new Point(_rectangle.X, _rectangle.Y);
@@ -702,72 +691,27 @@ namespace Contas_Familia.PanelControll.Dashboard
             } 
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {            
-            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count && e.ColumnIndex >= 0 && e.ColumnIndex < dataGridView1.Columns.Count)
-            {
-                switch (dataGridView1.Columns[e.ColumnIndex].Index)
-                {
-                    case 3:
-                        rectangle = dataGridView1.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
-                        dtp.Size = new Size(rectangle.Width, rectangle.Height);
-                        dtp.Location = new Point(rectangle.X, rectangle.Y);
-                        dtp.Visible = true;
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView1, e, dtp[0], rectangle[0]);
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView2, e, dtp[1], rectangle[1]);
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView3, e, dtp[2], rectangle[2]);
+        private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView4, e, dtp[3], rectangle[3]);
+        private void dataGridView5_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView5, e, dtp[4], rectangle[4]);
+        private void dataGridView6_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView6, e, dtp[5], rectangle[5]);
+        private void dataGridView7_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView7, e, dtp[6], rectangle[6]);
+        private void dataGridView8_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView8, e, dtp[7], rectangle[7]);
+        private void dataGridView9_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView9, e, dtp[8], rectangle[8]);
+        private void dataGridView10_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView10, e, dtp[9], rectangle[9]);
 
-                        break;
-                    default:
-                        break;
-                }
-
-                MessageBox.Show("1");
-            }            
-        }
-        //=> AddDateTimePickerTable(dataGridView1, e, dtp[0], rectangle[0]);
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.RowIndex < dataGridView2.Rows.Count && e.ColumnIndex >= 0 && e.ColumnIndex < dataGridView2.Columns.Count)
-            {
-                switch (dataGridView2.Columns[e.ColumnIndex].Index)
-                {
-                    case 3:
-                        rectangle = dataGridView2.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
-                        dtp.Size = new Size(rectangle.Width, rectangle.Height);
-                        dtp.Location = new Point(rectangle.X, rectangle.Y);
-                        dtp.Visible = true;
-                        break;
-                    default:
-                        break;
-                }
-
-                MessageBox.Show("2");
-            }
-        } //=> AddDateTimePickerTable(dataGridView2, e, dtp[1], rectangle[1]);
-        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e){ }// => AddDateTimePickerTable(dataGridView3, e, dtp[2], rectangle[2]);
-        private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e) { } // => AddDateTimePickerTable(dataGridView4, e, dtp[3], rectangle[3]);
-        private void dataGridView5_CellClick(object sender, DataGridViewCellEventArgs e) { }// => AddDateTimePickerTable(dataGridView5, e, dtp[4], rectangle[4]);
-        private void dataGridView6_CellClick(object sender, DataGridViewCellEventArgs e) { }// => AddDateTimePickerTable(dataGridView6, e, dtp[5], rectangle[5]);
-        private void dataGridView7_CellClick(object sender, DataGridViewCellEventArgs e) { }//=> AddDateTimePickerTable(dataGridView7, e, dtp[6], rectangle[6]);
-        private void dataGridView8_CellClick(object sender, DataGridViewCellEventArgs e) { }// => AddDateTimePickerTable(dataGridView8, e, dtp[7], rectangle[7]);
-        private void dataGridView9_CellClick(object sender, DataGridViewCellEventArgs e) { }//=> AddDateTimePickerTable(dataGridView9, e, dtp[8], rectangle[8]);
-        private void dataGridView10_CellClick(object sender, DataGridViewCellEventArgs e) { }//=> AddDateTimePickerTable(dataGridView10, e, dtp[9], rectangle[9]);
-
-        private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
-        {
-            dtp.Visible = false;
-
-        }// => dtp[0].Visible = false;
-        private void dataGridView2_Scroll(object sender, ScrollEventArgs e)
-        {
-            dtp.Visible = false;
-        }// => dtp[1].Visible = false;
-        private void dataGridView3_Scroll(object sender, ScrollEventArgs e) { }// => dtp[2].Visible = false;
-        private void dataGridView4_Scroll(object sender, ScrollEventArgs e) { }// => dtp[3].Visible = false;
-        private void dataGridView5_Scroll(object sender, ScrollEventArgs e) { }// => dtp[4].Visible = false;
-        private void dataGridView6_Scroll(object sender, ScrollEventArgs e) { }// => dtp[5].Visible = false;
-        private void dataGridView7_Scroll(object sender, ScrollEventArgs e) { }// => dtp[6].Visible = false;
-        private void dataGridView8_Scroll(object sender, ScrollEventArgs e) { }// => dtp[7].Visible = false;
-        private void dataGridView9_Scroll(object sender, ScrollEventArgs e) { }// => dtp[8].Visible = false;
-        private void dataGridView10_Scroll(object sender, ScrollEventArgs e) { }// => dtp[9].Visible = false;
+        private void dataGridView1_Scroll(object sender, ScrollEventArgs e) => dtp[0].Visible = false;
+        private void dataGridView2_Scroll(object sender, ScrollEventArgs e) => dtp[1].Visible = false;
+        private void dataGridView3_Scroll(object sender, ScrollEventArgs e) => dtp[2].Visible = false;
+        private void dataGridView4_Scroll(object sender, ScrollEventArgs e) => dtp[3].Visible = false;
+        private void dataGridView5_Scroll(object sender, ScrollEventArgs e) => dtp[4].Visible = false;
+        private void dataGridView6_Scroll(object sender, ScrollEventArgs e) => dtp[5].Visible = false;
+        private void dataGridView7_Scroll(object sender, ScrollEventArgs e) => dtp[6].Visible = false;
+        private void dataGridView8_Scroll(object sender, ScrollEventArgs e) => dtp[7].Visible = false;
+        private void dataGridView9_Scroll(object sender, ScrollEventArgs e) => dtp[8].Visible = false;
+        private void dataGridView10_Scroll(object sender, ScrollEventArgs e) => dtp[9].Visible = false;
         #endregion
 
         #region TEXT EDIT
@@ -935,9 +879,24 @@ namespace Contas_Familia.PanelControll.Dashboard
             // TABELA OCULTA DOS MEMBBROS DA FAMILIA
             pl_table_member_family.Visible = false;
 
-            // TEXTBOX EDITAR NOME DO MEMBRO
+            AddDateTimePicker();
             TextEditName();
             ButtonEditName();
+        }
+
+        // ADD O DATE TIME PICKER DENTRO DO DATAGRIDVIEW 
+        void AddDateTimePicker()
+        {
+            DataGridView[] dataGridViews = { dataGridView1, dataGridView2, dataGridView3, dataGridView4, dataGridView5, dataGridView6, dataGridView7, dataGridView8, dataGridView9, dataGridView10 };
+
+            for (int i = 0; i < dataGridViews.Length; i++)
+            {
+                dtp[i] = new DateTimePicker();
+                dataGridViews[i].Controls.Add(dtp[i]);
+                dtp[i].Visible = false;
+                dtp[i].Format = DateTimePickerFormat.Custom;
+                dtp[i].TextChanged += new EventHandler(dtp_TextChange);
+            }
         }
 
         // TODOS OS TEXTBOX EDIT NOME DO MEMBRO DA FAMILIA
