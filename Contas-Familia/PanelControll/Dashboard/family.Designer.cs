@@ -67,6 +67,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_edit_01 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_01 = new System.Windows.Forms.Button();
             this.txt_name_01 = new System.Windows.Forms.Label();
+            this.txt_name_edit_01 = new Contas_Familia.Script.RJTextBox();
             this.txt_total_01 = new System.Windows.Forms.Label();
             this.bt_save_01 = new System.Windows.Forms.Button();
             this.lb_total_01 = new System.Windows.Forms.Label();
@@ -79,135 +80,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_content_01 = new System.Windows.Forms.Panel();
             this.pl_content_02 = new System.Windows.Forms.Panel();
             this.pl_family_02 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.bt_save_edit_02 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_02 = new System.Windows.Forms.Button();
-            this.txt_name_02 = new System.Windows.Forms.Label();
-            this.txt_total_02 = new System.Windows.Forms.Label();
-            this.bt_save_02 = new System.Windows.Forms.Button();
-            this.lb_total_02 = new System.Windows.Forms.Label();
-            this.bt_edit_02 = new FontAwesome.Sharp.IconButton();
-            this.bt_cancel_02 = new System.Windows.Forms.Button();
-            this.bt_delete_02 = new System.Windows.Forms.Button();
-            this.pl_content_03 = new System.Windows.Forms.Panel();
-            this.pl_family_03 = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.bt_save_edit_03 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_03 = new System.Windows.Forms.Button();
-            this.txt_name_03 = new System.Windows.Forms.Label();
-            this.txt_total_03 = new System.Windows.Forms.Label();
-            this.bt_save_03 = new System.Windows.Forms.Button();
-            this.lb_total_03 = new System.Windows.Forms.Label();
-            this.bt_edit_03 = new FontAwesome.Sharp.IconButton();
-            this.bt_cancel_03 = new System.Windows.Forms.Button();
-            this.bt_delete_03 = new System.Windows.Forms.Button();
-            this.pl_content_04 = new System.Windows.Forms.Panel();
-            this.pl_family_04 = new System.Windows.Forms.Panel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.bt_save_edit_04 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_04 = new System.Windows.Forms.Button();
-            this.txt_name_04 = new System.Windows.Forms.Label();
-            this.txt_total_04 = new System.Windows.Forms.Label();
-            this.bt_save_04 = new System.Windows.Forms.Button();
-            this.lb_total_04 = new System.Windows.Forms.Label();
-            this.bt_edit_04 = new FontAwesome.Sharp.IconButton();
-            this.bt_cancel_04 = new System.Windows.Forms.Button();
-            this.bt_delete_04 = new System.Windows.Forms.Button();
-            this.pl_content_05 = new System.Windows.Forms.Panel();
-            this.pl_family_05 = new System.Windows.Forms.Panel();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.bt_save_edit_05 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_05 = new System.Windows.Forms.Button();
-            this.txt_name_05 = new System.Windows.Forms.Label();
-            this.txt_total_05 = new System.Windows.Forms.Label();
-            this.bt_save_05 = new System.Windows.Forms.Button();
-            this.lb_total_05 = new System.Windows.Forms.Label();
-            this.bt_edit_05 = new FontAwesome.Sharp.IconButton();
-            this.bt_cancel_05 = new System.Windows.Forms.Button();
-            this.bt_delete_05 = new System.Windows.Forms.Button();
-            this.pl_content_06 = new System.Windows.Forms.Panel();
-            this.pl_family_06 = new System.Windows.Forms.Panel();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.bt_save_edit_06 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_06 = new System.Windows.Forms.Button();
-            this.txt_name_06 = new System.Windows.Forms.Label();
-            this.txt_total_06 = new System.Windows.Forms.Label();
-            this.bt_save_06 = new System.Windows.Forms.Button();
-            this.lb_total_06 = new System.Windows.Forms.Label();
-            this.bt_edit_06 = new FontAwesome.Sharp.IconButton();
-            this.bt_cancel_06 = new System.Windows.Forms.Button();
-            this.bt_delete_06 = new System.Windows.Forms.Button();
-            this.pl_content_07 = new System.Windows.Forms.Panel();
-            this.pl_family_07 = new System.Windows.Forms.Panel();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.bt_save_edit_07 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_07 = new System.Windows.Forms.Button();
-            this.txt_name_07 = new System.Windows.Forms.Label();
-            this.txt_total_07 = new System.Windows.Forms.Label();
-            this.bt_save_07 = new System.Windows.Forms.Button();
-            this.lb_total_07 = new System.Windows.Forms.Label();
-            this.bt_edit_07 = new FontAwesome.Sharp.IconButton();
-            this.bt_cancel_07 = new System.Windows.Forms.Button();
-            this.bt_delete_07 = new System.Windows.Forms.Button();
-            this.pl_content_08 = new System.Windows.Forms.Panel();
-            this.pl_family_08 = new System.Windows.Forms.Panel();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.bt_save_edit_08 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_08 = new System.Windows.Forms.Button();
-            this.txt_name_08 = new System.Windows.Forms.Label();
-            this.txt_total_08 = new System.Windows.Forms.Label();
-            this.bt_save_08 = new System.Windows.Forms.Button();
-            this.lb_total_08 = new System.Windows.Forms.Label();
-            this.bt_edit_08 = new FontAwesome.Sharp.IconButton();
-            this.bt_cancel_08 = new System.Windows.Forms.Button();
-            this.bt_delete_08 = new System.Windows.Forms.Button();
-            this.pl_content_09 = new System.Windows.Forms.Panel();
-            this.pl_family_09 = new System.Windows.Forms.Panel();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
-            this.bt_save_edit_09 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_09 = new System.Windows.Forms.Button();
-            this.txt_name_09 = new System.Windows.Forms.Label();
-            this.txt_total_09 = new System.Windows.Forms.Label();
-            this.bt_save_09 = new System.Windows.Forms.Button();
-            this.lb_total_09 = new System.Windows.Forms.Label();
-            this.bt_edit_09 = new FontAwesome.Sharp.IconButton();
-            this.bt_cancel_09 = new System.Windows.Forms.Button();
-            this.bt_delete_09 = new System.Windows.Forms.Button();
-            this.pl_content_10 = new System.Windows.Forms.Panel();
-            this.pl_family_10 = new System.Windows.Forms.Panel();
-            this.dataGridView10 = new System.Windows.Forms.DataGridView();
-            this.bt_save_edit_10 = new System.Windows.Forms.Button();
-            this.bt_cancel_edit_10 = new System.Windows.Forms.Button();
-            this.txt_name_10 = new System.Windows.Forms.Label();
-            this.txt_total_10 = new System.Windows.Forms.Label();
-            this.bt_save_10 = new System.Windows.Forms.Button();
-            this.lb_total_10 = new System.Windows.Forms.Label();
-            this.bt_edit_10 = new FontAwesome.Sharp.IconButton();
-            this.bt_cancel_10 = new System.Windows.Forms.Button();
-            this.bt_delete_10 = new System.Windows.Forms.Button();
-            this.pl_add = new System.Windows.Forms.Panel();
-            this.lb_alert_member = new System.Windows.Forms.Label();
-            this.pl_add_family_member = new System.Windows.Forms.Panel();
-            this.bt_cancel = new System.Windows.Forms.Button();
-            this.bt_save = new System.Windows.Forms.Button();
-            this.bt_add = new System.Windows.Forms.Button();
-            this.pl_null = new System.Windows.Forms.Panel();
-            this.lb_table_member_family = new System.Windows.Forms.Label();
-            this.dgv_family_member = new System.Windows.Forms.DataGridView();
-            this.pl_table_member_family = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txt_name_edit_10 = new Contas_Familia.Script.RJTextBox();
-            this.txt_name_edit_09 = new Contas_Familia.Script.RJTextBox();
-            this.txt_name_edit_08 = new Contas_Familia.Script.RJTextBox();
-            this.txt_name_edit_07 = new Contas_Familia.Script.RJTextBox();
-            this.txt_name_edit_06 = new Contas_Familia.Script.RJTextBox();
-            this.txt_name_edit_05 = new Contas_Familia.Script.RJTextBox();
-            this.txt_name_edit_04 = new Contas_Familia.Script.RJTextBox();
-            this.txt_name_edit_03 = new Contas_Familia.Script.RJTextBox();
-            this.txt_name_edit_02 = new Contas_Familia.Script.RJTextBox();
-            this.txt_name_edit_01 = new Contas_Familia.Script.RJTextBox();
-            this.txt_add_family_name = new Contas_Familia.Script.RJTextBox();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -221,6 +94,19 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bt_save_edit_02 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_02 = new System.Windows.Forms.Button();
+            this.txt_name_02 = new System.Windows.Forms.Label();
+            this.txt_name_edit_02 = new Contas_Familia.Script.RJTextBox();
+            this.txt_total_02 = new System.Windows.Forms.Label();
+            this.bt_save_02 = new System.Windows.Forms.Button();
+            this.lb_total_02 = new System.Windows.Forms.Label();
+            this.bt_edit_02 = new FontAwesome.Sharp.IconButton();
+            this.bt_cancel_02 = new System.Windows.Forms.Button();
+            this.bt_delete_02 = new System.Windows.Forms.Button();
+            this.pl_content_03 = new System.Windows.Forms.Panel();
+            this.pl_family_03 = new System.Windows.Forms.Panel();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -234,6 +120,19 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bt_save_edit_03 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_03 = new System.Windows.Forms.Button();
+            this.txt_name_03 = new System.Windows.Forms.Label();
+            this.txt_name_edit_03 = new Contas_Familia.Script.RJTextBox();
+            this.txt_total_03 = new System.Windows.Forms.Label();
+            this.bt_save_03 = new System.Windows.Forms.Button();
+            this.lb_total_03 = new System.Windows.Forms.Label();
+            this.bt_edit_03 = new FontAwesome.Sharp.IconButton();
+            this.bt_cancel_03 = new System.Windows.Forms.Button();
+            this.bt_delete_03 = new System.Windows.Forms.Button();
+            this.pl_content_04 = new System.Windows.Forms.Panel();
+            this.pl_family_04 = new System.Windows.Forms.Panel();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.dataGridViewComboBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -247,6 +146,19 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bt_save_edit_04 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_04 = new System.Windows.Forms.Button();
+            this.txt_name_04 = new System.Windows.Forms.Label();
+            this.txt_name_edit_04 = new Contas_Familia.Script.RJTextBox();
+            this.txt_total_04 = new System.Windows.Forms.Label();
+            this.bt_save_04 = new System.Windows.Forms.Button();
+            this.lb_total_04 = new System.Windows.Forms.Label();
+            this.bt_edit_04 = new FontAwesome.Sharp.IconButton();
+            this.bt_cancel_04 = new System.Windows.Forms.Button();
+            this.bt_delete_04 = new System.Windows.Forms.Button();
+            this.pl_content_05 = new System.Windows.Forms.Panel();
+            this.pl_family_05 = new System.Windows.Forms.Panel();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridViewComboBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -260,6 +172,19 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bt_save_edit_05 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_05 = new System.Windows.Forms.Button();
+            this.txt_name_05 = new System.Windows.Forms.Label();
+            this.txt_name_edit_05 = new Contas_Familia.Script.RJTextBox();
+            this.txt_total_05 = new System.Windows.Forms.Label();
+            this.bt_save_05 = new System.Windows.Forms.Button();
+            this.lb_total_05 = new System.Windows.Forms.Label();
+            this.bt_edit_05 = new FontAwesome.Sharp.IconButton();
+            this.bt_cancel_05 = new System.Windows.Forms.Button();
+            this.bt_delete_05 = new System.Windows.Forms.Button();
+            this.pl_content_06 = new System.Windows.Forms.Panel();
+            this.pl_family_06 = new System.Windows.Forms.Panel();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridViewComboBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -273,6 +198,19 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bt_save_edit_06 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_06 = new System.Windows.Forms.Button();
+            this.txt_name_06 = new System.Windows.Forms.Label();
+            this.txt_name_edit_06 = new Contas_Familia.Script.RJTextBox();
+            this.txt_total_06 = new System.Windows.Forms.Label();
+            this.bt_save_06 = new System.Windows.Forms.Button();
+            this.lb_total_06 = new System.Windows.Forms.Label();
+            this.bt_edit_06 = new FontAwesome.Sharp.IconButton();
+            this.bt_cancel_06 = new System.Windows.Forms.Button();
+            this.bt_delete_06 = new System.Windows.Forms.Button();
+            this.pl_content_07 = new System.Windows.Forms.Panel();
+            this.pl_family_07 = new System.Windows.Forms.Panel();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.dataGridViewComboBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -286,6 +224,19 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bt_save_edit_07 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_07 = new System.Windows.Forms.Button();
+            this.txt_name_07 = new System.Windows.Forms.Label();
+            this.txt_name_edit_07 = new Contas_Familia.Script.RJTextBox();
+            this.txt_total_07 = new System.Windows.Forms.Label();
+            this.bt_save_07 = new System.Windows.Forms.Button();
+            this.lb_total_07 = new System.Windows.Forms.Label();
+            this.bt_edit_07 = new FontAwesome.Sharp.IconButton();
+            this.bt_cancel_07 = new System.Windows.Forms.Button();
+            this.bt_delete_07 = new System.Windows.Forms.Button();
+            this.pl_content_08 = new System.Windows.Forms.Panel();
+            this.pl_family_08 = new System.Windows.Forms.Panel();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.dataGridViewComboBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -299,6 +250,19 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn76 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn7 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bt_save_edit_08 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_08 = new System.Windows.Forms.Button();
+            this.txt_name_08 = new System.Windows.Forms.Label();
+            this.txt_name_edit_08 = new Contas_Familia.Script.RJTextBox();
+            this.txt_total_08 = new System.Windows.Forms.Label();
+            this.bt_save_08 = new System.Windows.Forms.Button();
+            this.lb_total_08 = new System.Windows.Forms.Label();
+            this.bt_edit_08 = new FontAwesome.Sharp.IconButton();
+            this.bt_cancel_08 = new System.Windows.Forms.Button();
+            this.bt_delete_08 = new System.Windows.Forms.Button();
+            this.pl_content_09 = new System.Windows.Forms.Panel();
+            this.pl_family_09 = new System.Windows.Forms.Panel();
+            this.dataGridView9 = new System.Windows.Forms.DataGridView();
             this.dataGridViewComboBoxColumn8 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -312,6 +276,19 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn87 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn88 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn8 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bt_save_edit_09 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_09 = new System.Windows.Forms.Button();
+            this.txt_name_09 = new System.Windows.Forms.Label();
+            this.txt_name_edit_09 = new Contas_Familia.Script.RJTextBox();
+            this.txt_total_09 = new System.Windows.Forms.Label();
+            this.bt_save_09 = new System.Windows.Forms.Button();
+            this.lb_total_09 = new System.Windows.Forms.Label();
+            this.bt_edit_09 = new FontAwesome.Sharp.IconButton();
+            this.bt_cancel_09 = new System.Windows.Forms.Button();
+            this.bt_delete_09 = new System.Windows.Forms.Button();
+            this.pl_content_10 = new System.Windows.Forms.Panel();
+            this.pl_family_10 = new System.Windows.Forms.Panel();
+            this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.dataGridViewComboBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn91 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn92 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -325,6 +302,28 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn98 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn99 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn9 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bt_save_edit_10 = new System.Windows.Forms.Button();
+            this.bt_cancel_edit_10 = new System.Windows.Forms.Button();
+            this.txt_name_10 = new System.Windows.Forms.Label();
+            this.txt_name_edit_10 = new Contas_Familia.Script.RJTextBox();
+            this.txt_total_10 = new System.Windows.Forms.Label();
+            this.bt_save_10 = new System.Windows.Forms.Button();
+            this.lb_total_10 = new System.Windows.Forms.Label();
+            this.bt_edit_10 = new FontAwesome.Sharp.IconButton();
+            this.bt_cancel_10 = new System.Windows.Forms.Button();
+            this.bt_delete_10 = new System.Windows.Forms.Button();
+            this.pl_add = new System.Windows.Forms.Panel();
+            this.lb_alert_member = new System.Windows.Forms.Label();
+            this.pl_add_family_member = new System.Windows.Forms.Panel();
+            this.txt_add_family_name = new Contas_Familia.Script.RJTextBox();
+            this.bt_cancel = new System.Windows.Forms.Button();
+            this.bt_save = new System.Windows.Forms.Button();
+            this.bt_add = new System.Windows.Forms.Button();
+            this.pl_null = new System.Windows.Forms.Panel();
+            this.lb_table_member_family = new System.Windows.Forms.Label();
+            this.dgv_family_member = new System.Windows.Forms.DataGridView();
+            this.pl_table_member_family = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -442,6 +441,30 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_01, "Double click to edit NAME");
             this.txt_name_01.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_01_MouseDoubleClick);
+            // 
+            // txt_name_edit_01
+            // 
+            this.txt_name_edit_01.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_01.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_01.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_01.BorderRadius = 0;
+            this.txt_name_edit_01.BorderSize = 1;
+            this.txt_name_edit_01.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_name_edit_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_01.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_01.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_01.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_01.Multiline = false;
+            this.txt_name_edit_01.Name = "txt_name_edit_01";
+            this.txt_name_edit_01.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_01.PasswordChar = false;
+            this.txt_name_edit_01.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_01.PlaceholderText = "";
+            this.txt_name_edit_01.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_01.TabIndex = 82;
+            this.txt_name_edit_01.Texts = "";
+            this.txt_name_edit_01.UnderlinedStyle = false;
+            this.txt_name_edit_01.Leave += new System.EventHandler(this.txt_name_edit_01_Leave);
             // 
             // txt_total_01
             // 
@@ -633,7 +656,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_02.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_family_02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
-            this.pl_family_02.Controls.Add(this.label1);
             this.pl_family_02.Controls.Add(this.dataGridView2);
             this.pl_family_02.Controls.Add(this.bt_save_edit_02);
             this.pl_family_02.Controls.Add(this.bt_cancel_edit_02);
@@ -649,18 +671,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_family_02.Name = "pl_family_02";
             this.pl_family_02.Size = new System.Drawing.Size(1171, 480);
             this.pl_family_02.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(741, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 25);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "2";
             // 
             // dataGridView2
             // 
@@ -722,6 +732,100 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView2_Scroll);
             this.dataGridView2.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView2_UserDeletingRow);
             // 
+            // dataGridViewComboBoxColumn1
+            // 
+            this.dataGridViewComboBoxColumn1.DataPropertyName = "credit_card_name";
+            this.dataGridViewComboBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewComboBoxColumn1.FillWeight = 32.86738F;
+            this.dataGridViewComboBoxColumn1.HeaderText = "CARTÃO";
+            this.dataGridViewComboBoxColumn1.Items.AddRange(new object[] {
+            "NU BANK"});
+            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "credit_card_payday";
+            this.dataGridViewTextBoxColumn3.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "VENCIMENTO";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "store_name";
+            this.dataGridViewTextBoxColumn4.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "LOJA";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "product_name";
+            this.dataGridViewTextBoxColumn5.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "PRODUTOS";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "credit_card_installment";
+            this.dataGridViewTextBoxColumn6.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "PARCELAMENTO";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "total_payble";
+            this.dataGridViewTextBoxColumn7.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "VALOR TOTAL";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "total_payable_installment";
+            this.dataGridViewTextBoxColumn8.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn8.HeaderText = "VALOR PARCELADO";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "family_member";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Family Member";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_register_family_member";
+            this.dataGridViewTextBoxColumn1.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID Register Family Member";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "id_register_family";
+            this.dataGridViewTextBoxColumn9.HeaderText = "ID Register Family";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "id_credit_card";
+            this.dataGridViewTextBoxColumn10.HeaderText = "ID Credit Card";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "id_products";
+            this.dataGridViewTextBoxColumn11.HeaderText = "ID Products";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Visible = false;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.FillWeight = 15F;
+            this.dataGridViewCheckBoxColumn1.HeaderText = "PAGO";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
             // bt_save_edit_02
             // 
             this.bt_save_edit_02.BackColor = System.Drawing.Color.OliveDrab;
@@ -767,6 +871,29 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_02, "Double click to edit NAME");
             this.txt_name_02.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_02_MouseDoubleClick);
+            // 
+            // txt_name_edit_02
+            // 
+            this.txt_name_edit_02.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_02.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_02.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_02.BorderRadius = 0;
+            this.txt_name_edit_02.BorderSize = 1;
+            this.txt_name_edit_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_02.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_02.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_02.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_02.Multiline = false;
+            this.txt_name_edit_02.Name = "txt_name_edit_02";
+            this.txt_name_edit_02.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_02.PasswordChar = false;
+            this.txt_name_edit_02.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_02.PlaceholderText = "";
+            this.txt_name_edit_02.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_02.TabIndex = 83;
+            this.txt_name_edit_02.Texts = "";
+            this.txt_name_edit_02.UnderlinedStyle = false;
+            this.txt_name_edit_02.Leave += new System.EventHandler(this.txt_name_edit_02_Leave);
             // 
             // txt_total_02
             // 
@@ -955,6 +1082,100 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView3.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView3_Scroll);
             this.dataGridView3.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView3_UserDeletingRow);
             // 
+            // dataGridViewComboBoxColumn2
+            // 
+            this.dataGridViewComboBoxColumn2.DataPropertyName = "credit_card_name";
+            this.dataGridViewComboBoxColumn2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewComboBoxColumn2.FillWeight = 32.86738F;
+            this.dataGridViewComboBoxColumn2.HeaderText = "CARTÃO";
+            this.dataGridViewComboBoxColumn2.Items.AddRange(new object[] {
+            "NU BANK"});
+            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "credit_card_payday";
+            this.dataGridViewTextBoxColumn14.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn14.HeaderText = "VENCIMENTO";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "store_name";
+            this.dataGridViewTextBoxColumn15.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn15.HeaderText = "LOJA";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "product_name";
+            this.dataGridViewTextBoxColumn16.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn16.HeaderText = "PRODUTOS";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "credit_card_installment";
+            this.dataGridViewTextBoxColumn17.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn17.HeaderText = "PARCELAMENTO";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "total_payble";
+            this.dataGridViewTextBoxColumn18.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn18.HeaderText = "VALOR TOTAL";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "total_payable_installment";
+            this.dataGridViewTextBoxColumn19.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn19.HeaderText = "VALOR PARCELADO";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "family_member";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Family Member";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "id_register_family_member";
+            this.dataGridViewTextBoxColumn12.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn12.HeaderText = "ID Register Family Member";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "id_register_family";
+            this.dataGridViewTextBoxColumn20.HeaderText = "ID Register Family";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "id_credit_card";
+            this.dataGridViewTextBoxColumn21.HeaderText = "ID Credit Card";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "id_products";
+            this.dataGridViewTextBoxColumn22.HeaderText = "ID Products";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Visible = false;
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.FillWeight = 15F;
+            this.dataGridViewCheckBoxColumn2.HeaderText = "PAGO";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            // 
             // bt_save_edit_03
             // 
             this.bt_save_edit_03.BackColor = System.Drawing.Color.OliveDrab;
@@ -1000,6 +1221,29 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_03, "Double click to edit NAME");
             this.txt_name_03.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_03_MouseDoubleClick);
+            // 
+            // txt_name_edit_03
+            // 
+            this.txt_name_edit_03.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_03.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_03.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_03.BorderRadius = 0;
+            this.txt_name_edit_03.BorderSize = 1;
+            this.txt_name_edit_03.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_03.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_03.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_03.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_03.Multiline = false;
+            this.txt_name_edit_03.Name = "txt_name_edit_03";
+            this.txt_name_edit_03.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_03.PasswordChar = false;
+            this.txt_name_edit_03.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_03.PlaceholderText = "";
+            this.txt_name_edit_03.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_03.TabIndex = 84;
+            this.txt_name_edit_03.Texts = "";
+            this.txt_name_edit_03.UnderlinedStyle = false;
+            this.txt_name_edit_03.Leave += new System.EventHandler(this.txt_name_edit_03_Leave);
             // 
             // txt_total_03
             // 
@@ -1188,6 +1432,100 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView4.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView4_Scroll);
             this.dataGridView4.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView4_UserDeletingRow);
             // 
+            // dataGridViewComboBoxColumn3
+            // 
+            this.dataGridViewComboBoxColumn3.DataPropertyName = "credit_card_name";
+            this.dataGridViewComboBoxColumn3.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewComboBoxColumn3.FillWeight = 32.86738F;
+            this.dataGridViewComboBoxColumn3.HeaderText = "CARTÃO";
+            this.dataGridViewComboBoxColumn3.Items.AddRange(new object[] {
+            "NU BANK"});
+            this.dataGridViewComboBoxColumn3.Name = "dataGridViewComboBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "credit_card_payday";
+            this.dataGridViewTextBoxColumn25.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn25.HeaderText = "VENCIMENTO";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "store_name";
+            this.dataGridViewTextBoxColumn26.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn26.HeaderText = "LOJA";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "product_name";
+            this.dataGridViewTextBoxColumn27.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn27.HeaderText = "PRODUTOS";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "credit_card_installment";
+            this.dataGridViewTextBoxColumn28.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn28.HeaderText = "PARCELAMENTO";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "total_payble";
+            this.dataGridViewTextBoxColumn29.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn29.HeaderText = "VALOR TOTAL";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "total_payable_installment";
+            this.dataGridViewTextBoxColumn30.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn30.HeaderText = "VALOR PARCELADO";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "family_member";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Family Member";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "id_register_family_member";
+            this.dataGridViewTextBoxColumn23.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn23.HeaderText = "ID Register Family Member";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "id_register_family";
+            this.dataGridViewTextBoxColumn31.HeaderText = "ID Register Family";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "id_credit_card";
+            this.dataGridViewTextBoxColumn32.HeaderText = "ID Credit Card";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "id_products";
+            this.dataGridViewTextBoxColumn33.HeaderText = "ID Products";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.Visible = false;
+            // 
+            // dataGridViewCheckBoxColumn3
+            // 
+            this.dataGridViewCheckBoxColumn3.FillWeight = 15F;
+            this.dataGridViewCheckBoxColumn3.HeaderText = "PAGO";
+            this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
+            // 
             // bt_save_edit_04
             // 
             this.bt_save_edit_04.BackColor = System.Drawing.Color.OliveDrab;
@@ -1233,6 +1571,29 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_04, "Double click to edit NAME");
             this.txt_name_04.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_04_MouseDoubleClick);
+            // 
+            // txt_name_edit_04
+            // 
+            this.txt_name_edit_04.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_04.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_04.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_04.BorderRadius = 0;
+            this.txt_name_edit_04.BorderSize = 1;
+            this.txt_name_edit_04.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_04.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_04.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_04.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_04.Multiline = false;
+            this.txt_name_edit_04.Name = "txt_name_edit_04";
+            this.txt_name_edit_04.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_04.PasswordChar = false;
+            this.txt_name_edit_04.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_04.PlaceholderText = "";
+            this.txt_name_edit_04.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_04.TabIndex = 93;
+            this.txt_name_edit_04.Texts = "";
+            this.txt_name_edit_04.UnderlinedStyle = false;
+            this.txt_name_edit_04.Leave += new System.EventHandler(this.txt_name_edit_04_Leave);
             // 
             // txt_total_04
             // 
@@ -1421,6 +1782,100 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView5.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView5_Scroll);
             this.dataGridView5.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView5_UserDeletingRow);
             // 
+            // dataGridViewComboBoxColumn4
+            // 
+            this.dataGridViewComboBoxColumn4.DataPropertyName = "credit_card_name";
+            this.dataGridViewComboBoxColumn4.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewComboBoxColumn4.FillWeight = 32.86738F;
+            this.dataGridViewComboBoxColumn4.HeaderText = "CARTÃO";
+            this.dataGridViewComboBoxColumn4.Items.AddRange(new object[] {
+            "NU BANK"});
+            this.dataGridViewComboBoxColumn4.Name = "dataGridViewComboBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "credit_card_payday";
+            this.dataGridViewTextBoxColumn36.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn36.HeaderText = "VENCIMENTO";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "store_name";
+            this.dataGridViewTextBoxColumn37.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn37.HeaderText = "LOJA";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "product_name";
+            this.dataGridViewTextBoxColumn38.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn38.HeaderText = "PRODUTOS";
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.DataPropertyName = "credit_card_installment";
+            this.dataGridViewTextBoxColumn39.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn39.HeaderText = "PARCELAMENTO";
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.DataPropertyName = "total_payble";
+            this.dataGridViewTextBoxColumn40.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn40.HeaderText = "VALOR TOTAL";
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.DataPropertyName = "total_payable_installment";
+            this.dataGridViewTextBoxColumn41.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn41.HeaderText = "VALOR PARCELADO";
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "family_member";
+            this.dataGridViewTextBoxColumn35.HeaderText = "Family Member";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            this.dataGridViewTextBoxColumn35.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "id_register_family_member";
+            this.dataGridViewTextBoxColumn34.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn34.HeaderText = "ID Register Family Member";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.DataPropertyName = "id_register_family";
+            this.dataGridViewTextBoxColumn42.HeaderText = "ID Register Family";
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            this.dataGridViewTextBoxColumn42.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            this.dataGridViewTextBoxColumn43.DataPropertyName = "id_credit_card";
+            this.dataGridViewTextBoxColumn43.HeaderText = "ID Credit Card";
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            this.dataGridViewTextBoxColumn43.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this.dataGridViewTextBoxColumn44.DataPropertyName = "id_products";
+            this.dataGridViewTextBoxColumn44.HeaderText = "ID Products";
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            this.dataGridViewTextBoxColumn44.Visible = false;
+            // 
+            // dataGridViewCheckBoxColumn4
+            // 
+            this.dataGridViewCheckBoxColumn4.FillWeight = 15F;
+            this.dataGridViewCheckBoxColumn4.HeaderText = "PAGO";
+            this.dataGridViewCheckBoxColumn4.Name = "dataGridViewCheckBoxColumn4";
+            // 
             // bt_save_edit_05
             // 
             this.bt_save_edit_05.BackColor = System.Drawing.Color.OliveDrab;
@@ -1466,6 +1921,29 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_05, "Double click to edit NAME");
             this.txt_name_05.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_05_MouseDoubleClick);
+            // 
+            // txt_name_edit_05
+            // 
+            this.txt_name_edit_05.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_05.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_05.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_05.BorderRadius = 0;
+            this.txt_name_edit_05.BorderSize = 1;
+            this.txt_name_edit_05.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_05.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_05.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_05.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_05.Multiline = false;
+            this.txt_name_edit_05.Name = "txt_name_edit_05";
+            this.txt_name_edit_05.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_05.PasswordChar = false;
+            this.txt_name_edit_05.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_05.PlaceholderText = "";
+            this.txt_name_edit_05.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_05.TabIndex = 92;
+            this.txt_name_edit_05.Texts = "";
+            this.txt_name_edit_05.UnderlinedStyle = false;
+            this.txt_name_edit_05.Leave += new System.EventHandler(this.txt_name_edit_05_Leave);
             // 
             // txt_total_05
             // 
@@ -1654,6 +2132,100 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView6.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView6_Scroll);
             this.dataGridView6.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView6_UserDeletingRow);
             // 
+            // dataGridViewComboBoxColumn5
+            // 
+            this.dataGridViewComboBoxColumn5.DataPropertyName = "credit_card_name";
+            this.dataGridViewComboBoxColumn5.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewComboBoxColumn5.FillWeight = 32.86738F;
+            this.dataGridViewComboBoxColumn5.HeaderText = "CARTÃO";
+            this.dataGridViewComboBoxColumn5.Items.AddRange(new object[] {
+            "NU BANK"});
+            this.dataGridViewComboBoxColumn5.Name = "dataGridViewComboBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "credit_card_payday";
+            this.dataGridViewTextBoxColumn47.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn47.HeaderText = "VENCIMENTO";
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            // 
+            // dataGridViewTextBoxColumn48
+            // 
+            this.dataGridViewTextBoxColumn48.DataPropertyName = "store_name";
+            this.dataGridViewTextBoxColumn48.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn48.HeaderText = "LOJA";
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            // 
+            // dataGridViewTextBoxColumn49
+            // 
+            this.dataGridViewTextBoxColumn49.DataPropertyName = "product_name";
+            this.dataGridViewTextBoxColumn49.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn49.HeaderText = "PRODUTOS";
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            // 
+            // dataGridViewTextBoxColumn50
+            // 
+            this.dataGridViewTextBoxColumn50.DataPropertyName = "credit_card_installment";
+            this.dataGridViewTextBoxColumn50.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn50.HeaderText = "PARCELAMENTO";
+            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
+            // 
+            // dataGridViewTextBoxColumn51
+            // 
+            this.dataGridViewTextBoxColumn51.DataPropertyName = "total_payble";
+            this.dataGridViewTextBoxColumn51.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn51.HeaderText = "VALOR TOTAL";
+            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
+            // 
+            // dataGridViewTextBoxColumn52
+            // 
+            this.dataGridViewTextBoxColumn52.DataPropertyName = "total_payable_installment";
+            this.dataGridViewTextBoxColumn52.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn52.HeaderText = "VALOR PARCELADO";
+            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
+            // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.DataPropertyName = "family_member";
+            this.dataGridViewTextBoxColumn46.HeaderText = "Family Member";
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            this.dataGridViewTextBoxColumn46.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.DataPropertyName = "id_register_family_member";
+            this.dataGridViewTextBoxColumn45.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn45.HeaderText = "ID Register Family Member";
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            this.dataGridViewTextBoxColumn45.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn53
+            // 
+            this.dataGridViewTextBoxColumn53.DataPropertyName = "id_register_family";
+            this.dataGridViewTextBoxColumn53.HeaderText = "ID Register Family";
+            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
+            this.dataGridViewTextBoxColumn53.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn54
+            // 
+            this.dataGridViewTextBoxColumn54.DataPropertyName = "id_credit_card";
+            this.dataGridViewTextBoxColumn54.HeaderText = "ID Credit Card";
+            this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
+            this.dataGridViewTextBoxColumn54.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn55
+            // 
+            this.dataGridViewTextBoxColumn55.DataPropertyName = "id_products";
+            this.dataGridViewTextBoxColumn55.HeaderText = "ID Products";
+            this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
+            this.dataGridViewTextBoxColumn55.Visible = false;
+            // 
+            // dataGridViewCheckBoxColumn5
+            // 
+            this.dataGridViewCheckBoxColumn5.FillWeight = 15F;
+            this.dataGridViewCheckBoxColumn5.HeaderText = "PAGO";
+            this.dataGridViewCheckBoxColumn5.Name = "dataGridViewCheckBoxColumn5";
+            // 
             // bt_save_edit_06
             // 
             this.bt_save_edit_06.BackColor = System.Drawing.Color.OliveDrab;
@@ -1699,6 +2271,29 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_06, "Double click to edit NAME");
             this.txt_name_06.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_06_MouseDoubleClick);
+            // 
+            // txt_name_edit_06
+            // 
+            this.txt_name_edit_06.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_06.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_06.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_06.BorderRadius = 0;
+            this.txt_name_edit_06.BorderSize = 1;
+            this.txt_name_edit_06.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_06.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_06.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_06.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_06.Multiline = false;
+            this.txt_name_edit_06.Name = "txt_name_edit_06";
+            this.txt_name_edit_06.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_06.PasswordChar = false;
+            this.txt_name_edit_06.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_06.PlaceholderText = "";
+            this.txt_name_edit_06.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_06.TabIndex = 91;
+            this.txt_name_edit_06.Texts = "";
+            this.txt_name_edit_06.UnderlinedStyle = false;
+            this.txt_name_edit_06.Leave += new System.EventHandler(this.txt_name_edit_06_Leave);
             // 
             // txt_total_06
             // 
@@ -1887,6 +2482,100 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView7.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView7_Scroll);
             this.dataGridView7.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView7_UserDeletingRow);
             // 
+            // dataGridViewComboBoxColumn6
+            // 
+            this.dataGridViewComboBoxColumn6.DataPropertyName = "credit_card_name";
+            this.dataGridViewComboBoxColumn6.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewComboBoxColumn6.FillWeight = 32.86738F;
+            this.dataGridViewComboBoxColumn6.HeaderText = "CARTÃO";
+            this.dataGridViewComboBoxColumn6.Items.AddRange(new object[] {
+            "NU BANK"});
+            this.dataGridViewComboBoxColumn6.Name = "dataGridViewComboBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn58
+            // 
+            this.dataGridViewTextBoxColumn58.DataPropertyName = "credit_card_payday";
+            this.dataGridViewTextBoxColumn58.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn58.HeaderText = "VENCIMENTO";
+            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
+            // 
+            // dataGridViewTextBoxColumn59
+            // 
+            this.dataGridViewTextBoxColumn59.DataPropertyName = "store_name";
+            this.dataGridViewTextBoxColumn59.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn59.HeaderText = "LOJA";
+            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
+            // 
+            // dataGridViewTextBoxColumn60
+            // 
+            this.dataGridViewTextBoxColumn60.DataPropertyName = "product_name";
+            this.dataGridViewTextBoxColumn60.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn60.HeaderText = "PRODUTOS";
+            this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
+            // 
+            // dataGridViewTextBoxColumn61
+            // 
+            this.dataGridViewTextBoxColumn61.DataPropertyName = "credit_card_installment";
+            this.dataGridViewTextBoxColumn61.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn61.HeaderText = "PARCELAMENTO";
+            this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
+            // 
+            // dataGridViewTextBoxColumn62
+            // 
+            this.dataGridViewTextBoxColumn62.DataPropertyName = "total_payble";
+            this.dataGridViewTextBoxColumn62.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn62.HeaderText = "VALOR TOTAL";
+            this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
+            // 
+            // dataGridViewTextBoxColumn63
+            // 
+            this.dataGridViewTextBoxColumn63.DataPropertyName = "total_payable_installment";
+            this.dataGridViewTextBoxColumn63.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn63.HeaderText = "VALOR PARCELADO";
+            this.dataGridViewTextBoxColumn63.Name = "dataGridViewTextBoxColumn63";
+            // 
+            // dataGridViewTextBoxColumn57
+            // 
+            this.dataGridViewTextBoxColumn57.DataPropertyName = "family_member";
+            this.dataGridViewTextBoxColumn57.HeaderText = "Family Member";
+            this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
+            this.dataGridViewTextBoxColumn57.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn56
+            // 
+            this.dataGridViewTextBoxColumn56.DataPropertyName = "id_register_family_member";
+            this.dataGridViewTextBoxColumn56.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn56.HeaderText = "ID Register Family Member";
+            this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
+            this.dataGridViewTextBoxColumn56.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn64
+            // 
+            this.dataGridViewTextBoxColumn64.DataPropertyName = "id_register_family";
+            this.dataGridViewTextBoxColumn64.HeaderText = "ID Register Family";
+            this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
+            this.dataGridViewTextBoxColumn64.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn65
+            // 
+            this.dataGridViewTextBoxColumn65.DataPropertyName = "id_credit_card";
+            this.dataGridViewTextBoxColumn65.HeaderText = "ID Credit Card";
+            this.dataGridViewTextBoxColumn65.Name = "dataGridViewTextBoxColumn65";
+            this.dataGridViewTextBoxColumn65.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn66
+            // 
+            this.dataGridViewTextBoxColumn66.DataPropertyName = "id_products";
+            this.dataGridViewTextBoxColumn66.HeaderText = "ID Products";
+            this.dataGridViewTextBoxColumn66.Name = "dataGridViewTextBoxColumn66";
+            this.dataGridViewTextBoxColumn66.Visible = false;
+            // 
+            // dataGridViewCheckBoxColumn6
+            // 
+            this.dataGridViewCheckBoxColumn6.FillWeight = 15F;
+            this.dataGridViewCheckBoxColumn6.HeaderText = "PAGO";
+            this.dataGridViewCheckBoxColumn6.Name = "dataGridViewCheckBoxColumn6";
+            // 
             // bt_save_edit_07
             // 
             this.bt_save_edit_07.BackColor = System.Drawing.Color.OliveDrab;
@@ -1932,6 +2621,29 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_07, "Double click to edit NAME");
             this.txt_name_07.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_07_MouseDoubleClick);
+            // 
+            // txt_name_edit_07
+            // 
+            this.txt_name_edit_07.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_07.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_07.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_07.BorderRadius = 0;
+            this.txt_name_edit_07.BorderSize = 1;
+            this.txt_name_edit_07.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_07.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_07.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_07.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_07.Multiline = false;
+            this.txt_name_edit_07.Name = "txt_name_edit_07";
+            this.txt_name_edit_07.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_07.PasswordChar = false;
+            this.txt_name_edit_07.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_07.PlaceholderText = "";
+            this.txt_name_edit_07.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_07.TabIndex = 90;
+            this.txt_name_edit_07.Texts = "";
+            this.txt_name_edit_07.UnderlinedStyle = false;
+            this.txt_name_edit_07.Leave += new System.EventHandler(this.txt_name_edit_07_Leave);
             // 
             // txt_total_07
             // 
@@ -2120,6 +2832,100 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView8.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView8_Scroll);
             this.dataGridView8.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView8_UserDeletingRow);
             // 
+            // dataGridViewComboBoxColumn7
+            // 
+            this.dataGridViewComboBoxColumn7.DataPropertyName = "credit_card_name";
+            this.dataGridViewComboBoxColumn7.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewComboBoxColumn7.FillWeight = 32.86738F;
+            this.dataGridViewComboBoxColumn7.HeaderText = "CARTÃO";
+            this.dataGridViewComboBoxColumn7.Items.AddRange(new object[] {
+            "NU BANK"});
+            this.dataGridViewComboBoxColumn7.Name = "dataGridViewComboBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn69
+            // 
+            this.dataGridViewTextBoxColumn69.DataPropertyName = "credit_card_payday";
+            this.dataGridViewTextBoxColumn69.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn69.HeaderText = "VENCIMENTO";
+            this.dataGridViewTextBoxColumn69.Name = "dataGridViewTextBoxColumn69";
+            // 
+            // dataGridViewTextBoxColumn70
+            // 
+            this.dataGridViewTextBoxColumn70.DataPropertyName = "store_name";
+            this.dataGridViewTextBoxColumn70.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn70.HeaderText = "LOJA";
+            this.dataGridViewTextBoxColumn70.Name = "dataGridViewTextBoxColumn70";
+            // 
+            // dataGridViewTextBoxColumn71
+            // 
+            this.dataGridViewTextBoxColumn71.DataPropertyName = "product_name";
+            this.dataGridViewTextBoxColumn71.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn71.HeaderText = "PRODUTOS";
+            this.dataGridViewTextBoxColumn71.Name = "dataGridViewTextBoxColumn71";
+            // 
+            // dataGridViewTextBoxColumn72
+            // 
+            this.dataGridViewTextBoxColumn72.DataPropertyName = "credit_card_installment";
+            this.dataGridViewTextBoxColumn72.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn72.HeaderText = "PARCELAMENTO";
+            this.dataGridViewTextBoxColumn72.Name = "dataGridViewTextBoxColumn72";
+            // 
+            // dataGridViewTextBoxColumn73
+            // 
+            this.dataGridViewTextBoxColumn73.DataPropertyName = "total_payble";
+            this.dataGridViewTextBoxColumn73.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn73.HeaderText = "VALOR TOTAL";
+            this.dataGridViewTextBoxColumn73.Name = "dataGridViewTextBoxColumn73";
+            // 
+            // dataGridViewTextBoxColumn74
+            // 
+            this.dataGridViewTextBoxColumn74.DataPropertyName = "total_payable_installment";
+            this.dataGridViewTextBoxColumn74.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn74.HeaderText = "VALOR PARCELADO";
+            this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
+            // 
+            // dataGridViewTextBoxColumn68
+            // 
+            this.dataGridViewTextBoxColumn68.DataPropertyName = "family_member";
+            this.dataGridViewTextBoxColumn68.HeaderText = "Family Member";
+            this.dataGridViewTextBoxColumn68.Name = "dataGridViewTextBoxColumn68";
+            this.dataGridViewTextBoxColumn68.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn67
+            // 
+            this.dataGridViewTextBoxColumn67.DataPropertyName = "id_register_family_member";
+            this.dataGridViewTextBoxColumn67.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn67.HeaderText = "ID Register Family Member";
+            this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
+            this.dataGridViewTextBoxColumn67.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn75
+            // 
+            this.dataGridViewTextBoxColumn75.DataPropertyName = "id_register_family";
+            this.dataGridViewTextBoxColumn75.HeaderText = "ID Register Family";
+            this.dataGridViewTextBoxColumn75.Name = "dataGridViewTextBoxColumn75";
+            this.dataGridViewTextBoxColumn75.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn76
+            // 
+            this.dataGridViewTextBoxColumn76.DataPropertyName = "id_credit_card";
+            this.dataGridViewTextBoxColumn76.HeaderText = "ID Credit Card";
+            this.dataGridViewTextBoxColumn76.Name = "dataGridViewTextBoxColumn76";
+            this.dataGridViewTextBoxColumn76.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn77
+            // 
+            this.dataGridViewTextBoxColumn77.DataPropertyName = "id_products";
+            this.dataGridViewTextBoxColumn77.HeaderText = "ID Products";
+            this.dataGridViewTextBoxColumn77.Name = "dataGridViewTextBoxColumn77";
+            this.dataGridViewTextBoxColumn77.Visible = false;
+            // 
+            // dataGridViewCheckBoxColumn7
+            // 
+            this.dataGridViewCheckBoxColumn7.FillWeight = 15F;
+            this.dataGridViewCheckBoxColumn7.HeaderText = "PAGO";
+            this.dataGridViewCheckBoxColumn7.Name = "dataGridViewCheckBoxColumn7";
+            // 
             // bt_save_edit_08
             // 
             this.bt_save_edit_08.BackColor = System.Drawing.Color.OliveDrab;
@@ -2165,6 +2971,29 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_08, "Double click to edit NAME");
             this.txt_name_08.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_08_MouseDoubleClick);
+            // 
+            // txt_name_edit_08
+            // 
+            this.txt_name_edit_08.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_08.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_08.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_08.BorderRadius = 0;
+            this.txt_name_edit_08.BorderSize = 1;
+            this.txt_name_edit_08.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_08.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_08.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_08.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_08.Multiline = false;
+            this.txt_name_edit_08.Name = "txt_name_edit_08";
+            this.txt_name_edit_08.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_08.PasswordChar = false;
+            this.txt_name_edit_08.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_08.PlaceholderText = "";
+            this.txt_name_edit_08.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_08.TabIndex = 89;
+            this.txt_name_edit_08.Texts = "";
+            this.txt_name_edit_08.UnderlinedStyle = false;
+            this.txt_name_edit_08.Leave += new System.EventHandler(this.txt_name_edit_08_Leave);
             // 
             // txt_total_08
             // 
@@ -2353,6 +3182,100 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView9.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView9_Scroll);
             this.dataGridView9.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView9_UserDeletingRow);
             // 
+            // dataGridViewComboBoxColumn8
+            // 
+            this.dataGridViewComboBoxColumn8.DataPropertyName = "credit_card_name";
+            this.dataGridViewComboBoxColumn8.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewComboBoxColumn8.FillWeight = 32.86738F;
+            this.dataGridViewComboBoxColumn8.HeaderText = "CARTÃO";
+            this.dataGridViewComboBoxColumn8.Items.AddRange(new object[] {
+            "NU BANK"});
+            this.dataGridViewComboBoxColumn8.Name = "dataGridViewComboBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn80
+            // 
+            this.dataGridViewTextBoxColumn80.DataPropertyName = "credit_card_payday";
+            this.dataGridViewTextBoxColumn80.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn80.HeaderText = "VENCIMENTO";
+            this.dataGridViewTextBoxColumn80.Name = "dataGridViewTextBoxColumn80";
+            // 
+            // dataGridViewTextBoxColumn81
+            // 
+            this.dataGridViewTextBoxColumn81.DataPropertyName = "store_name";
+            this.dataGridViewTextBoxColumn81.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn81.HeaderText = "LOJA";
+            this.dataGridViewTextBoxColumn81.Name = "dataGridViewTextBoxColumn81";
+            // 
+            // dataGridViewTextBoxColumn82
+            // 
+            this.dataGridViewTextBoxColumn82.DataPropertyName = "product_name";
+            this.dataGridViewTextBoxColumn82.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn82.HeaderText = "PRODUTOS";
+            this.dataGridViewTextBoxColumn82.Name = "dataGridViewTextBoxColumn82";
+            // 
+            // dataGridViewTextBoxColumn83
+            // 
+            this.dataGridViewTextBoxColumn83.DataPropertyName = "credit_card_installment";
+            this.dataGridViewTextBoxColumn83.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn83.HeaderText = "PARCELAMENTO";
+            this.dataGridViewTextBoxColumn83.Name = "dataGridViewTextBoxColumn83";
+            // 
+            // dataGridViewTextBoxColumn84
+            // 
+            this.dataGridViewTextBoxColumn84.DataPropertyName = "total_payble";
+            this.dataGridViewTextBoxColumn84.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn84.HeaderText = "VALOR TOTAL";
+            this.dataGridViewTextBoxColumn84.Name = "dataGridViewTextBoxColumn84";
+            // 
+            // dataGridViewTextBoxColumn85
+            // 
+            this.dataGridViewTextBoxColumn85.DataPropertyName = "total_payable_installment";
+            this.dataGridViewTextBoxColumn85.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn85.HeaderText = "VALOR PARCELADO";
+            this.dataGridViewTextBoxColumn85.Name = "dataGridViewTextBoxColumn85";
+            // 
+            // dataGridViewTextBoxColumn79
+            // 
+            this.dataGridViewTextBoxColumn79.DataPropertyName = "family_member";
+            this.dataGridViewTextBoxColumn79.HeaderText = "Family Member";
+            this.dataGridViewTextBoxColumn79.Name = "dataGridViewTextBoxColumn79";
+            this.dataGridViewTextBoxColumn79.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn78
+            // 
+            this.dataGridViewTextBoxColumn78.DataPropertyName = "id_register_family_member";
+            this.dataGridViewTextBoxColumn78.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn78.HeaderText = "ID Register Family Member";
+            this.dataGridViewTextBoxColumn78.Name = "dataGridViewTextBoxColumn78";
+            this.dataGridViewTextBoxColumn78.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn86
+            // 
+            this.dataGridViewTextBoxColumn86.DataPropertyName = "id_register_family";
+            this.dataGridViewTextBoxColumn86.HeaderText = "ID Register Family";
+            this.dataGridViewTextBoxColumn86.Name = "dataGridViewTextBoxColumn86";
+            this.dataGridViewTextBoxColumn86.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn87
+            // 
+            this.dataGridViewTextBoxColumn87.DataPropertyName = "id_credit_card";
+            this.dataGridViewTextBoxColumn87.HeaderText = "ID Credit Card";
+            this.dataGridViewTextBoxColumn87.Name = "dataGridViewTextBoxColumn87";
+            this.dataGridViewTextBoxColumn87.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn88
+            // 
+            this.dataGridViewTextBoxColumn88.DataPropertyName = "id_products";
+            this.dataGridViewTextBoxColumn88.HeaderText = "ID Products";
+            this.dataGridViewTextBoxColumn88.Name = "dataGridViewTextBoxColumn88";
+            this.dataGridViewTextBoxColumn88.Visible = false;
+            // 
+            // dataGridViewCheckBoxColumn8
+            // 
+            this.dataGridViewCheckBoxColumn8.FillWeight = 15F;
+            this.dataGridViewCheckBoxColumn8.HeaderText = "PAGO";
+            this.dataGridViewCheckBoxColumn8.Name = "dataGridViewCheckBoxColumn8";
+            // 
             // bt_save_edit_09
             // 
             this.bt_save_edit_09.BackColor = System.Drawing.Color.OliveDrab;
@@ -2398,6 +3321,29 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_09, "Double click to edit NAME");
             this.txt_name_09.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_09_MouseDoubleClick);
+            // 
+            // txt_name_edit_09
+            // 
+            this.txt_name_edit_09.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_09.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_09.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_09.BorderRadius = 0;
+            this.txt_name_edit_09.BorderSize = 1;
+            this.txt_name_edit_09.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_09.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_09.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_09.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_09.Multiline = false;
+            this.txt_name_edit_09.Name = "txt_name_edit_09";
+            this.txt_name_edit_09.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_09.PasswordChar = false;
+            this.txt_name_edit_09.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_09.PlaceholderText = "";
+            this.txt_name_edit_09.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_09.TabIndex = 89;
+            this.txt_name_edit_09.Texts = "";
+            this.txt_name_edit_09.UnderlinedStyle = false;
+            this.txt_name_edit_09.Leave += new System.EventHandler(this.txt_name_edit_09_Leave);
             // 
             // txt_total_09
             // 
@@ -2586,6 +3532,100 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView10.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView10_Scroll);
             this.dataGridView10.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView10_UserDeletingRow);
             // 
+            // dataGridViewComboBoxColumn9
+            // 
+            this.dataGridViewComboBoxColumn9.DataPropertyName = "credit_card_name";
+            this.dataGridViewComboBoxColumn9.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewComboBoxColumn9.FillWeight = 32.86738F;
+            this.dataGridViewComboBoxColumn9.HeaderText = "CARTÃO";
+            this.dataGridViewComboBoxColumn9.Items.AddRange(new object[] {
+            "NU BANK"});
+            this.dataGridViewComboBoxColumn9.Name = "dataGridViewComboBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn91
+            // 
+            this.dataGridViewTextBoxColumn91.DataPropertyName = "credit_card_payday";
+            this.dataGridViewTextBoxColumn91.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn91.HeaderText = "VENCIMENTO";
+            this.dataGridViewTextBoxColumn91.Name = "dataGridViewTextBoxColumn91";
+            // 
+            // dataGridViewTextBoxColumn92
+            // 
+            this.dataGridViewTextBoxColumn92.DataPropertyName = "store_name";
+            this.dataGridViewTextBoxColumn92.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn92.HeaderText = "LOJA";
+            this.dataGridViewTextBoxColumn92.Name = "dataGridViewTextBoxColumn92";
+            // 
+            // dataGridViewTextBoxColumn93
+            // 
+            this.dataGridViewTextBoxColumn93.DataPropertyName = "product_name";
+            this.dataGridViewTextBoxColumn93.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn93.HeaderText = "PRODUTOS";
+            this.dataGridViewTextBoxColumn93.Name = "dataGridViewTextBoxColumn93";
+            // 
+            // dataGridViewTextBoxColumn94
+            // 
+            this.dataGridViewTextBoxColumn94.DataPropertyName = "credit_card_installment";
+            this.dataGridViewTextBoxColumn94.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn94.HeaderText = "PARCELAMENTO";
+            this.dataGridViewTextBoxColumn94.Name = "dataGridViewTextBoxColumn94";
+            // 
+            // dataGridViewTextBoxColumn95
+            // 
+            this.dataGridViewTextBoxColumn95.DataPropertyName = "total_payble";
+            this.dataGridViewTextBoxColumn95.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn95.HeaderText = "VALOR TOTAL";
+            this.dataGridViewTextBoxColumn95.Name = "dataGridViewTextBoxColumn95";
+            // 
+            // dataGridViewTextBoxColumn96
+            // 
+            this.dataGridViewTextBoxColumn96.DataPropertyName = "total_payable_installment";
+            this.dataGridViewTextBoxColumn96.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn96.HeaderText = "VALOR PARCELADO";
+            this.dataGridViewTextBoxColumn96.Name = "dataGridViewTextBoxColumn96";
+            // 
+            // dataGridViewTextBoxColumn90
+            // 
+            this.dataGridViewTextBoxColumn90.DataPropertyName = "family_member";
+            this.dataGridViewTextBoxColumn90.HeaderText = "Family Member";
+            this.dataGridViewTextBoxColumn90.Name = "dataGridViewTextBoxColumn90";
+            this.dataGridViewTextBoxColumn90.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn89
+            // 
+            this.dataGridViewTextBoxColumn89.DataPropertyName = "id_register_family_member";
+            this.dataGridViewTextBoxColumn89.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn89.HeaderText = "ID Register Family Member";
+            this.dataGridViewTextBoxColumn89.Name = "dataGridViewTextBoxColumn89";
+            this.dataGridViewTextBoxColumn89.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn97
+            // 
+            this.dataGridViewTextBoxColumn97.DataPropertyName = "id_register_family";
+            this.dataGridViewTextBoxColumn97.HeaderText = "ID Register Family";
+            this.dataGridViewTextBoxColumn97.Name = "dataGridViewTextBoxColumn97";
+            this.dataGridViewTextBoxColumn97.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn98
+            // 
+            this.dataGridViewTextBoxColumn98.DataPropertyName = "id_credit_card";
+            this.dataGridViewTextBoxColumn98.HeaderText = "ID Credit Card";
+            this.dataGridViewTextBoxColumn98.Name = "dataGridViewTextBoxColumn98";
+            this.dataGridViewTextBoxColumn98.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn99
+            // 
+            this.dataGridViewTextBoxColumn99.DataPropertyName = "id_products";
+            this.dataGridViewTextBoxColumn99.HeaderText = "ID Products";
+            this.dataGridViewTextBoxColumn99.Name = "dataGridViewTextBoxColumn99";
+            this.dataGridViewTextBoxColumn99.Visible = false;
+            // 
+            // dataGridViewCheckBoxColumn9
+            // 
+            this.dataGridViewCheckBoxColumn9.FillWeight = 15F;
+            this.dataGridViewCheckBoxColumn9.HeaderText = "PAGO";
+            this.dataGridViewCheckBoxColumn9.Name = "dataGridViewCheckBoxColumn9";
+            // 
             // bt_save_edit_10
             // 
             this.bt_save_edit_10.BackColor = System.Drawing.Color.OliveDrab;
@@ -2631,6 +3671,29 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_10, "Double click to edit NAME");
             this.txt_name_10.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_10_MouseDoubleClick);
+            // 
+            // txt_name_edit_10
+            // 
+            this.txt_name_edit_10.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_10.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_10.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_10.BorderRadius = 0;
+            this.txt_name_edit_10.BorderSize = 1;
+            this.txt_name_edit_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_10.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_10.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_10.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_10.Multiline = false;
+            this.txt_name_edit_10.Name = "txt_name_edit_10";
+            this.txt_name_edit_10.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_10.PasswordChar = false;
+            this.txt_name_edit_10.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_10.PlaceholderText = "";
+            this.txt_name_edit_10.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_10.TabIndex = 88;
+            this.txt_name_edit_10.Texts = "";
+            this.txt_name_edit_10.UnderlinedStyle = false;
+            this.txt_name_edit_10.Leave += new System.EventHandler(this.txt_name_edit_10_Leave);
             // 
             // txt_total_10
             // 
@@ -2764,6 +3827,30 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_add_family_member.Size = new System.Drawing.Size(1171, 73);
             this.pl_add_family_member.TabIndex = 10;
             // 
+            // txt_add_family_name
+            // 
+            this.txt_add_family_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.txt_add_family_name.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_add_family_name.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_add_family_name.BorderRadius = 0;
+            this.txt_add_family_name.BorderSize = 2;
+            this.txt_add_family_name.Enabled = false;
+            this.txt_add_family_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_add_family_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_add_family_name.Location = new System.Drawing.Point(16, 17);
+            this.txt_add_family_name.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_add_family_name.Multiline = false;
+            this.txt_add_family_name.Name = "txt_add_family_name";
+            this.txt_add_family_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_add_family_name.PasswordChar = false;
+            this.txt_add_family_name.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_add_family_name.PlaceholderText = "";
+            this.txt_add_family_name.Size = new System.Drawing.Size(250, 31);
+            this.txt_add_family_name.TabIndex = 81;
+            this.txt_add_family_name.Texts = "";
+            this.txt_add_family_name.UnderlinedStyle = false;
+            this.txt_add_family_name.Leave += new System.EventHandler(this.txt_add_family_name_Leave);
+            // 
             // bt_cancel
             // 
             this.bt_cancel.BackColor = System.Drawing.Color.LightSlateGray;
@@ -2887,1116 +3974,16 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_table_member_family.TabIndex = 166;
             this.pl_table_member_family.Visible = false;
             // 
-            // txt_name_edit_10
-            // 
-            this.txt_name_edit_10.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_10.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_10.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_10.BorderRadius = 0;
-            this.txt_name_edit_10.BorderSize = 1;
-            this.txt_name_edit_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_10.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_10.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_10.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_10.Multiline = false;
-            this.txt_name_edit_10.Name = "txt_name_edit_10";
-            this.txt_name_edit_10.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_10.PasswordChar = false;
-            this.txt_name_edit_10.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_10.PlaceholderText = "";
-            this.txt_name_edit_10.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_10.TabIndex = 88;
-            this.txt_name_edit_10.Texts = "";
-            this.txt_name_edit_10.UnderlinedStyle = false;
-            this.txt_name_edit_10.Leave += new System.EventHandler(this.txt_name_edit_10_Leave);
-            // 
-            // txt_name_edit_09
-            // 
-            this.txt_name_edit_09.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_09.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_09.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_09.BorderRadius = 0;
-            this.txt_name_edit_09.BorderSize = 1;
-            this.txt_name_edit_09.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_09.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_09.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_09.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_09.Multiline = false;
-            this.txt_name_edit_09.Name = "txt_name_edit_09";
-            this.txt_name_edit_09.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_09.PasswordChar = false;
-            this.txt_name_edit_09.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_09.PlaceholderText = "";
-            this.txt_name_edit_09.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_09.TabIndex = 89;
-            this.txt_name_edit_09.Texts = "";
-            this.txt_name_edit_09.UnderlinedStyle = false;
-            this.txt_name_edit_09.Leave += new System.EventHandler(this.txt_name_edit_09_Leave);
-            // 
-            // txt_name_edit_08
-            // 
-            this.txt_name_edit_08.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_08.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_08.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_08.BorderRadius = 0;
-            this.txt_name_edit_08.BorderSize = 1;
-            this.txt_name_edit_08.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_08.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_08.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_08.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_08.Multiline = false;
-            this.txt_name_edit_08.Name = "txt_name_edit_08";
-            this.txt_name_edit_08.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_08.PasswordChar = false;
-            this.txt_name_edit_08.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_08.PlaceholderText = "";
-            this.txt_name_edit_08.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_08.TabIndex = 89;
-            this.txt_name_edit_08.Texts = "";
-            this.txt_name_edit_08.UnderlinedStyle = false;
-            this.txt_name_edit_08.Leave += new System.EventHandler(this.txt_name_edit_08_Leave);
-            // 
-            // txt_name_edit_07
-            // 
-            this.txt_name_edit_07.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_07.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_07.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_07.BorderRadius = 0;
-            this.txt_name_edit_07.BorderSize = 1;
-            this.txt_name_edit_07.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_07.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_07.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_07.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_07.Multiline = false;
-            this.txt_name_edit_07.Name = "txt_name_edit_07";
-            this.txt_name_edit_07.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_07.PasswordChar = false;
-            this.txt_name_edit_07.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_07.PlaceholderText = "";
-            this.txt_name_edit_07.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_07.TabIndex = 90;
-            this.txt_name_edit_07.Texts = "";
-            this.txt_name_edit_07.UnderlinedStyle = false;
-            this.txt_name_edit_07.Leave += new System.EventHandler(this.txt_name_edit_07_Leave);
-            // 
-            // txt_name_edit_06
-            // 
-            this.txt_name_edit_06.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_06.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_06.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_06.BorderRadius = 0;
-            this.txt_name_edit_06.BorderSize = 1;
-            this.txt_name_edit_06.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_06.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_06.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_06.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_06.Multiline = false;
-            this.txt_name_edit_06.Name = "txt_name_edit_06";
-            this.txt_name_edit_06.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_06.PasswordChar = false;
-            this.txt_name_edit_06.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_06.PlaceholderText = "";
-            this.txt_name_edit_06.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_06.TabIndex = 91;
-            this.txt_name_edit_06.Texts = "";
-            this.txt_name_edit_06.UnderlinedStyle = false;
-            this.txt_name_edit_06.Leave += new System.EventHandler(this.txt_name_edit_06_Leave);
-            // 
-            // txt_name_edit_05
-            // 
-            this.txt_name_edit_05.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_05.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_05.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_05.BorderRadius = 0;
-            this.txt_name_edit_05.BorderSize = 1;
-            this.txt_name_edit_05.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_05.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_05.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_05.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_05.Multiline = false;
-            this.txt_name_edit_05.Name = "txt_name_edit_05";
-            this.txt_name_edit_05.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_05.PasswordChar = false;
-            this.txt_name_edit_05.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_05.PlaceholderText = "";
-            this.txt_name_edit_05.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_05.TabIndex = 92;
-            this.txt_name_edit_05.Texts = "";
-            this.txt_name_edit_05.UnderlinedStyle = false;
-            this.txt_name_edit_05.Leave += new System.EventHandler(this.txt_name_edit_05_Leave);
-            // 
-            // txt_name_edit_04
-            // 
-            this.txt_name_edit_04.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_04.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_04.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_04.BorderRadius = 0;
-            this.txt_name_edit_04.BorderSize = 1;
-            this.txt_name_edit_04.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_04.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_04.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_04.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_04.Multiline = false;
-            this.txt_name_edit_04.Name = "txt_name_edit_04";
-            this.txt_name_edit_04.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_04.PasswordChar = false;
-            this.txt_name_edit_04.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_04.PlaceholderText = "";
-            this.txt_name_edit_04.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_04.TabIndex = 93;
-            this.txt_name_edit_04.Texts = "";
-            this.txt_name_edit_04.UnderlinedStyle = false;
-            this.txt_name_edit_04.Leave += new System.EventHandler(this.txt_name_edit_04_Leave);
-            // 
-            // txt_name_edit_03
-            // 
-            this.txt_name_edit_03.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_03.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_03.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_03.BorderRadius = 0;
-            this.txt_name_edit_03.BorderSize = 1;
-            this.txt_name_edit_03.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_03.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_03.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_03.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_03.Multiline = false;
-            this.txt_name_edit_03.Name = "txt_name_edit_03";
-            this.txt_name_edit_03.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_03.PasswordChar = false;
-            this.txt_name_edit_03.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_03.PlaceholderText = "";
-            this.txt_name_edit_03.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_03.TabIndex = 84;
-            this.txt_name_edit_03.Texts = "";
-            this.txt_name_edit_03.UnderlinedStyle = false;
-            this.txt_name_edit_03.Leave += new System.EventHandler(this.txt_name_edit_03_Leave);
-            // 
-            // txt_name_edit_02
-            // 
-            this.txt_name_edit_02.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_02.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_02.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_02.BorderRadius = 0;
-            this.txt_name_edit_02.BorderSize = 1;
-            this.txt_name_edit_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_02.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_02.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_02.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_02.Multiline = false;
-            this.txt_name_edit_02.Name = "txt_name_edit_02";
-            this.txt_name_edit_02.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_02.PasswordChar = false;
-            this.txt_name_edit_02.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_02.PlaceholderText = "";
-            this.txt_name_edit_02.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_02.TabIndex = 83;
-            this.txt_name_edit_02.Texts = "";
-            this.txt_name_edit_02.UnderlinedStyle = false;
-            this.txt_name_edit_02.Leave += new System.EventHandler(this.txt_name_edit_02_Leave);
-            // 
-            // txt_name_edit_01
-            // 
-            this.txt_name_edit_01.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_01.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_01.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_01.BorderRadius = 0;
-            this.txt_name_edit_01.BorderSize = 1;
-            this.txt_name_edit_01.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txt_name_edit_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_01.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_01.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_01.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_01.Multiline = false;
-            this.txt_name_edit_01.Name = "txt_name_edit_01";
-            this.txt_name_edit_01.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_01.PasswordChar = false;
-            this.txt_name_edit_01.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_01.PlaceholderText = "";
-            this.txt_name_edit_01.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_01.TabIndex = 82;
-            this.txt_name_edit_01.Texts = "";
-            this.txt_name_edit_01.UnderlinedStyle = false;
-            this.txt_name_edit_01.Leave += new System.EventHandler(this.txt_name_edit_01_Leave);
-            // 
-            // txt_add_family_name
-            // 
-            this.txt_add_family_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.txt_add_family_name.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_add_family_name.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_add_family_name.BorderRadius = 0;
-            this.txt_add_family_name.BorderSize = 2;
-            this.txt_add_family_name.Enabled = false;
-            this.txt_add_family_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_add_family_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_add_family_name.Location = new System.Drawing.Point(16, 17);
-            this.txt_add_family_name.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_add_family_name.Multiline = false;
-            this.txt_add_family_name.Name = "txt_add_family_name";
-            this.txt_add_family_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_add_family_name.PasswordChar = false;
-            this.txt_add_family_name.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_add_family_name.PlaceholderText = "";
-            this.txt_add_family_name.Size = new System.Drawing.Size(250, 31);
-            this.txt_add_family_name.TabIndex = 81;
-            this.txt_add_family_name.Texts = "";
-            this.txt_add_family_name.UnderlinedStyle = false;
-            this.txt_add_family_name.Leave += new System.EventHandler(this.txt_add_family_name_Leave);
-            // 
-            // dataGridViewComboBoxColumn1
-            // 
-            this.dataGridViewComboBoxColumn1.DataPropertyName = "credit_card_name";
-            this.dataGridViewComboBoxColumn1.FillWeight = 32.86738F;
-            this.dataGridViewComboBoxColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn1.HeaderText = "CARTÃO";
-            this.dataGridViewComboBoxColumn1.Items.AddRange(new object[] {
-            "NU BANK"});
-            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "credit_card_payday";
-            this.dataGridViewTextBoxColumn3.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "VENCIMENTO";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "store_name";
-            this.dataGridViewTextBoxColumn4.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "LOJA";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "product_name";
-            this.dataGridViewTextBoxColumn5.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "PRODUTOS";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "credit_card_installment";
-            this.dataGridViewTextBoxColumn6.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "PARCELAMENTO";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "total_payble";
-            this.dataGridViewTextBoxColumn7.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn7.HeaderText = "VALOR TOTAL";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "total_payable_installment";
-            this.dataGridViewTextBoxColumn8.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn8.HeaderText = "VALOR PARCELADO";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "family_member";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Family Member";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_register_family_member";
-            this.dataGridViewTextBoxColumn1.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID Register Family Member";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "id_register_family";
-            this.dataGridViewTextBoxColumn9.HeaderText = "ID Register Family";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "id_credit_card";
-            this.dataGridViewTextBoxColumn10.HeaderText = "ID Credit Card";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "id_products";
-            this.dataGridViewTextBoxColumn11.HeaderText = "ID Products";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Visible = false;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.FillWeight = 15F;
-            this.dataGridViewCheckBoxColumn1.HeaderText = "PAGO";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            // 
-            // dataGridViewComboBoxColumn2
-            // 
-            this.dataGridViewComboBoxColumn2.DataPropertyName = "credit_card_name";
-            this.dataGridViewComboBoxColumn2.FillWeight = 32.86738F;
-            this.dataGridViewComboBoxColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn2.HeaderText = "CARTÃO";
-            this.dataGridViewComboBoxColumn2.Items.AddRange(new object[] {
-            "NU BANK"});
-            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "credit_card_payday";
-            this.dataGridViewTextBoxColumn14.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn14.HeaderText = "VENCIMENTO";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "store_name";
-            this.dataGridViewTextBoxColumn15.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn15.HeaderText = "LOJA";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "product_name";
-            this.dataGridViewTextBoxColumn16.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn16.HeaderText = "PRODUTOS";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "credit_card_installment";
-            this.dataGridViewTextBoxColumn17.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn17.HeaderText = "PARCELAMENTO";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "total_payble";
-            this.dataGridViewTextBoxColumn18.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn18.HeaderText = "VALOR TOTAL";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "total_payable_installment";
-            this.dataGridViewTextBoxColumn19.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn19.HeaderText = "VALOR PARCELADO";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "family_member";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Family Member";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "id_register_family_member";
-            this.dataGridViewTextBoxColumn12.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn12.HeaderText = "ID Register Family Member";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "id_register_family";
-            this.dataGridViewTextBoxColumn20.HeaderText = "ID Register Family";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "id_credit_card";
-            this.dataGridViewTextBoxColumn21.HeaderText = "ID Credit Card";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "id_products";
-            this.dataGridViewTextBoxColumn22.HeaderText = "ID Products";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.Visible = false;
-            // 
-            // dataGridViewCheckBoxColumn2
-            // 
-            this.dataGridViewCheckBoxColumn2.FillWeight = 15F;
-            this.dataGridViewCheckBoxColumn2.HeaderText = "PAGO";
-            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            // 
-            // dataGridViewComboBoxColumn3
-            // 
-            this.dataGridViewComboBoxColumn3.DataPropertyName = "credit_card_name";
-            this.dataGridViewComboBoxColumn3.FillWeight = 32.86738F;
-            this.dataGridViewComboBoxColumn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn3.HeaderText = "CARTÃO";
-            this.dataGridViewComboBoxColumn3.Items.AddRange(new object[] {
-            "NU BANK"});
-            this.dataGridViewComboBoxColumn3.Name = "dataGridViewComboBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "credit_card_payday";
-            this.dataGridViewTextBoxColumn25.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn25.HeaderText = "VENCIMENTO";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "store_name";
-            this.dataGridViewTextBoxColumn26.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn26.HeaderText = "LOJA";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "product_name";
-            this.dataGridViewTextBoxColumn27.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn27.HeaderText = "PRODUTOS";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "credit_card_installment";
-            this.dataGridViewTextBoxColumn28.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn28.HeaderText = "PARCELAMENTO";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "total_payble";
-            this.dataGridViewTextBoxColumn29.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn29.HeaderText = "VALOR TOTAL";
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            // 
-            // dataGridViewTextBoxColumn30
-            // 
-            this.dataGridViewTextBoxColumn30.DataPropertyName = "total_payable_installment";
-            this.dataGridViewTextBoxColumn30.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn30.HeaderText = "VALOR PARCELADO";
-            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "family_member";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Family Member";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "id_register_family_member";
-            this.dataGridViewTextBoxColumn23.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn23.HeaderText = "ID Register Family Member";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn31
-            // 
-            this.dataGridViewTextBoxColumn31.DataPropertyName = "id_register_family";
-            this.dataGridViewTextBoxColumn31.HeaderText = "ID Register Family";
-            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
-            this.dataGridViewTextBoxColumn31.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.DataPropertyName = "id_credit_card";
-            this.dataGridViewTextBoxColumn32.HeaderText = "ID Credit Card";
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            this.dataGridViewTextBoxColumn32.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this.dataGridViewTextBoxColumn33.DataPropertyName = "id_products";
-            this.dataGridViewTextBoxColumn33.HeaderText = "ID Products";
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            this.dataGridViewTextBoxColumn33.Visible = false;
-            // 
-            // dataGridViewCheckBoxColumn3
-            // 
-            this.dataGridViewCheckBoxColumn3.FillWeight = 15F;
-            this.dataGridViewCheckBoxColumn3.HeaderText = "PAGO";
-            this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
-            // 
-            // dataGridViewComboBoxColumn4
-            // 
-            this.dataGridViewComboBoxColumn4.DataPropertyName = "credit_card_name";
-            this.dataGridViewComboBoxColumn4.FillWeight = 32.86738F;
-            this.dataGridViewComboBoxColumn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn4.HeaderText = "CARTÃO";
-            this.dataGridViewComboBoxColumn4.Items.AddRange(new object[] {
-            "NU BANK"});
-            this.dataGridViewComboBoxColumn4.Name = "dataGridViewComboBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this.dataGridViewTextBoxColumn36.DataPropertyName = "credit_card_payday";
-            this.dataGridViewTextBoxColumn36.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn36.HeaderText = "VENCIMENTO";
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this.dataGridViewTextBoxColumn37.DataPropertyName = "store_name";
-            this.dataGridViewTextBoxColumn37.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn37.HeaderText = "LOJA";
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            this.dataGridViewTextBoxColumn38.DataPropertyName = "product_name";
-            this.dataGridViewTextBoxColumn38.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn38.HeaderText = "PRODUTOS";
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this.dataGridViewTextBoxColumn39.DataPropertyName = "credit_card_installment";
-            this.dataGridViewTextBoxColumn39.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn39.HeaderText = "PARCELAMENTO";
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this.dataGridViewTextBoxColumn40.DataPropertyName = "total_payble";
-            this.dataGridViewTextBoxColumn40.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn40.HeaderText = "VALOR TOTAL";
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this.dataGridViewTextBoxColumn41.DataPropertyName = "total_payable_installment";
-            this.dataGridViewTextBoxColumn41.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn41.HeaderText = "VALOR PARCELADO";
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.DataPropertyName = "family_member";
-            this.dataGridViewTextBoxColumn35.HeaderText = "Family Member";
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            this.dataGridViewTextBoxColumn35.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this.dataGridViewTextBoxColumn34.DataPropertyName = "id_register_family_member";
-            this.dataGridViewTextBoxColumn34.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn34.HeaderText = "ID Register Family Member";
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            this.dataGridViewTextBoxColumn34.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn42
-            // 
-            this.dataGridViewTextBoxColumn42.DataPropertyName = "id_register_family";
-            this.dataGridViewTextBoxColumn42.HeaderText = "ID Register Family";
-            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
-            this.dataGridViewTextBoxColumn42.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn43
-            // 
-            this.dataGridViewTextBoxColumn43.DataPropertyName = "id_credit_card";
-            this.dataGridViewTextBoxColumn43.HeaderText = "ID Credit Card";
-            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
-            this.dataGridViewTextBoxColumn43.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn44
-            // 
-            this.dataGridViewTextBoxColumn44.DataPropertyName = "id_products";
-            this.dataGridViewTextBoxColumn44.HeaderText = "ID Products";
-            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
-            this.dataGridViewTextBoxColumn44.Visible = false;
-            // 
-            // dataGridViewCheckBoxColumn4
-            // 
-            this.dataGridViewCheckBoxColumn4.FillWeight = 15F;
-            this.dataGridViewCheckBoxColumn4.HeaderText = "PAGO";
-            this.dataGridViewCheckBoxColumn4.Name = "dataGridViewCheckBoxColumn4";
-            // 
-            // dataGridViewComboBoxColumn5
-            // 
-            this.dataGridViewComboBoxColumn5.DataPropertyName = "credit_card_name";
-            this.dataGridViewComboBoxColumn5.FillWeight = 32.86738F;
-            this.dataGridViewComboBoxColumn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn5.HeaderText = "CARTÃO";
-            this.dataGridViewComboBoxColumn5.Items.AddRange(new object[] {
-            "NU BANK"});
-            this.dataGridViewComboBoxColumn5.Name = "dataGridViewComboBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn47
-            // 
-            this.dataGridViewTextBoxColumn47.DataPropertyName = "credit_card_payday";
-            this.dataGridViewTextBoxColumn47.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn47.HeaderText = "VENCIMENTO";
-            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
-            // 
-            // dataGridViewTextBoxColumn48
-            // 
-            this.dataGridViewTextBoxColumn48.DataPropertyName = "store_name";
-            this.dataGridViewTextBoxColumn48.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn48.HeaderText = "LOJA";
-            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
-            // 
-            // dataGridViewTextBoxColumn49
-            // 
-            this.dataGridViewTextBoxColumn49.DataPropertyName = "product_name";
-            this.dataGridViewTextBoxColumn49.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn49.HeaderText = "PRODUTOS";
-            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
-            // 
-            // dataGridViewTextBoxColumn50
-            // 
-            this.dataGridViewTextBoxColumn50.DataPropertyName = "credit_card_installment";
-            this.dataGridViewTextBoxColumn50.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn50.HeaderText = "PARCELAMENTO";
-            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
-            // 
-            // dataGridViewTextBoxColumn51
-            // 
-            this.dataGridViewTextBoxColumn51.DataPropertyName = "total_payble";
-            this.dataGridViewTextBoxColumn51.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn51.HeaderText = "VALOR TOTAL";
-            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
-            // 
-            // dataGridViewTextBoxColumn52
-            // 
-            this.dataGridViewTextBoxColumn52.DataPropertyName = "total_payable_installment";
-            this.dataGridViewTextBoxColumn52.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn52.HeaderText = "VALOR PARCELADO";
-            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
-            // 
-            // dataGridViewTextBoxColumn46
-            // 
-            this.dataGridViewTextBoxColumn46.DataPropertyName = "family_member";
-            this.dataGridViewTextBoxColumn46.HeaderText = "Family Member";
-            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
-            this.dataGridViewTextBoxColumn46.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn45
-            // 
-            this.dataGridViewTextBoxColumn45.DataPropertyName = "id_register_family_member";
-            this.dataGridViewTextBoxColumn45.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn45.HeaderText = "ID Register Family Member";
-            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
-            this.dataGridViewTextBoxColumn45.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn53
-            // 
-            this.dataGridViewTextBoxColumn53.DataPropertyName = "id_register_family";
-            this.dataGridViewTextBoxColumn53.HeaderText = "ID Register Family";
-            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
-            this.dataGridViewTextBoxColumn53.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn54
-            // 
-            this.dataGridViewTextBoxColumn54.DataPropertyName = "id_credit_card";
-            this.dataGridViewTextBoxColumn54.HeaderText = "ID Credit Card";
-            this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
-            this.dataGridViewTextBoxColumn54.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn55
-            // 
-            this.dataGridViewTextBoxColumn55.DataPropertyName = "id_products";
-            this.dataGridViewTextBoxColumn55.HeaderText = "ID Products";
-            this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
-            this.dataGridViewTextBoxColumn55.Visible = false;
-            // 
-            // dataGridViewCheckBoxColumn5
-            // 
-            this.dataGridViewCheckBoxColumn5.FillWeight = 15F;
-            this.dataGridViewCheckBoxColumn5.HeaderText = "PAGO";
-            this.dataGridViewCheckBoxColumn5.Name = "dataGridViewCheckBoxColumn5";
-            // 
-            // dataGridViewComboBoxColumn6
-            // 
-            this.dataGridViewComboBoxColumn6.DataPropertyName = "credit_card_name";
-            this.dataGridViewComboBoxColumn6.FillWeight = 32.86738F;
-            this.dataGridViewComboBoxColumn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn6.HeaderText = "CARTÃO";
-            this.dataGridViewComboBoxColumn6.Items.AddRange(new object[] {
-            "NU BANK"});
-            this.dataGridViewComboBoxColumn6.Name = "dataGridViewComboBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn58
-            // 
-            this.dataGridViewTextBoxColumn58.DataPropertyName = "credit_card_payday";
-            this.dataGridViewTextBoxColumn58.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn58.HeaderText = "VENCIMENTO";
-            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
-            // 
-            // dataGridViewTextBoxColumn59
-            // 
-            this.dataGridViewTextBoxColumn59.DataPropertyName = "store_name";
-            this.dataGridViewTextBoxColumn59.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn59.HeaderText = "LOJA";
-            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
-            // 
-            // dataGridViewTextBoxColumn60
-            // 
-            this.dataGridViewTextBoxColumn60.DataPropertyName = "product_name";
-            this.dataGridViewTextBoxColumn60.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn60.HeaderText = "PRODUTOS";
-            this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
-            // 
-            // dataGridViewTextBoxColumn61
-            // 
-            this.dataGridViewTextBoxColumn61.DataPropertyName = "credit_card_installment";
-            this.dataGridViewTextBoxColumn61.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn61.HeaderText = "PARCELAMENTO";
-            this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
-            // 
-            // dataGridViewTextBoxColumn62
-            // 
-            this.dataGridViewTextBoxColumn62.DataPropertyName = "total_payble";
-            this.dataGridViewTextBoxColumn62.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn62.HeaderText = "VALOR TOTAL";
-            this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
-            // 
-            // dataGridViewTextBoxColumn63
-            // 
-            this.dataGridViewTextBoxColumn63.DataPropertyName = "total_payable_installment";
-            this.dataGridViewTextBoxColumn63.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn63.HeaderText = "VALOR PARCELADO";
-            this.dataGridViewTextBoxColumn63.Name = "dataGridViewTextBoxColumn63";
-            // 
-            // dataGridViewTextBoxColumn57
-            // 
-            this.dataGridViewTextBoxColumn57.DataPropertyName = "family_member";
-            this.dataGridViewTextBoxColumn57.HeaderText = "Family Member";
-            this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
-            this.dataGridViewTextBoxColumn57.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn56
-            // 
-            this.dataGridViewTextBoxColumn56.DataPropertyName = "id_register_family_member";
-            this.dataGridViewTextBoxColumn56.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn56.HeaderText = "ID Register Family Member";
-            this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
-            this.dataGridViewTextBoxColumn56.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn64
-            // 
-            this.dataGridViewTextBoxColumn64.DataPropertyName = "id_register_family";
-            this.dataGridViewTextBoxColumn64.HeaderText = "ID Register Family";
-            this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
-            this.dataGridViewTextBoxColumn64.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn65
-            // 
-            this.dataGridViewTextBoxColumn65.DataPropertyName = "id_credit_card";
-            this.dataGridViewTextBoxColumn65.HeaderText = "ID Credit Card";
-            this.dataGridViewTextBoxColumn65.Name = "dataGridViewTextBoxColumn65";
-            this.dataGridViewTextBoxColumn65.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn66
-            // 
-            this.dataGridViewTextBoxColumn66.DataPropertyName = "id_products";
-            this.dataGridViewTextBoxColumn66.HeaderText = "ID Products";
-            this.dataGridViewTextBoxColumn66.Name = "dataGridViewTextBoxColumn66";
-            this.dataGridViewTextBoxColumn66.Visible = false;
-            // 
-            // dataGridViewCheckBoxColumn6
-            // 
-            this.dataGridViewCheckBoxColumn6.FillWeight = 15F;
-            this.dataGridViewCheckBoxColumn6.HeaderText = "PAGO";
-            this.dataGridViewCheckBoxColumn6.Name = "dataGridViewCheckBoxColumn6";
-            // 
-            // dataGridViewComboBoxColumn7
-            // 
-            this.dataGridViewComboBoxColumn7.DataPropertyName = "credit_card_name";
-            this.dataGridViewComboBoxColumn7.FillWeight = 32.86738F;
-            this.dataGridViewComboBoxColumn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn7.HeaderText = "CARTÃO";
-            this.dataGridViewComboBoxColumn7.Items.AddRange(new object[] {
-            "NU BANK"});
-            this.dataGridViewComboBoxColumn7.Name = "dataGridViewComboBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn69
-            // 
-            this.dataGridViewTextBoxColumn69.DataPropertyName = "credit_card_payday";
-            this.dataGridViewTextBoxColumn69.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn69.HeaderText = "VENCIMENTO";
-            this.dataGridViewTextBoxColumn69.Name = "dataGridViewTextBoxColumn69";
-            // 
-            // dataGridViewTextBoxColumn70
-            // 
-            this.dataGridViewTextBoxColumn70.DataPropertyName = "store_name";
-            this.dataGridViewTextBoxColumn70.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn70.HeaderText = "LOJA";
-            this.dataGridViewTextBoxColumn70.Name = "dataGridViewTextBoxColumn70";
-            // 
-            // dataGridViewTextBoxColumn71
-            // 
-            this.dataGridViewTextBoxColumn71.DataPropertyName = "product_name";
-            this.dataGridViewTextBoxColumn71.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn71.HeaderText = "PRODUTOS";
-            this.dataGridViewTextBoxColumn71.Name = "dataGridViewTextBoxColumn71";
-            // 
-            // dataGridViewTextBoxColumn72
-            // 
-            this.dataGridViewTextBoxColumn72.DataPropertyName = "credit_card_installment";
-            this.dataGridViewTextBoxColumn72.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn72.HeaderText = "PARCELAMENTO";
-            this.dataGridViewTextBoxColumn72.Name = "dataGridViewTextBoxColumn72";
-            // 
-            // dataGridViewTextBoxColumn73
-            // 
-            this.dataGridViewTextBoxColumn73.DataPropertyName = "total_payble";
-            this.dataGridViewTextBoxColumn73.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn73.HeaderText = "VALOR TOTAL";
-            this.dataGridViewTextBoxColumn73.Name = "dataGridViewTextBoxColumn73";
-            // 
-            // dataGridViewTextBoxColumn74
-            // 
-            this.dataGridViewTextBoxColumn74.DataPropertyName = "total_payable_installment";
-            this.dataGridViewTextBoxColumn74.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn74.HeaderText = "VALOR PARCELADO";
-            this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
-            // 
-            // dataGridViewTextBoxColumn68
-            // 
-            this.dataGridViewTextBoxColumn68.DataPropertyName = "family_member";
-            this.dataGridViewTextBoxColumn68.HeaderText = "Family Member";
-            this.dataGridViewTextBoxColumn68.Name = "dataGridViewTextBoxColumn68";
-            this.dataGridViewTextBoxColumn68.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn67
-            // 
-            this.dataGridViewTextBoxColumn67.DataPropertyName = "id_register_family_member";
-            this.dataGridViewTextBoxColumn67.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn67.HeaderText = "ID Register Family Member";
-            this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
-            this.dataGridViewTextBoxColumn67.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn75
-            // 
-            this.dataGridViewTextBoxColumn75.DataPropertyName = "id_register_family";
-            this.dataGridViewTextBoxColumn75.HeaderText = "ID Register Family";
-            this.dataGridViewTextBoxColumn75.Name = "dataGridViewTextBoxColumn75";
-            this.dataGridViewTextBoxColumn75.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn76
-            // 
-            this.dataGridViewTextBoxColumn76.DataPropertyName = "id_credit_card";
-            this.dataGridViewTextBoxColumn76.HeaderText = "ID Credit Card";
-            this.dataGridViewTextBoxColumn76.Name = "dataGridViewTextBoxColumn76";
-            this.dataGridViewTextBoxColumn76.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn77
-            // 
-            this.dataGridViewTextBoxColumn77.DataPropertyName = "id_products";
-            this.dataGridViewTextBoxColumn77.HeaderText = "ID Products";
-            this.dataGridViewTextBoxColumn77.Name = "dataGridViewTextBoxColumn77";
-            this.dataGridViewTextBoxColumn77.Visible = false;
-            // 
-            // dataGridViewCheckBoxColumn7
-            // 
-            this.dataGridViewCheckBoxColumn7.FillWeight = 15F;
-            this.dataGridViewCheckBoxColumn7.HeaderText = "PAGO";
-            this.dataGridViewCheckBoxColumn7.Name = "dataGridViewCheckBoxColumn7";
-            // 
-            // dataGridViewComboBoxColumn8
-            // 
-            this.dataGridViewComboBoxColumn8.DataPropertyName = "credit_card_name";
-            this.dataGridViewComboBoxColumn8.FillWeight = 32.86738F;
-            this.dataGridViewComboBoxColumn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn8.HeaderText = "CARTÃO";
-            this.dataGridViewComboBoxColumn8.Items.AddRange(new object[] {
-            "NU BANK"});
-            this.dataGridViewComboBoxColumn8.Name = "dataGridViewComboBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn80
-            // 
-            this.dataGridViewTextBoxColumn80.DataPropertyName = "credit_card_payday";
-            this.dataGridViewTextBoxColumn80.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn80.HeaderText = "VENCIMENTO";
-            this.dataGridViewTextBoxColumn80.Name = "dataGridViewTextBoxColumn80";
-            // 
-            // dataGridViewTextBoxColumn81
-            // 
-            this.dataGridViewTextBoxColumn81.DataPropertyName = "store_name";
-            this.dataGridViewTextBoxColumn81.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn81.HeaderText = "LOJA";
-            this.dataGridViewTextBoxColumn81.Name = "dataGridViewTextBoxColumn81";
-            // 
-            // dataGridViewTextBoxColumn82
-            // 
-            this.dataGridViewTextBoxColumn82.DataPropertyName = "product_name";
-            this.dataGridViewTextBoxColumn82.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn82.HeaderText = "PRODUTOS";
-            this.dataGridViewTextBoxColumn82.Name = "dataGridViewTextBoxColumn82";
-            // 
-            // dataGridViewTextBoxColumn83
-            // 
-            this.dataGridViewTextBoxColumn83.DataPropertyName = "credit_card_installment";
-            this.dataGridViewTextBoxColumn83.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn83.HeaderText = "PARCELAMENTO";
-            this.dataGridViewTextBoxColumn83.Name = "dataGridViewTextBoxColumn83";
-            // 
-            // dataGridViewTextBoxColumn84
-            // 
-            this.dataGridViewTextBoxColumn84.DataPropertyName = "total_payble";
-            this.dataGridViewTextBoxColumn84.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn84.HeaderText = "VALOR TOTAL";
-            this.dataGridViewTextBoxColumn84.Name = "dataGridViewTextBoxColumn84";
-            // 
-            // dataGridViewTextBoxColumn85
-            // 
-            this.dataGridViewTextBoxColumn85.DataPropertyName = "total_payable_installment";
-            this.dataGridViewTextBoxColumn85.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn85.HeaderText = "VALOR PARCELADO";
-            this.dataGridViewTextBoxColumn85.Name = "dataGridViewTextBoxColumn85";
-            // 
-            // dataGridViewTextBoxColumn79
-            // 
-            this.dataGridViewTextBoxColumn79.DataPropertyName = "family_member";
-            this.dataGridViewTextBoxColumn79.HeaderText = "Family Member";
-            this.dataGridViewTextBoxColumn79.Name = "dataGridViewTextBoxColumn79";
-            this.dataGridViewTextBoxColumn79.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn78
-            // 
-            this.dataGridViewTextBoxColumn78.DataPropertyName = "id_register_family_member";
-            this.dataGridViewTextBoxColumn78.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn78.HeaderText = "ID Register Family Member";
-            this.dataGridViewTextBoxColumn78.Name = "dataGridViewTextBoxColumn78";
-            this.dataGridViewTextBoxColumn78.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn86
-            // 
-            this.dataGridViewTextBoxColumn86.DataPropertyName = "id_register_family";
-            this.dataGridViewTextBoxColumn86.HeaderText = "ID Register Family";
-            this.dataGridViewTextBoxColumn86.Name = "dataGridViewTextBoxColumn86";
-            this.dataGridViewTextBoxColumn86.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn87
-            // 
-            this.dataGridViewTextBoxColumn87.DataPropertyName = "id_credit_card";
-            this.dataGridViewTextBoxColumn87.HeaderText = "ID Credit Card";
-            this.dataGridViewTextBoxColumn87.Name = "dataGridViewTextBoxColumn87";
-            this.dataGridViewTextBoxColumn87.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn88
-            // 
-            this.dataGridViewTextBoxColumn88.DataPropertyName = "id_products";
-            this.dataGridViewTextBoxColumn88.HeaderText = "ID Products";
-            this.dataGridViewTextBoxColumn88.Name = "dataGridViewTextBoxColumn88";
-            this.dataGridViewTextBoxColumn88.Visible = false;
-            // 
-            // dataGridViewCheckBoxColumn8
-            // 
-            this.dataGridViewCheckBoxColumn8.FillWeight = 15F;
-            this.dataGridViewCheckBoxColumn8.HeaderText = "PAGO";
-            this.dataGridViewCheckBoxColumn8.Name = "dataGridViewCheckBoxColumn8";
-            // 
-            // dataGridViewComboBoxColumn9
-            // 
-            this.dataGridViewComboBoxColumn9.DataPropertyName = "credit_card_name";
-            this.dataGridViewComboBoxColumn9.FillWeight = 32.86738F;
-            this.dataGridViewComboBoxColumn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn9.HeaderText = "CARTÃO";
-            this.dataGridViewComboBoxColumn9.Items.AddRange(new object[] {
-            "NU BANK"});
-            this.dataGridViewComboBoxColumn9.Name = "dataGridViewComboBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn91
-            // 
-            this.dataGridViewTextBoxColumn91.DataPropertyName = "credit_card_payday";
-            this.dataGridViewTextBoxColumn91.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn91.HeaderText = "VENCIMENTO";
-            this.dataGridViewTextBoxColumn91.Name = "dataGridViewTextBoxColumn91";
-            // 
-            // dataGridViewTextBoxColumn92
-            // 
-            this.dataGridViewTextBoxColumn92.DataPropertyName = "store_name";
-            this.dataGridViewTextBoxColumn92.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn92.HeaderText = "LOJA";
-            this.dataGridViewTextBoxColumn92.Name = "dataGridViewTextBoxColumn92";
-            // 
-            // dataGridViewTextBoxColumn93
-            // 
-            this.dataGridViewTextBoxColumn93.DataPropertyName = "product_name";
-            this.dataGridViewTextBoxColumn93.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn93.HeaderText = "PRODUTOS";
-            this.dataGridViewTextBoxColumn93.Name = "dataGridViewTextBoxColumn93";
-            // 
-            // dataGridViewTextBoxColumn94
-            // 
-            this.dataGridViewTextBoxColumn94.DataPropertyName = "credit_card_installment";
-            this.dataGridViewTextBoxColumn94.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn94.HeaderText = "PARCELAMENTO";
-            this.dataGridViewTextBoxColumn94.Name = "dataGridViewTextBoxColumn94";
-            // 
-            // dataGridViewTextBoxColumn95
-            // 
-            this.dataGridViewTextBoxColumn95.DataPropertyName = "total_payble";
-            this.dataGridViewTextBoxColumn95.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn95.HeaderText = "VALOR TOTAL";
-            this.dataGridViewTextBoxColumn95.Name = "dataGridViewTextBoxColumn95";
-            // 
-            // dataGridViewTextBoxColumn96
-            // 
-            this.dataGridViewTextBoxColumn96.DataPropertyName = "total_payable_installment";
-            this.dataGridViewTextBoxColumn96.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn96.HeaderText = "VALOR PARCELADO";
-            this.dataGridViewTextBoxColumn96.Name = "dataGridViewTextBoxColumn96";
-            // 
-            // dataGridViewTextBoxColumn90
-            // 
-            this.dataGridViewTextBoxColumn90.DataPropertyName = "family_member";
-            this.dataGridViewTextBoxColumn90.HeaderText = "Family Member";
-            this.dataGridViewTextBoxColumn90.Name = "dataGridViewTextBoxColumn90";
-            this.dataGridViewTextBoxColumn90.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn89
-            // 
-            this.dataGridViewTextBoxColumn89.DataPropertyName = "id_register_family_member";
-            this.dataGridViewTextBoxColumn89.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn89.HeaderText = "ID Register Family Member";
-            this.dataGridViewTextBoxColumn89.Name = "dataGridViewTextBoxColumn89";
-            this.dataGridViewTextBoxColumn89.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn97
-            // 
-            this.dataGridViewTextBoxColumn97.DataPropertyName = "id_register_family";
-            this.dataGridViewTextBoxColumn97.HeaderText = "ID Register Family";
-            this.dataGridViewTextBoxColumn97.Name = "dataGridViewTextBoxColumn97";
-            this.dataGridViewTextBoxColumn97.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn98
-            // 
-            this.dataGridViewTextBoxColumn98.DataPropertyName = "id_credit_card";
-            this.dataGridViewTextBoxColumn98.HeaderText = "ID Credit Card";
-            this.dataGridViewTextBoxColumn98.Name = "dataGridViewTextBoxColumn98";
-            this.dataGridViewTextBoxColumn98.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn99
-            // 
-            this.dataGridViewTextBoxColumn99.DataPropertyName = "id_products";
-            this.dataGridViewTextBoxColumn99.HeaderText = "ID Products";
-            this.dataGridViewTextBoxColumn99.Name = "dataGridViewTextBoxColumn99";
-            this.dataGridViewTextBoxColumn99.Visible = false;
-            // 
-            // dataGridViewCheckBoxColumn9
-            // 
-            this.dataGridViewCheckBoxColumn9.FillWeight = 15F;
-            this.dataGridViewCheckBoxColumn9.HeaderText = "PAGO";
-            this.dataGridViewCheckBoxColumn9.Name = "dataGridViewCheckBoxColumn9";
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "credit_card_name";
+            this.Column1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.Column1.FillWeight = 32.86738F;
-            this.Column1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Column1.HeaderText = "CARTÃO";
             this.Column1.Items.AddRange(new object[] {
             "NU BANK"});
             this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Column2
             // 
@@ -4301,7 +4288,6 @@ namespace Contas_Familia.PanelControll.Dashboard
         private System.Windows.Forms.DataGridView dataGridView8;
         private System.Windows.Forms.DataGridView dataGridView9;
         private System.Windows.Forms.DataGridView dataGridView10;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;

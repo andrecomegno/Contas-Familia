@@ -311,14 +311,18 @@ namespace Contas_Familia.PanelControll.Dashboard
             {
                 for (int i = 0; i < dataGridViews.Rows.Count - 1; i++)
                 {
-                    // COLETA A DATA SELECIONADA, E ATRIBUI AO credit_card_payday
-                    credit_card_payday = dtp[i].Value.ToShortDateString();
-
                     // NOME DO CARTÃO DE CREDITO
                     credit_card_name = dataGridViews.Rows[i].Cells[0].Value.ToString();
                     // VENCIMENTO DO CARTÃO DE CREDITO
-                    //credit_card_payday = dataGridViews.Rows[i].Cells[1].Value.ToString();
-                    dataGridViews.Rows[i].Cells[1].Value = credit_card_payday;
+                    if(dataGridViews.Rows[i].Cells[1].Value == null || string.IsNullOrEmpty(dataGridViews.Rows[i].Cells[1].Value.ToString()))
+                    {
+                        credit_card_payday = dtp[i].Value.ToShortDateString();
+                    }
+                    else
+                    {
+                        credit_card_payday = dataGridViews.Rows[i].Cells[1].Value.ToString();
+                    }
+
                     // NOME DA LOJA
                     store_name = dataGridViews.Rows[i].Cells[2].Value.ToString();
                     // NOME DO PRODUTO
@@ -664,16 +668,18 @@ namespace Contas_Familia.PanelControll.Dashboard
         #region ADD DATETIMEPICKER TABLE
         // ADD NA TABELA O DateTimePicker
         void AddDateTimePickerTable(DataGridView dataGridViews, DataGridViewCellEventArgs e, DateTimePicker _dtp, Rectangle _rectangle)
-        {
+        {            
             if (e.RowIndex >= 0 && e.RowIndex < dataGridViews.Rows.Count && e.ColumnIndex >= 0 && e.ColumnIndex < dataGridViews.Columns.Count)
             {
                 switch (dataGridViews.Columns[e.ColumnIndex].Index)
                 {
+                    case 0:                        
+                        break;
                     case 1:
                         _rectangle = dataGridViews.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
                         _dtp.Size = new Size(_rectangle.Width, _rectangle.Height);
                         _dtp.Location = new Point(_rectangle.X, _rectangle.Y);
-                        _dtp.Visible = true;
+                        _dtp.Visible = true;                        
                         break;
                     default:
                         break;
@@ -689,6 +695,16 @@ namespace Contas_Familia.PanelControll.Dashboard
             {
                 dataGridViews[i].CurrentCell.Value = dtp[i].Text.ToString();
             } 
+        }
+
+        private void dtp_CloseUp(object sender, EventArgs e)
+        {
+            DataGridView[] dataGridViews = { dataGridView1, dataGridView2, dataGridView3, dataGridView4, dataGridView5, dataGridView6, dataGridView7, dataGridView8, dataGridView9, dataGridView10 };
+
+            for (int i = 0; i < dataGridViews.Length; i++)
+            {
+                dtp[i].Visible = false;
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView1, e, dtp[0], rectangle[0]);
@@ -753,111 +769,29 @@ namespace Contas_Familia.PanelControll.Dashboard
         }
 
         // NOME DUPLO CLICK 
-        private void txt_name_01_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            EditName(_nameEdit[0] = !_nameEdit[0], txt_name_01, txt_name_edit_01, bt_delete_01, bt_save_edit_01, bt_cancel_edit_01);
-        }
-
-        private void txt_name_02_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            EditName(_nameEdit[1] = !_nameEdit[1], txt_name_02, txt_name_edit_02, bt_delete_02, bt_save_edit_02, bt_cancel_edit_02);
-        }
-
-        private void txt_name_03_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            EditName(_nameEdit[2] = !_nameEdit[2], txt_name_03, txt_name_edit_03, bt_delete_03, bt_save_edit_03, bt_cancel_edit_03);
-        }
-
-        private void txt_name_04_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            EditName(_nameEdit[3] = !_nameEdit[3], txt_name_04, txt_name_edit_04, bt_delete_04, bt_save_edit_04, bt_cancel_edit_04);
-        }
-
-        private void txt_name_05_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            EditName(_nameEdit[4] = !_nameEdit[4], txt_name_05, txt_name_edit_05, bt_delete_05, bt_save_edit_05, bt_cancel_edit_05);
-        }
-
-        private void txt_name_06_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            EditName(_nameEdit[5] = !_nameEdit[5], txt_name_06, txt_name_edit_06, bt_delete_06, bt_save_edit_06, bt_cancel_edit_06);
-        }
-
-        private void txt_name_07_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            EditName(_nameEdit[6] = !_nameEdit[6], txt_name_07, txt_name_edit_07, bt_delete_07, bt_save_edit_07, bt_cancel_edit_07);
-        }
-
-        private void txt_name_08_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            EditName(_nameEdit[7] = !_nameEdit[7], txt_name_08, txt_name_edit_08, bt_delete_08, bt_save_edit_08, bt_cancel_edit_08);
-        }
-
-        private void txt_name_09_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            EditName(_nameEdit[8] = !_nameEdit[8], txt_name_09, txt_name_edit_09, bt_delete_09, bt_save_edit_09, bt_cancel_edit_09);
-        }
-
-        private void txt_name_10_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            EditName(_nameEdit[9] = !_nameEdit[9], txt_name_10, txt_name_edit_10, bt_delete_10, bt_save_edit_10, bt_cancel_edit_10);
-        }
+        private void txt_name_01_MouseDoubleClick(object sender, MouseEventArgs e) => EditName(_nameEdit[0] = !_nameEdit[0], txt_name_01, txt_name_edit_01, bt_delete_01, bt_save_edit_01, bt_cancel_edit_01);
+        private void txt_name_02_MouseDoubleClick(object sender, MouseEventArgs e) => EditName(_nameEdit[1] = !_nameEdit[1], txt_name_02, txt_name_edit_02, bt_delete_02, bt_save_edit_02, bt_cancel_edit_02);
+        private void txt_name_03_MouseDoubleClick(object sender, MouseEventArgs e) => EditName(_nameEdit[2] = !_nameEdit[2], txt_name_03, txt_name_edit_03, bt_delete_03, bt_save_edit_03, bt_cancel_edit_03);
+        private void txt_name_04_MouseDoubleClick(object sender, MouseEventArgs e) => EditName(_nameEdit[3] = !_nameEdit[3], txt_name_04, txt_name_edit_04, bt_delete_04, bt_save_edit_04, bt_cancel_edit_04);
+        private void txt_name_05_MouseDoubleClick(object sender, MouseEventArgs e) => EditName(_nameEdit[4] = !_nameEdit[4], txt_name_05, txt_name_edit_05, bt_delete_05, bt_save_edit_05, bt_cancel_edit_05);
+        private void txt_name_06_MouseDoubleClick(object sender, MouseEventArgs e) => EditName(_nameEdit[5] = !_nameEdit[5], txt_name_06, txt_name_edit_06, bt_delete_06, bt_save_edit_06, bt_cancel_edit_06);
+        private void txt_name_07_MouseDoubleClick(object sender, MouseEventArgs e) => EditName(_nameEdit[6] = !_nameEdit[6], txt_name_07, txt_name_edit_07, bt_delete_07, bt_save_edit_07, bt_cancel_edit_07);
+        private void txt_name_08_MouseDoubleClick(object sender, MouseEventArgs e) => EditName(_nameEdit[7] = !_nameEdit[7], txt_name_08, txt_name_edit_08, bt_delete_08, bt_save_edit_08, bt_cancel_edit_08);
+        private void txt_name_09_MouseDoubleClick(object sender, MouseEventArgs e) => EditName(_nameEdit[8] = !_nameEdit[8], txt_name_09, txt_name_edit_09, bt_delete_09, bt_save_edit_09, bt_cancel_edit_09);
+        private void txt_name_10_MouseDoubleClick(object sender, MouseEventArgs e) => EditName(_nameEdit[9] = !_nameEdit[9], txt_name_10, txt_name_edit_10, bt_delete_10, bt_save_edit_10, bt_cancel_edit_10);      
 
         // NOME EDITATR LEAVE
-        private void txt_name_edit_01_Leave(object sender, EventArgs e)
-        {
-            TextNameEditLeave(txt_name_edit_01);
-        }
-
-        private void txt_name_edit_02_Leave(object sender, EventArgs e)
-        {
-            TextNameEditLeave(txt_name_edit_02);
-        }
-
-        private void txt_name_edit_03_Leave(object sender, EventArgs e)
-        {
-            TextNameEditLeave(txt_name_edit_03);
-        }
-
-        private void txt_name_edit_04_Leave(object sender, EventArgs e)
-        {
-            TextNameEditLeave(txt_name_edit_04);
-        }
-
-        private void txt_name_edit_05_Leave(object sender, EventArgs e)
-        {
-            TextNameEditLeave(txt_name_edit_05);
-        }
-
-        private void txt_name_edit_06_Leave(object sender, EventArgs e)
-        {
-            TextNameEditLeave(txt_name_edit_06);
-        }
-
-        private void txt_name_edit_07_Leave(object sender, EventArgs e)
-        {
-            TextNameEditLeave(txt_name_edit_07);
-        }
-
-        private void txt_name_edit_08_Leave(object sender, EventArgs e)
-        {
-            TextNameEditLeave(txt_name_edit_08);
-        }
-
-        private void txt_name_edit_09_Leave(object sender, EventArgs e)
-        {
-            TextNameEditLeave(txt_name_edit_09);
-        }
-
-        private void txt_name_edit_10_Leave(object sender, EventArgs e)
-        {
-            TextNameEditLeave(txt_name_edit_10);
-        }
-
-        private void txt_add_family_name_Leave(object sender, EventArgs e)
-        {
-            TextNameEditLeave(txt_add_family_name);
-        }
+        private void txt_name_edit_01_Leave(object sender, EventArgs e) => TextNameEditLeave(txt_name_edit_01);
+        private void txt_name_edit_02_Leave(object sender, EventArgs e) => TextNameEditLeave(txt_name_edit_02);
+        private void txt_name_edit_03_Leave(object sender, EventArgs e) => TextNameEditLeave(txt_name_edit_03);
+        private void txt_name_edit_04_Leave(object sender, EventArgs e) => TextNameEditLeave(txt_name_edit_04);
+        private void txt_name_edit_05_Leave(object sender, EventArgs e) => TextNameEditLeave(txt_name_edit_05);
+        private void txt_name_edit_06_Leave(object sender, EventArgs e) => TextNameEditLeave(txt_name_edit_06);
+        private void txt_name_edit_07_Leave(object sender, EventArgs e) => TextNameEditLeave(txt_name_edit_07);
+        private void txt_name_edit_08_Leave(object sender, EventArgs e) => TextNameEditLeave(txt_name_edit_08);
+        private void txt_name_edit_09_Leave(object sender, EventArgs e) => TextNameEditLeave(txt_name_edit_09);
+        private void txt_name_edit_10_Leave(object sender, EventArgs e) => TextNameEditLeave(txt_name_edit_10);
+        private void txt_add_family_name_Leave(object sender, EventArgs e) => TextNameEditLeave(txt_add_family_name);
         #endregion
 
         #region STARTING
@@ -894,8 +828,9 @@ namespace Contas_Familia.PanelControll.Dashboard
                 dtp[i] = new DateTimePicker();
                 dataGridViews[i].Controls.Add(dtp[i]);
                 dtp[i].Visible = false;
-                dtp[i].Format = DateTimePickerFormat.Custom;
-                dtp[i].TextChanged += new EventHandler(dtp_TextChange);
+                dtp[i].Format = DateTimePickerFormat.Short;
+                dtp[i].CloseUp += new EventHandler(dtp_CloseUp);
+                dtp[i].TextChanged += new EventHandler(dtp_TextChange);               
             }
         }
 
@@ -965,9 +900,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             Main.Instance.ButtonMenuDisabled(true);            
             TableMain();
         }
-
-
-
 
     }
 }
