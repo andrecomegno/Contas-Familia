@@ -128,7 +128,7 @@ namespace Contas_Familia
             this.build.Name = "build";
             this.build.Size = new System.Drawing.Size(31, 13);
             this.build.TabIndex = 1;
-            this.build.Text = "v 1.0";
+            this.build.Text = "v 1.1";
             // 
             // txt_creator
             // 

@@ -67,7 +67,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_edit_01 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_01 = new System.Windows.Forms.Button();
             this.txt_name_01 = new System.Windows.Forms.Label();
-            this.txt_name_edit_01 = new Contas_Familia.Script.RJTextBox();
             this.txt_total_01 = new System.Windows.Forms.Label();
             this.bt_save_01 = new System.Windows.Forms.Button();
             this.lb_total_01 = new System.Windows.Forms.Label();
@@ -75,6 +74,19 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_cancel_01 = new System.Windows.Forms.Button();
             this.bt_delete_01 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.familypaydayDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.familypaydayDataSet = new Contas_Familia.familypaydayDataSet();
             this.pl_content_01 = new System.Windows.Forms.Panel();
@@ -97,7 +109,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_edit_02 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_02 = new System.Windows.Forms.Button();
             this.txt_name_02 = new System.Windows.Forms.Label();
-            this.txt_name_edit_02 = new Contas_Familia.Script.RJTextBox();
             this.txt_total_02 = new System.Windows.Forms.Label();
             this.bt_save_02 = new System.Windows.Forms.Button();
             this.lb_total_02 = new System.Windows.Forms.Label();
@@ -123,7 +134,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_edit_03 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_03 = new System.Windows.Forms.Button();
             this.txt_name_03 = new System.Windows.Forms.Label();
-            this.txt_name_edit_03 = new Contas_Familia.Script.RJTextBox();
             this.txt_total_03 = new System.Windows.Forms.Label();
             this.bt_save_03 = new System.Windows.Forms.Button();
             this.lb_total_03 = new System.Windows.Forms.Label();
@@ -149,7 +159,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_edit_04 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_04 = new System.Windows.Forms.Button();
             this.txt_name_04 = new System.Windows.Forms.Label();
-            this.txt_name_edit_04 = new Contas_Familia.Script.RJTextBox();
             this.txt_total_04 = new System.Windows.Forms.Label();
             this.bt_save_04 = new System.Windows.Forms.Button();
             this.lb_total_04 = new System.Windows.Forms.Label();
@@ -175,7 +184,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_edit_05 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_05 = new System.Windows.Forms.Button();
             this.txt_name_05 = new System.Windows.Forms.Label();
-            this.txt_name_edit_05 = new Contas_Familia.Script.RJTextBox();
             this.txt_total_05 = new System.Windows.Forms.Label();
             this.bt_save_05 = new System.Windows.Forms.Button();
             this.lb_total_05 = new System.Windows.Forms.Label();
@@ -201,7 +209,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_edit_06 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_06 = new System.Windows.Forms.Button();
             this.txt_name_06 = new System.Windows.Forms.Label();
-            this.txt_name_edit_06 = new Contas_Familia.Script.RJTextBox();
             this.txt_total_06 = new System.Windows.Forms.Label();
             this.bt_save_06 = new System.Windows.Forms.Button();
             this.lb_total_06 = new System.Windows.Forms.Label();
@@ -227,7 +234,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_edit_07 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_07 = new System.Windows.Forms.Button();
             this.txt_name_07 = new System.Windows.Forms.Label();
-            this.txt_name_edit_07 = new Contas_Familia.Script.RJTextBox();
             this.txt_total_07 = new System.Windows.Forms.Label();
             this.bt_save_07 = new System.Windows.Forms.Button();
             this.lb_total_07 = new System.Windows.Forms.Label();
@@ -253,7 +259,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_edit_08 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_08 = new System.Windows.Forms.Button();
             this.txt_name_08 = new System.Windows.Forms.Label();
-            this.txt_name_edit_08 = new Contas_Familia.Script.RJTextBox();
             this.txt_total_08 = new System.Windows.Forms.Label();
             this.bt_save_08 = new System.Windows.Forms.Button();
             this.lb_total_08 = new System.Windows.Forms.Label();
@@ -279,7 +284,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_edit_09 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_09 = new System.Windows.Forms.Button();
             this.txt_name_09 = new System.Windows.Forms.Label();
-            this.txt_name_edit_09 = new Contas_Familia.Script.RJTextBox();
             this.txt_total_09 = new System.Windows.Forms.Label();
             this.bt_save_09 = new System.Windows.Forms.Button();
             this.lb_total_09 = new System.Windows.Forms.Label();
@@ -305,7 +309,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.bt_save_edit_10 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_10 = new System.Windows.Forms.Button();
             this.txt_name_10 = new System.Windows.Forms.Label();
-            this.txt_name_edit_10 = new Contas_Familia.Script.RJTextBox();
             this.txt_total_10 = new System.Windows.Forms.Label();
             this.bt_save_10 = new System.Windows.Forms.Button();
             this.lb_total_10 = new System.Windows.Forms.Label();
@@ -315,7 +318,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_add = new System.Windows.Forms.Panel();
             this.lb_alert_member = new System.Windows.Forms.Label();
             this.pl_add_family_member = new System.Windows.Forms.Panel();
-            this.txt_add_family_name = new Contas_Familia.Script.RJTextBox();
             this.bt_cancel = new System.Windows.Forms.Button();
             this.bt_save = new System.Windows.Forms.Button();
             this.bt_add = new System.Windows.Forms.Button();
@@ -324,19 +326,17 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dgv_family_member = new System.Windows.Forms.DataGridView();
             this.pl_table_member_family = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.txt_name_edit_10 = new Contas_Familia.Script.RJTextBox();
+            this.txt_name_edit_09 = new Contas_Familia.Script.RJTextBox();
+            this.txt_name_edit_08 = new Contas_Familia.Script.RJTextBox();
+            this.txt_name_edit_07 = new Contas_Familia.Script.RJTextBox();
+            this.txt_name_edit_06 = new Contas_Familia.Script.RJTextBox();
+            this.txt_name_edit_05 = new Contas_Familia.Script.RJTextBox();
+            this.txt_name_edit_04 = new Contas_Familia.Script.RJTextBox();
+            this.txt_name_edit_03 = new Contas_Familia.Script.RJTextBox();
+            this.txt_name_edit_02 = new Contas_Familia.Script.RJTextBox();
+            this.txt_name_edit_01 = new Contas_Familia.Script.RJTextBox();
+            this.txt_add_family_name = new Contas_Familia.Script.RJTextBox();
             this.pl_family_01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.familypaydayDataSetBindingSource)).BeginInit();
@@ -441,30 +441,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_01, "Double click to edit NAME");
             this.txt_name_01.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_01_MouseDoubleClick);
-            // 
-            // txt_name_edit_01
-            // 
-            this.txt_name_edit_01.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_01.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_01.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_01.BorderRadius = 0;
-            this.txt_name_edit_01.BorderSize = 1;
-            this.txt_name_edit_01.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txt_name_edit_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_01.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_01.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_01.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_01.Multiline = false;
-            this.txt_name_edit_01.Name = "txt_name_edit_01";
-            this.txt_name_edit_01.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_01.PasswordChar = false;
-            this.txt_name_edit_01.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_01.PlaceholderText = "";
-            this.txt_name_edit_01.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_01.TabIndex = 82;
-            this.txt_name_edit_01.Texts = "";
-            this.txt_name_edit_01.UnderlinedStyle = false;
-            this.txt_name_edit_01.Leave += new System.EventHandler(this.txt_name_edit_01_Leave);
             // 
             // txt_total_01
             // 
@@ -622,6 +598,102 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView1.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView1_RowsRemoved);
             this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
             this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "credit_card_name";
+            this.Column1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Column1.FillWeight = 32.86738F;
+            this.Column1.HeaderText = "CARTÃO";
+            this.Column1.Items.AddRange(new object[] {
+            "NU BANK"});
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "credit_card_payday";
+            this.Column2.FillWeight = 32.86738F;
+            this.Column2.HeaderText = "VENCIMENTO";
+            this.Column2.Name = "Column2";
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "store_name";
+            this.Column3.FillWeight = 32.86738F;
+            this.Column3.HeaderText = "LOJA";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "product_name";
+            this.Column4.FillWeight = 32.86738F;
+            this.Column4.HeaderText = "PRODUTOS";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "credit_card_installment";
+            this.Column5.FillWeight = 32.86738F;
+            this.Column5.HeaderText = "PARCELAMENTO";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "total_payble";
+            this.Column6.FillWeight = 32.86738F;
+            this.Column6.HeaderText = "VALOR TOTAL";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "total_payable_installment";
+            this.Column7.FillWeight = 32.86738F;
+            this.Column7.HeaderText = "VALOR PARCELADO";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "family_member";
+            this.Column8.HeaderText = "Family Member";
+            this.Column8.Name = "Column8";
+            this.Column8.Visible = false;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "id_register_family_member";
+            this.Column9.FillWeight = 32.86738F;
+            this.Column9.HeaderText = "ID Register Family Member";
+            this.Column9.Name = "Column9";
+            this.Column9.Visible = false;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "id_register_family";
+            this.Column10.HeaderText = "ID Register Family";
+            this.Column10.Name = "Column10";
+            this.Column10.Visible = false;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "id_credit_card";
+            this.Column11.HeaderText = "ID Credit Card";
+            this.Column11.Name = "Column11";
+            this.Column11.Visible = false;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "id_products";
+            this.Column12.HeaderText = "ID Products";
+            this.Column12.Name = "Column12";
+            this.Column12.Visible = false;
+            // 
+            // Column13
+            // 
+            this.Column13.FillWeight = 15F;
+            this.Column13.HeaderText = "PAGO";
+            this.Column13.Name = "Column13";
             // 
             // familypaydayDataSetBindingSource
             // 
@@ -871,29 +943,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_02, "Double click to edit NAME");
             this.txt_name_02.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_02_MouseDoubleClick);
-            // 
-            // txt_name_edit_02
-            // 
-            this.txt_name_edit_02.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_02.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_02.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_02.BorderRadius = 0;
-            this.txt_name_edit_02.BorderSize = 1;
-            this.txt_name_edit_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_02.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_02.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_02.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_02.Multiline = false;
-            this.txt_name_edit_02.Name = "txt_name_edit_02";
-            this.txt_name_edit_02.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_02.PasswordChar = false;
-            this.txt_name_edit_02.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_02.PlaceholderText = "";
-            this.txt_name_edit_02.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_02.TabIndex = 83;
-            this.txt_name_edit_02.Texts = "";
-            this.txt_name_edit_02.UnderlinedStyle = false;
-            this.txt_name_edit_02.Leave += new System.EventHandler(this.txt_name_edit_02_Leave);
             // 
             // txt_total_02
             // 
@@ -1222,29 +1271,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.toolTip1.SetToolTip(this.txt_name_03, "Double click to edit NAME");
             this.txt_name_03.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_03_MouseDoubleClick);
             // 
-            // txt_name_edit_03
-            // 
-            this.txt_name_edit_03.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_03.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_03.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_03.BorderRadius = 0;
-            this.txt_name_edit_03.BorderSize = 1;
-            this.txt_name_edit_03.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_03.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_03.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_03.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_03.Multiline = false;
-            this.txt_name_edit_03.Name = "txt_name_edit_03";
-            this.txt_name_edit_03.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_03.PasswordChar = false;
-            this.txt_name_edit_03.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_03.PlaceholderText = "";
-            this.txt_name_edit_03.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_03.TabIndex = 84;
-            this.txt_name_edit_03.Texts = "";
-            this.txt_name_edit_03.UnderlinedStyle = false;
-            this.txt_name_edit_03.Leave += new System.EventHandler(this.txt_name_edit_03_Leave);
-            // 
             // txt_total_03
             // 
             this.txt_total_03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1571,29 +1597,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_04, "Double click to edit NAME");
             this.txt_name_04.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_04_MouseDoubleClick);
-            // 
-            // txt_name_edit_04
-            // 
-            this.txt_name_edit_04.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_04.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_04.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_04.BorderRadius = 0;
-            this.txt_name_edit_04.BorderSize = 1;
-            this.txt_name_edit_04.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_04.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_04.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_04.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_04.Multiline = false;
-            this.txt_name_edit_04.Name = "txt_name_edit_04";
-            this.txt_name_edit_04.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_04.PasswordChar = false;
-            this.txt_name_edit_04.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_04.PlaceholderText = "";
-            this.txt_name_edit_04.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_04.TabIndex = 93;
-            this.txt_name_edit_04.Texts = "";
-            this.txt_name_edit_04.UnderlinedStyle = false;
-            this.txt_name_edit_04.Leave += new System.EventHandler(this.txt_name_edit_04_Leave);
             // 
             // txt_total_04
             // 
@@ -1922,29 +1925,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.toolTip1.SetToolTip(this.txt_name_05, "Double click to edit NAME");
             this.txt_name_05.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_05_MouseDoubleClick);
             // 
-            // txt_name_edit_05
-            // 
-            this.txt_name_edit_05.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_05.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_05.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_05.BorderRadius = 0;
-            this.txt_name_edit_05.BorderSize = 1;
-            this.txt_name_edit_05.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_05.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_05.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_05.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_05.Multiline = false;
-            this.txt_name_edit_05.Name = "txt_name_edit_05";
-            this.txt_name_edit_05.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_05.PasswordChar = false;
-            this.txt_name_edit_05.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_05.PlaceholderText = "";
-            this.txt_name_edit_05.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_05.TabIndex = 92;
-            this.txt_name_edit_05.Texts = "";
-            this.txt_name_edit_05.UnderlinedStyle = false;
-            this.txt_name_edit_05.Leave += new System.EventHandler(this.txt_name_edit_05_Leave);
-            // 
             // txt_total_05
             // 
             this.txt_total_05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2271,29 +2251,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_06, "Double click to edit NAME");
             this.txt_name_06.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_06_MouseDoubleClick);
-            // 
-            // txt_name_edit_06
-            // 
-            this.txt_name_edit_06.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_06.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_06.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_06.BorderRadius = 0;
-            this.txt_name_edit_06.BorderSize = 1;
-            this.txt_name_edit_06.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_06.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_06.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_06.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_06.Multiline = false;
-            this.txt_name_edit_06.Name = "txt_name_edit_06";
-            this.txt_name_edit_06.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_06.PasswordChar = false;
-            this.txt_name_edit_06.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_06.PlaceholderText = "";
-            this.txt_name_edit_06.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_06.TabIndex = 91;
-            this.txt_name_edit_06.Texts = "";
-            this.txt_name_edit_06.UnderlinedStyle = false;
-            this.txt_name_edit_06.Leave += new System.EventHandler(this.txt_name_edit_06_Leave);
             // 
             // txt_total_06
             // 
@@ -2622,29 +2579,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.toolTip1.SetToolTip(this.txt_name_07, "Double click to edit NAME");
             this.txt_name_07.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_07_MouseDoubleClick);
             // 
-            // txt_name_edit_07
-            // 
-            this.txt_name_edit_07.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_07.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_07.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_07.BorderRadius = 0;
-            this.txt_name_edit_07.BorderSize = 1;
-            this.txt_name_edit_07.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_07.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_07.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_07.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_07.Multiline = false;
-            this.txt_name_edit_07.Name = "txt_name_edit_07";
-            this.txt_name_edit_07.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_07.PasswordChar = false;
-            this.txt_name_edit_07.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_07.PlaceholderText = "";
-            this.txt_name_edit_07.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_07.TabIndex = 90;
-            this.txt_name_edit_07.Texts = "";
-            this.txt_name_edit_07.UnderlinedStyle = false;
-            this.txt_name_edit_07.Leave += new System.EventHandler(this.txt_name_edit_07_Leave);
-            // 
             // txt_total_07
             // 
             this.txt_total_07.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2971,29 +2905,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.txt_name_08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.txt_name_08, "Double click to edit NAME");
             this.txt_name_08.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_08_MouseDoubleClick);
-            // 
-            // txt_name_edit_08
-            // 
-            this.txt_name_edit_08.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_08.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_08.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_08.BorderRadius = 0;
-            this.txt_name_edit_08.BorderSize = 1;
-            this.txt_name_edit_08.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_08.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_08.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_08.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_08.Multiline = false;
-            this.txt_name_edit_08.Name = "txt_name_edit_08";
-            this.txt_name_edit_08.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_08.PasswordChar = false;
-            this.txt_name_edit_08.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_08.PlaceholderText = "";
-            this.txt_name_edit_08.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_08.TabIndex = 89;
-            this.txt_name_edit_08.Texts = "";
-            this.txt_name_edit_08.UnderlinedStyle = false;
-            this.txt_name_edit_08.Leave += new System.EventHandler(this.txt_name_edit_08_Leave);
             // 
             // txt_total_08
             // 
@@ -3322,29 +3233,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.toolTip1.SetToolTip(this.txt_name_09, "Double click to edit NAME");
             this.txt_name_09.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_09_MouseDoubleClick);
             // 
-            // txt_name_edit_09
-            // 
-            this.txt_name_edit_09.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_09.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_09.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_09.BorderRadius = 0;
-            this.txt_name_edit_09.BorderSize = 1;
-            this.txt_name_edit_09.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_09.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_09.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_09.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_09.Multiline = false;
-            this.txt_name_edit_09.Name = "txt_name_edit_09";
-            this.txt_name_edit_09.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_09.PasswordChar = false;
-            this.txt_name_edit_09.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_09.PlaceholderText = "";
-            this.txt_name_edit_09.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_09.TabIndex = 89;
-            this.txt_name_edit_09.Texts = "";
-            this.txt_name_edit_09.UnderlinedStyle = false;
-            this.txt_name_edit_09.Leave += new System.EventHandler(this.txt_name_edit_09_Leave);
-            // 
             // txt_total_09
             // 
             this.txt_total_09.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -3672,29 +3560,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.toolTip1.SetToolTip(this.txt_name_10, "Double click to edit NAME");
             this.txt_name_10.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txt_name_10_MouseDoubleClick);
             // 
-            // txt_name_edit_10
-            // 
-            this.txt_name_edit_10.BackColor = System.Drawing.Color.White;
-            this.txt_name_edit_10.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_10.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_name_edit_10.BorderRadius = 0;
-            this.txt_name_edit_10.BorderSize = 1;
-            this.txt_name_edit_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edit_10.ForeColor = System.Drawing.Color.Black;
-            this.txt_name_edit_10.Location = new System.Drawing.Point(18, 12);
-            this.txt_name_edit_10.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_name_edit_10.Multiline = false;
-            this.txt_name_edit_10.Name = "txt_name_edit_10";
-            this.txt_name_edit_10.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_name_edit_10.PasswordChar = false;
-            this.txt_name_edit_10.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_name_edit_10.PlaceholderText = "";
-            this.txt_name_edit_10.Size = new System.Drawing.Size(250, 40);
-            this.txt_name_edit_10.TabIndex = 88;
-            this.txt_name_edit_10.Texts = "";
-            this.txt_name_edit_10.UnderlinedStyle = false;
-            this.txt_name_edit_10.Leave += new System.EventHandler(this.txt_name_edit_10_Leave);
-            // 
             // txt_total_10
             // 
             this.txt_total_10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -3827,30 +3692,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_add_family_member.Size = new System.Drawing.Size(1171, 73);
             this.pl_add_family_member.TabIndex = 10;
             // 
-            // txt_add_family_name
-            // 
-            this.txt_add_family_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.txt_add_family_name.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_add_family_name.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_add_family_name.BorderRadius = 0;
-            this.txt_add_family_name.BorderSize = 2;
-            this.txt_add_family_name.Enabled = false;
-            this.txt_add_family_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_add_family_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_add_family_name.Location = new System.Drawing.Point(16, 17);
-            this.txt_add_family_name.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_add_family_name.Multiline = false;
-            this.txt_add_family_name.Name = "txt_add_family_name";
-            this.txt_add_family_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_add_family_name.PasswordChar = false;
-            this.txt_add_family_name.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_add_family_name.PlaceholderText = "";
-            this.txt_add_family_name.Size = new System.Drawing.Size(250, 31);
-            this.txt_add_family_name.TabIndex = 81;
-            this.txt_add_family_name.Texts = "";
-            this.txt_add_family_name.UnderlinedStyle = false;
-            this.txt_add_family_name.Leave += new System.EventHandler(this.txt_add_family_name_Leave);
-            // 
             // bt_cancel
             // 
             this.bt_cancel.BackColor = System.Drawing.Color.LightSlateGray;
@@ -3974,100 +3815,260 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_table_member_family.TabIndex = 166;
             this.pl_table_member_family.Visible = false;
             // 
-            // Column1
+            // txt_name_edit_10
             // 
-            this.Column1.DataPropertyName = "credit_card_name";
-            this.Column1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Column1.FillWeight = 32.86738F;
-            this.Column1.HeaderText = "CARTÃO";
-            this.Column1.Items.AddRange(new object[] {
-            "NU BANK"});
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.txt_name_edit_10.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_10.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_10.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_10.BorderRadius = 0;
+            this.txt_name_edit_10.BorderSize = 1;
+            this.txt_name_edit_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_10.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_10.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_10.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_10.Multiline = false;
+            this.txt_name_edit_10.Name = "txt_name_edit_10";
+            this.txt_name_edit_10.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_10.PasswordChar = false;
+            this.txt_name_edit_10.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_10.PlaceholderText = "";
+            this.txt_name_edit_10.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_10.TabIndex = 88;
+            this.txt_name_edit_10.Texts = "";
+            this.txt_name_edit_10.UnderlinedStyle = false;
+            this.txt_name_edit_10.Leave += new System.EventHandler(this.txt_name_edit_10_Leave);
             // 
-            // Column2
+            // txt_name_edit_09
             // 
-            this.Column2.DataPropertyName = "credit_card_payday";
-            this.Column2.FillWeight = 32.86738F;
-            this.Column2.HeaderText = "VENCIMENTO";
-            this.Column2.Name = "Column2";
+            this.txt_name_edit_09.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_09.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_09.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_09.BorderRadius = 0;
+            this.txt_name_edit_09.BorderSize = 1;
+            this.txt_name_edit_09.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_09.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_09.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_09.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_09.Multiline = false;
+            this.txt_name_edit_09.Name = "txt_name_edit_09";
+            this.txt_name_edit_09.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_09.PasswordChar = false;
+            this.txt_name_edit_09.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_09.PlaceholderText = "";
+            this.txt_name_edit_09.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_09.TabIndex = 89;
+            this.txt_name_edit_09.Texts = "";
+            this.txt_name_edit_09.UnderlinedStyle = false;
+            this.txt_name_edit_09.Leave += new System.EventHandler(this.txt_name_edit_09_Leave);
             // 
-            // Column3
+            // txt_name_edit_08
             // 
-            this.Column3.DataPropertyName = "store_name";
-            this.Column3.FillWeight = 32.86738F;
-            this.Column3.HeaderText = "LOJA";
-            this.Column3.Name = "Column3";
+            this.txt_name_edit_08.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_08.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_08.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_08.BorderRadius = 0;
+            this.txt_name_edit_08.BorderSize = 1;
+            this.txt_name_edit_08.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_08.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_08.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_08.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_08.Multiline = false;
+            this.txt_name_edit_08.Name = "txt_name_edit_08";
+            this.txt_name_edit_08.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_08.PasswordChar = false;
+            this.txt_name_edit_08.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_08.PlaceholderText = "";
+            this.txt_name_edit_08.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_08.TabIndex = 89;
+            this.txt_name_edit_08.Texts = "";
+            this.txt_name_edit_08.UnderlinedStyle = false;
+            this.txt_name_edit_08.Leave += new System.EventHandler(this.txt_name_edit_08_Leave);
             // 
-            // Column4
+            // txt_name_edit_07
             // 
-            this.Column4.DataPropertyName = "product_name";
-            this.Column4.FillWeight = 32.86738F;
-            this.Column4.HeaderText = "PRODUTOS";
-            this.Column4.Name = "Column4";
+            this.txt_name_edit_07.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_07.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_07.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_07.BorderRadius = 0;
+            this.txt_name_edit_07.BorderSize = 1;
+            this.txt_name_edit_07.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_07.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_07.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_07.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_07.Multiline = false;
+            this.txt_name_edit_07.Name = "txt_name_edit_07";
+            this.txt_name_edit_07.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_07.PasswordChar = false;
+            this.txt_name_edit_07.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_07.PlaceholderText = "";
+            this.txt_name_edit_07.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_07.TabIndex = 90;
+            this.txt_name_edit_07.Texts = "";
+            this.txt_name_edit_07.UnderlinedStyle = false;
+            this.txt_name_edit_07.Leave += new System.EventHandler(this.txt_name_edit_07_Leave);
             // 
-            // Column5
+            // txt_name_edit_06
             // 
-            this.Column5.DataPropertyName = "credit_card_installment";
-            this.Column5.FillWeight = 32.86738F;
-            this.Column5.HeaderText = "PARCELAMENTO";
-            this.Column5.Name = "Column5";
+            this.txt_name_edit_06.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_06.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_06.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_06.BorderRadius = 0;
+            this.txt_name_edit_06.BorderSize = 1;
+            this.txt_name_edit_06.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_06.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_06.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_06.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_06.Multiline = false;
+            this.txt_name_edit_06.Name = "txt_name_edit_06";
+            this.txt_name_edit_06.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_06.PasswordChar = false;
+            this.txt_name_edit_06.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_06.PlaceholderText = "";
+            this.txt_name_edit_06.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_06.TabIndex = 91;
+            this.txt_name_edit_06.Texts = "";
+            this.txt_name_edit_06.UnderlinedStyle = false;
+            this.txt_name_edit_06.Leave += new System.EventHandler(this.txt_name_edit_06_Leave);
             // 
-            // Column6
+            // txt_name_edit_05
             // 
-            this.Column6.DataPropertyName = "total_payble";
-            this.Column6.FillWeight = 32.86738F;
-            this.Column6.HeaderText = "VALOR TOTAL";
-            this.Column6.Name = "Column6";
+            this.txt_name_edit_05.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_05.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_05.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_05.BorderRadius = 0;
+            this.txt_name_edit_05.BorderSize = 1;
+            this.txt_name_edit_05.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_05.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_05.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_05.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_05.Multiline = false;
+            this.txt_name_edit_05.Name = "txt_name_edit_05";
+            this.txt_name_edit_05.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_05.PasswordChar = false;
+            this.txt_name_edit_05.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_05.PlaceholderText = "";
+            this.txt_name_edit_05.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_05.TabIndex = 92;
+            this.txt_name_edit_05.Texts = "";
+            this.txt_name_edit_05.UnderlinedStyle = false;
+            this.txt_name_edit_05.Leave += new System.EventHandler(this.txt_name_edit_05_Leave);
             // 
-            // Column7
+            // txt_name_edit_04
             // 
-            this.Column7.DataPropertyName = "total_payable_installment";
-            this.Column7.FillWeight = 32.86738F;
-            this.Column7.HeaderText = "VALOR PARCELADO";
-            this.Column7.Name = "Column7";
+            this.txt_name_edit_04.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_04.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_04.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_04.BorderRadius = 0;
+            this.txt_name_edit_04.BorderSize = 1;
+            this.txt_name_edit_04.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_04.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_04.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_04.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_04.Multiline = false;
+            this.txt_name_edit_04.Name = "txt_name_edit_04";
+            this.txt_name_edit_04.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_04.PasswordChar = false;
+            this.txt_name_edit_04.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_04.PlaceholderText = "";
+            this.txt_name_edit_04.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_04.TabIndex = 93;
+            this.txt_name_edit_04.Texts = "";
+            this.txt_name_edit_04.UnderlinedStyle = false;
+            this.txt_name_edit_04.Leave += new System.EventHandler(this.txt_name_edit_04_Leave);
             // 
-            // Column8
+            // txt_name_edit_03
             // 
-            this.Column8.DataPropertyName = "family_member";
-            this.Column8.HeaderText = "Family Member";
-            this.Column8.Name = "Column8";
-            this.Column8.Visible = false;
+            this.txt_name_edit_03.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_03.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_03.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_03.BorderRadius = 0;
+            this.txt_name_edit_03.BorderSize = 1;
+            this.txt_name_edit_03.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_03.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_03.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_03.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_03.Multiline = false;
+            this.txt_name_edit_03.Name = "txt_name_edit_03";
+            this.txt_name_edit_03.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_03.PasswordChar = false;
+            this.txt_name_edit_03.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_03.PlaceholderText = "";
+            this.txt_name_edit_03.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_03.TabIndex = 84;
+            this.txt_name_edit_03.Texts = "";
+            this.txt_name_edit_03.UnderlinedStyle = false;
+            this.txt_name_edit_03.Leave += new System.EventHandler(this.txt_name_edit_03_Leave);
             // 
-            // Column9
+            // txt_name_edit_02
             // 
-            this.Column9.DataPropertyName = "id_register_family_member";
-            this.Column9.FillWeight = 32.86738F;
-            this.Column9.HeaderText = "ID Register Family Member";
-            this.Column9.Name = "Column9";
-            this.Column9.Visible = false;
+            this.txt_name_edit_02.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_02.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_02.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_02.BorderRadius = 0;
+            this.txt_name_edit_02.BorderSize = 1;
+            this.txt_name_edit_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_02.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_02.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_02.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_02.Multiline = false;
+            this.txt_name_edit_02.Name = "txt_name_edit_02";
+            this.txt_name_edit_02.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_02.PasswordChar = false;
+            this.txt_name_edit_02.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_02.PlaceholderText = "";
+            this.txt_name_edit_02.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_02.TabIndex = 83;
+            this.txt_name_edit_02.Texts = "";
+            this.txt_name_edit_02.UnderlinedStyle = false;
+            this.txt_name_edit_02.Leave += new System.EventHandler(this.txt_name_edit_02_Leave);
             // 
-            // Column10
+            // txt_name_edit_01
             // 
-            this.Column10.DataPropertyName = "id_register_family";
-            this.Column10.HeaderText = "ID Register Family";
-            this.Column10.Name = "Column10";
-            this.Column10.Visible = false;
+            this.txt_name_edit_01.BackColor = System.Drawing.Color.White;
+            this.txt_name_edit_01.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_01.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_name_edit_01.BorderRadius = 0;
+            this.txt_name_edit_01.BorderSize = 1;
+            this.txt_name_edit_01.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txt_name_edit_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edit_01.ForeColor = System.Drawing.Color.Black;
+            this.txt_name_edit_01.Location = new System.Drawing.Point(18, 12);
+            this.txt_name_edit_01.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_name_edit_01.Multiline = false;
+            this.txt_name_edit_01.Name = "txt_name_edit_01";
+            this.txt_name_edit_01.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_name_edit_01.PasswordChar = false;
+            this.txt_name_edit_01.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_name_edit_01.PlaceholderText = "";
+            this.txt_name_edit_01.Size = new System.Drawing.Size(250, 40);
+            this.txt_name_edit_01.TabIndex = 82;
+            this.txt_name_edit_01.Texts = "";
+            this.txt_name_edit_01.UnderlinedStyle = false;
+            this.txt_name_edit_01.Leave += new System.EventHandler(this.txt_name_edit_01_Leave);
             // 
-            // Column11
+            // txt_add_family_name
             // 
-            this.Column11.DataPropertyName = "id_credit_card";
-            this.Column11.HeaderText = "ID Credit Card";
-            this.Column11.Name = "Column11";
-            this.Column11.Visible = false;
-            // 
-            // Column12
-            // 
-            this.Column12.DataPropertyName = "id_products";
-            this.Column12.HeaderText = "ID Products";
-            this.Column12.Name = "Column12";
-            this.Column12.Visible = false;
-            // 
-            // Column13
-            // 
-            this.Column13.FillWeight = 15F;
-            this.Column13.HeaderText = "PAGO";
-            this.Column13.Name = "Column13";
+            this.txt_add_family_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.txt_add_family_name.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_add_family_name.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_add_family_name.BorderRadius = 0;
+            this.txt_add_family_name.BorderSize = 2;
+            this.txt_add_family_name.Enabled = false;
+            this.txt_add_family_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_add_family_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_add_family_name.Location = new System.Drawing.Point(16, 17);
+            this.txt_add_family_name.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_add_family_name.Multiline = false;
+            this.txt_add_family_name.Name = "txt_add_family_name";
+            this.txt_add_family_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_add_family_name.PasswordChar = false;
+            this.txt_add_family_name.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_add_family_name.PlaceholderText = "";
+            this.txt_add_family_name.Size = new System.Drawing.Size(250, 31);
+            this.txt_add_family_name.TabIndex = 81;
+            this.txt_add_family_name.Texts = "";
+            this.txt_add_family_name.UnderlinedStyle = false;
+            this.txt_add_family_name.Leave += new System.EventHandler(this.txt_add_family_name_Leave);
             // 
             // family
             // 

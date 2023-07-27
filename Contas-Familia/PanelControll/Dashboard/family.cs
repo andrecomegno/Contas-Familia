@@ -309,43 +309,54 @@ namespace Contas_Familia.PanelControll.Dashboard
             // DATAGRIDVIEW, SALVAR NOVOS DADOS NA TABELA
             if (dataGridViews.Rows.Count > 1)
             {
-                for (int i = 0; i < dataGridViews.Rows.Count - 1; i++)
+                try
                 {
-                    // NOME DO CARTÃO DE CREDITO
-                    credit_card_name = dataGridViews.Rows[i].Cells[0].Value.ToString();
-                    // VENCIMENTO DO CARTÃO DE CREDITO
-                    if(dataGridViews.Rows[i].Cells[1].Value == null || string.IsNullOrEmpty(dataGridViews.Rows[i].Cells[1].Value.ToString()))
+                    // PERCORRE AS LINHA DO DATAGRIDVIEW
+                    for (int i = 0; i < dataGridViews.Rows.Count - 1; i++)
                     {
-                        credit_card_payday = dtp[i].Value.ToShortDateString();
-                    }
-                    else
-                    {
-                        credit_card_payday = dataGridViews.Rows[i].Cells[1].Value.ToString();
+                        // NOME DO CARTÃO DE CREDITO
+                        credit_card_name = dataGridViews.Rows[i].Cells[0].Value.ToString();
+
+                        // VENCIMENTO DO CARTÃO DE CREDITO, DateTimePicker
+                        if (dataGridViews.Rows[i].Cells[1].Value == null || string.IsNullOrEmpty(dataGridViews.Rows[i].Cells[1].Value.ToString()))
+                        {
+                            // SE O USUARIO DEIXAR EM BRANCO, SERA ADICIONADO A DATA ATUAL
+                            credit_card_payday = dtp[i].Value.ToString("dd/MM/yyyy");
+                        }
+                        else
+                        {
+                            // PEGA O VALOR DA DATA SELECIONADA PELO USUARIO E PASSADO A VARIAVEL
+                            credit_card_payday = dataGridViews.Rows[i].Cells[1].Value.ToString();
+                        }                     
+
+                        // NOME DA LOJA
+                        store_name = dataGridViews.Rows[i].Cells[2].Value.ToString();
+                        // NOME DO PRODUTO
+                        product_name = dataGridViews.Rows[i].Cells[3].Value.ToString();
+                        // PARCELAMENTO
+                        card_credit_installment = dataGridViews.Rows[i].Cells[4].Value.ToString();
+                        // VALOR TOTAL DA COMPRA
+                        total_payble = Convert.ToDecimal(dataGridViews.Rows[i].Cells[5].Value);
+                        // VALOR A PAGAR PARCELADO
+                        total_payable_installment = Convert.ToDecimal(dataGridViews.Rows[i].Cells[6].Value);
+                        // NOME DO MEMBRO DA FAMILIA
+                        dataGridViews.Rows[i].Cells[7].Value = name;
+                        // ID FAMILY MEMBER
+                        dataGridViews.Rows[i].Cells[8].Value = id;
                     }
 
-                    // NOME DA LOJA
-                    store_name = dataGridViews.Rows[i].Cells[2].Value.ToString();
-                    // NOME DO PRODUTO
-                    product_name = dataGridViews.Rows[i].Cells[3].Value.ToString();
-                    // PARCELAMENTO
-                    card_credit_installment = dataGridViews.Rows[i].Cells[4].Value.ToString();
-                    // VALOR TOTAL DA COMPRA
-                    total_payble = Convert.ToDecimal(dataGridViews.Rows[i].Cells[5].Value);
-                    // VALOR A PAGAR PARCELADO
-                    total_payable_installment = Convert.ToDecimal(dataGridViews.Rows[i].Cells[6].Value);
-                    // NOME DO MEMBRO DA FAMILIA
-                    dataGridViews.Rows[i].Cells[7].Value = name;
-                    // ID FAMILY MEMBER
-                    dataGridViews.Rows[i].Cells[8].Value = id;
+                    // TABELA DAS CONTAS A PAGAR
+                    TableMemberPayDay(id);
+
+                    // ATUALIZA A TABELA
+                    TableMain();
+
+                    MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
-                // TABELA DAS CONTAS A PAGAR
-                TableMemberPayDay(id);
-
-                // ATUALIZA A TABELA
-                TableMain();
-
-                MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }                
             }
         }
 
@@ -393,17 +404,24 @@ namespace Contas_Familia.PanelControll.Dashboard
         // BOTÃO DELETAR LINHA DA TABELA
         private void BT_DeleteRow(DataGridViewRowCancelEventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            switch (dr)
+            try
             {
-                case DialogResult.Yes:
-                    // TABELA DELETAR 
-                    TableDeleteBillToPay();
-                    break;
-                case DialogResult.No:
-                    e.Cancel = true;
-                    break;
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        // TABELA DELETAR 
+                        TableDeleteBillToPay();
+                        break;
+                    case DialogResult.No:
+                        e.Cancel = true;
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("INTERNAL ERROR: " + ex, "INTERNAL ERROR !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -578,6 +596,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 }
             }
         }
+        // CELL MOUSE CLICK
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView1);
         private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView2);
         private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView3);
@@ -668,18 +687,22 @@ namespace Contas_Familia.PanelControll.Dashboard
         #region ADD DATETIMEPICKER TABLE
         // ADD NA TABELA O DateTimePicker
         void AddDateTimePickerTable(DataGridView dataGridViews, DataGridViewCellEventArgs e, DateTimePicker _dtp, Rectangle _rectangle)
-        {            
+        {
+            // VERFICA O CLICK SOMENTE DENTRO DO DateTimePicker
             if (e.RowIndex >= 0 && e.RowIndex < dataGridViews.Rows.Count && e.ColumnIndex >= 0 && e.ColumnIndex < dataGridViews.Columns.Count)
             {
+                // CRIADO UM SWITCH PARA VERIFICAR A COLUNA VENCIMENTO NA ONDE ESTA O DateTimePicker
                 switch (dataGridViews.Columns[e.ColumnIndex].Index)
                 {
-                    case 0:                        
-                        break;
+                    // A PRIMEIRA COLUNA DA TABELA
                     case 1:
                         _rectangle = dataGridViews.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
+                        // TAMANHO DO DateTimePicker
                         _dtp.Size = new Size(_rectangle.Width, _rectangle.Height);
+                        // COLOCA O DateTimePicker DENTRO DA CELULA 
                         _dtp.Location = new Point(_rectangle.X, _rectangle.Y);
-                        _dtp.Visible = true;                        
+                        // DEIXA O DateTimePicker VISIVEL QUANDO CLICADO PELO USUARIO
+                        _dtp.Visible = true;
                         break;
                     default:
                         break;
@@ -687,26 +710,42 @@ namespace Contas_Familia.PanelControll.Dashboard
             }
         }
 
-        private void dtp_TextChange(Object sender, EventArgs e)
-        {
-            DataGridView[] dataGridViews = { dataGridView1, dataGridView2, dataGridView3, dataGridView4, dataGridView5, dataGridView6, dataGridView7, dataGridView8, dataGridView9, dataGridView10 };
-
-            for (int i = 0; i < dataGridViews.Length; i++)
-            {
-                dataGridViews[i].CurrentCell.Value = dtp[i].Text.ToString();
-            } 
-        }
-
+        // FECHA O DateTimePicker DEPOIS DE SELECIONAR UMA DATA
         private void dtp_CloseUp(object sender, EventArgs e)
         {
-            DataGridView[] dataGridViews = { dataGridView1, dataGridView2, dataGridView3, dataGridView4, dataGridView5, dataGridView6, dataGridView7, dataGridView8, dataGridView9, dataGridView10 };
-
-            for (int i = 0; i < dataGridViews.Length; i++)
+            // CRIA UM NOVO DateTimePicker E ADICIONA O OBJECT SENDER
+            DateTimePicker dtp = sender as DateTimePicker;
+            if (dtp != null)
             {
-                dtp[i].Visible = false;
+                // CRIA UMA NOVO DATAGRIDVIEW PARA ADICONAR O DateTimePicker
+                DataGridView dataGridView = GetDataGridViewFromDateTimePicker(dtp);
+                if (dataGridView != null && dataGridView.CurrentCell != null)
+                {
+                    // ADICIONA A DATA SELECIONADO PELO USUARIO AO DATAGRIDVIEW ATRIBUINDO A CELULA
+                    dataGridView.CurrentCell.Value = dtp.Value.ToString("dd/MM/yyyy");
+                    dtp.Visible = false;
+                }
             }
         }
 
+        // PEGA O DATAGRIDVIEW JUNTO COM O DATETIMEPICKER
+        private DataGridView GetDataGridViewFromDateTimePicker(DateTimePicker _dtp)
+        {
+            DataGridView[] dataGridViews = { dataGridView1, dataGridView2, dataGridView3, dataGridView4, dataGridView5, dataGridView6, dataGridView7, dataGridView8, dataGridView9, dataGridView10 };
+
+            // PERCORRE TODAS AS DATAGRIDVIEW 
+            for (int i = 0; i < dataGridViews.Length; i++)
+            {
+                // SE O DateTimePicker FOR IGUAL A CELULA SELECIONADA PELO USURIO NO DATAGRIDVIEW RETORNA O DATAGRIDVIEW COM A DATA
+                if (_dtp == this.dtp[i])
+                {
+                    return dataGridViews[i];
+                }
+            }
+            return null;
+        }
+
+        // CELL CLICK DATAGRIDVIEWS
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView1, e, dtp[0], rectangle[0]);
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView2, e, dtp[1], rectangle[1]);
         private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView3, e, dtp[2], rectangle[2]);
@@ -718,6 +757,7 @@ namespace Contas_Familia.PanelControll.Dashboard
         private void dataGridView9_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView9, e, dtp[8], rectangle[8]);
         private void dataGridView10_CellClick(object sender, DataGridViewCellEventArgs e) => AddDateTimePickerTable(dataGridView10, e, dtp[9], rectangle[9]);
 
+        // DATAGRIDVIEWS SCROLL 
         private void dataGridView1_Scroll(object sender, ScrollEventArgs e) => dtp[0].Visible = false;
         private void dataGridView2_Scroll(object sender, ScrollEventArgs e) => dtp[1].Visible = false;
         private void dataGridView3_Scroll(object sender, ScrollEventArgs e) => dtp[2].Visible = false;
@@ -829,8 +869,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 dataGridViews[i].Controls.Add(dtp[i]);
                 dtp[i].Visible = false;
                 dtp[i].Format = DateTimePickerFormat.Short;
-                dtp[i].CloseUp += new EventHandler(dtp_CloseUp);
-                dtp[i].TextChanged += new EventHandler(dtp_TextChange);               
+                dtp[i].CloseUp += new EventHandler(dtp_CloseUp);             
             }
         }
 
@@ -900,6 +939,5 @@ namespace Contas_Familia.PanelControll.Dashboard
             Main.Instance.ButtonMenuDisabled(true);            
             TableMain();
         }
-
     }
 }
