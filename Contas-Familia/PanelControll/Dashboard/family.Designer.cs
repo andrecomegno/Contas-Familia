@@ -81,19 +81,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_content_02 = new System.Windows.Forms.Panel();
             this.pl_family_02 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bt_save_edit_02 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_02 = new System.Windows.Forms.Button();
             this.txt_name_02 = new System.Windows.Forms.Label();
@@ -324,6 +311,18 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dgv_family_member = new System.Windows.Forms.DataGridView();
             this.pl_table_member_family = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -331,7 +330,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -593,7 +591,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.Column5,
             this.Column6,
             this.Column7,
-            this.Column8,
             this.Column9,
             this.Column10,
             this.Column11,
@@ -622,10 +619,9 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView1.ShowCellToolTips = false;
             this.dataGridView1.Size = new System.Drawing.Size(1139, 350);
             this.dataGridView1.TabIndex = 8;
-            this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView1_RowsRemoved);
             this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
             this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
@@ -707,7 +703,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
@@ -738,100 +733,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridView2.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView2_RowsRemoved);
             this.dataGridView2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView2_Scroll);
             this.dataGridView2.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView2_UserDeletingRow);
-            // 
-            // dataGridViewComboBoxColumn1
-            // 
-            this.dataGridViewComboBoxColumn1.DataPropertyName = "credit_card_name";
-            this.dataGridViewComboBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewComboBoxColumn1.FillWeight = 32.86738F;
-            this.dataGridViewComboBoxColumn1.HeaderText = "CARTÃO";
-            this.dataGridViewComboBoxColumn1.Items.AddRange(new object[] {
-            "NU BANK"});
-            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "credit_card_payday";
-            this.dataGridViewTextBoxColumn3.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "VENCIMENTO";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "store_name";
-            this.dataGridViewTextBoxColumn4.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "LOJA";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "product_name";
-            this.dataGridViewTextBoxColumn5.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "PRODUTOS";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "credit_card_installment";
-            this.dataGridViewTextBoxColumn6.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "PARCELAMENTO";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "total_payble";
-            this.dataGridViewTextBoxColumn7.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn7.HeaderText = "VALOR TOTAL";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "total_payable_installment";
-            this.dataGridViewTextBoxColumn8.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn8.HeaderText = "VALOR PARCELADO";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "family_member";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Family Member";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_register_family_member";
-            this.dataGridViewTextBoxColumn1.FillWeight = 32.86738F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID Register Family Member";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "id_register_family";
-            this.dataGridViewTextBoxColumn9.HeaderText = "ID Register Family";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "id_credit_card";
-            this.dataGridViewTextBoxColumn10.HeaderText = "ID Credit Card";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "id_products";
-            this.dataGridViewTextBoxColumn11.HeaderText = "ID Products";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Visible = false;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.FillWeight = 15F;
-            this.dataGridViewCheckBoxColumn1.HeaderText = "PAGO";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
             // bt_save_edit_02
             // 
@@ -3981,6 +3882,93 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_table_member_family.TabIndex = 166;
             this.pl_table_member_family.Visible = false;
             // 
+            // dataGridViewComboBoxColumn1
+            // 
+            this.dataGridViewComboBoxColumn1.DataPropertyName = "credit_card_name";
+            this.dataGridViewComboBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewComboBoxColumn1.FillWeight = 32.86738F;
+            this.dataGridViewComboBoxColumn1.HeaderText = "CARTÃO";
+            this.dataGridViewComboBoxColumn1.Items.AddRange(new object[] {
+            "NU BANK"});
+            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "credit_card_payday";
+            this.dataGridViewTextBoxColumn3.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "VENCIMENTO";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "store_name";
+            this.dataGridViewTextBoxColumn4.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "LOJA";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "product_name";
+            this.dataGridViewTextBoxColumn5.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "PRODUTOS";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "credit_card_installment";
+            this.dataGridViewTextBoxColumn6.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "PARCELAMENTO";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "total_payble";
+            this.dataGridViewTextBoxColumn7.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "VALOR TOTAL";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "total_payable_installment";
+            this.dataGridViewTextBoxColumn8.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn8.HeaderText = "VALOR PARCELADO";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_register_family_member";
+            this.dataGridViewTextBoxColumn1.FillWeight = 32.86738F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID Register Family Member";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "id_register_family";
+            this.dataGridViewTextBoxColumn9.HeaderText = "ID Register Family";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "id_credit_card";
+            this.dataGridViewTextBoxColumn10.HeaderText = "ID Credit Card";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "id_products";
+            this.dataGridViewTextBoxColumn11.HeaderText = "ID Products";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Visible = false;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.FillWeight = 15F;
+            this.dataGridViewCheckBoxColumn1.HeaderText = "PAGO";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "credit_card_name";
@@ -4036,52 +4024,50 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.Column7.HeaderText = "VALOR PARCELADO";
             this.Column7.Name = "Column7";
             // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "family_member";
-            this.Column8.HeaderText = "Family Member";
-            this.Column8.Name = "Column8";
-            this.Column8.Visible = false;
-            // 
             // Column9
             // 
             this.Column9.DataPropertyName = "id_register_family_member";
-            this.Column9.FillWeight = 32.86738F;
-            this.Column9.HeaderText = "ID Register Family Member";
+            this.Column9.FillWeight = 15F;
+            this.Column9.HeaderText = "ID RFM";
             this.Column9.Name = "Column9";
             this.Column9.Visible = false;
             // 
             // Column10
             // 
             this.Column10.DataPropertyName = "id_register_family";
-            this.Column10.HeaderText = "ID Register Family";
+            this.Column10.FillWeight = 15F;
+            this.Column10.HeaderText = "ID RF";
             this.Column10.Name = "Column10";
             this.Column10.Visible = false;
             // 
             // Column11
             // 
             this.Column11.DataPropertyName = "id_credit_card";
-            this.Column11.HeaderText = "ID Credit Card";
+            this.Column11.FillWeight = 15F;
+            this.Column11.HeaderText = "ID CC";
             this.Column11.Name = "Column11";
             this.Column11.Visible = false;
             // 
             // Column14
             // 
             this.Column14.DataPropertyName = "id_credit_card_list";
-            this.Column14.HeaderText = "ID Credit Card List";
+            this.Column14.FillWeight = 15F;
+            this.Column14.HeaderText = "ID CCL";
             this.Column14.Name = "Column14";
             this.Column14.Visible = false;
             // 
             // Column15
             // 
             this.Column15.DataPropertyName = "id_total_credit_card";
-            this.Column15.HeaderText = "ID Total Credit Card";
+            this.Column15.FillWeight = 15F;
+            this.Column15.HeaderText = "ID TCC";
             this.Column15.Name = "Column15";
             this.Column15.Visible = false;
             // 
             // Column12
             // 
             this.Column12.DataPropertyName = "id_products";
+            this.Column12.FillWeight = 15F;
             this.Column12.HeaderText = "ID Products";
             this.Column12.Name = "Column12";
             this.Column12.Visible = false;
@@ -4311,19 +4297,6 @@ namespace Contas_Familia.PanelControll.Dashboard
         private System.Windows.Forms.DataGridView dataGridView8;
         private System.Windows.Forms.DataGridView dataGridView9;
         private System.Windows.Forms.DataGridView dataGridView10;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
@@ -4428,6 +4401,18 @@ namespace Contas_Familia.PanelControll.Dashboard
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn98;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn99;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn9;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -4435,7 +4420,6 @@ namespace Contas_Familia.PanelControll.Dashboard
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;

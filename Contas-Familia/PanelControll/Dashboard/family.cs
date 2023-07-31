@@ -32,20 +32,18 @@ namespace Contas_Familia.PanelControll.Dashboard
         // BOTÃO EDITAR NOME DO MEMBRO DA FAMILIA
         private bool[] _nameEdit = new bool[10];
 
-        // BOTÃO SALVAR - ATRIBUI NOVOS DADOS A TABELA
+        // BOTÃO SALVAR - ATRIBUI NOVOS DADOS A TABELA        
         string credit_card_name;
         string credit_card_payday;
         string store_name;
         string product_name;
-        string card_credit_installment;
+        string credit_card_installment;
         decimal total_payble;
         decimal total_payable_installment;
 
         // DATA
         DateTimePicker[] dtp = new DateTimePicker[10];
         Rectangle[] rectangle = new Rectangle[10];
-
-        bool isEditingCell = false;
 
         public family()
         {
@@ -102,7 +100,6 @@ namespace Contas_Familia.PanelControll.Dashboard
                 // PASSA TODOS OS MEMBROS AO LABEL
                 TxtNames[i].Text = family_member[i];
 
-                // TODAS AS DATAGRIDVIEWS, PASSANDO OS MEMBROS DA FAMILIA PARA CADA TABELA
                 dataGridViews[i].DataSource = ExecuteQuery(TxtNames[i].Text);
             }
 
@@ -110,7 +107,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             for (int i = 0; i < dataGridViews.Length; i++)
             {
                 // TOTAL DAS DIVIDAS DE CADA TABELAS
-                TxtTotal[i].Text = SumTotal(dataGridViews[i]).ToString("c");
+                TxtTotal[i].Text = SumTotal(dataGridViews[i]).ToString("c");                
 
                 if (String.IsNullOrEmpty(TxtNames[i].Text) || dgv_family_member.Rows.Count == 0)
                 {
@@ -120,12 +117,6 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     panels[i].Visible = true;
                 }
-            }
-
-            // CONFIGURAÇÃO DE TODOS OS DATAGRIDVIEW
-            foreach (DataGridView dataGridView in dataGridViews)
-            {
-                SettingsDataGridViewColumns(dataGridView);
             }
 
             database.closeConnection();
@@ -168,28 +159,6 @@ namespace Contas_Familia.PanelControll.Dashboard
                     da.Fill(dt);
                     return dt;
                 }
-            }
-        }
-
-        // CONFIGURAR AS COLUNAS DO DATAGRIDVIEW
-        private void SettingsDataGridViewColumns(DataGridView dataGridView)
-        {
-            if (dataGridView.Columns.Count >= 14)
-            {
-                dataGridView.Columns[0].HeaderText = "CARTÕES"; // credit_card_name
-                dataGridView.Columns[1].HeaderText = "VENCIMENTO"; // credit_card_payday
-                dataGridView.Columns[2].HeaderText = "LOJAS"; // store_name
-                dataGridView.Columns[3].HeaderText = "PRODUTOS"; // product_name
-                dataGridView.Columns[4].HeaderText = "PARCELAMENTO"; // credit_card_installment
-                dataGridView.Columns[5].HeaderText = "VALOR TOTAL"; // total_payble
-                dataGridView.Columns[6].HeaderText = "VALOR PARCELADO"; // total_payable_installment
-                dataGridView.Columns[7].Visible = false; // family_member
-                dataGridView.Columns[8].Visible = false; // id_register_family_member
-                dataGridView.Columns[9].Visible = false; // id_register_family
-                dataGridView.Columns[10].Visible = false; // id_credit_card
-                dataGridView.Columns[11].Visible = false; // id_credit_card_list
-                dataGridView.Columns[12].Visible = false; // id_total_credit_card
-                dataGridView.Columns[13].Visible = false; // id_products
             }
         }
 
@@ -243,61 +212,8 @@ namespace Contas_Familia.PanelControll.Dashboard
         }
 
         // TABELA DE CONTAS A PAGAR
-        void TableAddPayDay(DataGridView dataGridViews, int id, Label name)
+        void TableAddPayDay(int id_registerFamilyMember)
         {
-            // PERCORRE AS LINHA DO DATAGRIDVIEW
-            for (int i = 0; i < dataGridViews.Rows.Count - 1; i++)
-            {
-                // NOME DO CARTÃO DE CREDITO
-                credit_card_name = dataGridViews.Rows[i].Cells[0].Value?.ToString() ?? "";
-
-                // VENCIMENTO DO CARTÃO DE CREDITO, DateTimePicker
-                if (dataGridViews.Rows[i].Cells[1].Value == null || dataGridViews.Rows[i].Cells[1].Value == DBNull.Value)
-                {
-                    // SE O USUARIO DEIXAR EM BRANCO, SERA ADICIONADO A DATA ATUAL
-                    credit_card_payday = dtp[i].Value.ToString("dd/MM/yyyy");
-                }
-                else
-                {
-                    // PEGA O VALOR DA DATA SELECIONADA PELO USUARIO E PASSADO A VARIAVEL
-                    credit_card_payday = dataGridViews.Rows[i].Cells[1].Value.ToString();
-                }
-
-                // NOME DA LOJA
-                store_name = dataGridViews.Rows[i].Cells[2].Value?.ToString() ?? "";
-                // NOME DO PRODUTO
-                product_name = dataGridViews.Rows[i].Cells[3].Value?.ToString() ?? "";
-                // PARCELAMENTO
-                card_credit_installment = dataGridViews.Rows[i].Cells[4].Value?.ToString() ?? "";
-
-                // VALOR TOTAL DA COMPRA
-                string totalPaybleString = dataGridViews.Rows[i].Cells[5].Value?.ToString() ?? "";
-                if (decimal.TryParse(totalPaybleString, out decimal totalPayble))
-                {
-                    total_payble = totalPayble;
-                }
-                else
-                {
-                    total_payble = 0;
-                }
-
-                // VALOR A PAGAR PARCELADO
-                string totalPayableInstallmentString = dataGridViews.Rows[i].Cells[6].Value?.ToString() ?? "";
-                if (decimal.TryParse(totalPayableInstallmentString, out decimal totalPayableInstallment))
-                {
-                    total_payable_installment = totalPayableInstallment;
-                }
-                else
-                {
-                    total_payable_installment = 0;
-                }
-
-                // NOME DO MEMBRO DA FAMILIA
-                dataGridViews.Rows[i].Cells[7].Value = name;
-                // ID FAMILY MEMBER
-                dataGridViews.Rows[i].Cells[8].Value = id;
-            }
-
             // BANCO DE DADOS
             configdb database = new configdb();
             database.openConnection();
@@ -312,7 +228,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             MySqlCommand cmdProducts = new MySqlCommand(insertProducts, database.getConnection());
             cmdProducts.Parameters.Add("@store_name", MySqlDbType.VarChar, 50).Value = store_name;
             cmdProducts.Parameters.Add("@product_name", MySqlDbType.VarChar, 245).Value = product_name;
-            cmdProducts.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id;
+            cmdProducts.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id_registerFamilyMember;
             cmdProducts.ExecuteNonQuery();
             long idProducts = cmdProducts.LastInsertedId;
 
@@ -326,7 +242,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // CARTÃO DE CREDITO
             MySqlCommand cmdCreditCard = new MySqlCommand(insertCreditCard, database.getConnection());
             cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.VarChar, 10).Value = credit_card_payday;
-            cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = card_credit_installment;
+            cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = credit_card_installment;
             cmdCreditCard.Parameters.Add("@id_credit_card_list", MySqlDbType.Int32).Value = idCreditCardList;
             cmdCreditCard.ExecuteNonQuery();
             long idCreditCard = cmdCreditCard.LastInsertedId;
@@ -338,98 +254,49 @@ namespace Contas_Familia.PanelControll.Dashboard
             cmdTotal.Parameters.Add("@id_credit_card", MySqlDbType.Int32).Value = idCreditCard;
             cmdTotal.ExecuteNonQuery();
 
-            database.closeConnection();
+            database.closeConnection();            
         }
 
-        void TableEditPayDay(DataGridView dataGridViews)
+        void TableEditPayDay()
         {
             // BANCO DE DADOS
             configdb database = new configdb();
             database.openConnection();
 
-            // PERCORRE AS LINHA DO DATAGRIDVIEW
-            for (int i = 0; i < dataGridViews.Rows.Count - 1; i++)
-            {
-                // NOME DO CARTÃO DE CREDITO
-                credit_card_name = dataGridViews.Rows[i].Cells[0].Value.ToString();
-                // VENCIMENTO DO CARTÃO DE CREDITO, DateTimePicker
-                if (dataGridViews.Rows[i].Cells[1].Value == null || dataGridViews.Rows[i].Cells[1].Value == DBNull.Value)
-                {
-                    // SE O USUARIO DEIXAR EM BRANCO, SERA ADICIONADO A DATA ATUAL
-                    credit_card_payday = dtp[i].Value.ToString("dd/MM/yyyy");
-                }
-                else
-                {
-                    // PEGA O VALOR DA DATA SELECIONADA PELO USUARIO E PASSADO A VARIAVEL
-                    credit_card_payday = dataGridViews.Rows[i].Cells[1].Value.ToString();
-                }
-                // NOME DA LOJA
-                store_name = dataGridViews.Rows[i].Cells[2].Value.ToString();
-                // NOME DO PRODUTO
-                product_name = dataGridViews.Rows[i].Cells[3].Value?.ToString();
-                // PARCELAMENTO
-                card_credit_installment = dataGridViews.Rows[i].Cells[4].Value.ToString();
-                // VALOR TOTAL DA COMPRA
-                string totalPaybleString = dataGridViews.Rows[i].Cells[5].Value.ToString();
-                if (decimal.TryParse(totalPaybleString, out decimal totalPayble))
-                {
-                    total_payble = totalPayble;
-                }
-                else
-                {
-                    total_payble = 0;
-                }
-
-                // VALOR A PAGAR PARCELADO
-                string totalPayableInstallmentString = dataGridViews.Rows[i].Cells[6].Value.ToString();
-                if (decimal.TryParse(totalPayableInstallmentString, out decimal totalPayableInstallment))
-                {
-                    total_payable_installment = totalPayableInstallment;
-                }
-                else
-                {
-                    total_payable_installment = 0;
-                }
-            }
-
             //UPDATE
-            string updateProducts = "UPDATE familypayday.products SET store_name = @store_name, product_name = @product_name WHERE id_products = @id_products and id_register_family_member = @id_register_family_member";
-            string updateCreditCardList = "UPDATE familypayday.credit_card_list SET credit_card_name = @credit_card_name WHERE id_credit_card_list = @id_credit_card_list and id_products = @id_products";
-            string updateCreditCard = "UPDATE familypayday.credit_card SET credit_card_payday = @credit_card_payday, credit_card_installment = @credit_card_installment WHERE id_credit_card = @id_credit_card and id_credit_card_list = @id_credit_card_list";
-            string updatetTotal = "UPDATE familypayday.total_credit_card SET total_payble = @total_payble, total_payable_installment = @total_payable_installment WHERE id_total_credit_card = @id_total_credit_card and id_credit_card = @id_credit_card";
+            string updateProducts = "UPDATE familypayday.products SET store_name = @store_name, product_name = @product_name WHERE id_products = @id_products";
+            string updateCreditCardList = "UPDATE familypayday.credit_card_list SET credit_card_name = @credit_card_name WHERE id_credit_card_list = @id_credit_card_list";
+            string updateCreditCard = "UPDATE familypayday.credit_card SET credit_card_payday = @credit_card_payday, credit_card_installment = @credit_card_installment WHERE id_credit_card = @id_credit_card";
+            string updatetTotal = "UPDATE familypayday.total_credit_card SET total_payble = @total_payble, total_payable_installment = @total_payable_installment WHERE id_total_credit_card = @id_total_credit_card";
 
             // PRODUTOS
             MySqlCommand cmdUpdateProducts = new MySqlCommand(updateProducts, database.getConnection());
+            cmdUpdateProducts.Parameters.Add("@id_products", MySqlDbType.Int32).Value = sl_id_products;
             cmdUpdateProducts.Parameters.Add("@store_name", MySqlDbType.VarChar, 50).Value = store_name;
             cmdUpdateProducts.Parameters.Add("@product_name", MySqlDbType.VarChar, 245).Value = product_name;
-            cmdUpdateProducts.Parameters.Add("@id_products", MySqlDbType.Int32).Value = sl_id_products;
-            cmdUpdateProducts.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = sl_id_register_family_member;
             cmdUpdateProducts.ExecuteNonQuery();
 
             //  LISTA DE CARTÕES DE CREDITOS
             MySqlCommand cmdCreditCardList = new MySqlCommand(updateCreditCardList, database.getConnection());
-            cmdCreditCardList.Parameters.Add("@credit_card_name", MySqlDbType.VarChar, 45).Value = credit_card_name;
-            cmdCreditCardList.Parameters.Add("@id_products", MySqlDbType.Int32).Value = sl_id_products;
             cmdCreditCardList.Parameters.Add("@id_credit_card_list", MySqlDbType.Int32).Value = sl_id_credit_card_list;
+            cmdCreditCardList.Parameters.Add("@credit_card_name", MySqlDbType.VarChar, 45).Value = credit_card_name;
             cmdCreditCardList.ExecuteNonQuery();
 
             // CARTÃO DE CREDITO
             MySqlCommand cmdCreditCard = new MySqlCommand(updateCreditCard, database.getConnection());
-            cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.VarChar, 10).Value = credit_card_payday;
-            cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = card_credit_installment;
-            cmdCreditCard.Parameters.Add("@id_credit_card_list", MySqlDbType.Int32).Value = sl_id_credit_card_list;
             cmdCreditCard.Parameters.Add("@id_credit_card", MySqlDbType.Int32).Value = sl_id_credit_card;
+            cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.VarChar, 10).Value = credit_card_payday;
+            cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = credit_card_installment;
             cmdCreditCard.ExecuteNonQuery();
 
             // TOTAL
             MySqlCommand cmdTotal = new MySqlCommand(updatetTotal, database.getConnection());
+            cmdTotal.Parameters.Add("@id_total_credit_card", MySqlDbType.Int32).Value = sl_id_total_credit_card;
             cmdTotal.Parameters.Add("@total_payble", MySqlDbType.Decimal).Value = total_payble;
             cmdTotal.Parameters.Add("@total_payable_installment", MySqlDbType.Decimal).Value = total_payable_installment;
-            cmdTotal.Parameters.Add("@id_credit_card", MySqlDbType.Int32).Value = sl_id_credit_card;
-            cmdTotal.Parameters.Add("@id_total_credit_card", MySqlDbType.Int32).Value = sl_id_total_credit_card;
             cmdTotal.ExecuteNonQuery();
 
-            database.closeConnection();
+            database.closeConnection();            
         }
 
         // TABELA DE EDIÇÃO DO NOME DO MEMBRO DA FAMILIA
@@ -454,7 +321,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         #region BUTTONS PANEL TABLE
         // BOTÃO SALVAR DATAGRIDVIEW
-        void BT_Save(DataGridView dataGridViews, int id, Label name)
+        void BT_Save(DataGridView dataGridViews, int id_registerFamilyMember)
         {            
             try
             {
@@ -462,32 +329,32 @@ namespace Contas_Familia.PanelControll.Dashboard
                 configdb database = new configdb();
                 database.openConnection();
 
+                // VEREFICA SE O REGISTRO JA EXISTE NA TABELA PRODUTOS, COLETANDO O REGISTRO DO MEMBRO DA FAMILIA
+                string checkIfExistsQuery = "SELECT COUNT(*) FROM familypayday.products WHERE id_products = @id_products";
+                MySqlCommand cmdCheckIfExists = new MySqlCommand(checkIfExistsQuery, database.getConnection());
+                cmdCheckIfExists.Parameters.Add("@id_products", MySqlDbType.Int32).Value = sl_id_products;
+                int recordCount = Convert.ToInt32(cmdCheckIfExists.ExecuteScalar());
+
                 if (dataGridViews.Rows.Count > 1)
                 {
-                    // VEREFICA SE O REGISTRO JA EXISTE NA TABELA PRODUTOS, COLETANDO O REGISTRO DO MEMBRO DA FAMILIA
-                    string checkIfExistsQuery = "SELECT COUNT(*) FROM familypayday.products WHERE id_register_family_member = @id_register_family_member";
-                    MySqlCommand cmdCheckIfExists = new MySqlCommand(checkIfExistsQuery, database.getConnection());
-                    cmdCheckIfExists.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = sl_id_register_family_member;
-                    int recordCount = Convert.ToInt32(cmdCheckIfExists.ExecuteScalar());
-
                     if (recordCount > 0)
                     {
-                        // EDITAR CONTA
-                        TableEditPayDay(dataGridViews);
+                        // TABELA UPDATE
+                        TableEditPayDay();
                     }
                     else
                     {
-                        // ADD NOVA CONTAS
-                        TableAddPayDay(dataGridViews, id, name);
+                        // TABELA INSERT
+                        TableAddPayDay(id_registerFamilyMember);
                     }
 
                     // ATUALIZA A TABELA
-                    //TableMain();
-
-                    MessageBox.Show("Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    TableMain();
                 }
+
+                database.closeConnection();
             }
-            catch (/*Exception*/ InvalidCastException ex)
+            catch (Exception ex)
             {
                 // TRATAR EXCEÇÃO ESPECÍFICA RELACIONADA AO DBNull AQUI
                 MessageBox.Show("Invalid Cast Exception: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -568,80 +435,95 @@ namespace Contas_Familia.PanelControll.Dashboard
             }
         }
 
-        private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            isEditingCell = true;
-
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.RowHeaderSelect;
-        }
-
-        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if (isEditingCell)
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                // Aqui você pode chamar a função BT_Save para salvar os dados da célula atual no banco de dados
-                BT_Save(dataGridView1, id_register_family_member[0], txt_name_01);
+                DataGridView dataGridViews = (DataGridView)sender;
+                DataGridViewRow row = dataGridViews.Rows[e.RowIndex];
 
-                TableMain();
+                credit_card_name = row.Cells[0].Value.ToString();
+                credit_card_payday = row.Cells[1].Value == DBNull.Value ? dtp[e.RowIndex].Value.ToString("dd/MM/yyyy") : row.Cells[1].Value.ToString();
+                store_name = row.Cells[2].Value == DBNull.Value ? "N/A" : row.Cells[2].Value.ToString();
+                product_name = row.Cells[3].Value == DBNull.Value ? "N/A" : row.Cells[3].Value.ToString();
+                credit_card_installment = row.Cells[4].Value == DBNull.Value ? "N/A" : row.Cells[4].Value.ToString();
 
-                // Defina a variável isEditingCell como false após salvar
-                isEditingCell = false;
+                // VALOR TOTAL DA COMPRA
+                string totalPaybleString = row.Cells[5].Value.ToString();
+                if (decimal.TryParse(totalPaybleString, out decimal totalPayble))
+                {
+                    total_payble = totalPayble;
+                }
+                else
+                {
+                    total_payble = 0;
+                }
+
+                // VALOR A PAGAR PARCELADO
+                string totalPayableInstallmentString = row.Cells[6].Value.ToString();
+                if (decimal.TryParse(totalPayableInstallmentString, out decimal totalPayableInstallment))
+                {
+                    total_payable_installment = totalPayableInstallment;
+                }
+                else
+                {
+                    total_payable_installment = 0;
+                }
+
+                BT_Save(dataGridView1, id_register_family_member[0]);
             }
-
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
-
 
         // BOTÃO 1
         private void bt_edit_01_Click(object sender, EventArgs e) => PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
         private void bt_cancel_01_Click(object sender, EventArgs e) => BT_Cancel(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
         private void bt_delete_01_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[0], pl_content_01, txt_name_01);
-        private void bt_save_01_Click(object sender, EventArgs e) => BT_Save(dataGridView1, id_register_family_member[0], txt_name_01);
+        private void bt_save_01_Click(object sender, EventArgs e) => BT_Save(dataGridView1, id_register_family_member[0]);
         // BOTÃO 2
         private void bt_edit_02_Click(object sender, EventArgs e) => PanelContent(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
         private void bt_cancel_02_Click(object sender, EventArgs e) => BT_Cancel(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
         private void bt_delete_02_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[1], pl_content_02, txt_name_02);
-        private void bt_save_02_Click(object sender, EventArgs e) => BT_Save(dataGridView2, id_register_family_member[1], txt_name_02);
+        private void bt_save_02_Click(object sender, EventArgs e) => BT_Save(dataGridView2, id_register_family_member[1]);
         // BOTÃO 3
         private void bt_edit_03_Click(object sender, EventArgs e) => PanelContent(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
         private void bt_cancel_03_Click(object sender, EventArgs e) => BT_Cancel(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
         private void bt_delete_03_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[2], pl_content_03, txt_name_03);
-        private void bt_save_03_Click(object sender, EventArgs e) => BT_Save(dataGridView3, id_register_family_member[2], txt_name_03);
+        private void bt_save_03_Click(object sender, EventArgs e) => BT_Save(dataGridView3, id_register_family_member[2]);
         // BOTÃO 4
         private void bt_edit_04_Click(object sender, EventArgs e) => PanelContent(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
         private void bt_cancel_04_Click(object sender, EventArgs e) => BT_Cancel(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
         private void bt_delete_04_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[3], pl_content_04, txt_name_04);
-        private void bt_save_04_Click(object sender, EventArgs e) => BT_Save(dataGridView4, id_register_family_member[3], txt_name_04);
+        private void bt_save_04_Click(object sender, EventArgs e) => BT_Save(dataGridView4, id_register_family_member[3]);
         // BOTÃO 5
         private void bt_edit_05_Click(object sender, EventArgs e) => PanelContent(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
         private void bt_cancel_05_Click(object sender, EventArgs e) => BT_Cancel(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
         private void bt_delete_05_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[4], pl_content_05, txt_name_05);
-        private void bt_save_05_Click(object sender, EventArgs e) => BT_Save(dataGridView5, id_register_family_member[4], txt_name_05);
+        private void bt_save_05_Click(object sender, EventArgs e) => BT_Save(dataGridView5, id_register_family_member[4]);
         // BOTÃO 6
         private void bt_edit_06_Click(object sender, EventArgs e) => PanelContent(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
         private void bt_cancel_06_Click(object sender, EventArgs e) => BT_Cancel(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
         private void bt_delete_06_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[5], pl_content_06, txt_name_06);
-        private void bt_save_06_Click(object sender, EventArgs e) => BT_Save(dataGridView6, id_register_family_member[5], txt_name_06);
+        private void bt_save_06_Click(object sender, EventArgs e) => BT_Save(dataGridView6, id_register_family_member[5]);
         // BOTÃO 7
         private void bt_edit_07_Click(object sender, EventArgs e) => PanelContent(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
         private void bt_cancel_07_Click(object sender, EventArgs e) => BT_Cancel(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
         private void bt_delete_07_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[6], pl_content_07, txt_name_07);
-        private void bt_save_07_Click(object sender, EventArgs e) => BT_Save(dataGridView7, id_register_family_member[6], txt_name_07);        
+        private void bt_save_07_Click(object sender, EventArgs e) => BT_Save(dataGridView7, id_register_family_member[6]);        
         // BOTÃO 8
         private void bt_edit_08_Click(object sender, EventArgs e) => PanelContent(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
         private void bt_cancel_08_Click(object sender, EventArgs e) => BT_Cancel(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
         private void bt_delete_08_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[7], pl_content_08, txt_name_08);
-        private void bt_save_08_Click(object sender, EventArgs e) => BT_Save(dataGridView8, id_register_family_member[7], txt_name_08);
+        private void bt_save_08_Click(object sender, EventArgs e) => BT_Save(dataGridView8, id_register_family_member[7]);
         // BOTÃO 9
         private void bt_edit_09_Click(object sender, EventArgs e) => PanelContent(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
         private void bt_cancel_09_Click(object sender, EventArgs e) => BT_Cancel(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
         private void bt_delete_09_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[8], pl_content_09, txt_name_09);
-        private void bt_save_09_Click(object sender, EventArgs e) => BT_Save(dataGridView9, id_register_family_member[8], txt_name_09);
+        private void bt_save_09_Click(object sender, EventArgs e) => BT_Save(dataGridView9, id_register_family_member[8]);
         // BOTÃO 10
         private void bt_edit_10_Click(object sender, EventArgs e) => PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
         private void bt_cancel_10_Click(object sender, EventArgs e) => BT_Cancel(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
         private void bt_delete_10_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[9], pl_content_10, txt_name_10);
-        private void bt_save_10_Click(object sender, EventArgs e) => BT_Save(dataGridView10, id_register_family_member[9], txt_name_10);
+        private void bt_save_10_Click(object sender, EventArgs e) => BT_Save(dataGridView10, id_register_family_member[9]);
 
         // BOTÃO DELETAR LINHA DA TABELA
         private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
@@ -736,10 +618,10 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         #region SELECT ROW, COLLECT TABLE DATA
         // SELECIONAR LINHA, COLETAR DADOS 
-        void SelectDeleteRow(DataGridView dataGridViews)
+        void SelectRow(DataGridView dataGridViews)
         {
             if (dataGridViews.SelectedRows.Count > 0)
-            {
+            {                
                 // OBTEM A LINHA SELECIONADA
                 DataRowView selectedRow = dataGridViews.SelectedRows[0].DataBoundItem as DataRowView;
 
@@ -765,7 +647,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                     if (selectedRow["id_total_credit_card"] != DBNull.Value)
                     {
                         sl_id_total_credit_card = Convert.ToInt32(selectedRow["id_total_credit_card"]);
-                    }                   
+                    }
                 }
                 else
                 {
@@ -778,17 +660,18 @@ namespace Contas_Familia.PanelControll.Dashboard
                 }
             }
         }
+
         // CELL MOUSE CLICK
-        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView1);
-        private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView2);
-        private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView3);
-        private void dataGridView4_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView4);
-        private void dataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView5);
-        private void dataGridView6_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView6);
-        private void dataGridView7_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView7);
-        private void dataGridView8_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView8);
-        private void dataGridView9_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView9);
-        private void dataGridView10_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectDeleteRow(dataGridView10);
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectRow(dataGridView1);
+        private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectRow(dataGridView2);
+        private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectRow(dataGridView3);
+        private void dataGridView4_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectRow(dataGridView4);
+        private void dataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectRow(dataGridView5);
+        private void dataGridView6_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectRow(dataGridView6);
+        private void dataGridView7_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectRow(dataGridView7);
+        private void dataGridView8_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectRow(dataGridView8);
+        private void dataGridView9_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectRow(dataGridView9);
+        private void dataGridView10_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) => SelectRow(dataGridView10);
         #endregion
 
         #region ADD NEW FAMILY MEMEBR
@@ -1121,7 +1004,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             Main.Instance.ButtonMenuDisabled(true);            
             TableMain();
         }
-
 
     }
 }
