@@ -60,8 +60,8 @@ namespace Contas_Familia.PanelControll.Dashboard
 
             DataGridView[] dataGridViews = { dataGridView1, dataGridView2, dataGridView3, dataGridView4, dataGridView5, dataGridView6, dataGridView7, dataGridView8, dataGridView9, dataGridView10 };
             Panel[] panels = { pl_content_01, pl_content_02, pl_content_03, pl_content_04, pl_content_05, pl_content_06, pl_content_07, pl_content_08, pl_content_09, pl_content_10 };
-            Label[] TxtNames = { txt_name_01, txt_name_02, txt_name_03, txt_name_04, txt_name_05, txt_name_06, txt_name_07, txt_name_08, txt_name_09, txt_name_10 };
-            Label[] TxtTotal = { txt_total_01, txt_total_02, txt_total_03, txt_total_04, txt_total_05, txt_total_06, txt_total_07, txt_total_08, txt_total_09, txt_total_10 };
+            Label[] txtNames = { txt_name_01, txt_name_02, txt_name_03, txt_name_04, txt_name_05, txt_name_06, txt_name_07, txt_name_08, txt_name_09, txt_name_10 };
+            Label[] txtTotal = { txt_total_01, txt_total_02, txt_total_03, txt_total_04, txt_total_05, txt_total_06, txt_total_07, txt_total_08, txt_total_09, txt_total_10 };
 
             string query = "select ID_REGISTER_FAMILY_MEMBER, FAMILY_MEMBER, ID_REGISTER_FAMILY from familypayday.register_family_member";
 
@@ -98,18 +98,18 @@ namespace Contas_Familia.PanelControll.Dashboard
             for (int i = 0; i < dgv_family_member.Rows.Count; i++)
             {
                 // PASSA TODOS OS MEMBROS AO LABEL
-                TxtNames[i].Text = family_member[i];
+                txtNames[i].Text = family_member[i];
 
-                dataGridViews[i].DataSource = ExecuteQuery(TxtNames[i].Text);
+                dataGridViews[i].DataSource = ExecuteQuery(txtNames[i].Text);
             }
 
             // HABILITA / DESABILITA TODAS OS PAINEIS 
             for (int i = 0; i < dataGridViews.Length; i++)
             {
                 // TOTAL DAS DIVIDAS DE CADA TABELAS
-                TxtTotal[i].Text = SumTotal(dataGridViews[i]).ToString("c");                
+                txtTotal[i].Text = SumTotal(dataGridViews[i]).ToString("c");                
 
-                if (String.IsNullOrEmpty(TxtNames[i].Text) || dgv_family_member.Rows.Count == 0)
+                if (String.IsNullOrEmpty(txtNames[i].Text) || dgv_family_member.Rows.Count == 0)
                 {
                     panels[i].Visible = false;
                 }
@@ -185,7 +185,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             configdb database = new configdb();
             database.openConnection();
 
-            string query = "DELETE FROM familypayday.register_family_member WHERE id_register_family_member = @id_register_family_member and id_register_family = @id_register_family";
+            string query = "DELETE FROM familypayday.register_family_member WHERE (id_register_family_member = @id_register_family_member) and (id_register_family = @id_register_family)";
 
             MySqlCommand cmd = new MySqlCommand(query, database.getConnection());
             cmd.Parameters.Add("@id_register_family_member", MySqlDbType.Int32).Value = id_member;
@@ -395,13 +395,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             }
         }
 
-        // BOTÃO CAMCELAR
-        void BT_Cancel(bool reg, Panel pl_content, IconButton button)
-        {
-            // RECOLHE O PAINEL
-            PanelContent(reg, pl_content, button);
-        }
-
         // BOTÃO DELETAR LINHA DA TABELA
         private void BT_DeleteRow(DataGridViewRowCancelEventArgs e)
         {
@@ -413,7 +406,7 @@ namespace Contas_Familia.PanelControll.Dashboard
                 {
                     case DialogResult.Yes:
                         // TABELA DELETAR 
-                        TableDeleteBillToPay();
+                        TableDeleteBillToPay();                        
                         break;
                     case DialogResult.No:
                         e.Cancel = true;
@@ -435,7 +428,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             }
         }
 
-        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        void AutoSave(object sender, DataGridViewCellEventArgs e, DataGridView dataGridView, int id)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
@@ -470,60 +463,53 @@ namespace Contas_Familia.PanelControll.Dashboard
                     total_payable_installment = 0;
                 }
 
-                BT_Save(dataGridView1, id_register_family_member[0]);
+                // BOTÃO SALVAR
+                BT_Save(dataGridView, id);
             }
         }
 
-        // BOTÃO 1
-        private void bt_edit_01_Click(object sender, EventArgs e) => PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
-        private void bt_cancel_01_Click(object sender, EventArgs e) => BT_Cancel(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
+        // SALVAR AUTOMATICO 
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e) => AutoSave(sender, e, dataGridView1, id_register_family_member[0]);
+        private void dataGridView2_CellValueChanged(object sender, DataGridViewCellEventArgs e) => AutoSave(sender, e, dataGridView2, id_register_family_member[1]);
+        private void dataGridView3_CellValueChanged(object sender, DataGridViewCellEventArgs e) => AutoSave(sender, e, dataGridView3, id_register_family_member[2]);
+        private void dataGridView4_CellValueChanged(object sender, DataGridViewCellEventArgs e) => AutoSave(sender, e, dataGridView4, id_register_family_member[3]);
+        private void dataGridView5_CellValueChanged(object sender, DataGridViewCellEventArgs e) => AutoSave(sender, e, dataGridView5, id_register_family_member[4]);
+        private void dataGridView6_CellValueChanged(object sender, DataGridViewCellEventArgs e) => AutoSave(sender, e, dataGridView6, id_register_family_member[5]);
+        private void dataGridView7_CellValueChanged(object sender, DataGridViewCellEventArgs e) => AutoSave(sender, e, dataGridView7, id_register_family_member[6]);
+        private void dataGridView8_CellValueChanged(object sender, DataGridViewCellEventArgs e) => AutoSave(sender, e, dataGridView8, id_register_family_member[7]);
+        private void dataGridView9_CellValueChanged(object sender, DataGridViewCellEventArgs e) => AutoSave(sender, e, dataGridView9, id_register_family_member[8]);
+        private void dataGridView10_CellValueChanged(object sender, DataGridViewCellEventArgs e) => AutoSave(sender, e, dataGridView10, id_register_family_member[9]);
+
+        // DATAGRIDVIEW BOTÃO 1
+        private void bt_more_01_Click(object sender, EventArgs e) => PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_more_01);
         private void bt_delete_01_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[0], pl_content_01, txt_name_01);
-        private void bt_save_01_Click(object sender, EventArgs e) => BT_Save(dataGridView1, id_register_family_member[0]);
-        // BOTÃO 2
-        private void bt_edit_02_Click(object sender, EventArgs e) => PanelContent(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
-        private void bt_cancel_02_Click(object sender, EventArgs e) => BT_Cancel(_edit[1] = !_edit[1], pl_content_02, bt_edit_02);
+        // DATAGRIDVIEW BOTÃO 2
+        private void bt_more_02_Click(object sender, EventArgs e) => PanelContent(_edit[1] = !_edit[1], pl_content_02, bt_more_02);
         private void bt_delete_02_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[1], pl_content_02, txt_name_02);
-        private void bt_save_02_Click(object sender, EventArgs e) => BT_Save(dataGridView2, id_register_family_member[1]);
-        // BOTÃO 3
-        private void bt_edit_03_Click(object sender, EventArgs e) => PanelContent(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
-        private void bt_cancel_03_Click(object sender, EventArgs e) => BT_Cancel(_edit[2] = !_edit[2], pl_content_03, bt_edit_03);
+        // DATAGRIDVIEW BOTÃO 3
+        private void bt_more_03_Click(object sender, EventArgs e) => PanelContent(_edit[2] = !_edit[2], pl_content_03, bt_more_03);
         private void bt_delete_03_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[2], pl_content_03, txt_name_03);
-        private void bt_save_03_Click(object sender, EventArgs e) => BT_Save(dataGridView3, id_register_family_member[2]);
-        // BOTÃO 4
-        private void bt_edit_04_Click(object sender, EventArgs e) => PanelContent(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
-        private void bt_cancel_04_Click(object sender, EventArgs e) => BT_Cancel(_edit[3] = !_edit[3], pl_content_04, bt_edit_04);
+        // DATAGRIDVIEW BOTÃO 4
+        private void bt_more_04_Click(object sender, EventArgs e) => PanelContent(_edit[3] = !_edit[3], pl_content_04, bt_more_04);
         private void bt_delete_04_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[3], pl_content_04, txt_name_04);
-        private void bt_save_04_Click(object sender, EventArgs e) => BT_Save(dataGridView4, id_register_family_member[3]);
-        // BOTÃO 5
-        private void bt_edit_05_Click(object sender, EventArgs e) => PanelContent(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
-        private void bt_cancel_05_Click(object sender, EventArgs e) => BT_Cancel(_edit[4] = !_edit[4], pl_content_05, bt_edit_05);
+        // DATAGRIDVIEW BOTÃO 5
+        private void bt_more_05_Click(object sender, EventArgs e) => PanelContent(_edit[4] = !_edit[4], pl_content_05, bt_more_05);
         private void bt_delete_05_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[4], pl_content_05, txt_name_05);
-        private void bt_save_05_Click(object sender, EventArgs e) => BT_Save(dataGridView5, id_register_family_member[4]);
-        // BOTÃO 6
-        private void bt_edit_06_Click(object sender, EventArgs e) => PanelContent(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
-        private void bt_cancel_06_Click(object sender, EventArgs e) => BT_Cancel(_edit[5] = !_edit[5], pl_content_06, bt_edit_06);
+        // DATAGRIDVIEW BOTÃO 6
+        private void bt_more_06_Click(object sender, EventArgs e) => PanelContent(_edit[5] = !_edit[5], pl_content_06, bt_more_06);
         private void bt_delete_06_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[5], pl_content_06, txt_name_06);
-        private void bt_save_06_Click(object sender, EventArgs e) => BT_Save(dataGridView6, id_register_family_member[5]);
-        // BOTÃO 7
-        private void bt_edit_07_Click(object sender, EventArgs e) => PanelContent(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
-        private void bt_cancel_07_Click(object sender, EventArgs e) => BT_Cancel(_edit[6] = !_edit[6], pl_content_07, bt_edit_07);
+        // DATAGRIDVIEW BOTÃO 7
+        private void bt_more_07_Click(object sender, EventArgs e) => PanelContent(_edit[6] = !_edit[6], pl_content_07, bt_more_07);
         private void bt_delete_07_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[6], pl_content_07, txt_name_07);
-        private void bt_save_07_Click(object sender, EventArgs e) => BT_Save(dataGridView7, id_register_family_member[6]);        
-        // BOTÃO 8
-        private void bt_edit_08_Click(object sender, EventArgs e) => PanelContent(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
-        private void bt_cancel_08_Click(object sender, EventArgs e) => BT_Cancel(_edit[7] = !_edit[7], pl_content_08, bt_edit_08);
+        // DATAGRIDVIEW BOTÃO 8
+        private void bt_more_08_Click(object sender, EventArgs e) => PanelContent(_edit[7] = !_edit[7], pl_content_08, bt_more_08);
         private void bt_delete_08_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[7], pl_content_08, txt_name_08);
-        private void bt_save_08_Click(object sender, EventArgs e) => BT_Save(dataGridView8, id_register_family_member[7]);
-        // BOTÃO 9
-        private void bt_edit_09_Click(object sender, EventArgs e) => PanelContent(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
-        private void bt_cancel_09_Click(object sender, EventArgs e) => BT_Cancel(_edit[8] = !_edit[8], pl_content_09, bt_edit_09);
+        // DATAGRIDVIEW BOTÃO 9
+        private void bt_more_09_Click(object sender, EventArgs e) => PanelContent(_edit[8] = !_edit[8], pl_content_09, bt_more_09);
         private void bt_delete_09_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[8], pl_content_09, txt_name_09);
-        private void bt_save_09_Click(object sender, EventArgs e) => BT_Save(dataGridView9, id_register_family_member[8]);
-        // BOTÃO 10
-        private void bt_edit_10_Click(object sender, EventArgs e) => PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
-        private void bt_cancel_10_Click(object sender, EventArgs e) => BT_Cancel(_edit[9] = !_edit[9], pl_content_10, bt_edit_10);
+        // DATAGRIDVIEW BOTÃO 10
+        private void bt_more_10_Click(object sender, EventArgs e) => PanelContent(_edit[9] = !_edit[9], pl_content_10, bt_more_10);
         private void bt_delete_10_Click(object sender, EventArgs e) => BT_Delete(id_register_family_member[9], pl_content_10, txt_name_10);
-        private void bt_save_10_Click(object sender, EventArgs e) => BT_Save(dataGridView10, id_register_family_member[9]);
 
         // BOTÃO DELETAR LINHA DA TABELA
         private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e) => BT_DeleteRow(e);
@@ -904,16 +890,16 @@ namespace Contas_Familia.PanelControll.Dashboard
         void StartPanelFamily()
         {
             // PAINEIS 
-            PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_edit_01);
-            PanelContent(_edit[1], pl_content_02, bt_edit_02);
-            PanelContent(_edit[2], pl_content_03, bt_edit_03);
-            PanelContent(_edit[3], pl_content_04, bt_edit_04);
-            PanelContent(_edit[4], pl_content_05, bt_edit_05);
-            PanelContent(_edit[5], pl_content_06, bt_edit_06);
-            PanelContent(_edit[6], pl_content_07, bt_edit_07);
-            PanelContent(_edit[7], pl_content_08, bt_edit_08);
-            PanelContent(_edit[8], pl_content_09, bt_edit_09);
-            PanelContent(_edit[9], pl_content_10, bt_edit_10);
+            PanelContent(_edit[0] = !_edit[0], pl_content_01, bt_more_01);
+            PanelContent(_edit[1], pl_content_02, bt_more_02);
+            PanelContent(_edit[2], pl_content_03, bt_more_03);
+            PanelContent(_edit[3], pl_content_04, bt_more_04);
+            PanelContent(_edit[4], pl_content_05, bt_more_05);
+            PanelContent(_edit[5], pl_content_06, bt_more_06);
+            PanelContent(_edit[6], pl_content_07, bt_more_07);
+            PanelContent(_edit[7], pl_content_08, bt_more_08);
+            PanelContent(_edit[8], pl_content_09, bt_more_09);
+            PanelContent(_edit[9], pl_content_10, bt_more_10);
 
             // TABELA OCULTA DOS MEMBBROS DA FAMILIA
             pl_table_member_family.Visible = false;
@@ -1004,6 +990,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             Main.Instance.ButtonMenuDisabled(true);            
             TableMain();
         }
+
 
     }
 }
