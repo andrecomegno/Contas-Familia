@@ -13,13 +13,16 @@ namespace Contas_Familia.PanelControll.Home
     {
         public static list_family Instance;
 
-        // ID`S  
-        public int select_id_register_family;
-        public int id_login = Login.Instance.id_login;
+        // LISTA DAS FAMILIA
         public int[] id_register_family = new int[10];
-
-        // QUANTIDADE DE FAMILIAS CADASTRADAS
         public string[] family_name = new string[10];
+
+        // LOGIN
+        public int id_login = Login.Instance.id_login;
+
+        // SELECIONAR UMA FAMILIA
+        public int sl_id_register_family;
+        public string sl_family_name;
 
         // BOTÕES
         private IconButton ButtonFamilyDelete;
@@ -90,71 +93,83 @@ namespace Contas_Familia.PanelControll.Home
                 // MOUSE ESQUERDO
                 case MouseButtons.Left:
                     // ADD O ID REGISTER FAMILY PARA O select_id_register_family
-                    select_id_register_family = id_register_family[0];
+                    sl_id_register_family = id_register_family[0];
+                    // ADD O NOME DA FAMILIA 
+                    sl_family_name = family_name[0];
                     // IR PARA O DASHBOARD
                     Next_Dashboard();
                     break;
                 // MOUSE DIREITO
                 case MouseButtons.Right:
                     // ADD O ID REGISTER FAMILY PARA O select_id_register_family
-                    select_id_register_family = id_register_family[0];
+                    sl_id_register_family = id_register_family[0];
                     // ATRIBUI O BOTÃO DELETADO A VARIAVEL ButtonFamilyDelete
                     ButtonFamilyDelete = bt_family_01;                    
                     break;
             }
         }
 
-        private void bt_family_02_Click(object sender, EventArgs e)
+        private void bt_family_02_MouseDown(object sender, MouseEventArgs e)
         {
-            select_id_register_family = id_register_family[1];
-            Next_Dashboard();
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    sl_id_register_family = id_register_family[1];
+                    sl_family_name = family_name[1];
+                    Next_Dashboard();
+                    break;
+                case MouseButtons.Right:
+                    sl_id_register_family = id_register_family[1];
+                    ButtonFamilyDelete = bt_family_02;
+                    break;
+            }
         }
 
         private void bt_family_03_Click(object sender, EventArgs e)
         {
-            select_id_register_family = id_register_family[2];
+            sl_id_register_family = id_register_family[2];
             Next_Dashboard();
         }
 
         private void bt_family_04_Click(object sender, EventArgs e)
         {
-            select_id_register_family = id_register_family[3];
+            sl_id_register_family = id_register_family[3];
             Next_Dashboard();
         }
 
         private void bt_family_05_Click(object sender, EventArgs e)
         {
-            select_id_register_family = id_register_family[4];
+            sl_id_register_family = id_register_family[4];
             Next_Dashboard();
         }
 
         private void bt_family_06_Click(object sender, EventArgs e)
         {
-            select_id_register_family = id_register_family[5];
+            sl_id_register_family = id_register_family[5];
             Next_Dashboard();
         }
 
         private void bt_family_07_Click(object sender, EventArgs e)
         {
-            select_id_register_family = id_register_family[6];
+            sl_id_register_family = id_register_family[6];
             Next_Dashboard();
         }
 
         private void bt_family_08_Click(object sender, EventArgs e)
         {
-            select_id_register_family = id_register_family[7];
+            sl_id_register_family = id_register_family[7];
             Next_Dashboard();
         }
 
         private void bt_family_09_Click(object sender, EventArgs e)
         {
-            select_id_register_family = id_register_family[8];
+            sl_id_register_family = id_register_family[8];
             Next_Dashboard();
         }
 
         private void bt_family_10_Click(object sender, EventArgs e)
         {
-            select_id_register_family = id_register_family[9];
+            sl_id_register_family = id_register_family[9];
             Next_Dashboard();
         }
 
@@ -165,9 +180,6 @@ namespace Contas_Familia.PanelControll.Home
 
             // SELECIONAR BOTÃO DASHBOARD
             Main.Instance.Dashboard();
-
-            // ABRIR JANELA FAMILY DO DASHBOARD
-            dashboard.Instance.Family();
         }
 
         private void list_family_Load(object sender, EventArgs e)

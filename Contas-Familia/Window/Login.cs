@@ -11,7 +11,7 @@ namespace Contas_Familia
     {
         public static Login Instance;
         public int id_login;
-        public string username;
+        public string userName;
 
         public Login()
         {
@@ -60,7 +60,7 @@ namespace Contas_Familia
                         while (dr.Read())
                         {
                             id_login = dr.GetInt32("id_login");
-                            username = dr.GetString("username");
+                            userName = dr.GetString("username");
                         }
 
                         this.Close();

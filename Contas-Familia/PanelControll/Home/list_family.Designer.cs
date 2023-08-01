@@ -32,6 +32,10 @@ namespace Contas_Familia.PanelControll.Home
             this.components = new System.ComponentModel.Container();
             this.pl_list_family = new System.Windows.Forms.Panel();
             this.bt_family_10 = new FontAwesome.Sharp.IconButton();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.Delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.bt_family_06 = new FontAwesome.Sharp.IconButton();
             this.bt_family_09 = new FontAwesome.Sharp.IconButton();
             this.bt_family_05 = new FontAwesome.Sharp.IconButton();
@@ -41,10 +45,6 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_02 = new FontAwesome.Sharp.IconButton();
             this.bt_family_01 = new FontAwesome.Sharp.IconButton();
             this.bt_family_04 = new FontAwesome.Sharp.IconButton();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Edit = new System.Windows.Forms.ToolStripMenuItem();
-            this.Delete = new System.Windows.Forms.ToolStripMenuItem();
-            this.Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.pl_list_family.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -91,6 +91,36 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_10.Tag = "";
             this.bt_family_10.UseVisualStyleBackColor = false;
             this.bt_family_10.Click += new System.EventHandler(this.bt_family_10_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Edit,
+            this.Delete,
+            this.Exit});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 70);
+            // 
+            // Edit
+            // 
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(107, 22);
+            this.Edit.Text = "Edit";
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
+            // 
+            // Delete
+            // 
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(107, 22);
+            this.Delete.Text = "Delete";
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // Exit
+            // 
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(107, 22);
+            this.Exit.Text = "Exit";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // bt_family_06
             // 
@@ -258,7 +288,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_02.TabIndex = 121;
             this.bt_family_02.Tag = "";
             this.bt_family_02.UseVisualStyleBackColor = false;
-            this.bt_family_02.Click += new System.EventHandler(this.bt_family_02_Click);
+            this.bt_family_02.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_02_MouseDown);
             // 
             // bt_family_01
             // 
@@ -307,36 +337,6 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_04.Tag = "";
             this.bt_family_04.UseVisualStyleBackColor = false;
             this.bt_family_04.Click += new System.EventHandler(this.bt_family_04_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Edit,
-            this.Delete,
-            this.Exit});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 70);
-            // 
-            // Edit
-            // 
-            this.Edit.Name = "Edit";
-            this.Edit.Size = new System.Drawing.Size(107, 22);
-            this.Edit.Text = "Edit";
-            this.Edit.Click += new System.EventHandler(this.Edit_Click);
-            // 
-            // Delete
-            // 
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(107, 22);
-            this.Delete.Text = "Delete";
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
-            // 
-            // Exit
-            // 
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(107, 22);
-            this.Exit.Text = "Exit";
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // list_family
             // 

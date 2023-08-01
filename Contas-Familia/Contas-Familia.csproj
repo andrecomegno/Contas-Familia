@@ -97,6 +97,7 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -152,6 +153,15 @@
       <DependentUpon>setting.cs</DependentUpon>
     </Compile>
     <Compile Include="Script\configdb.cs" />
+    <Compile Include="Script\RJCircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Script\RJComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Script\RJComboBox.Designer.cs">
+      <DependentUpon>RJComboBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Script\RJTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -251,6 +261,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backgraund-transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

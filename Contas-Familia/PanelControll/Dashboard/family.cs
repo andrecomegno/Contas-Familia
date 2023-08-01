@@ -12,19 +12,19 @@ namespace Contas_Familia.PanelControll.Dashboard
 {
     public partial class family : UserControl
     {
-        // ID`S
-        private int id_register_family = list_family.Instance.select_id_register_family;        
+        // COLETA O ID, QUANDO SELECIONADO UMA FAMILIA 
+        private int id_register_family = list_family.Instance.sl_id_register_family; 
+        
+        // COLETA DADOS DA TABELA MEMBROS DA FAMILIA
         private int[] id_register_family_member = new int[10];
+        private string[] family_member = new string[10];
 
-        // COLETAR DADOS DA TABELA AO SELECIONAR
+        // COLETAR DADOS DA TABELA AO SELECIONAR UMA DIVIDA
         private int sl_id_register_family_member;
         private int sl_id_products;
         private int sl_id_credit_card_list;
         private int sl_id_credit_card;
         private int sl_id_total_credit_card;
-
-        // MEMBROS DA FAMILIA
-        private string[] family_member = new string[10];
 
         // BOTÃO EDITAR
         private bool[] _edit = new bool[10];
@@ -41,7 +41,7 @@ namespace Contas_Familia.PanelControll.Dashboard
         decimal total_payble;
         decimal total_payable_installment;
 
-        // DATA
+        // DATA DENTRO DO DATADRIGVIEW
         DateTimePicker[] dtp = new DateTimePicker[10];
         Rectangle[] rectangle = new Rectangle[10];
 
@@ -63,10 +63,11 @@ namespace Contas_Familia.PanelControll.Dashboard
             Label[] txtNames = { txt_name_01, txt_name_02, txt_name_03, txt_name_04, txt_name_05, txt_name_06, txt_name_07, txt_name_08, txt_name_09, txt_name_10 };
             Label[] txtTotal = { txt_total_01, txt_total_02, txt_total_03, txt_total_04, txt_total_05, txt_total_06, txt_total_07, txt_total_08, txt_total_09, txt_total_10 };
 
-            string query = "select ID_REGISTER_FAMILY_MEMBER, FAMILY_MEMBER, ID_REGISTER_FAMILY from familypayday.register_family_member";
+            string query = "select id_register_family_member, family_member, id_register_family from familypayday.register_family_member where id_register_family = @id_register_family";
 
             // NOVA DATAGRIDVIEW, OCULTA, UTILIZADA SOMENTE PARA COLETAR OS MEMBROS DA FAMILIA
             MySqlCommand cmd = new MySqlCommand(query, database.getConnection());
+            cmd.Parameters.AddWithValue("@id_register_family", id_register_family);
 
             using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
             {
