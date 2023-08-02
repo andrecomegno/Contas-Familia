@@ -1,10 +1,11 @@
-﻿using Contas_Familia.PanelControll.Home;
+﻿using System;
+using System.Data;
+using System.Drawing;
+using System.Windows.Forms;
 using Contas_Familia.Script;
 using Contas_Familia.Window;
 using MySql.Data.MySqlClient;
-using System;
-using System.Drawing;
-using System.Windows.Forms;
+using Contas_Familia.PanelControll.Home;
 
 namespace Contas_Familia.PanelControll.Dashboard
 {
@@ -25,10 +26,43 @@ namespace Contas_Familia.PanelControll.Dashboard
         {
             LabelNameFamilyAndLogin();
             TabelaComboBox();
+            Graphic();
 
+            // DESATIVA O MENU HOME 
             Main.Instance.ButtonMenuDisabled(true);
         }
 
+        #region Panel Graphic
+        void Graphic()
+        {
+            configdb database = new configdb();
+            database.openConnection();
+
+            string query = "select rf.family_name, rfm.family_member, cc.credit_card_payday, sum(tcc.total_payable_installment) AS total, rfm.id_register_family_member, rf.id_register_family from familypayday.login lo join familypayday.register_family rf on rf.id_login = lo.id_login join familypayday.register_family_member rfm on rfm.id_register_family = rf.id_register_family join familypayday.products pr on pr.id_register_family_member = rfm.id_register_family_member join familypayday.credit_card_list ccl on ccl.id_products = pr.id_products join familypayday.credit_card cc on cc.id_credit_card_list = ccl.id_credit_card_list join familypayday.total_credit_card tcc on tcc.id_credit_card = cc.id_credit_card where rf.id_register_family = @id_register_family and cc.credit_card_payday like @dateNow group by rfm.id_register_family_member";
+
+            MySqlCommand cmd = new MySqlCommand(query, database.getConnection());
+            cmd.Parameters.AddWithValue("@id_register_family", id_register_family);
+            cmd.Parameters.AddWithValue("@dateNow", "%" + DateTime.Now.Year); 
+
+            using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+            {
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                chart_paypal.DataSource = dt;
+                chart_paypal.Series["payday"].XValueMember = "family_member";
+                chart_paypal.Series["payday"].YValueMembers = "total";
+                chart_paypal.Series["payday"].IsValueShownAsLabel = true;
+                chart_paypal.Series["payday"].LabelFormat = "C2";
+
+                chart_paypal.DataBind();
+            }
+
+            database.closeConnection();
+        }
+        #endregion
+
+        #region Menu Top 
         private void bt_dashboard_Click(object sender, EventArgs e) => Dashboard();
 
         private void bt_family_Click(object sender, EventArgs e) => Family();
@@ -58,6 +92,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             pl_mid.Controls.Add(userControl);
             userControl.BringToFront();
         }
+        #endregion
 
         #region Panel User Login
         void LabelNameFamilyAndLogin()
