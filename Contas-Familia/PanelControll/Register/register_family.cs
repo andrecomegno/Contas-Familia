@@ -56,14 +56,8 @@ namespace Contas_Familia.PanelControll.Register
                 }
                 finally
                 {
-                    dashboard uc = new dashboard();
+                    home uc = new home();
                     Main.Instance.addControll(uc);
-
-                    // SELECIONAR BOTÃO DASHBOARD
-                    Main.Instance.Dashboard();
-
-                    // ABRIR JANELA FAMILY DO DASHBOARD
-                    dashboard.Instance.Family();
                 }                
             }
         }
