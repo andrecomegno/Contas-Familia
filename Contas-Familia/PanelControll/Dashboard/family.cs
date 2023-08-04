@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Contas_Familia.PanelControll.Home;
 using Contas_Familia.Script;
@@ -34,7 +36,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
         // BOTÃO SALVAR - ATRIBUI NOVOS DADOS A TABELA        
         string credit_card_name;
-        string credit_card_payday;
+        DateTime credit_card_payday;
         string store_name;
         string product_name;
         string credit_card_installment;
@@ -242,7 +244,7 @@ namespace Contas_Familia.PanelControll.Dashboard
 
             // CARTÃO DE CREDITO
             MySqlCommand cmdCreditCard = new MySqlCommand(insertCreditCard, database.getConnection());
-            cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.VarChar, 10).Value = credit_card_payday;
+            cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.Date).Value = credit_card_payday;
             cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = credit_card_installment;
             cmdCreditCard.Parameters.Add("@id_credit_card_list", MySqlDbType.Int32).Value = idCreditCardList;
             cmdCreditCard.ExecuteNonQuery();
@@ -286,7 +288,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             // CARTÃO DE CREDITO
             MySqlCommand cmdCreditCard = new MySqlCommand(updateCreditCard, database.getConnection());
             cmdCreditCard.Parameters.Add("@id_credit_card", MySqlDbType.Int32).Value = sl_id_credit_card;
-            cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.VarChar, 10).Value = credit_card_payday;
+            cmdCreditCard.Parameters.Add("@credit_card_payday", MySqlDbType.Date).Value = credit_card_payday;
             cmdCreditCard.Parameters.Add("@credit_card_installment", MySqlDbType.VarChar, 7).Value = credit_card_installment;
             cmdCreditCard.ExecuteNonQuery();
 
@@ -437,7 +439,31 @@ namespace Contas_Familia.PanelControll.Dashboard
                 DataGridViewRow row = dataGridViews.Rows[e.RowIndex];
 
                 credit_card_name = row.Cells[0].Value.ToString();
-                credit_card_payday = row.Cells[1].Value == DBNull.Value ? dtp[e.RowIndex].Value.ToString("dd/MM/yyyy") : row.Cells[1].Value.ToString();
+                //credit_card_payday = row.Cells[1].Value == DBNull.Value ? dtp[e.RowIndex].Value.ToString("MM/dd/yyyy") : row.Cells[1].Value.ToString();
+
+                if (row.Cells[1].Value == DBNull.Value || string.IsNullOrWhiteSpace(row.Cells[1].Value.ToString()))
+                {
+                    // Caso a célula esteja vazia, você pode definir um valor padrão ou tratar o erro.
+                    // Neste exemplo, estou definindo a data mínima como valor padrão.
+                    credit_card_payday = dtp[e.RowIndex].Value.ToString("MM/dd/yyyy");
+                }
+                else
+                {
+                    string creditCardPaydayString = row.Cells[1].Value.ToString();
+
+                    // Convertendo a string para um objeto DateTime
+                    if (DateTime.TryParseExact(creditCardPaydayString, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime result))
+                    {
+                        credit_card_payday = result;
+                    }
+                    else
+                    {
+                        // Caso a conversão falhe, você pode tratar o erro ou definir um valor padrão.
+                        // Nesse exemplo, estou definindo a data mínima como valor padrão.
+                        credit_card_payday = DateTime.MinValue;
+                    }
+                }
+                
                 store_name = row.Cells[2].Value == DBNull.Value ? "N/A" : row.Cells[2].Value.ToString();
                 product_name = row.Cells[3].Value == DBNull.Value ? "N/A" : row.Cells[3].Value.ToString();
                 credit_card_installment = row.Cells[4].Value == DBNull.Value ? "N/A" : row.Cells[4].Value.ToString();

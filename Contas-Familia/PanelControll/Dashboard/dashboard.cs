@@ -6,6 +6,7 @@ using Contas_Familia.Script;
 using Contas_Familia.Window;
 using MySql.Data.MySqlClient;
 using Contas_Familia.PanelControll.Home;
+using System.Linq;
 
 namespace Contas_Familia.PanelControll.Dashboard
 {
@@ -53,13 +54,63 @@ namespace Contas_Familia.PanelControll.Dashboard
                 chart_paypal.Series["payday"].XValueMember = "family_member";
                 chart_paypal.Series["payday"].YValueMembers = "total";
                 chart_paypal.Series["payday"].IsValueShownAsLabel = true;
-                chart_paypal.Series["payday"].LabelFormat = "C2";
+                chart_paypal.Series["payday"].LabelFormat = "C2";               
 
                 chart_paypal.DataBind();
             }
 
             database.closeConnection();
+
+            if (chart_paypal.Series.Any(s => s.Points.Count > 0))
+            {
+                lb_alert_no_data.Visible = false;
+            }
+            else
+            {
+                lb_alert_no_data.Visible = true;
+            }
         }
+
+        void TabelaComboBox()
+        {
+            configdb database = new configdb();
+            database.openConnection();
+
+            string query = "select family_member, id_register_family from familypayday.register_family_member where id_register_family = '1' order by family_member asc";
+
+            MySqlCommand cmd = new MySqlCommand(query, database.getConnection());
+            cmd.Parameters.AddWithValue("@id_register_family", id_register_family);
+
+            using (MySqlDataReader dr = cmd.ExecuteReader())
+            {
+                while (dr.Read())
+                {
+                    // ATRIBUI TODOS OS MEMBROS DA FAMILIA AO COMBOBOX
+                    cb_member_family.Items.Add(dr.GetString(0));
+                }
+            }
+
+            string query2 = "select family_member, id_register_family from familypayday.register_family_member where id_register_family = '1' order by family_member asc";
+
+            MySqlCommand cmd2 = new MySqlCommand(query2, database.getConnection());
+            cmd2.Parameters.AddWithValue("@id_register_family", id_register_family);
+
+            using (MySqlDataReader dr = cmd2.ExecuteReader())
+            {
+                while (dr.Read())
+                {
+                    // ATRIBUI TODOS OS MEMBROS DA FAMILIA AO COMBOBOX
+                    cb_name_member.Items.Add(dr.GetString(0));
+                }
+            }
+
+            database.closeConnection();
+
+            // INICIAR O COMBOBOX COM OS TITULOS PARA SELECIONAR
+            cb_member_family.SelectedIndex = 0;
+            cb_name_member.SelectedIndex = 0;
+        }
+
         #endregion
 
         #region Menu Top 
@@ -98,7 +149,7 @@ namespace Contas_Familia.PanelControll.Dashboard
         void LabelNameFamilyAndLogin()
         {
             // ATRIBUI O NOME DA CONTA LOGADA
-            lb_userName.Text = userName;
+            lb_userName.Text = userName;            
             // ATRIBUI O NOME DA FAMILIA LOGADA
             lb_family_name.Text = list_family.Instance.sl_family_name + " !";
         }
@@ -114,38 +165,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             Main.Instance.Home();
             Main.Instance.ButtonMenuDisabled(false);
         }
-        #endregion
-
-        #region Panel Total Family
-        void TabelaComboBox()
-        {
-            configdb database = new configdb();
-            database.openConnection();
-
-            string query = "select family_member, id_register_family from familypayday.register_family_member where id_register_family = @id_register_family order by family_member asc";
-            
-            MySqlCommand cmd = new MySqlCommand(query, database.getConnection());
-            cmd.Parameters.AddWithValue("@id_register_family", id_register_family);
-
-            using (MySqlDataReader dr = cmd.ExecuteReader())
-            {
-                while (dr.Read())
-                {
-                    // ATRIBUI TODOS OS MEMBROS DA FAMILIA AO COMBOBOX
-                    cb_member_family.Items.Add(dr.GetString(0));
-                }
-            }
-
-            database.closeConnection();
-
-            // INICIAR COMO TODOS OS NOMES DA FAMILIA
-            cb_member_family.SelectedIndex = 0;
-        }
-
-        void LabelTotal()
-        {
-
-        } 
         #endregion
 
         private void dashboard_Load(object sender, EventArgs e)

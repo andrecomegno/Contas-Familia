@@ -29,10 +29,10 @@ namespace Contas_Familia.PanelControll.Dashboard
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.pl_top = new System.Windows.Forms.Panel();
             this.bt_family = new System.Windows.Forms.Button();
             this.bt_dashboard = new System.Windows.Forms.Button();
@@ -40,24 +40,25 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_mid = new System.Windows.Forms.Panel();
             this.pl_dashboard = new System.Windows.Forms.Panel();
             this.pl_graphic = new System.Windows.Forms.Panel();
-            this.chart_paypal = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.cb_member_family = new Contas_Familia.Script.RJComboBox();
+            this.cb_name_member = new Contas_Familia.Script.RJComboBox();
             this.pl_total = new System.Windows.Forms.Panel();
             this.pl_profile = new System.Windows.Forms.Panel();
             this.lb_title_family = new System.Windows.Forms.Label();
             this.lb_family_name = new System.Windows.Forms.Label();
+            this.im_profile_image = new Contas_Familia.Script.RJCircularPictureBox();
             this.bt_logout = new FontAwesome.Sharp.IconButton();
             this.bt_settings = new FontAwesome.Sharp.IconButton();
             this.lb_userName = new System.Windows.Forms.Label();
-            this.cb_member_family = new Contas_Familia.Script.RJComboBox();
-            this.im_profile_image = new Contas_Familia.Script.RJCircularPictureBox();
-            this.cb_name_member = new Contas_Familia.Script.RJComboBox();
+            this.lb_alert_no_data = new System.Windows.Forms.Label();
+            this.chart_paypal = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pl_top.SuspendLayout();
             this.pl_mid.SuspendLayout();
             this.pl_dashboard.SuspendLayout();
             this.pl_graphic.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_paypal)).BeginInit();
             this.pl_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.im_profile_image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_paypal)).BeginInit();
             this.SuspendLayout();
             // 
             // pl_top
@@ -144,6 +145,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_graphic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pl_graphic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.pl_graphic.Controls.Add(this.lb_alert_no_data);
             this.pl_graphic.Controls.Add(this.cb_member_family);
             this.pl_graphic.Controls.Add(this.cb_name_member);
             this.pl_graphic.Controls.Add(this.chart_paypal);
@@ -152,34 +154,46 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_graphic.Size = new System.Drawing.Size(1120, 426);
             this.pl_graphic.TabIndex = 2;
             // 
-            // chart_paypal
+            // cb_member_family
             // 
-            this.chart_paypal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.chart_paypal.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_paypal.Legends.Add(legend1);
-            this.chart_paypal.Location = new System.Drawing.Point(19, 45);
-            this.chart_paypal.Name = "chart_paypal";
-            this.chart_paypal.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            series1.IsValueShownAsLabel = true;
-            series1.IsVisibleInLegend = false;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.Name = "payday";
-            series1.YValuesPerPoint = 30;
-            this.chart_paypal.Series.Add(series1);
-            this.chart_paypal.Size = new System.Drawing.Size(1087, 348);
-            this.chart_paypal.TabIndex = 101;
-            this.chart_paypal.Text = "chart";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            title1.ForeColor = System.Drawing.Color.DimGray;
-            title1.Name = "Title1";
-            title1.Text = "Members Family - Outgoing";
-            this.chart_paypal.Titles.Add(title1);
+            this.cb_member_family.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cb_member_family.BorderColor = System.Drawing.Color.Transparent;
+            this.cb_member_family.BorderSize = 0;
+            this.cb_member_family.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_member_family.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cb_member_family.ForeColor = System.Drawing.Color.Black;
+            this.cb_member_family.IconColor = System.Drawing.Color.Black;
+            this.cb_member_family.Items.AddRange(new object[] {
+            "Select Name",
+            "All"});
+            this.cb_member_family.ListBackColor = System.Drawing.Color.White;
+            this.cb_member_family.ListTextColor = System.Drawing.Color.DimGray;
+            this.cb_member_family.Location = new System.Drawing.Point(128, 9);
+            this.cb_member_family.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cb_member_family.Name = "cb_member_family";
+            this.cb_member_family.Size = new System.Drawing.Size(200, 30);
+            this.cb_member_family.TabIndex = 132;
+            this.cb_member_family.Texts = "";
+            // 
+            // cb_name_member
+            // 
+            this.cb_name_member.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cb_name_member.BorderColor = System.Drawing.Color.Transparent;
+            this.cb_name_member.BorderSize = 0;
+            this.cb_name_member.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_name_member.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cb_name_member.ForeColor = System.Drawing.Color.Black;
+            this.cb_name_member.IconColor = System.Drawing.Color.Black;
+            this.cb_name_member.Items.AddRange(new object[] {
+            "Year"});
+            this.cb_name_member.ListBackColor = System.Drawing.Color.White;
+            this.cb_name_member.ListTextColor = System.Drawing.Color.DimGray;
+            this.cb_name_member.Location = new System.Drawing.Point(19, 9);
+            this.cb_name_member.MinimumSize = new System.Drawing.Size(80, 30);
+            this.cb_name_member.Name = "cb_name_member";
+            this.cb_name_member.Size = new System.Drawing.Size(94, 30);
+            this.cb_name_member.TabIndex = 133;
+            this.cb_name_member.Texts = "";
             // 
             // pl_total
             // 
@@ -229,6 +243,23 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_family_name.TabIndex = 124;
             this.lb_family_name.Text = "Unknown";
             this.lb_family_name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // im_profile_image
+            // 
+            this.im_profile_image.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.im_profile_image.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.im_profile_image.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.im_profile_image.BorderColor2 = System.Drawing.Color.HotPink;
+            this.im_profile_image.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.im_profile_image.BorderSize = 2;
+            this.im_profile_image.GradientAngle = 50F;
+            this.im_profile_image.Image = global::Contas_Familia.Properties.Resources.user;
+            this.im_profile_image.Location = new System.Drawing.Point(24, 45);
+            this.im_profile_image.Name = "im_profile_image";
+            this.im_profile_image.Size = new System.Drawing.Size(100, 100);
+            this.im_profile_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.im_profile_image.TabIndex = 4;
+            this.im_profile_image.TabStop = false;
             // 
             // bt_logout
             // 
@@ -292,64 +323,58 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.lb_userName.Text = "Unknown";
             this.lb_userName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cb_member_family
+            // lb_alert_no_data
             // 
-            this.cb_member_family.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cb_member_family.BorderColor = System.Drawing.Color.Transparent;
-            this.cb_member_family.BorderSize = 0;
-            this.cb_member_family.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_member_family.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cb_member_family.ForeColor = System.Drawing.Color.Black;
-            this.cb_member_family.IconColor = System.Drawing.Color.Black;
-            this.cb_member_family.Items.AddRange(new object[] {
-            "Select Name",
-            "All"});
-            this.cb_member_family.ListBackColor = System.Drawing.Color.White;
-            this.cb_member_family.ListTextColor = System.Drawing.Color.DimGray;
-            this.cb_member_family.Location = new System.Drawing.Point(128, 9);
-            this.cb_member_family.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cb_member_family.Name = "cb_member_family";
-            this.cb_member_family.Size = new System.Drawing.Size(200, 30);
-            this.cb_member_family.TabIndex = 132;
-            this.cb_member_family.Texts = "";
+            this.lb_alert_no_data.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_alert_no_data.BackColor = System.Drawing.Color.White;
+            this.lb_alert_no_data.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_alert_no_data.ForeColor = System.Drawing.Color.DarkGray;
+            this.lb_alert_no_data.Location = new System.Drawing.Point(22, 188);
+            this.lb_alert_no_data.Name = "lb_alert_no_data";
+            this.lb_alert_no_data.Size = new System.Drawing.Size(1081, 25);
+            this.lb_alert_no_data.TabIndex = 110;
+            this.lb_alert_no_data.Text = "No Data";
+            this.lb_alert_no_data.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // im_profile_image
+            // chart_paypal
             // 
-            this.im_profile_image.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.im_profile_image.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.im_profile_image.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.im_profile_image.BorderColor2 = System.Drawing.Color.HotPink;
-            this.im_profile_image.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.im_profile_image.BorderSize = 2;
-            this.im_profile_image.GradientAngle = 50F;
-            this.im_profile_image.Image = global::Contas_Familia.Properties.Resources.user;
-            this.im_profile_image.Location = new System.Drawing.Point(24, 45);
-            this.im_profile_image.Name = "im_profile_image";
-            this.im_profile_image.Size = new System.Drawing.Size(100, 100);
-            this.im_profile_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.im_profile_image.TabIndex = 4;
-            this.im_profile_image.TabStop = false;
-            // 
-            // cb_name_member
-            // 
-            this.cb_name_member.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cb_name_member.BorderColor = System.Drawing.Color.Transparent;
-            this.cb_name_member.BorderSize = 0;
-            this.cb_name_member.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_name_member.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cb_name_member.ForeColor = System.Drawing.Color.Black;
-            this.cb_name_member.IconColor = System.Drawing.Color.Black;
-            this.cb_name_member.Items.AddRange(new object[] {
-            "Year",
-            "2023"});
-            this.cb_name_member.ListBackColor = System.Drawing.Color.White;
-            this.cb_name_member.ListTextColor = System.Drawing.Color.DimGray;
-            this.cb_name_member.Location = new System.Drawing.Point(19, 9);
-            this.cb_name_member.MinimumSize = new System.Drawing.Size(80, 30);
-            this.cb_name_member.Name = "cb_name_member";
-            this.cb_name_member.Size = new System.Drawing.Size(94, 30);
-            this.cb_name_member.TabIndex = 133;
-            this.cb_name_member.Texts = "";
+            this.chart_paypal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea5.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea5.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisX2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea5.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea5.AxisY2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea5.Name = "ChartArea1";
+            this.chart_paypal.ChartAreas.Add(chartArea5);
+            legend5.Enabled = false;
+            legend5.HeaderSeparatorColor = System.Drawing.Color.Transparent;
+            legend5.ItemColumnSeparatorColor = System.Drawing.Color.Transparent;
+            legend5.Name = "Legend1";
+            this.chart_paypal.Legends.Add(legend5);
+            this.chart_paypal.Location = new System.Drawing.Point(19, 45);
+            this.chart_paypal.Name = "chart_paypal";
+            this.chart_paypal.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+            series5.IsValueShownAsLabel = true;
+            series5.Legend = "Legend1";
+            series5.Name = "payday";
+            series5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            series5.YValuesPerPoint = 30;
+            this.chart_paypal.Series.Add(series5);
+            this.chart_paypal.Size = new System.Drawing.Size(1084, 360);
+            this.chart_paypal.TabIndex = 109;
+            this.chart_paypal.Text = "chart";
+            title5.BackColor = System.Drawing.Color.Transparent;
+            title5.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.Center;
+            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            title5.ForeColor = System.Drawing.Color.DimGray;
+            title5.Name = "Title1";
+            title5.Text = "Members Family - Outgoing";
+            this.chart_paypal.Titles.Add(title5);
             // 
             // dashboard
             // 
@@ -365,10 +390,10 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_mid.ResumeLayout(false);
             this.pl_dashboard.ResumeLayout(false);
             this.pl_graphic.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart_paypal)).EndInit();
             this.pl_profile.ResumeLayout(false);
             this.pl_profile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.im_profile_image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_paypal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -388,10 +413,11 @@ namespace Contas_Familia.PanelControll.Dashboard
         private FontAwesome.Sharp.IconButton bt_settings;
         private FontAwesome.Sharp.IconButton bt_logout;
         private Script.RJCircularPictureBox im_profile_image;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart_paypal;
         private Script.RJComboBox cb_member_family;
         private System.Windows.Forms.Label lb_family_name;
         private System.Windows.Forms.Label lb_title_family;
         private Script.RJComboBox cb_name_member;
+        private System.Windows.Forms.Label lb_alert_no_data;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_paypal;
     }
 }
