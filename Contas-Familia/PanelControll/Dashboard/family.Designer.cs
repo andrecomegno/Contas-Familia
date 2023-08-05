@@ -33,9 +33,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -63,6 +60,9 @@ namespace Contas_Familia.PanelControll.Dashboard
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pl_family_01 = new System.Windows.Forms.Panel();
             this.bt_save_edit_01 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_01 = new System.Windows.Forms.Button();
@@ -91,26 +91,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.familypaydayDataSet = new Contas_Familia.familypaydayDataSet();
             this.pl_content_01 = new System.Windows.Forms.Panel();
             this.pl_content_02 = new System.Windows.Forms.Panel();
-            this.pl_content_03 = new System.Windows.Forms.Panel();
-            this.pl_content_04 = new System.Windows.Forms.Panel();
-            this.pl_content_05 = new System.Windows.Forms.Panel();
-            this.pl_content_06 = new System.Windows.Forms.Panel();
-            this.pl_content_07 = new System.Windows.Forms.Panel();
-            this.pl_content_08 = new System.Windows.Forms.Panel();
-            this.pl_content_09 = new System.Windows.Forms.Panel();
-            this.pl_content_10 = new System.Windows.Forms.Panel();
-            this.pl_add = new System.Windows.Forms.Panel();
-            this.lb_alert_member = new System.Windows.Forms.Label();
-            this.pl_add_family_member = new System.Windows.Forms.Panel();
-            this.txt_add_family_name = new Contas_Familia.Script.RJTextBox();
-            this.bt_cancel = new System.Windows.Forms.Button();
-            this.bt_save = new System.Windows.Forms.Button();
-            this.bt_add = new System.Windows.Forms.Button();
-            this.pl_null = new System.Windows.Forms.Panel();
-            this.lb_table_member_family = new System.Windows.Forms.Label();
-            this.dgv_family_member = new System.Windows.Forms.DataGridView();
-            this.pl_table_member_family = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pl_family_02 = new System.Windows.Forms.Panel();
             this.bt_save_edit_02 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_02 = new System.Windows.Forms.Button();
@@ -135,6 +115,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pl_content_03 = new System.Windows.Forms.Panel();
             this.pl_family_03 = new System.Windows.Forms.Panel();
             this.bt_save_edit_03 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_03 = new System.Windows.Forms.Button();
@@ -159,6 +140,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pl_content_04 = new System.Windows.Forms.Panel();
             this.pl_family_04 = new System.Windows.Forms.Panel();
             this.bt_save_edit_04 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_04 = new System.Windows.Forms.Button();
@@ -183,6 +165,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pl_content_05 = new System.Windows.Forms.Panel();
             this.pl_family_05 = new System.Windows.Forms.Panel();
             this.bt_save_edit_05 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_05 = new System.Windows.Forms.Button();
@@ -207,6 +190,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pl_content_06 = new System.Windows.Forms.Panel();
             this.pl_family_06 = new System.Windows.Forms.Panel();
             this.bt_save_edit_06 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_06 = new System.Windows.Forms.Button();
@@ -231,6 +215,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pl_content_07 = new System.Windows.Forms.Panel();
             this.pl_family_07 = new System.Windows.Forms.Panel();
             this.bt_save_edit_07 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_07 = new System.Windows.Forms.Button();
@@ -255,6 +240,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pl_content_08 = new System.Windows.Forms.Panel();
             this.pl_family_08 = new System.Windows.Forms.Panel();
             this.bt_save_edit_08 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_08 = new System.Windows.Forms.Button();
@@ -279,6 +265,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn83 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn84 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn7 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pl_content_09 = new System.Windows.Forms.Panel();
             this.pl_family_09 = new System.Windows.Forms.Panel();
             this.bt_save_edit_09 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_09 = new System.Windows.Forms.Button();
@@ -303,6 +290,7 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn95 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn96 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn8 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pl_content_10 = new System.Windows.Forms.Panel();
             this.pl_family_10 = new System.Windows.Forms.Panel();
             this.bt_save_edit_10 = new System.Windows.Forms.Button();
             this.bt_cancel_edit_10 = new System.Windows.Forms.Button();
@@ -327,42 +315,54 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewTextBoxColumn107 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn108 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn9 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pl_add = new System.Windows.Forms.Panel();
+            this.lb_alert_member = new System.Windows.Forms.Label();
+            this.pl_add_family_member = new System.Windows.Forms.Panel();
+            this.txt_add_family_name = new Contas_Familia.Script.RJTextBox();
+            this.bt_cancel = new System.Windows.Forms.Button();
+            this.bt_save = new System.Windows.Forms.Button();
+            this.bt_add = new System.Windows.Forms.Button();
+            this.pl_null = new System.Windows.Forms.Panel();
+            this.lb_table_member_family = new System.Windows.Forms.Label();
+            this.dgv_family_member = new System.Windows.Forms.DataGridView();
+            this.pl_table_member_family = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pl_family_01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.familypaydayDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.familypaydayDataSet)).BeginInit();
             this.pl_content_01.SuspendLayout();
             this.pl_content_02.SuspendLayout();
+            this.pl_family_02.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.pl_content_03.SuspendLayout();
+            this.pl_family_03.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.pl_content_04.SuspendLayout();
+            this.pl_family_04.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.pl_content_05.SuspendLayout();
+            this.pl_family_05.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.pl_content_06.SuspendLayout();
+            this.pl_family_06.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.pl_content_07.SuspendLayout();
+            this.pl_family_07.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             this.pl_content_08.SuspendLayout();
+            this.pl_family_08.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             this.pl_content_09.SuspendLayout();
+            this.pl_family_09.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             this.pl_content_10.SuspendLayout();
+            this.pl_family_10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             this.pl_add.SuspendLayout();
             this.pl_add_family_member.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_family_member)).BeginInit();
             this.pl_table_member_family.SuspendLayout();
-            this.pl_family_02.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.pl_family_03.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.pl_family_04.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            this.pl_family_05.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            this.pl_family_06.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            this.pl_family_07.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            this.pl_family_08.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-            this.pl_family_09.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
-            this.pl_family_10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             this.SuspendLayout();
             // 
             // pl_family_01
@@ -717,260 +717,6 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.pl_content_02.Size = new System.Drawing.Size(1222, 500);
             this.pl_content_02.TabIndex = 154;
             // 
-            // pl_content_03
-            // 
-            this.pl_content_03.Controls.Add(this.pl_family_03);
-            this.pl_content_03.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_03.Location = new System.Drawing.Point(0, 1458);
-            this.pl_content_03.Name = "pl_content_03";
-            this.pl_content_03.Size = new System.Drawing.Size(1222, 500);
-            this.pl_content_03.TabIndex = 156;
-            // 
-            // pl_content_04
-            // 
-            this.pl_content_04.Controls.Add(this.pl_family_04);
-            this.pl_content_04.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_04.Location = new System.Drawing.Point(0, 1958);
-            this.pl_content_04.Name = "pl_content_04";
-            this.pl_content_04.Size = new System.Drawing.Size(1222, 500);
-            this.pl_content_04.TabIndex = 157;
-            // 
-            // pl_content_05
-            // 
-            this.pl_content_05.Controls.Add(this.pl_family_05);
-            this.pl_content_05.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_05.Location = new System.Drawing.Point(0, 2458);
-            this.pl_content_05.Name = "pl_content_05";
-            this.pl_content_05.Size = new System.Drawing.Size(1222, 500);
-            this.pl_content_05.TabIndex = 158;
-            // 
-            // pl_content_06
-            // 
-            this.pl_content_06.Controls.Add(this.pl_family_06);
-            this.pl_content_06.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_06.Location = new System.Drawing.Point(0, 2958);
-            this.pl_content_06.Name = "pl_content_06";
-            this.pl_content_06.Size = new System.Drawing.Size(1222, 500);
-            this.pl_content_06.TabIndex = 159;
-            // 
-            // pl_content_07
-            // 
-            this.pl_content_07.Controls.Add(this.pl_family_07);
-            this.pl_content_07.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_07.Location = new System.Drawing.Point(0, 3458);
-            this.pl_content_07.Name = "pl_content_07";
-            this.pl_content_07.Size = new System.Drawing.Size(1222, 500);
-            this.pl_content_07.TabIndex = 160;
-            // 
-            // pl_content_08
-            // 
-            this.pl_content_08.Controls.Add(this.pl_family_08);
-            this.pl_content_08.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_08.Location = new System.Drawing.Point(0, 3958);
-            this.pl_content_08.Name = "pl_content_08";
-            this.pl_content_08.Size = new System.Drawing.Size(1222, 500);
-            this.pl_content_08.TabIndex = 161;
-            // 
-            // pl_content_09
-            // 
-            this.pl_content_09.Controls.Add(this.pl_family_09);
-            this.pl_content_09.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_09.Location = new System.Drawing.Point(0, 4458);
-            this.pl_content_09.Name = "pl_content_09";
-            this.pl_content_09.Size = new System.Drawing.Size(1222, 500);
-            this.pl_content_09.TabIndex = 162;
-            // 
-            // pl_content_10
-            // 
-            this.pl_content_10.Controls.Add(this.pl_family_10);
-            this.pl_content_10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_content_10.Location = new System.Drawing.Point(0, 4958);
-            this.pl_content_10.Name = "pl_content_10";
-            this.pl_content_10.Size = new System.Drawing.Size(1222, 500);
-            this.pl_content_10.TabIndex = 163;
-            // 
-            // pl_add
-            // 
-            this.pl_add.Controls.Add(this.lb_alert_member);
-            this.pl_add.Controls.Add(this.pl_add_family_member);
-            this.pl_add.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_add.Location = new System.Drawing.Point(0, 0);
-            this.pl_add.Name = "pl_add";
-            this.pl_add.Size = new System.Drawing.Size(1222, 458);
-            this.pl_add.TabIndex = 164;
-            // 
-            // lb_alert_member
-            // 
-            this.lb_alert_member.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_alert_member.ForeColor = System.Drawing.Color.White;
-            this.lb_alert_member.Location = new System.Drawing.Point(15, 215);
-            this.lb_alert_member.Name = "lb_alert_member";
-            this.lb_alert_member.Size = new System.Drawing.Size(1194, 35);
-            this.lb_alert_member.TabIndex = 74;
-            this.lb_alert_member.Text = "There is no family member, please add a new one";
-            this.lb_alert_member.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pl_add_family_member
-            // 
-            this.pl_add_family_member.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pl_add_family_member.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
-            this.pl_add_family_member.Controls.Add(this.txt_add_family_name);
-            this.pl_add_family_member.Controls.Add(this.bt_cancel);
-            this.pl_add_family_member.Controls.Add(this.bt_save);
-            this.pl_add_family_member.Controls.Add(this.bt_add);
-            this.pl_add_family_member.Location = new System.Drawing.Point(25, 6);
-            this.pl_add_family_member.Name = "pl_add_family_member";
-            this.pl_add_family_member.Size = new System.Drawing.Size(1171, 73);
-            this.pl_add_family_member.TabIndex = 10;
-            // 
-            // txt_add_family_name
-            // 
-            this.txt_add_family_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.txt_add_family_name.BorderColor = System.Drawing.Color.Transparent;
-            this.txt_add_family_name.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_add_family_name.BorderRadius = 0;
-            this.txt_add_family_name.BorderSize = 2;
-            this.txt_add_family_name.Enabled = false;
-            this.txt_add_family_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_add_family_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_add_family_name.Location = new System.Drawing.Point(16, 17);
-            this.txt_add_family_name.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_add_family_name.Multiline = false;
-            this.txt_add_family_name.Name = "txt_add_family_name";
-            this.txt_add_family_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_add_family_name.PasswordChar = false;
-            this.txt_add_family_name.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_add_family_name.PlaceholderText = "";
-            this.txt_add_family_name.Size = new System.Drawing.Size(250, 31);
-            this.txt_add_family_name.TabIndex = 81;
-            this.txt_add_family_name.Texts = "";
-            this.txt_add_family_name.UnderlinedStyle = false;
-            this.txt_add_family_name.Leave += new System.EventHandler(this.txt_add_family_name_Leave);
-            // 
-            // bt_cancel
-            // 
-            this.bt_cancel.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cancel.FlatAppearance.BorderSize = 0;
-            this.bt_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cancel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancel.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel.Location = new System.Drawing.Point(401, 12);
-            this.bt_cancel.Name = "bt_cancel";
-            this.bt_cancel.Size = new System.Drawing.Size(122, 36);
-            this.bt_cancel.TabIndex = 80;
-            this.bt_cancel.Text = "Cancel";
-            this.bt_cancel.UseVisualStyleBackColor = false;
-            this.bt_cancel.Visible = false;
-            this.bt_cancel.Click += new System.EventHandler(this.bt_cancel_Click);
-            // 
-            // bt_save
-            // 
-            this.bt_save.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_save.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_save.FlatAppearance.BorderSize = 0;
-            this.bt_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_save.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save.ForeColor = System.Drawing.Color.White;
-            this.bt_save.Location = new System.Drawing.Point(273, 12);
-            this.bt_save.Name = "bt_save";
-            this.bt_save.Size = new System.Drawing.Size(122, 36);
-            this.bt_save.TabIndex = 79;
-            this.bt_save.Text = "Save";
-            this.bt_save.UseVisualStyleBackColor = false;
-            this.bt_save.Visible = false;
-            this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
-            // 
-            // bt_add
-            // 
-            this.bt_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_add.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_add.FlatAppearance.BorderSize = 0;
-            this.bt_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_add.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_add.ForeColor = System.Drawing.Color.White;
-            this.bt_add.Location = new System.Drawing.Point(1031, 12);
-            this.bt_add.Name = "bt_add";
-            this.bt_add.Size = new System.Drawing.Size(122, 36);
-            this.bt_add.TabIndex = 78;
-            this.bt_add.Text = "Add";
-            this.bt_add.UseVisualStyleBackColor = false;
-            this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
-            // 
-            // pl_null
-            // 
-            this.pl_null.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_null.Location = new System.Drawing.Point(0, 5458);
-            this.pl_null.Name = "pl_null";
-            this.pl_null.Size = new System.Drawing.Size(1222, 73);
-            this.pl_null.TabIndex = 165;
-            // 
-            // lb_table_member_family
-            // 
-            this.lb_table_member_family.AutoSize = true;
-            this.lb_table_member_family.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_table_member_family.ForeColor = System.Drawing.Color.White;
-            this.lb_table_member_family.Location = new System.Drawing.Point(66, 100);
-            this.lb_table_member_family.Name = "lb_table_member_family";
-            this.lb_table_member_family.Size = new System.Drawing.Size(244, 25);
-            this.lb_table_member_family.TabIndex = 86;
-            this.lb_table_member_family.Text = "TABLE MEMBER FAMILY";
-            // 
-            // dgv_family_member
-            // 
-            this.dgv_family_member.AllowUserToAddRows = false;
-            this.dgv_family_member.AllowUserToDeleteRows = false;
-            this.dgv_family_member.AllowUserToResizeColumns = false;
-            this.dgv_family_member.AllowUserToResizeRows = false;
-            this.dgv_family_member.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_family_member.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
-            this.dgv_family_member.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.dgv_family_member.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_family_member.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
-            this.dgv_family_member.ColumnHeadersHeight = 50;
-            this.dgv_family_member.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_family_member.DefaultCellStyle = dataGridViewCellStyle32;
-            this.dgv_family_member.EnableHeadersVisualStyles = false;
-            this.dgv_family_member.Location = new System.Drawing.Point(25, 6);
-            this.dgv_family_member.MultiSelect = false;
-            this.dgv_family_member.Name = "dgv_family_member";
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_family_member.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
-            this.dgv_family_member.RowHeadersVisible = false;
-            this.dgv_family_member.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgv_family_member.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgv_family_member.ShowCellToolTips = false;
-            this.dgv_family_member.Size = new System.Drawing.Size(337, 230);
-            this.dgv_family_member.TabIndex = 85;
-            // 
-            // pl_table_member_family
-            // 
-            this.pl_table_member_family.Controls.Add(this.lb_table_member_family);
-            this.pl_table_member_family.Controls.Add(this.dgv_family_member);
-            this.pl_table_member_family.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_table_member_family.Location = new System.Drawing.Point(0, 5531);
-            this.pl_table_member_family.Name = "pl_table_member_family";
-            this.pl_table_member_family.Size = new System.Drawing.Size(1222, 258);
-            this.pl_table_member_family.TabIndex = 166;
-            this.pl_table_member_family.Visible = false;
-            // 
             // pl_family_02
             // 
             this.pl_family_02.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1293,6 +1039,15 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewCheckBoxColumn1.FillWeight = 15F;
             this.dataGridViewCheckBoxColumn1.HeaderText = "PAGO";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
+            // pl_content_03
+            // 
+            this.pl_content_03.Controls.Add(this.pl_family_03);
+            this.pl_content_03.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_content_03.Location = new System.Drawing.Point(0, 1458);
+            this.pl_content_03.Name = "pl_content_03";
+            this.pl_content_03.Size = new System.Drawing.Size(1222, 500);
+            this.pl_content_03.TabIndex = 156;
             // 
             // pl_family_03
             // 
@@ -1617,6 +1372,15 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewCheckBoxColumn2.HeaderText = "PAGO";
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             // 
+            // pl_content_04
+            // 
+            this.pl_content_04.Controls.Add(this.pl_family_04);
+            this.pl_content_04.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_content_04.Location = new System.Drawing.Point(0, 1958);
+            this.pl_content_04.Name = "pl_content_04";
+            this.pl_content_04.Size = new System.Drawing.Size(1222, 500);
+            this.pl_content_04.TabIndex = 157;
+            // 
             // pl_family_04
             // 
             this.pl_family_04.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1939,6 +1703,15 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewCheckBoxColumn3.FillWeight = 15F;
             this.dataGridViewCheckBoxColumn3.HeaderText = "PAGO";
             this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
+            // 
+            // pl_content_05
+            // 
+            this.pl_content_05.Controls.Add(this.pl_family_05);
+            this.pl_content_05.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_content_05.Location = new System.Drawing.Point(0, 2458);
+            this.pl_content_05.Name = "pl_content_05";
+            this.pl_content_05.Size = new System.Drawing.Size(1222, 500);
+            this.pl_content_05.TabIndex = 158;
             // 
             // pl_family_05
             // 
@@ -2263,6 +2036,15 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewCheckBoxColumn4.HeaderText = "PAGO";
             this.dataGridViewCheckBoxColumn4.Name = "dataGridViewCheckBoxColumn4";
             // 
+            // pl_content_06
+            // 
+            this.pl_content_06.Controls.Add(this.pl_family_06);
+            this.pl_content_06.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_content_06.Location = new System.Drawing.Point(0, 2958);
+            this.pl_content_06.Name = "pl_content_06";
+            this.pl_content_06.Size = new System.Drawing.Size(1222, 500);
+            this.pl_content_06.TabIndex = 159;
+            // 
             // pl_family_06
             // 
             this.pl_family_06.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -2585,6 +2367,15 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewCheckBoxColumn5.FillWeight = 15F;
             this.dataGridViewCheckBoxColumn5.HeaderText = "PAGO";
             this.dataGridViewCheckBoxColumn5.Name = "dataGridViewCheckBoxColumn5";
+            // 
+            // pl_content_07
+            // 
+            this.pl_content_07.Controls.Add(this.pl_family_07);
+            this.pl_content_07.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_content_07.Location = new System.Drawing.Point(0, 3458);
+            this.pl_content_07.Name = "pl_content_07";
+            this.pl_content_07.Size = new System.Drawing.Size(1222, 500);
+            this.pl_content_07.TabIndex = 160;
             // 
             // pl_family_07
             // 
@@ -2909,6 +2700,15 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewCheckBoxColumn6.HeaderText = "PAGO";
             this.dataGridViewCheckBoxColumn6.Name = "dataGridViewCheckBoxColumn6";
             // 
+            // pl_content_08
+            // 
+            this.pl_content_08.Controls.Add(this.pl_family_08);
+            this.pl_content_08.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_content_08.Location = new System.Drawing.Point(0, 3958);
+            this.pl_content_08.Name = "pl_content_08";
+            this.pl_content_08.Size = new System.Drawing.Size(1222, 500);
+            this.pl_content_08.TabIndex = 161;
+            // 
             // pl_family_08
             // 
             this.pl_family_08.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -3231,6 +3031,15 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewCheckBoxColumn7.FillWeight = 15F;
             this.dataGridViewCheckBoxColumn7.HeaderText = "PAGO";
             this.dataGridViewCheckBoxColumn7.Name = "dataGridViewCheckBoxColumn7";
+            // 
+            // pl_content_09
+            // 
+            this.pl_content_09.Controls.Add(this.pl_family_09);
+            this.pl_content_09.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_content_09.Location = new System.Drawing.Point(0, 4458);
+            this.pl_content_09.Name = "pl_content_09";
+            this.pl_content_09.Size = new System.Drawing.Size(1222, 500);
+            this.pl_content_09.TabIndex = 162;
             // 
             // pl_family_09
             // 
@@ -3555,6 +3364,15 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewCheckBoxColumn8.HeaderText = "PAGO";
             this.dataGridViewCheckBoxColumn8.Name = "dataGridViewCheckBoxColumn8";
             // 
+            // pl_content_10
+            // 
+            this.pl_content_10.Controls.Add(this.pl_family_10);
+            this.pl_content_10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_content_10.Location = new System.Drawing.Point(0, 4958);
+            this.pl_content_10.Name = "pl_content_10";
+            this.pl_content_10.Size = new System.Drawing.Size(1222, 500);
+            this.pl_content_10.TabIndex = 163;
+            // 
             // pl_family_10
             // 
             this.pl_family_10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -3878,6 +3696,189 @@ namespace Contas_Familia.PanelControll.Dashboard
             this.dataGridViewCheckBoxColumn9.HeaderText = "PAGO";
             this.dataGridViewCheckBoxColumn9.Name = "dataGridViewCheckBoxColumn9";
             // 
+            // pl_add
+            // 
+            this.pl_add.Controls.Add(this.lb_alert_member);
+            this.pl_add.Controls.Add(this.pl_add_family_member);
+            this.pl_add.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_add.Location = new System.Drawing.Point(0, 0);
+            this.pl_add.Name = "pl_add";
+            this.pl_add.Size = new System.Drawing.Size(1222, 458);
+            this.pl_add.TabIndex = 164;
+            // 
+            // lb_alert_member
+            // 
+            this.lb_alert_member.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_alert_member.ForeColor = System.Drawing.Color.White;
+            this.lb_alert_member.Location = new System.Drawing.Point(15, 215);
+            this.lb_alert_member.Name = "lb_alert_member";
+            this.lb_alert_member.Size = new System.Drawing.Size(1194, 35);
+            this.lb_alert_member.TabIndex = 74;
+            this.lb_alert_member.Text = "There is no family member, please add a new one";
+            this.lb_alert_member.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pl_add_family_member
+            // 
+            this.pl_add_family_member.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pl_add_family_member.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.pl_add_family_member.Controls.Add(this.txt_add_family_name);
+            this.pl_add_family_member.Controls.Add(this.bt_cancel);
+            this.pl_add_family_member.Controls.Add(this.bt_save);
+            this.pl_add_family_member.Controls.Add(this.bt_add);
+            this.pl_add_family_member.Location = new System.Drawing.Point(25, 6);
+            this.pl_add_family_member.Name = "pl_add_family_member";
+            this.pl_add_family_member.Size = new System.Drawing.Size(1171, 73);
+            this.pl_add_family_member.TabIndex = 10;
+            // 
+            // txt_add_family_name
+            // 
+            this.txt_add_family_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.txt_add_family_name.BorderColor = System.Drawing.Color.Transparent;
+            this.txt_add_family_name.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_add_family_name.BorderRadius = 0;
+            this.txt_add_family_name.BorderSize = 2;
+            this.txt_add_family_name.Enabled = false;
+            this.txt_add_family_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_add_family_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_add_family_name.Location = new System.Drawing.Point(16, 17);
+            this.txt_add_family_name.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_add_family_name.Multiline = false;
+            this.txt_add_family_name.Name = "txt_add_family_name";
+            this.txt_add_family_name.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_add_family_name.PasswordChar = false;
+            this.txt_add_family_name.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_add_family_name.PlaceholderText = "";
+            this.txt_add_family_name.Size = new System.Drawing.Size(250, 31);
+            this.txt_add_family_name.TabIndex = 81;
+            this.txt_add_family_name.Texts = "";
+            this.txt_add_family_name.UnderlinedStyle = false;
+            this.txt_add_family_name.Leave += new System.EventHandler(this.txt_add_family_name_Leave);
+            // 
+            // bt_cancel
+            // 
+            this.bt_cancel.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bt_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_cancel.FlatAppearance.BorderSize = 0;
+            this.bt_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_cancel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cancel.ForeColor = System.Drawing.Color.White;
+            this.bt_cancel.Location = new System.Drawing.Point(401, 12);
+            this.bt_cancel.Name = "bt_cancel";
+            this.bt_cancel.Size = new System.Drawing.Size(122, 36);
+            this.bt_cancel.TabIndex = 80;
+            this.bt_cancel.Text = "Cancel";
+            this.bt_cancel.UseVisualStyleBackColor = false;
+            this.bt_cancel.Visible = false;
+            this.bt_cancel.Click += new System.EventHandler(this.bt_cancel_Click);
+            // 
+            // bt_save
+            // 
+            this.bt_save.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_save.FlatAppearance.BorderSize = 0;
+            this.bt_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_save.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save.ForeColor = System.Drawing.Color.White;
+            this.bt_save.Location = new System.Drawing.Point(273, 12);
+            this.bt_save.Name = "bt_save";
+            this.bt_save.Size = new System.Drawing.Size(122, 36);
+            this.bt_save.TabIndex = 79;
+            this.bt_save.Text = "Save";
+            this.bt_save.UseVisualStyleBackColor = false;
+            this.bt_save.Visible = false;
+            this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
+            // 
+            // bt_add
+            // 
+            this.bt_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_add.BackColor = System.Drawing.Color.OliveDrab;
+            this.bt_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_add.FlatAppearance.BorderSize = 0;
+            this.bt_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_add.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_add.ForeColor = System.Drawing.Color.White;
+            this.bt_add.Location = new System.Drawing.Point(1031, 12);
+            this.bt_add.Name = "bt_add";
+            this.bt_add.Size = new System.Drawing.Size(122, 36);
+            this.bt_add.TabIndex = 78;
+            this.bt_add.Text = "Add";
+            this.toolTip1.SetToolTip(this.bt_add, "Add a new family member");
+            this.bt_add.UseVisualStyleBackColor = false;
+            this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
+            // 
+            // pl_null
+            // 
+            this.pl_null.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_null.Location = new System.Drawing.Point(0, 5458);
+            this.pl_null.Name = "pl_null";
+            this.pl_null.Size = new System.Drawing.Size(1222, 73);
+            this.pl_null.TabIndex = 165;
+            // 
+            // lb_table_member_family
+            // 
+            this.lb_table_member_family.AutoSize = true;
+            this.lb_table_member_family.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_table_member_family.ForeColor = System.Drawing.Color.White;
+            this.lb_table_member_family.Location = new System.Drawing.Point(66, 100);
+            this.lb_table_member_family.Name = "lb_table_member_family";
+            this.lb_table_member_family.Size = new System.Drawing.Size(244, 25);
+            this.lb_table_member_family.TabIndex = 86;
+            this.lb_table_member_family.Text = "TABLE MEMBER FAMILY";
+            // 
+            // dgv_family_member
+            // 
+            this.dgv_family_member.AllowUserToAddRows = false;
+            this.dgv_family_member.AllowUserToDeleteRows = false;
+            this.dgv_family_member.AllowUserToResizeColumns = false;
+            this.dgv_family_member.AllowUserToResizeRows = false;
+            this.dgv_family_member.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_family_member.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
+            this.dgv_family_member.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dgv_family_member.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_family_member.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            this.dgv_family_member.ColumnHeadersHeight = 50;
+            this.dgv_family_member.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_family_member.DefaultCellStyle = dataGridViewCellStyle32;
+            this.dgv_family_member.EnableHeadersVisualStyles = false;
+            this.dgv_family_member.Location = new System.Drawing.Point(25, 6);
+            this.dgv_family_member.MultiSelect = false;
+            this.dgv_family_member.Name = "dgv_family_member";
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_family_member.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            this.dgv_family_member.RowHeadersVisible = false;
+            this.dgv_family_member.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgv_family_member.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgv_family_member.ShowCellToolTips = false;
+            this.dgv_family_member.Size = new System.Drawing.Size(337, 230);
+            this.dgv_family_member.TabIndex = 85;
+            // 
+            // pl_table_member_family
+            // 
+            this.pl_table_member_family.Controls.Add(this.lb_table_member_family);
+            this.pl_table_member_family.Controls.Add(this.dgv_family_member);
+            this.pl_table_member_family.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pl_table_member_family.Location = new System.Drawing.Point(0, 5531);
+            this.pl_table_member_family.Name = "pl_table_member_family";
+            this.pl_table_member_family.Size = new System.Drawing.Size(1222, 258);
+            this.pl_table_member_family.TabIndex = 166;
+            this.pl_table_member_family.Visible = false;
+            // 
             // family
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3907,46 +3908,46 @@ namespace Contas_Familia.PanelControll.Dashboard
             ((System.ComponentModel.ISupportInitialize)(this.familypaydayDataSet)).EndInit();
             this.pl_content_01.ResumeLayout(false);
             this.pl_content_02.ResumeLayout(false);
+            this.pl_family_02.ResumeLayout(false);
+            this.pl_family_02.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.pl_content_03.ResumeLayout(false);
+            this.pl_family_03.ResumeLayout(false);
+            this.pl_family_03.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.pl_content_04.ResumeLayout(false);
+            this.pl_family_04.ResumeLayout(false);
+            this.pl_family_04.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.pl_content_05.ResumeLayout(false);
+            this.pl_family_05.ResumeLayout(false);
+            this.pl_family_05.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.pl_content_06.ResumeLayout(false);
+            this.pl_family_06.ResumeLayout(false);
+            this.pl_family_06.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.pl_content_07.ResumeLayout(false);
+            this.pl_family_07.ResumeLayout(false);
+            this.pl_family_07.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             this.pl_content_08.ResumeLayout(false);
+            this.pl_family_08.ResumeLayout(false);
+            this.pl_family_08.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             this.pl_content_09.ResumeLayout(false);
+            this.pl_family_09.ResumeLayout(false);
+            this.pl_family_09.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             this.pl_content_10.ResumeLayout(false);
+            this.pl_family_10.ResumeLayout(false);
+            this.pl_family_10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             this.pl_add.ResumeLayout(false);
             this.pl_add_family_member.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_family_member)).EndInit();
             this.pl_table_member_family.ResumeLayout(false);
             this.pl_table_member_family.PerformLayout();
-            this.pl_family_02.ResumeLayout(false);
-            this.pl_family_02.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.pl_family_03.ResumeLayout(false);
-            this.pl_family_03.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.pl_family_04.ResumeLayout(false);
-            this.pl_family_04.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            this.pl_family_05.ResumeLayout(false);
-            this.pl_family_05.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            this.pl_family_06.ResumeLayout(false);
-            this.pl_family_06.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            this.pl_family_07.ResumeLayout(false);
-            this.pl_family_07.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            this.pl_family_08.ResumeLayout(false);
-            this.pl_family_08.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            this.pl_family_09.ResumeLayout(false);
-            this.pl_family_09.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
-            this.pl_family_10.ResumeLayout(false);
-            this.pl_family_10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -18,7 +18,7 @@ namespace Contas_Familia.PanelControll.Dashboard
         private string userName = Login.Instance.userName;
 
         private string year;
-        private string name;
+        private string nameMember;
 
         public dashboard()
         {
@@ -42,11 +42,12 @@ namespace Contas_Familia.PanelControll.Dashboard
             configdb database = new configdb();
             database.openConnection();
 
-            string query = "select rf.family_name, rfm.family_member, cc.credit_card_payday, sum(tcc.total_payable_installment) AS total, rfm.id_register_family_member, rf.id_register_family from familypayday.login lo join familypayday.register_family rf on rf.id_login = lo.id_login join familypayday.register_family_member rfm on rfm.id_register_family = rf.id_register_family join familypayday.products pr on pr.id_register_family_member = rfm.id_register_family_member join familypayday.credit_card_list ccl on ccl.id_products = pr.id_products join familypayday.credit_card cc on cc.id_credit_card_list = ccl.id_credit_card_list join familypayday.total_credit_card tcc on tcc.id_credit_card = cc.id_credit_card where rf.id_register_family = @id_register_family and YEAR(credit_card_payday) like @dateNow group by rfm.id_register_family_member";
+            string query = "select rf.family_name, rfm.family_member, cc.credit_card_payday, sum(tcc.total_payable_installment) AS total, rfm.id_register_family_member, rf.id_register_family from familypayday.login lo join familypayday.register_family rf on rf.id_login = lo.id_login join familypayday.register_family_member rfm on rfm.id_register_family = rf.id_register_family join familypayday.products pr on pr.id_register_family_member = rfm.id_register_family_member join familypayday.credit_card_list ccl on ccl.id_products = pr.id_products join familypayday.credit_card cc on cc.id_credit_card_list = ccl.id_credit_card_list join familypayday.total_credit_card tcc on tcc.id_credit_card = cc.id_credit_card where rf.id_register_family = @id_register_family and YEAR(credit_card_payday) like @dateNow and rfm.family_member like @nameMember group by rfm.id_register_family_member";
 
             MySqlCommand cmd = new MySqlCommand(query, database.getConnection());
             cmd.Parameters.AddWithValue("@id_register_family", id_register_family);
-            cmd.Parameters.AddWithValue("@dateNow", "%" + year/*DateTime.Now.Year*/); 
+            cmd.Parameters.AddWithValue("@dateNow", "%" + year);
+            cmd.Parameters.AddWithValue("@nameMember", nameMember);
 
             using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
             {
@@ -69,6 +70,52 @@ namespace Contas_Familia.PanelControll.Dashboard
                 lb_alert_no_data.Visible = false;
             else
                 lb_alert_no_data.Visible = true;
+        }
+
+        private void cb_year_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cb_year.SelectedIndex)
+                {
+                    case 0:
+                        // TODOS OS ANOS
+                        year = "%";
+                        break;
+                    default:
+                        // SELECIONA O ANO NO COMBOBOX
+                        year = cb_year.SelectedItem.ToString();
+                        break;
+                }
+            }
+            finally
+            {
+                // RESETA O GRAFICO
+                Graphic();
+            }
+        }
+
+        private void cb_member_family_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cb_member_family.SelectedIndex)
+                {
+                    case 0:
+                        // TODOS OS MEMBROS DA FAMILIA
+                        nameMember = "%";
+                        break;
+                    default:
+                        // SELECIONA O NOME DO COMBOBOX
+                        nameMember = cb_member_family.SelectedItem.ToString();
+                        break;
+                }
+            }
+            finally
+            {
+                // RESETA O GRAFICO
+                Graphic();
+            }
         }
 
         void TabelaComboBox()
@@ -105,13 +152,9 @@ namespace Contas_Familia.PanelControll.Dashboard
 
             database.closeConnection();            
 
-            MessageBox.Show(year);
-
             // INICIAR O COMBOBOX COM OS TITULOS PARA SELECIONAR
             cb_member_family.SelectedIndex = 0;
-            cb_year.SelectedIndex = 0;
-
-            year = cb_year.SelectedItem.ToString();
+            cb_year.SelectedIndex = 0;            
         }
 
         #endregion
@@ -168,6 +211,7 @@ namespace Contas_Familia.PanelControll.Dashboard
         #endregion
 
         private void dashboard_Load(object sender, EventArgs e) => Starting();
+
 
     }
 

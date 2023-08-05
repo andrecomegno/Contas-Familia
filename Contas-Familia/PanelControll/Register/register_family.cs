@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Drawing;
 using Contas_Familia.Window;
-using Contas_Familia.PanelControll.Home;
-using Contas_Familia.PanelControll.Dashboard;
+using System.Windows.Forms;
 using Contas_Familia.Script;
 using MySql.Data.MySqlClient;
+using Contas_Familia.PanelControll.Home;
 
 namespace Contas_Familia.PanelControll.Register
 {
@@ -20,55 +19,20 @@ namespace Contas_Familia.PanelControll.Register
         public register_family()
         {
             InitializeComponent();
-
             PanelContent(_next, pl_content);
             Instance = this;
         }
 
-        // BOTÕES
-        void Next()
-        {
-            if (String.IsNullOrEmpty(txt_family_name.Texts))
-            {
-                txt_family_name.BorderColor = Color.Red;
-                txt_family_name.BorderSize = 3;
-            }
-            else
-            {
-                PanelContent(_next = !_next, pl_content);
-            }
-        }
-        
-        void Button_Save()
-        {
-            if (String.IsNullOrEmpty(txt_name_01.Texts))
-            {
-                txt_name_01.BorderColor = Color.Red;
-                txt_name_01.BorderSize = 3;
-            }
-            else
-            {
-                try
-                {
-                    Family();
-
-                    MessageBox.Show("Family Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                finally
-                {
-                    home uc = new home();
-                    Main.Instance.addControll(uc);
-                }                
-            }
-        }
-
-        void Family()
+        void TableFamily()
         {
             configdb database = new configdb();
             database.openConnection();
 
+            string queryRF = "insert into familypayday.register_family (id_register_family, family_name, id_login) values (null, @family_name, @id_login)";
+            string queryRFM = "insert into familypayday.register_family_member (id_register_family_member, family_member, id_register_family) values (null, @family_member, @id_register_family)";
+
             // INSERT TABELA CADASTRO FAMILIA
-            MySqlCommand CmdRegisterFamily = new MySqlCommand("INSERT INTO familypayday.register_family (id_register_family, family_name, id_login) values (null, @family_name, @id_login)", database.getConnection());
+            MySqlCommand CmdRegisterFamily = new MySqlCommand(queryRF, database.getConnection());
 
             CmdRegisterFamily.Parameters.Add("@family_name", MySqlDbType.VarChar, 45).Value = txt_family_name.Texts;
             CmdRegisterFamily.Parameters.Add("@id_login", MySqlDbType.Int32).Value = id_login;
@@ -87,7 +51,7 @@ namespace Contas_Familia.PanelControll.Register
                 if (!string.IsNullOrEmpty(textBoxValues[i]))
                 {
                     // INSERT TABELA CADASTRO MEMBRO DA FAMILIA
-                    MySqlCommand cmdFamilyMember = new MySqlCommand("INSERT INTO familypayday.register_family_member (id_register_family_member, family_member, id_register_family) VALUES (null, @family_member, @id_register_family)", database.getConnection());
+                    MySqlCommand cmdFamilyMember = new MySqlCommand(queryRFM, database.getConnection());
 
                     cmdFamilyMember.Parameters.Add("@family_member", MySqlDbType.VarChar, 45).Value = textBoxValues[i];
                     cmdFamilyMember.Parameters.Add("@id_register_family", MySqlDbType.Int32).Value = id_register_family;
@@ -99,7 +63,45 @@ namespace Contas_Familia.PanelControll.Register
             database.closeConnection();
         }
 
-        void Cancel()
+        #region BUTTONS
+        // BOTÕES
+        void BT_Next()
+        {
+            if (String.IsNullOrEmpty(txt_family_name.Texts))
+            {
+                txt_family_name.BorderColor = Color.Red;
+                txt_family_name.BorderSize = 3;
+            }
+            else
+            {
+                PanelContent(_next = !_next, pl_content);
+            }
+        }
+        
+        void BT_Save()
+        {
+            if (String.IsNullOrEmpty(txt_name_01.Texts))
+            {
+                txt_name_01.BorderColor = Color.Red;
+                txt_name_01.BorderSize = 3;
+            }
+            else
+            {
+                try
+                {
+                    TableFamily();
+
+                    MessageBox.Show("Family Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                finally
+                {
+                    home uc = new home();
+                    Main.Instance.addControll(uc);
+                }                
+            }
+        }
+
+        void BT_Cancel()
         {
             home uc = new home();
             Main.Instance.addControll(uc);
@@ -108,24 +110,12 @@ namespace Contas_Familia.PanelControll.Register
             Main.Instance.Home();
         }
         
-        private void bt_next_Click(object sender, EventArgs e) => Next();
+        private void bt_next_Click(object sender, EventArgs e) => BT_Next();
 
-        private void bt_save_Click(object sender, EventArgs e) => Button_Save();
+        private void bt_save_Click(object sender, EventArgs e) => BT_Save();
 
-        private void bt_cancel_Click(object sender, EventArgs e) => Cancel();
-
-        // PAINEL CASCATA DO REGISTO DA FAMILIA
-        void PanelContent(bool reg, Panel pl_family)
-        {
-            if (reg)
-            {
-                pl_family.Size = new Size(830, 500);
-            }
-            else
-            {
-                pl_family.Size = new Size(830, 70);
-            }
-        }
+        private void bt_cancel_Click(object sender, EventArgs e) => BT_Cancel();
+        #endregion
 
         #region CLEAN NOTIFICATION TEXTOBOX
         private void txt_family_name_Leave(object sender, EventArgs e)
@@ -194,5 +184,18 @@ namespace Contas_Familia.PanelControll.Register
             txt_name_10.BorderSize = 0;
         }
         #endregion
+
+        // PAINEL CASCATA DO REGISTO DA FAMILIA
+        void PanelContent(bool reg, Panel pl_family)
+        {
+            if (reg)
+            {
+                pl_family.Size = new Size(830, 500);
+            }
+            else
+            {
+                pl_family.Size = new Size(830, 70);
+            }
+        }
     }
 }

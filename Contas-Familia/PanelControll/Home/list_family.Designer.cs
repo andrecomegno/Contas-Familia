@@ -33,7 +33,6 @@ namespace Contas_Familia.PanelControll.Home
             this.pl_list_family = new System.Windows.Forms.Panel();
             this.bt_family_10 = new FontAwesome.Sharp.IconButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Edit = new System.Windows.Forms.ToolStripMenuItem();
             this.Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.bt_family_06 = new FontAwesome.Sharp.IconButton();
@@ -80,7 +79,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_10.ForeColor = System.Drawing.Color.White;
             this.bt_family_10.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.bt_family_10.IconColor = System.Drawing.Color.White;
-            this.bt_family_10.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.bt_family_10.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bt_family_10.IconSize = 35;
             this.bt_family_10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_family_10.Location = new System.Drawing.Point(279, 214);
@@ -90,23 +89,15 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_10.TabIndex = 129;
             this.bt_family_10.Tag = "";
             this.bt_family_10.UseVisualStyleBackColor = false;
-            this.bt_family_10.Click += new System.EventHandler(this.bt_family_10_Click);
+            this.bt_family_10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_10_MouseDown);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Edit,
             this.Delete,
             this.Exit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 70);
-            // 
-            // Edit
-            // 
-            this.Edit.Name = "Edit";
-            this.Edit.Size = new System.Drawing.Size(107, 22);
-            this.Edit.Text = "Edit";
-            this.Edit.Click += new System.EventHandler(this.Edit_Click);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
             // 
             // Delete
             // 
@@ -118,9 +109,8 @@ namespace Contas_Familia.PanelControll.Home
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(107, 22);
+            this.Exit.Size = new System.Drawing.Size(180, 22);
             this.Exit.Text = "Exit";
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // bt_family_06
             // 
@@ -134,7 +124,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_06.ForeColor = System.Drawing.Color.White;
             this.bt_family_06.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.bt_family_06.IconColor = System.Drawing.Color.White;
-            this.bt_family_06.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.bt_family_06.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bt_family_06.IconSize = 35;
             this.bt_family_06.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_family_06.Location = new System.Drawing.Point(279, 110);
@@ -144,7 +134,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_06.TabIndex = 125;
             this.bt_family_06.Tag = "";
             this.bt_family_06.UseVisualStyleBackColor = false;
-            this.bt_family_06.Click += new System.EventHandler(this.bt_family_06_Click);
+            this.bt_family_06.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_06_MouseDown);
             // 
             // bt_family_09
             // 
@@ -158,7 +148,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_09.ForeColor = System.Drawing.Color.White;
             this.bt_family_09.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.bt_family_09.IconColor = System.Drawing.Color.White;
-            this.bt_family_09.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.bt_family_09.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bt_family_09.IconSize = 35;
             this.bt_family_09.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_family_09.Location = new System.Drawing.Point(26, 214);
@@ -168,7 +158,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_09.TabIndex = 128;
             this.bt_family_09.Tag = "";
             this.bt_family_09.UseVisualStyleBackColor = false;
-            this.bt_family_09.Click += new System.EventHandler(this.bt_family_09_Click);
+            this.bt_family_09.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_09_MouseDown);
             // 
             // bt_family_05
             // 
@@ -182,7 +172,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_05.ForeColor = System.Drawing.Color.White;
             this.bt_family_05.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.bt_family_05.IconColor = System.Drawing.Color.White;
-            this.bt_family_05.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.bt_family_05.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bt_family_05.IconSize = 35;
             this.bt_family_05.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_family_05.Location = new System.Drawing.Point(26, 110);
@@ -192,7 +182,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_05.TabIndex = 124;
             this.bt_family_05.Tag = "";
             this.bt_family_05.UseVisualStyleBackColor = false;
-            this.bt_family_05.Click += new System.EventHandler(this.bt_family_05_Click);
+            this.bt_family_05.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_05_MouseDown);
             // 
             // bt_family_07
             // 
@@ -206,7 +196,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_07.ForeColor = System.Drawing.Color.White;
             this.bt_family_07.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.bt_family_07.IconColor = System.Drawing.Color.White;
-            this.bt_family_07.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.bt_family_07.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bt_family_07.IconSize = 35;
             this.bt_family_07.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_family_07.Location = new System.Drawing.Point(26, 162);
@@ -216,7 +206,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_07.TabIndex = 126;
             this.bt_family_07.Tag = "";
             this.bt_family_07.UseVisualStyleBackColor = false;
-            this.bt_family_07.Click += new System.EventHandler(this.bt_family_07_Click);
+            this.bt_family_07.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_07_MouseDown);
             // 
             // bt_family_08
             // 
@@ -230,7 +220,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_08.ForeColor = System.Drawing.Color.White;
             this.bt_family_08.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.bt_family_08.IconColor = System.Drawing.Color.White;
-            this.bt_family_08.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.bt_family_08.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bt_family_08.IconSize = 35;
             this.bt_family_08.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_family_08.Location = new System.Drawing.Point(279, 162);
@@ -240,7 +230,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_08.TabIndex = 123;
             this.bt_family_08.Tag = "";
             this.bt_family_08.UseVisualStyleBackColor = false;
-            this.bt_family_08.Click += new System.EventHandler(this.bt_family_08_Click);
+            this.bt_family_08.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_08_MouseDown);
             // 
             // bt_family_03
             // 
@@ -254,7 +244,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_03.ForeColor = System.Drawing.Color.White;
             this.bt_family_03.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.bt_family_03.IconColor = System.Drawing.Color.White;
-            this.bt_family_03.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.bt_family_03.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bt_family_03.IconSize = 35;
             this.bt_family_03.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_family_03.Location = new System.Drawing.Point(26, 58);
@@ -264,7 +254,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_03.TabIndex = 122;
             this.bt_family_03.Tag = "";
             this.bt_family_03.UseVisualStyleBackColor = false;
-            this.bt_family_03.Click += new System.EventHandler(this.bt_family_03_Click);
+            this.bt_family_03.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_03_MouseDown);
             // 
             // bt_family_02
             // 
@@ -278,7 +268,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_02.ForeColor = System.Drawing.Color.White;
             this.bt_family_02.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.bt_family_02.IconColor = System.Drawing.Color.White;
-            this.bt_family_02.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.bt_family_02.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bt_family_02.IconSize = 35;
             this.bt_family_02.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_family_02.Location = new System.Drawing.Point(279, 6);
@@ -302,7 +292,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_01.ForeColor = System.Drawing.Color.White;
             this.bt_family_01.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.bt_family_01.IconColor = System.Drawing.Color.White;
-            this.bt_family_01.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.bt_family_01.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bt_family_01.IconSize = 35;
             this.bt_family_01.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_family_01.Location = new System.Drawing.Point(26, 6);
@@ -326,7 +316,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_04.ForeColor = System.Drawing.Color.White;
             this.bt_family_04.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.bt_family_04.IconColor = System.Drawing.Color.White;
-            this.bt_family_04.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.bt_family_04.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bt_family_04.IconSize = 35;
             this.bt_family_04.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_family_04.Location = new System.Drawing.Point(279, 58);
@@ -336,7 +326,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_04.TabIndex = 119;
             this.bt_family_04.Tag = "";
             this.bt_family_04.UseVisualStyleBackColor = false;
-            this.bt_family_04.Click += new System.EventHandler(this.bt_family_04_Click);
+            this.bt_family_04.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_04_MouseDown);
             // 
             // list_family
             // 
@@ -367,7 +357,6 @@ namespace Contas_Familia.PanelControll.Home
         private FontAwesome.Sharp.IconButton bt_family_01;
         private FontAwesome.Sharp.IconButton bt_family_04;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem Edit;
         private System.Windows.Forms.ToolStripMenuItem Delete;
         private System.Windows.Forms.ToolStripMenuItem Exit;
     }

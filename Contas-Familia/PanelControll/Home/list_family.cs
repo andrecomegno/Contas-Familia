@@ -38,8 +38,10 @@ namespace Contas_Familia.PanelControll.Home
             configdb database = new configdb();
             database.openConnection();
 
+            string query = "select id_register_family, family_name, id_login from familypayday.register_family where id_login = @id_login ";
+
             // TABELA REGISTRO DO NOME DA FAMILIA
-            MySqlCommand cmd = new MySqlCommand("select id_register_family, family_name, id_login from familypayday.register_family where id_login = @id_login ", database.getConnection());
+            MySqlCommand cmd = new MySqlCommand(query, database.getConnection());
             cmd.Parameters.AddWithValue("@id_login", id_login);
 
             using (MySqlDataReader dr = cmd.ExecuteReader())
@@ -57,6 +59,7 @@ namespace Contas_Familia.PanelControll.Home
             database.closeConnection();
         }
 
+        #region Button Family Name
         // ADD OS NOMES DAS FAMILIAS NOS BOTÕES
         void ButtonFamilyName()
         {
@@ -84,6 +87,15 @@ namespace Contas_Familia.PanelControll.Home
                     button.Enabled = false;
                 }
             }
+        }
+
+        void Next_Dashboard()
+        {
+            dashboard uc = new dashboard();
+            Main.Instance.addControll(uc);
+
+            // SELECIONAR BOTÃO DASHBOARD
+            Main.Instance.Dashboard();
         }
 
         private void bt_family_01_MouseDown(object sender, MouseEventArgs e)
@@ -122,79 +134,139 @@ namespace Contas_Familia.PanelControll.Home
                     sl_id_register_family = id_register_family[1];
                     ButtonFamilyDelete = bt_family_02;
                     break;
+            }            
+        }
+        private void bt_family_03_MouseDown(object sender, MouseEventArgs e)
+        {
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    sl_id_register_family = id_register_family[2];
+                    sl_family_name = family_name[2];
+                    Next_Dashboard();
+                    break;
+                case MouseButtons.Right:
+                    sl_id_register_family = id_register_family[2];
+                    ButtonFamilyDelete = bt_family_03;
+                    break;
             }
         }
 
-        private void bt_family_03_Click(object sender, EventArgs e)
+        private void bt_family_04_MouseDown(object sender, MouseEventArgs e)
         {
-            sl_id_register_family = id_register_family[2];
-            Next_Dashboard();
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    sl_id_register_family = id_register_family[3];
+                    sl_family_name = family_name[3];
+                    Next_Dashboard();
+                    break;
+                case MouseButtons.Right:
+                    sl_id_register_family = id_register_family[3];
+                    ButtonFamilyDelete = bt_family_04;
+                    break;
+            }
         }
 
-        private void bt_family_04_Click(object sender, EventArgs e)
+        private void bt_family_05_MouseDown(object sender, MouseEventArgs e)
         {
-            sl_id_register_family = id_register_family[3];
-            Next_Dashboard();
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    sl_id_register_family = id_register_family[4];
+                    sl_family_name = family_name[4];
+                    Next_Dashboard();
+                    break;
+                case MouseButtons.Right:
+                    sl_id_register_family = id_register_family[4];
+                    ButtonFamilyDelete = bt_family_05;
+                    break;
+            }
         }
 
-        private void bt_family_05_Click(object sender, EventArgs e)
+        private void bt_family_06_MouseDown(object sender, MouseEventArgs e)
         {
-            sl_id_register_family = id_register_family[4];
-            Next_Dashboard();
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    sl_id_register_family = id_register_family[5];
+                    sl_family_name = family_name[5];
+                    Next_Dashboard();
+                    break;
+                case MouseButtons.Right:
+                    sl_id_register_family = id_register_family[5];
+                    ButtonFamilyDelete = bt_family_06;
+                    break;
+            }
         }
 
-        private void bt_family_06_Click(object sender, EventArgs e)
+        private void bt_family_07_MouseDown(object sender, MouseEventArgs e)
         {
-            sl_id_register_family = id_register_family[5];
-            Next_Dashboard();
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    sl_id_register_family = id_register_family[6];
+                    sl_family_name = family_name[6];
+                    Next_Dashboard();
+                    break;
+                case MouseButtons.Right:
+                    sl_id_register_family = id_register_family[6];
+                    ButtonFamilyDelete = bt_family_07;
+                    break;
+            }
         }
 
-        private void bt_family_07_Click(object sender, EventArgs e)
+        private void bt_family_08_MouseDown(object sender, MouseEventArgs e)
         {
-            sl_id_register_family = id_register_family[6];
-            Next_Dashboard();
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    sl_id_register_family = id_register_family[7];
+                    sl_family_name = family_name[7];
+                    Next_Dashboard();
+                    break;
+                case MouseButtons.Right:
+                    sl_id_register_family = id_register_family[7];
+                    ButtonFamilyDelete = bt_family_08;
+                    break;
+            }
         }
 
-        private void bt_family_08_Click(object sender, EventArgs e)
+        private void bt_family_09_MouseDown(object sender, MouseEventArgs e)
         {
-            sl_id_register_family = id_register_family[7];
-            Next_Dashboard();
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    sl_id_register_family = id_register_family[8];
+                    sl_family_name = family_name[8];
+                    Next_Dashboard();
+                    break;
+                case MouseButtons.Right:
+                    sl_id_register_family = id_register_family[8];
+                    ButtonFamilyDelete = bt_family_09;
+                    break;
+            }
         }
 
-        private void bt_family_09_Click(object sender, EventArgs e)
+        private void bt_family_10_MouseDown(object sender, MouseEventArgs e)
         {
-            sl_id_register_family = id_register_family[8];
-            Next_Dashboard();
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    sl_id_register_family = id_register_family[9];
+                    sl_family_name = family_name[9];
+                    Next_Dashboard();
+                    break;
+                case MouseButtons.Right:
+                    sl_id_register_family = id_register_family[9];
+                    ButtonFamilyDelete = bt_family_10;
+                    break;
+            }
         }
-
-        private void bt_family_10_Click(object sender, EventArgs e)
-        {
-            sl_id_register_family = id_register_family[9];
-            Next_Dashboard();
-        }
-
-        void Next_Dashboard()
-        {
-            dashboard uc = new dashboard();
-            Main.Instance.addControll(uc);
-
-            // SELECIONAR BOTÃO DASHBOARD
-            Main.Instance.Dashboard();
-        }
-
-        private void list_family_Load(object sender, EventArgs e)
-        {
-            Table();
-            ButtonList();
-        }
+        #endregion
 
         #region MENU contextMenuStrip1
-        private void Edit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Delete_Click(object sender, EventArgs e)
+        void BT_Delete()
         {
             DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE FAMILY", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
@@ -207,12 +279,7 @@ namespace Contas_Familia.PanelControll.Home
                     break;
                 default:
                     break;
-            }
-        }
-
-        private void Exit_Click(object sender, EventArgs e)
-        {
-
+            }            
         }
 
         void DeleteFamily()
@@ -223,7 +290,8 @@ namespace Contas_Familia.PanelControll.Home
                 configdb database = new configdb();
                 database.openConnection();
 
-                MySqlCommand cmd = new MySqlCommand("delete from familypayday.register_family where (id_login = @id_login)", database.getConnection());
+                MySqlCommand cmd = new MySqlCommand("delete from familypayday.register_family where (id_register_family = @id_register_family) and (id_login = @id_login)", database.getConnection());
+                cmd.Parameters.AddWithValue("@id_register_family", sl_id_register_family);
                 cmd.Parameters.AddWithValue("@id_login", id_login);
 
                 cmd.ExecuteNonQuery();
@@ -243,13 +311,20 @@ namespace Contas_Familia.PanelControll.Home
         // DESABILITAR BOTÃO DELETADO
         private void DeleteButtonFamily(IconButton bt)
         {
-            bt.IconChar = IconChar.AccessibleIcon;
+            bt.IconColor = Color.FromArgb(24, 25, 28);
             bt.BackColor = Color.FromArgb(24, 25, 28);
             bt.Text = string.Empty;
             bt.Enabled = false;
         }
 
+        private void Delete_Click(object sender, EventArgs e) => BT_Delete();
         #endregion
+
+        private void list_family_Load(object sender, EventArgs e)
+        {
+            Table();
+            ButtonList();
+        }
 
     }
 }

@@ -32,7 +32,9 @@ namespace Contas_Familia.PanelControll.Settings
             this.pl_top = new System.Windows.Forms.Panel();
             this.lb_setting = new System.Windows.Forms.Label();
             this.pl_mid = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pl_top.SuspendLayout();
+            this.pl_mid.SuspendLayout();
             this.SuspendLayout();
             // 
             // pl_top
@@ -61,11 +63,19 @@ namespace Contas_Familia.PanelControll.Settings
             // pl_mid
             // 
             this.pl_mid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.pl_mid.Controls.Add(this.panel1);
             this.pl_mid.Dock = System.Windows.Forms.DockStyle.Top;
             this.pl_mid.Location = new System.Drawing.Point(0, 51);
             this.pl_mid.Name = "pl_mid";
             this.pl_mid.Size = new System.Drawing.Size(1078, 457);
             this.pl_mid.TabIndex = 145;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(46, 30);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(996, 168);
+            this.panel1.TabIndex = 0;
             // 
             // setting
             // 
@@ -77,6 +87,7 @@ namespace Contas_Familia.PanelControll.Settings
             this.Name = "setting";
             this.Size = new System.Drawing.Size(1078, 965);
             this.pl_top.ResumeLayout(false);
+            this.pl_mid.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -86,5 +97,6 @@ namespace Contas_Familia.PanelControll.Settings
         private System.Windows.Forms.Panel pl_top;
         private System.Windows.Forms.Label lb_setting;
         private System.Windows.Forms.Panel pl_mid;
+        private System.Windows.Forms.Panel panel1;
     }
 }
