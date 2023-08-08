@@ -34,6 +34,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_10 = new FontAwesome.Sharp.IconButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.bt_family_06 = new FontAwesome.Sharp.IconButton();
             this.bt_family_09 = new FontAwesome.Sharp.IconButton();
@@ -44,6 +45,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_02 = new FontAwesome.Sharp.IconButton();
             this.bt_family_01 = new FontAwesome.Sharp.IconButton();
             this.bt_family_04 = new FontAwesome.Sharp.IconButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pl_list_family.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -88,6 +90,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_10.Size = new System.Drawing.Size(247, 46);
             this.bt_family_10.TabIndex = 129;
             this.bt_family_10.Tag = "";
+            this.toolTip1.SetToolTip(this.bt_family_10, "Right Click to Edit");
             this.bt_family_10.UseVisualStyleBackColor = false;
             this.bt_family_10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_10_MouseDown);
             // 
@@ -95,9 +98,10 @@ namespace Contas_Familia.PanelControll.Home
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Delete,
+            this.editToolStripMenuItem,
             this.Exit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 70);
             // 
             // Delete
             // 
@@ -106,10 +110,17 @@ namespace Contas_Familia.PanelControll.Home
             this.Delete.Text = "Delete";
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.Edit_Click);
+            // 
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(180, 22);
+            this.Exit.Size = new System.Drawing.Size(107, 22);
             this.Exit.Text = "Exit";
             // 
             // bt_family_06
@@ -133,6 +144,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_06.Size = new System.Drawing.Size(247, 46);
             this.bt_family_06.TabIndex = 125;
             this.bt_family_06.Tag = "";
+            this.toolTip1.SetToolTip(this.bt_family_06, "Right Click to Edit");
             this.bt_family_06.UseVisualStyleBackColor = false;
             this.bt_family_06.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_06_MouseDown);
             // 
@@ -157,6 +169,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_09.Size = new System.Drawing.Size(247, 46);
             this.bt_family_09.TabIndex = 128;
             this.bt_family_09.Tag = "";
+            this.toolTip1.SetToolTip(this.bt_family_09, "Right Click to Edit");
             this.bt_family_09.UseVisualStyleBackColor = false;
             this.bt_family_09.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_09_MouseDown);
             // 
@@ -181,6 +194,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_05.Size = new System.Drawing.Size(247, 46);
             this.bt_family_05.TabIndex = 124;
             this.bt_family_05.Tag = "";
+            this.toolTip1.SetToolTip(this.bt_family_05, "Right Click to Edit");
             this.bt_family_05.UseVisualStyleBackColor = false;
             this.bt_family_05.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_05_MouseDown);
             // 
@@ -205,6 +219,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_07.Size = new System.Drawing.Size(247, 46);
             this.bt_family_07.TabIndex = 126;
             this.bt_family_07.Tag = "";
+            this.toolTip1.SetToolTip(this.bt_family_07, "Right Click to Edit");
             this.bt_family_07.UseVisualStyleBackColor = false;
             this.bt_family_07.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_07_MouseDown);
             // 
@@ -229,6 +244,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_08.Size = new System.Drawing.Size(247, 46);
             this.bt_family_08.TabIndex = 123;
             this.bt_family_08.Tag = "";
+            this.toolTip1.SetToolTip(this.bt_family_08, "Right Click to Edit");
             this.bt_family_08.UseVisualStyleBackColor = false;
             this.bt_family_08.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_08_MouseDown);
             // 
@@ -253,6 +269,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_03.Size = new System.Drawing.Size(247, 46);
             this.bt_family_03.TabIndex = 122;
             this.bt_family_03.Tag = "";
+            this.toolTip1.SetToolTip(this.bt_family_03, "Right Click to Edit");
             this.bt_family_03.UseVisualStyleBackColor = false;
             this.bt_family_03.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_03_MouseDown);
             // 
@@ -277,6 +294,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_02.Size = new System.Drawing.Size(247, 46);
             this.bt_family_02.TabIndex = 121;
             this.bt_family_02.Tag = "";
+            this.toolTip1.SetToolTip(this.bt_family_02, "Right Click to Edit");
             this.bt_family_02.UseVisualStyleBackColor = false;
             this.bt_family_02.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_02_MouseDown);
             // 
@@ -301,6 +319,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_01.Size = new System.Drawing.Size(247, 46);
             this.bt_family_01.TabIndex = 120;
             this.bt_family_01.Tag = "";
+            this.toolTip1.SetToolTip(this.bt_family_01, "Right Click to Edit");
             this.bt_family_01.UseVisualStyleBackColor = false;
             this.bt_family_01.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_01_MouseDown);
             // 
@@ -325,6 +344,7 @@ namespace Contas_Familia.PanelControll.Home
             this.bt_family_04.Size = new System.Drawing.Size(247, 46);
             this.bt_family_04.TabIndex = 119;
             this.bt_family_04.Tag = "";
+            this.toolTip1.SetToolTip(this.bt_family_04, "Right Click to Edit");
             this.bt_family_04.UseVisualStyleBackColor = false;
             this.bt_family_04.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bt_family_04_MouseDown);
             // 
@@ -359,5 +379,7 @@ namespace Contas_Familia.PanelControll.Home
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Delete;
         private System.Windows.Forms.ToolStripMenuItem Exit;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

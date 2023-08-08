@@ -7,6 +7,7 @@ using Contas_Familia.Script;
 using Contas_Familia.Window;
 using MySql.Data.MySqlClient;
 using Contas_Familia.PanelControll.Home;
+using Contas_Familia.PanelControll.Settings;
 
 namespace Contas_Familia.PanelControll.Dashboard
 {

@@ -128,6 +128,12 @@
     <Compile Include="PanelControll\Dashboard\dashboard.Designer.cs">
       <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelControll\Home\edit_family_name.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelControll\Home\edit_family_name.Designer.cs">
+      <DependentUpon>edit_family_name.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelControll\Home\home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PanelControll\Dashboard\dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelControll\Home\edit_family_name.resx">
+      <DependentUpon>edit_family_name.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelControll\Home\home.resx">
       <DependentUpon>home.cs</DependentUpon>

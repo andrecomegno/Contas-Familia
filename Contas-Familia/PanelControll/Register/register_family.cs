@@ -23,7 +23,7 @@ namespace Contas_Familia.PanelControll.Register
             Instance = this;
         }
 
-        void TableFamily()
+        void TableRegisterFamily()
         {
             configdb database = new configdb();
             database.openConnection();
@@ -89,7 +89,7 @@ namespace Contas_Familia.PanelControll.Register
             {
                 try
                 {
-                    TableFamily();
+                    TableRegisterFamily();
 
                     MessageBox.Show("Family Saved successfully !", "Successfully !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

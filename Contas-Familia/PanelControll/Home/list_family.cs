@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Windows.Forms;
+using System.Drawing;
 using FontAwesome.Sharp;
+using System.Windows.Forms;
 using Contas_Familia.Script;
 using Contas_Familia.Window;
-using Contas_Familia.PanelControll.Dashboard;
 using MySql.Data.MySqlClient;
-using System.Drawing;
+using Contas_Familia.PanelControll.Dashboard;
 
 namespace Contas_Familia.PanelControll.Home
 {
@@ -95,7 +95,7 @@ namespace Contas_Familia.PanelControll.Home
             Main.Instance.addControll(uc);
 
             // SELECIONAR BOTÃO DASHBOARD
-            Main.Instance.Dashboard();
+            Main.Instance.Dashboard();            
         }
 
         private void bt_family_01_MouseDown(object sender, MouseEventArgs e)
@@ -115,6 +115,8 @@ namespace Contas_Familia.PanelControll.Home
                 case MouseButtons.Right:
                     // ADD O ID REGISTER FAMILY PARA O select_id_register_family
                     sl_id_register_family = id_register_family[0];
+                    // ADD O NOME DA FAMILIA 
+                    sl_family_name = family_name[0];
                     // ATRIBUI O BOTÃO DELETADO A VARIAVEL ButtonFamilyDelete
                     ButtonFamilyDelete = bt_family_01;                    
                     break;
@@ -132,6 +134,7 @@ namespace Contas_Familia.PanelControll.Home
                     break;
                 case MouseButtons.Right:
                     sl_id_register_family = id_register_family[1];
+                    sl_family_name = family_name[1];
                     ButtonFamilyDelete = bt_family_02;
                     break;
             }            
@@ -147,6 +150,7 @@ namespace Contas_Familia.PanelControll.Home
                     break;
                 case MouseButtons.Right:
                     sl_id_register_family = id_register_family[2];
+                    sl_family_name = family_name[2];
                     ButtonFamilyDelete = bt_family_03;
                     break;
             }
@@ -163,6 +167,7 @@ namespace Contas_Familia.PanelControll.Home
                     break;
                 case MouseButtons.Right:
                     sl_id_register_family = id_register_family[3];
+                    sl_family_name = family_name[3];
                     ButtonFamilyDelete = bt_family_04;
                     break;
             }
@@ -179,6 +184,7 @@ namespace Contas_Familia.PanelControll.Home
                     break;
                 case MouseButtons.Right:
                     sl_id_register_family = id_register_family[4];
+                    sl_family_name = family_name[4];
                     ButtonFamilyDelete = bt_family_05;
                     break;
             }
@@ -195,6 +201,7 @@ namespace Contas_Familia.PanelControll.Home
                     break;
                 case MouseButtons.Right:
                     sl_id_register_family = id_register_family[5];
+                    sl_family_name = family_name[5];
                     ButtonFamilyDelete = bt_family_06;
                     break;
             }
@@ -211,6 +218,7 @@ namespace Contas_Familia.PanelControll.Home
                     break;
                 case MouseButtons.Right:
                     sl_id_register_family = id_register_family[6];
+                    sl_family_name = family_name[6];
                     ButtonFamilyDelete = bt_family_07;
                     break;
             }
@@ -227,6 +235,7 @@ namespace Contas_Familia.PanelControll.Home
                     break;
                 case MouseButtons.Right:
                     sl_id_register_family = id_register_family[7];
+                    sl_family_name = family_name[7];
                     ButtonFamilyDelete = bt_family_08;
                     break;
             }
@@ -243,6 +252,7 @@ namespace Contas_Familia.PanelControll.Home
                     break;
                 case MouseButtons.Right:
                     sl_id_register_family = id_register_family[8];
+                    sl_family_name = family_name[8];
                     ButtonFamilyDelete = bt_family_09;
                     break;
             }
@@ -259,6 +269,7 @@ namespace Contas_Familia.PanelControll.Home
                     break;
                 case MouseButtons.Right:
                     sl_id_register_family = id_register_family[9];
+                    sl_family_name = family_name[9];
                     ButtonFamilyDelete = bt_family_10;
                     break;
             }
@@ -266,6 +277,12 @@ namespace Contas_Familia.PanelControll.Home
         #endregion
 
         #region MENU contextMenuStrip1
+        void BT_Edit()
+        {
+            edit_family_name uc = new edit_family_name();
+            home.Instance.addControll(uc);
+        }
+
         void BT_Delete()
         {
             DialogResult dr = MessageBox.Show("Are you sure you want to delete ?", "DELETE FAMILY", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -318,13 +335,16 @@ namespace Contas_Familia.PanelControll.Home
         }
 
         private void Delete_Click(object sender, EventArgs e) => BT_Delete();
+
+        private void Edit_Click(object sender, EventArgs e) => BT_Edit();
         #endregion
 
         private void list_family_Load(object sender, EventArgs e)
         {
             Table();
-            ButtonList();
+            ButtonList();            
         }
+
 
     }
 }

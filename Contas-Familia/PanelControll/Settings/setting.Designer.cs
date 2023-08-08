@@ -33,24 +33,15 @@ namespace Contas_Familia.PanelControll.Settings
             this.lb_setting = new System.Windows.Forms.Label();
             this.pl_account_01 = new System.Windows.Forms.Panel();
             this.pl_account = new System.Windows.Forms.Panel();
-            this.lb_title_01 = new System.Windows.Forms.Label();
-            this.pl_account_family = new System.Windows.Forms.Panel();
-            this.lb_title_02 = new System.Windows.Forms.Label();
-            this.pl_account_02 = new System.Windows.Forms.Panel();
-            this.txt_username = new System.Windows.Forms.Label();
-            this.txt_family_name = new System.Windows.Forms.Label();
-            this.txt_family_name_edit = new Contas_Familia.Script.RJTextBox();
-            this.txt_password = new Contas_Familia.Script.RJTextBox();
-            this.txt_repeat_password = new Contas_Familia.Script.RJTextBox();
             this.bt_save_01 = new System.Windows.Forms.Button();
             this.bt_cancel_01 = new System.Windows.Forms.Button();
-            this.bt_save_02 = new System.Windows.Forms.Button();
-            this.bt_cancel_02 = new System.Windows.Forms.Button();
+            this.txt_username = new System.Windows.Forms.Label();
+            this.txt_password = new Contas_Familia.Script.RJTextBox();
+            this.lb_title_01 = new System.Windows.Forms.Label();
+            this.txt_repeat_password = new Contas_Familia.Script.RJTextBox();
             this.pl_top.SuspendLayout();
             this.pl_account_01.SuspendLayout();
             this.pl_account.SuspendLayout();
-            this.pl_account_family.SuspendLayout();
-            this.pl_account_02.SuspendLayout();
             this.SuspendLayout();
             // 
             // pl_top
@@ -101,147 +92,6 @@ namespace Contas_Familia.PanelControll.Settings
             this.pl_account.Size = new System.Drawing.Size(509, 243);
             this.pl_account.TabIndex = 101;
             // 
-            // lb_title_01
-            // 
-            this.lb_title_01.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_title_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title_01.ForeColor = System.Drawing.Color.White;
-            this.lb_title_01.Location = new System.Drawing.Point(3, 10);
-            this.lb_title_01.Name = "lb_title_01";
-            this.lb_title_01.Size = new System.Drawing.Size(503, 31);
-            this.lb_title_01.TabIndex = 98;
-            this.lb_title_01.Text = "Account";
-            this.lb_title_01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pl_account_family
-            // 
-            this.pl_account_family.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pl_account_family.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(28)))));
-            this.pl_account_family.Controls.Add(this.bt_save_02);
-            this.pl_account_family.Controls.Add(this.bt_cancel_02);
-            this.pl_account_family.Controls.Add(this.txt_family_name);
-            this.pl_account_family.Controls.Add(this.txt_family_name_edit);
-            this.pl_account_family.Controls.Add(this.lb_title_02);
-            this.pl_account_family.Location = new System.Drawing.Point(283, 6);
-            this.pl_account_family.Name = "pl_account_family";
-            this.pl_account_family.Size = new System.Drawing.Size(509, 224);
-            this.pl_account_family.TabIndex = 102;
-            // 
-            // lb_title_02
-            // 
-            this.lb_title_02.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_title_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_title_02.ForeColor = System.Drawing.Color.White;
-            this.lb_title_02.Location = new System.Drawing.Point(3, 10);
-            this.lb_title_02.Name = "lb_title_02";
-            this.lb_title_02.Size = new System.Drawing.Size(503, 31);
-            this.lb_title_02.TabIndex = 98;
-            this.lb_title_02.Text = "Account Family";
-            this.lb_title_02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pl_account_02
-            // 
-            this.pl_account_02.Controls.Add(this.pl_account_family);
-            this.pl_account_02.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_account_02.Location = new System.Drawing.Point(0, 332);
-            this.pl_account_02.Name = "pl_account_02";
-            this.pl_account_02.Size = new System.Drawing.Size(1078, 254);
-            this.pl_account_02.TabIndex = 103;
-            // 
-            // txt_username
-            // 
-            this.txt_username.BackColor = System.Drawing.Color.White;
-            this.txt_username.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username.ForeColor = System.Drawing.Color.DarkGray;
-            this.txt_username.Location = new System.Drawing.Point(134, 45);
-            this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(250, 31);
-            this.txt_username.TabIndex = 104;
-            this.txt_username.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_family_name
-            // 
-            this.txt_family_name.BackColor = System.Drawing.Color.White;
-            this.txt_family_name.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txt_family_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_family_name.ForeColor = System.Drawing.Color.White;
-            this.txt_family_name.Location = new System.Drawing.Point(129, 50);
-            this.txt_family_name.Name = "txt_family_name";
-            this.txt_family_name.Size = new System.Drawing.Size(250, 31);
-            this.txt_family_name.TabIndex = 105;
-            this.txt_family_name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_family_name_edit
-            // 
-            this.txt_family_name_edit.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_family_name_edit.BorderColor = System.Drawing.Color.White;
-            this.txt_family_name_edit.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_family_name_edit.BorderRadius = 0;
-            this.txt_family_name_edit.BorderSize = 2;
-            this.txt_family_name_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_family_name_edit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_family_name_edit.Location = new System.Drawing.Point(129, 101);
-            this.txt_family_name_edit.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_family_name_edit.Multiline = false;
-            this.txt_family_name_edit.Name = "txt_family_name_edit";
-            this.txt_family_name_edit.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_family_name_edit.PasswordChar = false;
-            this.txt_family_name_edit.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_family_name_edit.PlaceholderText = "New Family Name ";
-            this.txt_family_name_edit.Size = new System.Drawing.Size(250, 31);
-            this.txt_family_name_edit.TabIndex = 9;
-            this.txt_family_name_edit.Texts = "";
-            this.txt_family_name_edit.UnderlinedStyle = false;
-            // 
-            // txt_password
-            // 
-            this.txt_password.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_password.BorderColor = System.Drawing.Color.White;
-            this.txt_password.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_password.BorderRadius = 0;
-            this.txt_password.BorderSize = 2;
-            this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_password.Location = new System.Drawing.Point(134, 97);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_password.Multiline = false;
-            this.txt_password.Name = "txt_password";
-            this.txt_password.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_password.PasswordChar = true;
-            this.txt_password.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_password.PlaceholderText = "Password";
-            this.txt_password.Size = new System.Drawing.Size(250, 31);
-            this.txt_password.TabIndex = 10;
-            this.txt_password.Texts = "";
-            this.txt_password.UnderlinedStyle = false;
-            this.txt_password.Leave += new System.EventHandler(this.txt_password_Leave);
-            // 
-            // txt_repeat_password
-            // 
-            this.txt_repeat_password.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_repeat_password.BorderColor = System.Drawing.Color.White;
-            this.txt_repeat_password.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txt_repeat_password.BorderRadius = 0;
-            this.txt_repeat_password.BorderSize = 2;
-            this.txt_repeat_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_repeat_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_repeat_password.Location = new System.Drawing.Point(134, 136);
-            this.txt_repeat_password.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_repeat_password.Multiline = false;
-            this.txt_repeat_password.Name = "txt_repeat_password";
-            this.txt_repeat_password.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt_repeat_password.PasswordChar = true;
-            this.txt_repeat_password.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt_repeat_password.PlaceholderText = "Repeat Password";
-            this.txt_repeat_password.Size = new System.Drawing.Size(250, 31);
-            this.txt_repeat_password.TabIndex = 11;
-            this.txt_repeat_password.Texts = "";
-            this.txt_repeat_password.UnderlinedStyle = false;
-            this.txt_repeat_password.Leave += new System.EventHandler(this.txt_repeat_password_Leave);
-            // 
             // bt_save_01
             // 
             this.bt_save_01.BackColor = System.Drawing.Color.OliveDrab;
@@ -274,43 +124,82 @@ namespace Contas_Familia.PanelControll.Settings
             this.bt_cancel_01.UseVisualStyleBackColor = false;
             this.bt_cancel_01.Click += new System.EventHandler(this.bt_cancel_01_Click);
             // 
-            // bt_save_02
+            // txt_username
             // 
-            this.bt_save_02.BackColor = System.Drawing.Color.OliveDrab;
-            this.bt_save_02.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_save_02.FlatAppearance.BorderSize = 0;
-            this.bt_save_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_save_02.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save_02.ForeColor = System.Drawing.Color.White;
-            this.bt_save_02.Location = new System.Drawing.Point(129, 143);
-            this.bt_save_02.Name = "bt_save_02";
-            this.bt_save_02.Size = new System.Drawing.Size(122, 36);
-            this.bt_save_02.TabIndex = 108;
-            this.bt_save_02.Text = "Save";
-            this.bt_save_02.UseVisualStyleBackColor = false;
+            this.txt_username.BackColor = System.Drawing.Color.White;
+            this.txt_username.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_username.ForeColor = System.Drawing.Color.DarkGray;
+            this.txt_username.Location = new System.Drawing.Point(134, 45);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(250, 31);
+            this.txt_username.TabIndex = 104;
+            this.txt_username.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // bt_cancel_02
+            // txt_password
             // 
-            this.bt_cancel_02.BackColor = System.Drawing.Color.LightSlateGray;
-            this.bt_cancel_02.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cancel_02.FlatAppearance.BorderSize = 0;
-            this.bt_cancel_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cancel_02.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancel_02.ForeColor = System.Drawing.Color.White;
-            this.bt_cancel_02.Location = new System.Drawing.Point(257, 143);
-            this.bt_cancel_02.Name = "bt_cancel_02";
-            this.bt_cancel_02.Size = new System.Drawing.Size(122, 36);
-            this.bt_cancel_02.TabIndex = 107;
-            this.bt_cancel_02.Text = "Cancel";
-            this.bt_cancel_02.UseVisualStyleBackColor = false;
-            this.bt_cancel_02.Click += new System.EventHandler(this.bt_cancel_02_Click);
+            this.txt_password.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_password.BorderColor = System.Drawing.Color.White;
+            this.txt_password.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_password.BorderRadius = 0;
+            this.txt_password.BorderSize = 2;
+            this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_password.Location = new System.Drawing.Point(134, 97);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_password.Multiline = false;
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_password.PasswordChar = true;
+            this.txt_password.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_password.PlaceholderText = "Password";
+            this.txt_password.Size = new System.Drawing.Size(250, 31);
+            this.txt_password.TabIndex = 10;
+            this.txt_password.Texts = "";
+            this.txt_password.UnderlinedStyle = false;
+            this.txt_password.Leave += new System.EventHandler(this.txt_password_Leave);
+            // 
+            // lb_title_01
+            // 
+            this.lb_title_01.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_title_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_title_01.ForeColor = System.Drawing.Color.White;
+            this.lb_title_01.Location = new System.Drawing.Point(3, 10);
+            this.lb_title_01.Name = "lb_title_01";
+            this.lb_title_01.Size = new System.Drawing.Size(503, 31);
+            this.lb_title_01.TabIndex = 98;
+            this.lb_title_01.Text = "Account";
+            this.lb_title_01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_repeat_password
+            // 
+            this.txt_repeat_password.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_repeat_password.BorderColor = System.Drawing.Color.White;
+            this.txt_repeat_password.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txt_repeat_password.BorderRadius = 0;
+            this.txt_repeat_password.BorderSize = 2;
+            this.txt_repeat_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_repeat_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_repeat_password.Location = new System.Drawing.Point(134, 136);
+            this.txt_repeat_password.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_repeat_password.Multiline = false;
+            this.txt_repeat_password.Name = "txt_repeat_password";
+            this.txt_repeat_password.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt_repeat_password.PasswordChar = true;
+            this.txt_repeat_password.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_repeat_password.PlaceholderText = "Repeat Password";
+            this.txt_repeat_password.Size = new System.Drawing.Size(250, 31);
+            this.txt_repeat_password.TabIndex = 11;
+            this.txt_repeat_password.Texts = "";
+            this.txt_repeat_password.UnderlinedStyle = false;
+            this.txt_repeat_password.Leave += new System.EventHandler(this.txt_repeat_password_Leave);
             // 
             // setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.Controls.Add(this.pl_account_02);
             this.Controls.Add(this.pl_account_01);
             this.Controls.Add(this.pl_top);
             this.Name = "setting";
@@ -319,8 +208,6 @@ namespace Contas_Familia.PanelControll.Settings
             this.pl_top.ResumeLayout(false);
             this.pl_account_01.ResumeLayout(false);
             this.pl_account.ResumeLayout(false);
-            this.pl_account_family.ResumeLayout(false);
-            this.pl_account_02.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -332,17 +219,10 @@ namespace Contas_Familia.PanelControll.Settings
         private System.Windows.Forms.Panel pl_account_01;
         private Script.RJTextBox txt_password;
         private Script.RJTextBox txt_repeat_password;
-        private Script.RJTextBox txt_family_name_edit;
         private System.Windows.Forms.Label lb_title_01;
         private System.Windows.Forms.Panel pl_account;
-        private System.Windows.Forms.Panel pl_account_family;
-        private System.Windows.Forms.Label lb_title_02;
-        private System.Windows.Forms.Panel pl_account_02;
         private System.Windows.Forms.Label txt_username;
-        private System.Windows.Forms.Label txt_family_name;
         private System.Windows.Forms.Button bt_save_01;
         private System.Windows.Forms.Button bt_cancel_01;
-        private System.Windows.Forms.Button bt_save_02;
-        private System.Windows.Forms.Button bt_cancel_02;
     }
 }

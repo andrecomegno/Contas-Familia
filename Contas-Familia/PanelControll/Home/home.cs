@@ -6,19 +6,23 @@ namespace Contas_Familia.PanelControll.Home
 {
     public partial class home : UserControl
     {
+        public static home Instance;
+
         public home()
         {
             InitializeComponent();
             List_Family();
+
+            Instance = this;
         }
 
         private void List_Family()
         {
             list_family uc = new list_family();
-            addControl(uc);
+            addControll(uc);
         }
 
-        private void addControl(UserControl userControl)
+        public void addControll(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
             pl_family.Controls.Clear();
