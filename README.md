@@ -15,30 +15,29 @@
 
 # Introdução
 <p>
-Contas Familia é um projeto de gerenciador as contas a pagar de cada mes, com ele você vai conseguir cadastrar novos membros da familia, cadastrar uma familia, editar, excluir, verificar com um grafico quantos cada membro da familia gastou no mês, fazer filtros de gastos.
+Contas-Família é um projeto de gerenciar as contas a pagar de cada mês, com ele você vai conseguir cadastrar novos membros da família, cadastrar uma família, editar, excluir, verificar gastos em um gráfico, filtros de gastos por nome e ano.
 </p>
 
 ## Características
 <div>
   <p> 
-  O projeto foi desenvolvido em .Net Framework, Visual Studio, o photoshop para as criações e tratamento de imagens, a linguagem C# junto com o MySql.
-  Contas-Familia voce podera fazer um login separada para cada usuário facilitando muito o gerenciamento, com um menu lateral que pode esconder para ampliar ainda mais a sua área de trabalho, com botões de atalhos estratégicos para agilizar o manuseio, com o aplicativo vocë poderá fazer:
+  O projeto foi desenvolvido em .Net Framework, Visual Studio, o photoshop para as criações e tratamento de imagens, a linguagem C# junto com o MySql. Contas-Família você poderá fazer um login separada para cada usuário facilitando muito o gerenciamento, com um menu lateral que pode esconder para ampliar ainda mais a sua área de trabalho, com botões de atalhos estratégicos para agilizar o manuseio, com o aplicativo vocë poderá fazer:
   </p>
 
 - Login: Separado para cada usuário
-- Cadastrar: Membros da familia e nome da Familia
-- Editar e Excluir: Membros da familia, nome da Familia e tabela de contas a pagar
+- Cadastrar: Membros da família e nome da Família
+- Editar e Excluir: Membros da família, nome da Família e tabela de contas a pagar
 - Dashboard: Gráficos
 
 ## Print`s
-<p> Aqui estão um pouco mais sobre o projeto Contas-Familia <p>
+<p> Aqui estão um pouco mais sobre o projeto Contas-Família.<p>
 <div style="display: inline"> 
     <img src="https://github.com/andrecomegno/Contas-Familia/assets/55299009/d296e467-539f-4ede-9304-9a92f739b594" alt="Cadastro" height="280">    
     <img src="https://github.com/andrecomegno/Contas-Familia/assets/55299009/2e021823-a44c-41ae-8368-361d1acb26fe" alt="Buscar" height="280">
 </div>
 
 ## Configuração do Projeto:
-<p>Vocë vai precisar das seguinte ferramentas para conseguir funcionar o aplicativo corretamente.</p>
+<p>Você vai precisar das seguintes ferramentas para conseguir funcionar o aplicativo corretamente.</p>
 
 - Visual Studio para a compilação e execução do aplicativo.
 - MySQL Workbench como Banco de Dados.
